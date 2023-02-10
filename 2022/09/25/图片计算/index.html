@@ -102,12 +102,12 @@ mioe = mioe = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclip4jbpj20zk0m87cv.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicliwyw55j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxfdlttj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
         </ul>
       </div>
     </header>
@@ -153,21 +153,30 @@ mioe = mioe = AC总在意料外^^</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h3 id="直接加运算"><a href="#直接加运算" class="headerlink" title="直接加运算"></a>直接加运算</h3><p><code>img += 10</code> 每项rgb数值都加10，溢出部分会自动<code>% 255</code>处理</p>
-<h3 id="cv2-add"><a href="#cv2-add" class="headerlink" title="cv2.add"></a><code>cv2.add</code></h3><p><code>cv2.add(img, img1)</code>溢出部分将自动处理为255</p>
-<h3 id="cv2-addaddWeighted"><a href="#cv2-addaddWeighted" class="headerlink" title="cv2.addaddWeighted"></a><code>cv2.addaddWeighted</code></h3><p><code>cv2.addWeighted(src1, alpha, src2, beta, gamma[, dst[, dtype]]) → dst</code></p>
+    <h3 id="直接加运算"><a class="markdownIt-Anchor" href="#直接加运算">#</a> 直接加运算</h3>
+<p><code>img += 10</code>  每项 rgb 数值都加 10，溢出部分会自动 <code>% 255</code>  处理</p>
+<h3 id="cv2add"><a class="markdownIt-Anchor" href="#cv2add">#</a>  <code>cv2.add</code></h3>
+<p><code>cv2.add(img, img1)</code>  溢出部分将自动处理为 255</p>
+<h3 id="cv2addaddweighted"><a class="markdownIt-Anchor" href="#cv2addaddweighted">#</a>  <code>cv2.addaddWeighted</code></h3>
+<p><code>cv2.addWeighted(src1, alpha, src2, beta, gamma[, dst[, dtype]]) → dst</code></p>
 <ul>
-<li><p>scr1, scr2：ndarray 多维数组，表示一个灰度或彩色图像</p>
+<li>
+<p>scr1, scr2：ndarray 多维数组，表示一个灰度或彩色图像</p>
 </li>
-<li><p>alpha：第一张图像 scr1 的权重，通常取为 0～1 之间的浮点数</p>
+<li>
+<p>alpha：第一张图像 scr1 的权重，通常取为 0～1 之间的浮点数</p>
 </li>
-<li><p>beta：第二张图像 scr2 的权重，通常取为 0～1 之间的浮点数</p>
+<li>
+<p>beta：第二张图像 scr2 的权重，通常取为 0～1 之间的浮点数</p>
 </li>
-<li><p>gamma： 灰度系数，图像校正的偏移量，用于调节亮度</p>
+<li>
+<p>gamma： 灰度系数，图像校正的偏移量，用于调节亮度</p>
 </li>
-<li><p>dtype 输出图像的深度，即每个像素值的位数，可选项，默认等于 src1.depth()</p>
+<li>
+<p>dtype 输出图像的深度，即每个像素值的位数，可选项，默认等于 src1.depth ()</p>
 </li>
-<li><p>retrun：dst，加权加法运算结果的图像数组</p>
+<li>
+<p>retrun：dst，加权加法运算结果的图像数组</p>
 <p><img data-src="https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/09/3016520072.png" alt="image.png"></p>
 </li>
 </ul>
@@ -217,7 +226,7 @@ mioe = mioe = AC总在意料外^^</title>
     <div class="item left">
       
 
-  <a href="/2022/09/24/%E5%9B%BE%E5%83%8F%E5%A1%AB%E5%85%85/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicitht3xtj20zk0m8k5v.jpg" title="图像填充">
+  <a href="/2022/09/24/%E5%9B%BE%E5%83%8F%E5%A1%AB%E5%85%85/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhpw3lwj20zk0m8gvw.jpg" title="图像填充">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> Opencv</span>
   <h3>图像填充</h3>
@@ -227,7 +236,7 @@ mioe = mioe = AC总在意料外^^</title>
     <div class="item right">
       
 
-  <a href="/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclgi503lj20zk0m8hdt.jpg" title="随机头图">
+  <a href="/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxp31goj20zk0m8qv5.jpg" title="随机头图">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> 教程</span>
   <h3>随机头图</h3>
@@ -249,7 +258,7 @@ mioe = mioe = AC总在意料外^^</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E5%8A%A0%E8%BF%90%E7%AE%97"><span class="toc-number">1.</span> <span class="toc-text">直接加运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cv2-add"><span class="toc-number">2.</span> <span class="toc-text">cv2.add</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cv2-addaddWeighted"><span class="toc-number">3.</span> <span class="toc-text">cv2.addaddWeighted</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E5%8A%A0%E8%BF%90%E7%AE%97"><span class="toc-number">1.</span> <span class="toc-text"> 直接加运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cv2add"><span class="toc-number">2.</span> <span class="toc-text">  cv2.add</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cv2addaddweighted"><span class="toc-number">3.</span> <span class="toc-text">  cv2.addaddWeighted</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -358,6 +367,16 @@ mioe = mioe = AC总在意料外^^</title>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+</div>
+
+    <span><a href="/2022/12/21/AcWing_116._%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F/" title="AcWing 116. 飞行员兄弟">AcWing 116. 飞行员兄弟</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
@@ -370,42 +389,12 @@ mioe = mioe = AC总在意料外^^</title>
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
-</div>
-
-    <span><a href="/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/" title="scanf、cin返回值与连续输入">scanf、cin返回值与连续输入</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%85%B6%E4%BB%96/" title="分类于 其他">其他</a>
-</div>
-
-    <span><a href="/2022/10/31/WolfraAlpha_%E7%9F%A9%E9%98%B5%E7%9B%B8%E5%85%B3/" title="WolfraAlpha 矩阵相关">WolfraAlpha 矩阵相关</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Python/" title="分类于 Python">Python</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2021/03/31/%E9%80%92%E5%BD%92_-_%E6%95%B0%E7%BB%84%E7%B4%AF%E5%8A%A0/" title="递归 - 数组累加">递归 - 数组累加</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-</div>
-
-    <span><a href="/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/" title="git push出现Everything up-to-date">git push出现Everything up-to-date</a></span>
+    <span><a href="/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="贪婪算法之背包问题">贪婪算法之背包问题</a></span>
   </li>
 
       
@@ -417,17 +406,7 @@ mioe = mioe = AC总在意料外^^</title>
 <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2023/01/30/KMP/" title="KMP">KMP</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-</div>
-
-    <span><a href="/2022/05/25/linux%E6%8C%89%E5%90%8D%E6%9F%A5PID%E5%92%8C%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C/" title="linux按名查PID和后台运行">linux按名查PID和后台运行</a></span>
+    <span><a href="/2022/12/25/%E5%9C%A8%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97%E9%87%8C%E5%A4%84%E7%90%86%E6%B5%AE%E7%82%B9%E6%95%B0/" title="在整数运算里处理浮点数">在整数运算里处理浮点数</a></span>
   </li>
 
       
@@ -437,7 +416,31 @@ mioe = mioe = AC总在意料外^^</title>
 <a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2023/01/10/gcd%E4%B8%8E%E6%AC%A7%E6%8B%89%E8%B4%A8%E6%95%B0%E7%AD%9B%E6%A8%A1%E6%9D%BF/" title="gcd与欧拉质数筛模板">gcd与欧拉质数筛模板</a></span>
+    <span><a href="/2023/02/04/%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/" title="最短路问题">最短路问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2021/03/21/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="二分查找">二分查找</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9A%8F%E7%AC%94/" title="分类于 随笔">随笔</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E9%9A%8F%E7%AC%94/%E7%9B%B8%E5%86%8C/" title="分类于 相册">相册</a>
+</div>
+
+    <span><a href="/2019/05/20/%E6%9C%89%E8%B6%A3%E7%9A%84%E7%81%B5%E9%AD%82%E7%BB%88%E4%BC%9A%E7%9B%B8%E9%81%87/" title="有趣的灵魂终会相遇">有趣的灵魂终会相遇</a></span>
   </li>
 
       
@@ -454,10 +457,26 @@ mioe = mioe = AC总在意料外^^</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2023/01/31/%E9%9B%86%E5%90%88%E4%B8%8E%E5%B9%B6%E6%9F%A5%E9%9B%86/" title="集合与并查集">集合与并查集</a></span>
+    <span><a href="/2021/10/16/%E5%8E%86%E5%B1%8A%E7%9C%9F%E9%A2%98_%E5%88%86%E7%B3%96%E6%9E%9C%E3%80%90%E7%AC%AC%E4%BA%94%E5%B1%8A%E3%80%91%E3%80%90%E7%9C%81%E8%B5%9B%E3%80%91%E3%80%90C%E7%BB%84%E3%80%91/" title="历届真题 分糖果【第五届】【省赛】【C组】">历届真题 分糖果【第五届】【省赛】【C组】</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2021/11/04/Vector_%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="Vector 二分查找">Vector 二分查找</a></span>
   </li>
 
   </ul>

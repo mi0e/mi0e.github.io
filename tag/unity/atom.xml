@@ -13,9 +13,9 @@
     <category term="github" />
     <category term="linux" />
     <category term="Open-cv" />
+    <category term="模板" />
     <category term="碧蓝航线" />
     <category term="Python" />
-    <category term="模板" />
     <category term="局域网" />
     <category term="阅读" />
     <category term="相册" />
@@ -24,7 +24,7 @@
         <id>http://example.com/2022/10/27/Unity%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%BA%A2%E7%BB%BF%E7%81%AF%E8%87%AA%E5%8A%A8%E5%8F%98%E6%8D%A2/</id>
         <title>Unity回调函数实现简单红绿灯自动变换</title>
         <link rel="alternate" href="http://example.com/2022/10/27/Unity%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%BA%A2%E7%BB%BF%E7%81%AF%E8%87%AA%E5%8A%A8%E5%8F%98%E6%8D%A2/"/>
-        <content type="html">&lt;pre&gt;&lt;code class=&#34;c#&#34;&gt;using System.Collections;
+        <content type="html">&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -54,6 +54,7 @@ public class AutoChangeColor : MonoBehaviour
         if (i == 3) i = 0;
     &amp;#125;
 &amp;#125;
+
 &lt;/code&gt;&lt;/pre&gt;
 </content>
         <category term="unity" />

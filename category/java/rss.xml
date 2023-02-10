@@ -16,9 +16,9 @@
         <category>github</category>
         <category>linux</category>
         <category>Open-cv</category>
+        <category>模板</category>
         <category>碧蓝航线</category>
         <category>Python</category>
-        <category>模板</category>
         <category>局域网</category>
         <category>阅读</category>
         <category>相册</category>
@@ -30,31 +30,32 @@
             <pubDate>Thu, 24 Dec 2020 20:57:00 +0800</pubDate>
             <description><![CDATA[ &lt;pre&gt;&lt;code&gt;List&amp;lt;Type&amp;gt; variable = new ArrayList&amp;lt;&amp;gt;([size]);
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Type：int String method …&lt;br&gt;size：可写可不写 &lt;/p&gt;
+&lt;p&gt;Type：int String method …&lt;br&gt;
+size：可写可不写&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;class user&amp;#123;
-    private String name;
-    private int age;
-    public user(String string, int i) &amp;#123;
-        this.name = string;
-        this.age = i;
-    &amp;#125;
-    public String getName() &amp;#123;
-        return name;
-    &amp;#125;
-    public int getAge() &amp;#123;
-        return age;
-    &amp;#125;
+	private String name;
+	private int age;
+	public user(String string, int i) &amp;#123;
+		this.name = string;
+		this.age = i;
+	&amp;#125;
+	public String getName() &amp;#123;
+		return name;
+	&amp;#125;
+	public int getAge() &amp;#123;
+		return age;
+	&amp;#125;
 &amp;#125;
 
-    List&amp;lt;user&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();
-    list.add(new user(&amp;quot;张三&amp;quot;,15));
+	List&amp;lt;user&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();
+	list.add(new user(&amp;quot;张三&amp;quot;,15));
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
 &lt;p&gt;集合的遍历：&lt;/p&gt;
 &lt;p&gt;方法一&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;for (int i = 0; i &amp;lt; list.size(); i++) &amp;#123;
-    System.out.print(list.get(i).getName());
-    System.out.println(list.get(i).getAge());
+	System.out.print(list.get(i).getName());
+	System.out.println(list.get(i).getAge());
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;方法二&lt;/p&gt;
@@ -72,8 +73,7 @@
             <description><![CDATA[ &lt;pre&gt;&lt;code&gt;for(type element: array)  
 &amp;#123;  
   System.out.println(element);  
-&amp;#125;  
-&lt;/code&gt;&lt;/pre&gt;
+&amp;#125;  &lt;/code&gt;&lt;/pre&gt;
  ]]></description>
         </item>
     </channel>

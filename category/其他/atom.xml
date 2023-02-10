@@ -13,9 +13,9 @@
     <category term="github" />
     <category term="linux" />
     <category term="Open-cv" />
+    <category term="模板" />
     <category term="碧蓝航线" />
     <category term="Python" />
-    <category term="模板" />
     <category term="局域网" />
     <category term="阅读" />
     <category term="相册" />
@@ -33,8 +33,8 @@
 &lt;p&gt;RowReduce &lt;strong&gt;—&lt;/strong&gt; 行简化阶梯形&lt;/p&gt;
 &lt;p&gt;PseudoInverse &lt;strong&gt;—&lt;/strong&gt; 方阵或矩形矩阵的伪逆&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Transpose &lt;strong&gt;—&lt;/strong&gt; 转置($m^T$，用&lt;code&gt;esc&lt;/code&gt; tr &lt;code&gt;esc&lt;/code&gt;)&lt;/p&gt;
-&lt;p&gt;ConjugateTranspose &lt;strong&gt;—&lt;/strong&gt; 共轭转置($m^+$，用&lt;code&gt;esc&lt;/code&gt; ct &lt;code&gt;esc&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;Transpose &lt;strong&gt;—&lt;/strong&gt; 转置 (&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;m^T&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8413309999999999em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8413309999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，用 &lt;code&gt;esc&lt;/code&gt;  tr  &lt;code&gt;esc&lt;/code&gt; )&lt;/p&gt;
+&lt;p&gt;ConjugateTranspose &lt;strong&gt;—&lt;/strong&gt; 共轭转置 (&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;m^+&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.771331em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.771331em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mbin mtight&#34;&gt;+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，用 &lt;code&gt;esc&lt;/code&gt;  ct  &lt;code&gt;esc&lt;/code&gt; )&lt;/p&gt;
 &lt;p&gt;LowerTriangularize, UpperTriangularize &lt;strong&gt;—&lt;/strong&gt; 提取矩阵的下三角形或上三角形部分&lt;/p&gt;
 &lt;p&gt;Symmetrize &lt;strong&gt;—&lt;/strong&gt; 找出矩阵的对称、反对称等部分&lt;/p&gt;
 &lt;hr&gt;

@@ -102,12 +102,12 @@ mioe = mioe = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclize41wj20zk0m87gk.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeu1usa7j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li>
         </ul>
       </div>
     </header>
@@ -156,14 +156,22 @@ mioe = mioe = AC总在意料外^^</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>给定 <strong>n</strong> 个数组成的一个数列，规定有两种操作，一是修改某个元素，二是求子数列 <strong>[<strong>a</strong>,<strong>b</strong>]</strong> 的连续和。</p>
-<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行包含两个整数 <strong>n</strong> 和 <strong>m</strong>，分别表示数的个数和操作次数。</p>
+    <h4 id="题目"><a class="markdownIt-Anchor" href="#题目">#</a> 题目</h4>
+<p>给定 <strong>n</strong> 个数组成的一个数列，规定有两种操作，一是修改某个元素，二是求子数列 <strong>[<strong>a</strong>,<strong>b</strong>]</strong> 的连续和。</p>
+<h4 id="输入格式"><a class="markdownIt-Anchor" href="#输入格式">#</a> 输入格式</h4>
+<p>第一行包含两个整数 <strong>n</strong> 和 <strong>m</strong>，分别表示数的个数和操作次数。</p>
 <p>第二行包含 <strong>n</strong> 个整数，表示完整数列。</p>
-<p>接下来 <strong>m</strong> 行，每行包含三个整数 <strong>k</strong>,<strong>a</strong>,<strong>b</strong> （<strong>k&#x3D;0</strong>，表示求子数列 <strong>[a,b]</strong> 的和；<strong>k&#x3D;1</strong>，表示第 <strong>a</strong> 个数加 <strong>b</strong>）。</p>
+<p>接下来 <strong>m</strong> 行，每行包含三个整数 <strong>k</strong>,<strong>a</strong>,<strong>b</strong> （<strong>k=0</strong>，表示求子数列 <strong>[a,b]</strong> 的和；<strong>k=1</strong>，表示第 <strong>a</strong> 个数加 <strong>b</strong>）。</p>
 <p>数列从 <strong>1</strong> 开始计数。</p>
-<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>输出若干行数字，表示 <strong>k</strong>&#x3D;<strong>0</strong> 时，对应的子数列 <strong>[<strong>a</strong>,<strong>b</strong>]</strong> 的连续和。</p>
-<h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p><strong>1</strong>≤<strong>n</strong>≤<strong>100000</strong>,<br><strong>1</strong>≤<strong>m</strong>≤<strong>100000，<br>1</strong>≤<strong>a</strong>≤<strong>b</strong>≤<strong>n</strong>,<br>数据保证在任何时候，数列中所有元素之和均在 int 范围内。</p>
-<h4 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h4><pre><code>10 5
+<h4 id="输出格式"><a class="markdownIt-Anchor" href="#输出格式">#</a> 输出格式</h4>
+<p>输出若干行数字，表示 <strong>k</strong>=<strong>0</strong> 时，对应的子数列 <strong>[<strong>a</strong>,<strong>b</strong>]</strong> 的连续和。</p>
+<h4 id="数据范围"><a class="markdownIt-Anchor" href="#数据范围">#</a> 数据范围</h4>
+<p><strong>1</strong>≤<strong>n</strong>≤<strong>100000</strong>,<br>
+<strong>1</strong>≤<strong>m</strong>≤<strong>100000，<br>
+1</strong>≤<strong>a</strong>≤<strong>b</strong>≤<strong>n</strong>,<br>
+ 数据保证在任何时候，数列中所有元素之和均在 int 范围内。</p>
+<h4 id="输入样例"><a class="markdownIt-Anchor" href="#输入样例">#</a> 输入样例：</h4>
+<pre><code>10 5
 1 2 3 4 5 6 7 8 9 10
 1 1 5
 0 1 3
@@ -171,11 +179,13 @@ mioe = mioe = AC总在意料外^^</title>
 1 7 5
 0 4 8
 </code></pre>
-<h4 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h4><pre><code>11
+<h4 id="输出样例"><a class="markdownIt-Anchor" href="#输出样例">#</a> 输出样例：</h4>
+<pre><code>11
 30
 35
 </code></pre>
-<h4 id="树状数组模板"><a href="#树状数组模板" class="headerlink" title="树状数组模板"></a>树状数组模板</h4><pre><code class="c++">#include&lt;bits/stdc++.h&gt;
+<h4 id="树状数组模板"><a class="markdownIt-Anchor" href="#树状数组模板">#</a> 树状数组模板</h4>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 const int N = 100010;
 
@@ -183,46 +193,47 @@ int n, m;
 int arr[N], tr[N];
 
 int lowbit(int i)&#123;
-    return i &amp; -i;
+	return i &amp; -i;
 &#125;
 
 void add(int index, int x)&#123;
-    for(int i = index; i &lt;= n; i += lowbit(i))
-        tr[i] += x;
-    return;
+	for(int i = index; i &lt;= n; i += lowbit(i))
+		tr[i] += x;
+	return;
 &#125;
 
 void change(int index, int x)&#123;
-    int c = x - arr[index];
-    for(int i = index; i &lt;= n; i += lowbit(i))
-        tr[i] += c;
-    return;
+	int c = x - arr[index];
+	for(int i = index; i &lt;= n; i += lowbit(i))
+		tr[i] += c;
+	return;
 &#125;
 
 int query(int index)&#123;
-    int res = 0;
-    for(int i = index; i; i -= lowbit(i))
-        res += tr[i];
-    return res;
+	int res = 0;
+	for(int i = index; i; i -= lowbit(i))
+		res += tr[i];
+	return res;
 &#125;
 
 int main()&#123;
-    cin &gt;&gt; n &gt;&gt; m;
-    for(int i = 1; i &lt;= n; i++) scanf(&quot;%d&quot;, &amp;arr[i]);
-    for(int i = 1; i &lt;= n; i++) add(i, arr[i]);
+	cin &gt;&gt; n &gt;&gt; m;
+	for(int i = 1; i &lt;= n; i++) scanf(&quot;%d&quot;, &amp;arr[i]);
+	for(int i = 1; i &lt;= n; i++) add(i, arr[i]);
 
-    while(m--)&#123;
-        int tag, l, r;
-        int res;
-        scanf(&quot;%d %d %d&quot;, &amp;tag, &amp;l, &amp;r);
-        if(tag) add(l, r);
-        else printf(&quot;%d\n&quot;, query(r) - query(l - 1));
-    &#125;
+	while(m--)&#123;
+		int tag, l, r;
+		int res;
+		scanf(&quot;%d %d %d&quot;, &amp;tag, &amp;l, &amp;r);
+		if(tag) add(l, r);
+		else printf(&quot;%d\n&quot;, query(r) - query(l - 1));
+	&#125;
 
-    return 0;
+	return 0;
 &#125;
 </code></pre>
-<h4 id="线段树模板"><a href="#线段树模板" class="headerlink" title="线段树模板"></a>线段树模板</h4><pre><code class="c++">#include&lt;bits/stdc++.h&gt;
+<h4 id="线段树模板"><a class="markdownIt-Anchor" href="#线段树模板">#</a> 线段树模板</h4>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 const int N = 100010;
 
@@ -230,59 +241,59 @@ int n, m;
 int num[N];
 
 struct node&#123;
-    int l, r;
-    int sum;
+	int l, r;
+	int sum;
 &#125;sgt[N * 4];		// 需要开N * 4
 
 // 更新当前节点
 void pushup(int root)&#123;
-    sgt[root].sum = sgt[root &lt;&lt; 1].sum + sgt[root &lt;&lt; 1 | 1].sum;
+	sgt[root].sum = sgt[root &lt;&lt; 1].sum + sgt[root &lt;&lt; 1 | 1].sum;
 &#125;
 
 // 初始化线段树
 void build(int root, int l, int r)&#123;
-    if(l == r) sgt[root].sum = num[l];
-    else&#123;
-        sgt[root] = &#123;l, r&#125;;
-        int mid = l + r &gt;&gt; 1;
-        build(root &lt;&lt; 1, l, mid);
-        build(root &lt;&lt; 1 | 1, mid + 1, r);
-        pushup(root);
-    &#125;
-    return;
+	if(l == r) sgt[root].sum = num[l];
+	else&#123;
+		sgt[root] = &#123;l, r&#125;;
+		int mid = l + r &gt;&gt; 1;
+		build(root &lt;&lt; 1, l, mid);
+		build(root &lt;&lt; 1 | 1, mid + 1, r);
+		pushup(root);
+	&#125;
+	return;
 &#125;
 
 int query(int root, int l, int r)&#123;
-    if(sgt[root].l &gt;= l &amp;&amp; sgt[root].r &lt;= r) return sgt[root].sum;
-    int mid = sgt[root].l + sgt[root].r &gt;&gt; 1;
-    int sum = 0;
-    if(l &lt;= mid) sum += query(root &lt;&lt; 1, l, r);
-    if(r &gt; mid) sum += query(root &lt;&lt; 1 | 1, l, r);
-    return sum;
+	if(sgt[root].l &gt;= l &amp;&amp; sgt[root].r &lt;= r) return sgt[root].sum;
+	int mid = sgt[root].l + sgt[root].r &gt;&gt; 1;
+	int sum = 0;
+	if(l &lt;= mid) sum += query(root &lt;&lt; 1, l, r);
+	if(r &gt; mid) sum += query(root &lt;&lt; 1 | 1, l, r);
+	return sum;
 &#125;
 
 void modify(int root, int index, int c)&#123;
-    if(sgt[root].l == sgt[root].r) sgt[root].sum += c;
-    else&#123;
-        int mid = sgt[root].l + sgt[root].r &gt;&gt; 1;
-        if(index &lt;= mid) modify(root &lt;&lt; 1, index, c);
-        else modify(root &lt;&lt; 1 | 1, index, c);
-        pushup(root);
-    &#125;
+	if(sgt[root].l == sgt[root].r) sgt[root].sum += c;
+	else&#123;
+		int mid = sgt[root].l + sgt[root].r &gt;&gt; 1;
+		if(index &lt;= mid) modify(root &lt;&lt; 1, index, c);
+		else modify(root &lt;&lt; 1 | 1, index, c);
+		pushup(root);
+	&#125;
 &#125;
 
 int main()&#123;
-    cin &gt;&gt; n &gt;&gt; m;
-    for(int i = 1; i &lt;= n; i++) scanf(&quot;%d&quot;, &amp;num[i]);
-    build(1, 1, n);
-    int k, a, b;
-    while(m--)&#123;
-        scanf(&quot;%d %d %d&quot;, &amp;k, &amp;a, &amp;b);
-        if(k) modify(1, a, b);
-        else printf(&quot;%d\n&quot;, query(1, a, b));
-    &#125;
+	cin &gt;&gt; n &gt;&gt; m;
+	for(int i = 1; i &lt;= n; i++) scanf(&quot;%d&quot;, &amp;num[i]);
+	build(1, 1, n);
+	int k, a, b;
+	while(m--)&#123;
+		scanf(&quot;%d %d %d&quot;, &amp;k, &amp;a, &amp;b);
+		if(k) modify(1, a, b);
+		else printf(&quot;%d\n&quot;, query(1, a, b));
+	&#125;
 
-    return 0;
+	return 0;
 &#125;
 </code></pre>
 
@@ -331,7 +342,7 @@ int main()&#123;
     <div class="item left">
       
 
-  <a href="/2022/12/27/stringstream_%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC_int_double/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipesng5oej20zk0m87d4.jpg" title="stringstream 字符串转 int&#x2F;double">
+  <a href="/2022/12/27/stringstream_%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC_int_double/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclh5u05ej20zk0m87df.jpg" title="stringstream 字符串转 int&#x2F;double">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>stringstream 字符串转 int/double</h3>
@@ -341,7 +352,7 @@ int main()&#123;
     <div class="item right">
       
 
-  <a href="/2023/01/05/BFS%E6%A8%A1%E6%9D%BF/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giph47e9vtj20zk0m8x6l.jpg" title="BFS模板">
+  <a href="/2023/01/05/BFS%E6%A8%A1%E6%9D%BF/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxp31goj20zk0m8qv5.jpg" title="BFS模板">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>BFS模板</h3>
@@ -363,7 +374,7 @@ int main()&#123;
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="toc-number">4.</span> <span class="toc-text">数据范围</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">5.</span> <span class="toc-text">输入样例：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">6.</span> <span class="toc-text">输出样例：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E6%A8%A1%E6%9D%BF"><span class="toc-number">7.</span> <span class="toc-text">树状数组模板</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF"><span class="toc-number">8.</span> <span class="toc-text">线段树模板</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text"> 题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text"> 输入格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text"> 输出格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="toc-number">4.</span> <span class="toc-text"> 数据范围</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B"><span class="toc-number">5.</span> <span class="toc-text"> 输入样例：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="toc-number">6.</span> <span class="toc-text"> 输出样例：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E6%A8%A1%E6%9D%BF"><span class="toc-number">7.</span> <span class="toc-text"> 树状数组模板</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF"><span class="toc-number">8.</span> <span class="toc-text"> 线段树模板</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -472,34 +483,14 @@ int main()&#123;
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-</div>
-
-    <span><a href="/2023/02/03/%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%EF%BC%88%E9%82%BB%E6%8E%A5%E8%A1%A8%EF%BC%89/" title="树的深度优先遍历（邻接表）">树的深度优先遍历（邻接表）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" title="小根堆">小根堆</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/10/23/C++_STL%E5%AE%B9%E5%99%A8%EF%BC%8811%E4%B8%AA%EF%BC%89/" title="C++ STL容器（11个）">C++ STL容器（11个）</a></span>
+    <span><a href="/2021/11/04/Vector_%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="Vector 二分查找">Vector 二分查找</a></span>
   </li>
 
       
@@ -509,7 +500,63 @@ int main()&#123;
 <a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
 </div>
 
-    <span><a href="/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%BF%90%E7%AE%97%EF%BC%88%E5%AF%B9%E6%95%B0%EF%BC%89/" title="图像的非线性运算（对数）">图像的非线性运算（对数）</a></span>
+    <span><a href="/2022/09/24/%E5%9B%BE%E5%83%8F%E5%A1%AB%E5%85%85/" title="图像填充">图像填充</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2021/06/02/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4_python/" title="P1223 排队接水 python">P1223 排队接水 python</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9A%8F%E7%AC%94/" title="分类于 随笔">随笔</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E9%9A%8F%E7%AC%94/%E7%9B%B8%E5%86%8C/" title="分类于 相册">相册</a>
+</div>
+
+    <span><a href="/2019/05/20/%E6%9C%89%E8%B6%A3%E7%9A%84%E7%81%B5%E9%AD%82%E7%BB%88%E4%BC%9A%E7%9B%B8%E9%81%87/" title="有趣的灵魂终会相遇">有趣的灵魂终会相遇</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Unity/" title="分类于 Unity">Unity</a>
+</div>
+
+    <span><a href="/2022/10/27/Unity%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%BA%A2%E7%BB%BF%E7%81%AF%E8%87%AA%E5%8A%A8%E5%8F%98%E6%8D%A2/" title="Unity回调函数实现简单红绿灯自动变换">Unity回调函数实现简单红绿灯自动变换</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2021/03/31/%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B(D&amp;C%EF%BC%89/" title="分而治之(D&amp;C）">分而治之(D&amp;C）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
+</div>
+
+    <span><a href="/2022/09/20/cv%E5%9F%BA%E7%A1%80%E7%9B%B8%E5%85%B3%E4%B8%8Efloat_uint8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="cv基础相关与float&#x2F;uint8类型转换">cv基础相关与float/uint8类型转换</a></span>
   </li>
 
       
@@ -519,7 +566,7 @@ int main()&#123;
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 </div>
 
-    <span><a href="/2020/12/06/%E5%BE%AA%E7%8E%AF%E3%80%81%E8%BF%AD%E4%BB%A3%E3%80%81%E9%81%8D%E5%8E%86%E5%92%8C%E9%80%92%E5%BD%92%E7%9A%84%E5%8C%BA%E5%88%AB/" title="循环、迭代、遍历和递归的区别">循环、迭代、遍历和递归的区别</a></span>
+    <span><a href="/2022/12/21/AcWing_116._%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F/" title="AcWing 116. 飞行员兄弟">AcWing 116. 飞行员兄弟</a></span>
   </li>
 
       
@@ -536,46 +583,10 @@ int main()&#123;
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2023/01/08/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/" title="树的直径">树的直径</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2021/11/08/DFS%E8%BF%B7%E5%AE%AB%E9%97%AE%E9%A2%98/" title="DFS迷宫问题">DFS迷宫问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
-</div>
-
-    <span><a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" title="IMG数组相关">IMG数组相关</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2022/12/27/stringstream_%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC_int_double/" title="stringstream 字符串转 int&#x2F;double">stringstream 字符串转 int/double</a></span>
+    <span><a href="/2022/11/11/C++%E5%A4%A7%E4%BD%9C%E4%B8%9A/" title="C++大作业">C++大作业</a></span>
   </li>
 
   </ul>

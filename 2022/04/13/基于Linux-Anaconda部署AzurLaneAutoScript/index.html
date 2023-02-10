@@ -102,12 +102,12 @@ mioe = mioe = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclimtf7dj20zk0m8qav.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></li>
         </ul>
       </div>
     </header>
@@ -156,41 +156,52 @@ mioe = mioe = AC总在意料外^^</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="在-Linux-上部署-AzurLaneAutoScript"><a href="#在-Linux-上部署-AzurLaneAutoScript" class="headerlink" title="在 Linux 上部署 AzurLaneAutoScript"></a>在 Linux 上部署 AzurLaneAutoScript</h1><h2 id="Anaconda相关"><a href="#Anaconda相关" class="headerlink" title="Anaconda相关"></a>Anaconda相关</h2><h3 id="下载anaconda3"><a href="#下载anaconda3" class="headerlink" title="下载anaconda3"></a>下载anaconda3</h3><pre><code>wget https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.shanaconda
+    <h1 id="在-linux-上部署-azurlaneautoscript"><a class="markdownIt-Anchor" href="#在-linux-上部署-azurlaneautoscript">#</a> 在 Linux 上部署 AzurLaneAutoScript</h1>
+<h2 id="anaconda相关"><a class="markdownIt-Anchor" href="#anaconda相关">#</a> Anaconda 相关</h2>
+<h3 id="下载anaconda3"><a class="markdownIt-Anchor" href="#下载anaconda3">#</a> 下载 anaconda3</h3>
+<pre><code>wget https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.shanaconda
 </code></pre>
-<h3 id="修改权限"><a href="#修改权限" class="headerlink" title="修改权限"></a>修改权限</h3><pre><code>chmod +x Anaconda3-5.2.0-Linux-x86_64.sh
+<h3 id="修改权限"><a class="markdownIt-Anchor" href="#修改权限">#</a> 修改权限</h3>
+<pre><code>chmod +x Anaconda3-5.2.0-Linux-x86_64.sh
 </code></pre>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code>./Anaconda3-5.2.0-Linux-x86_64.sh
+<h3 id="安装"><a class="markdownIt-Anchor" href="#安装">#</a> 安装</h3>
+<pre><code>./Anaconda3-5.2.0-Linux-x86_64.sh
 # 一路yes&amp;enter
 </code></pre>
-<h2 id="拉取Alas"><a href="#拉取Alas" class="headerlink" title="拉取Alas"></a>拉取Alas</h2><p>移动到欲安装alas目录下，git整个仓库</p>
+<h2 id="拉取alas"><a class="markdownIt-Anchor" href="#拉取alas">#</a> 拉取 Alas</h2>
+<p>移动到欲安装 alas 目录下，git 整个仓库</p>
 <pre><code>cd /home
 git clone https://github.com/LmeSzinc/AzurLaneAutoScript.git
 # 如果下载速度缓慢，可换用gitee
 </code></pre>
-<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><h3 id="python环境"><a href="#python环境" class="headerlink" title="python环境"></a>python环境</h3><pre><code>conda create -n alas python=3.7.6
+<h2 id="安装依赖"><a class="markdownIt-Anchor" href="#安装依赖">#</a> 安装依赖</h2>
+<h3 id="python环境"><a class="markdownIt-Anchor" href="#python环境">#</a> python 环境</h3>
+<pre><code>conda create -n alas python=3.7.6
 conda activate alas
 cd AzurLaneAutoScript
 pip install -r requirements-in.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 # 可换用其他源
 </code></pre>
 <blockquote>
-<p>由于某些 python 库在不同 os 下的依赖不同，直接从 requirements-in.txt 安装即可，pip会自动处理依赖。当然也可以从 requirements.txt 安装，但是需注释掉 pywin32</p>
+<p>由于某些 python 库在不同 os 下的依赖不同，直接从 requirements-in.txt 安装即可，pip 会自动处理依赖。当然也可以从 requirements.txt 安装，但是需注释掉 pywin32</p>
 </blockquote>
-<h3 id="adb"><a href="#adb" class="headerlink" title="adb"></a>adb</h3><p>下载 <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuYW5kcm9pZC5jb20vc3R1ZGlvL3JlbGVhc2VzL3BsYXRmb3JtLXRvb2xz">SDK Platform Tools for Linux</span> 并解压，将adb放在<code>/usr/bin</code>目录下</p>
-<h3 id="uiautomator2"><a href="#uiautomator2" class="headerlink" title="uiautomator2"></a>uiautomator2</h3><p>若运行 alas 后无法正常初始化 uiautomator2，可按此方法手动安装，安装过程参考 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL29wZW5hdHgvdWlhdXRvbWF0b3Iy">uiautomator2</span></p>
-<p>运行 <code>adb connect &lt;address&gt;</code> 连接你的云手机，确保运行 <code>adb device</code> 后可以看到设备</p>
-<p>在 alas python 环境下运行 <code>python</code> 打开 python 命令行窗口，输入以下命令</p>
+<h3 id="adb"><a class="markdownIt-Anchor" href="#adb">#</a> adb</h3>
+<p>下载 <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuYW5kcm9pZC5jb20vc3R1ZGlvL3JlbGVhc2VzL3BsYXRmb3JtLXRvb2xz">SDK Platform Tools for Linux</span> 并解压，将 adb 放在 <code>/usr/bin</code>  目录下</p>
+<h3 id="uiautomator2"><a class="markdownIt-Anchor" href="#uiautomator2">#</a> uiautomator2</h3>
+<p>若运行 alas 后无法正常初始化 uiautomator2，可按此方法手动安装，安装过程参考 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL29wZW5hdHgvdWlhdXRvbWF0b3Iy">uiautomator2</span></p>
+<p>运行  <code>adb connect &lt;address&gt;</code>  连接你的云手机，确保运行  <code>adb device</code>  后可以看到设备</p>
+<p>在 alas python 环境下运行  <code>python</code>  打开 python 命令行窗口，输入以下命令</p>
 <pre><code>import uiautomator2 as u2
 
 d = u2.connect() # connect to device
 print(d.info)
 </code></pre>
 <p>等待一段时间，输出类似如下内容，说明安装成功</p>
-<pre><code>&#123;&#39;currentPackageName&#39;: &#39;net.oneplus.launcher&#39;, &#39;displayHeight&#39;: 1920, &#39;displayRotation&#39;: 0, &#39;displaySizeDpX&#39;: 411, &#39;displaySizeDpY&#39;: 731, &#39;displayWidth&#39;: 1080, &#39;productName&#39;: &#39;OnePlus5&#39;, &#39;
-screenOn&#39;: True, &#39;sdkInt&#39;: 27, &#39;naturalOrientation&#39;: True&#125;
+<pre><code>&#123;'currentPackageName': 'net.oneplus.launcher', 'displayHeight': 1920, 'displayRotation': 0, 'displaySizeDpX': 411, 'displaySizeDpY': 731, 'displayWidth': 1080, 'productName': 'OnePlus5', '
+screenOn': True, 'sdkInt': 27, 'naturalOrientation': True&#125;
 </code></pre>
-<h3 id="修改deploy-yaml"><a href="#修改deploy-yaml" class="headerlink" title="修改deploy.yaml"></a>修改deploy.yaml</h3><p>因为Alas默认使用了Windows下的配置文件，所以我们要手动修改</p>
+<h3 id="修改deployyaml"><a class="markdownIt-Anchor" href="#修改deployyaml">#</a> 修改 deploy.yaml</h3>
+<p>因为 Alas 默认使用了 Windows 下的配置文件，所以我们要手动修改</p>
 <pre><code># 修改gitee仓库
 Deploy.Git.Repository : https://gitee.com/LmeSzinc/AzurLaneAutoScript
 
@@ -203,7 +214,8 @@ Deploy.Python.PythonExecutable : [Anaconda安装路径]/envs/alas/bin/python
 # adb位置
 Deploy.Adb.AdbExecutable : /usr/bin/adb
 </code></pre>
-<h2 id="使用-shell-脚本启动停止-alas"><a href="#使用-shell-脚本启动停止-alas" class="headerlink" title="使用 shell 脚本启动停止 alas"></a>使用 shell 脚本启动停止 alas</h2><p>编写脚本</p>
+<h2 id="使用-shell-脚本启动停止-alas"><a class="markdownIt-Anchor" href="#使用-shell-脚本启动停止-alas">#</a> 使用 shell 脚本启动停止 alas</h2>
+<p>编写脚本</p>
 <pre><code>#!/bin/bash
 
 start()&#123;
@@ -225,7 +237,7 @@ case $1 in
     * ) stop;start;;
 esac
 </code></pre>
-<p>将文件保存为 alas，放在<code>/usr/bin</code>，修改权限</p>
+<p>将文件保存为 alas，放在 <code>/usr/bin</code> ，修改权限</p>
 <pre><code>chmod 755 alas
 </code></pre>
 <p>可用以下命令控制 alas</p>
@@ -233,10 +245,13 @@ esac
 alas stop # 停止
 alas # 重启
 </code></pre>
-<h2 id="遇到一些问题"><a href="#遇到一些问题" class="headerlink" title="遇到一些问题"></a>遇到一些问题</h2><h3 id="ERROR-Permission-denied"><a href="#ERROR-Permission-denied" class="headerlink" title="ERROR:Permission denied"></a>ERROR:Permission denied</h3><pre><code># 权限相关问题，激活环境时用以下代码
+<h2 id="遇到一些问题"><a class="markdownIt-Anchor" href="#遇到一些问题">#</a> 遇到一些问题</h2>
+<h3 id="errorpermission-denied"><a class="markdownIt-Anchor" href="#errorpermission-denied">#</a> ERROR:Permission denied</h3>
+<pre><code># 权限相关问题，激活环境时用以下代码
 source activate alas
 </code></pre>
-<h3 id="ERROR-Conda-command-not-found"><a href="#ERROR-Conda-command-not-found" class="headerlink" title="ERROR:Conda command not found"></a>ERROR:Conda command not found</h3><pre><code># 打开系统变量
+<h3 id="errorconda-command-not-found"><a class="markdownIt-Anchor" href="#errorconda-command-not-found">#</a> ERROR:Conda command not found</h3>
+<pre><code># 打开系统变量
 vim ~/.bashrc
 
 # 添加系统变量
@@ -245,12 +260,14 @@ export PATH=/[path]/anaconda3/bin:$PATH # [path]为anaconda3的安装路径
 #重新加载配置
 source ~/.bashrc
 </code></pre>
-<h3 id="ERROR-XXX-is-not-a-trusted-or-secure-host"><a href="#ERROR-XXX-is-not-a-trusted-or-secure-host" class="headerlink" title="ERROR:XXX is not a trusted or secure host"></a>ERROR:XXX is not a trusted or secure host</h3><pre><code>pip install 库包名 -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+<h3 id="errorxxx-is-not-a-trusted-or-secure-host"><a class="markdownIt-Anchor" href="#errorxxx-is-not-a-trusted-or-secure-host">#</a> ERROR:XXX is not a trusted or secure host</h3>
+<pre><code>pip install 库包名 -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
 # 这里将pip源换成清华源、阿里源等都适用。
 </code></pre>
 <hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>感谢Lme大佬的 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0xtZVN6aW5jL0F6dXJMYW5lQXV0b1NjcmlwdA==">AzurLaneAutoScript</span> <del>MAGA 让碧蓝航线再次伟大！</del></p>
-<p>教程参考了群内大佬 <strong>Alas部署.md - freesrz</strong></p>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结">#</a> 总结</h2>
+<p>感谢 Lme 大佬的 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0xtZVN6aW5jL0F6dXJMYW5lQXV0b1NjcmlwdA==">AzurLaneAutoScript</span> <s>MAGA 让碧蓝航线再次伟大！</s></p>
+<p>教程参考了群内大佬 <strong><span class="exturl" data-url="aHR0cDovL3huLS1BbGFzLXl3Nms5ODdmLm1k">Alas 部署.md</span> - freesrz</strong></p>
 <p>再一次感谢各位群大佬</p>
 
       <div class="tags">
@@ -300,7 +317,7 @@ source ~/.bashrc
     <div class="item left">
       
 
-  <a href="/2022/03/27/%E6%99%95%E8%BD%AE%E6%95%88%E5%BA%94/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeudstjqj20zk0m8k3r.jpg" title="晕轮效应">
+  <a href="/2022/03/27/%E6%99%95%E8%BD%AE%E6%95%88%E5%BA%94/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicliwyw55j20zk0m8hdt.jpg" title="晕轮效应">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 随笔</span>
   <h3>晕轮效应</h3>
@@ -310,7 +327,7 @@ source ~/.bashrc
     <div class="item right">
       
 
-  <a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giph4wqtg4j20zk0m8x6p.jpg" title="卸载Linux图形桌面">
+  <a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhfehz7j20zk0m8u0x.jpg" title="卸载Linux图形桌面">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> Linux</span>
   <h3>卸载Linux图形桌面</h3>
@@ -332,7 +349,7 @@ source ~/.bashrc
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%A8-Linux-%E4%B8%8A%E9%83%A8%E7%BD%B2-AzurLaneAutoScript"><span class="toc-number">1.</span> <span class="toc-text">在 Linux 上部署 AzurLaneAutoScript</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Anaconda%E7%9B%B8%E5%85%B3"><span class="toc-number">1.1.</span> <span class="toc-text">Anaconda相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDanaconda3"><span class="toc-number">1.1.1.</span> <span class="toc-text">下载anaconda3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90"><span class="toc-number">1.1.2.</span> <span class="toc-text">修改权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.3.</span> <span class="toc-text">安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%89%E5%8F%96Alas"><span class="toc-number">1.2.</span> <span class="toc-text">拉取Alas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="toc-number">1.3.</span> <span class="toc-text">安装依赖</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#python%E7%8E%AF%E5%A2%83"><span class="toc-number">1.3.1.</span> <span class="toc-text">python环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#adb"><span class="toc-number">1.3.2.</span> <span class="toc-text">adb</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#uiautomator2"><span class="toc-number">1.3.3.</span> <span class="toc-text">uiautomator2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9deploy-yaml"><span class="toc-number">1.3.4.</span> <span class="toc-text">修改deploy.yaml</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-shell-%E8%84%9A%E6%9C%AC%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2-alas"><span class="toc-number">1.4.</span> <span class="toc-text">使用 shell 脚本启动停止 alas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%87%E5%88%B0%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="toc-number">1.5.</span> <span class="toc-text">遇到一些问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ERROR-Permission-denied"><span class="toc-number">1.5.1.</span> <span class="toc-text">ERROR:Permission denied</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ERROR-Conda-command-not-found"><span class="toc-number">1.5.2.</span> <span class="toc-text">ERROR:Conda command not found</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ERROR-XXX-is-not-a-trusted-or-secure-host"><span class="toc-number">1.5.3.</span> <span class="toc-text">ERROR:XXX is not a trusted or secure host</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.6.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%A8-linux-%E4%B8%8A%E9%83%A8%E7%BD%B2-azurlaneautoscript"><span class="toc-number">1.</span> <span class="toc-text"> 在 Linux 上部署 AzurLaneAutoScript</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#anaconda%E7%9B%B8%E5%85%B3"><span class="toc-number">1.1.</span> <span class="toc-text"> Anaconda 相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDanaconda3"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 下载 anaconda3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90"><span class="toc-number">1.1.2.</span> <span class="toc-text"> 修改权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.3.</span> <span class="toc-text"> 安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%89%E5%8F%96alas"><span class="toc-number">1.2.</span> <span class="toc-text"> 拉取 Alas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="toc-number">1.3.</span> <span class="toc-text"> 安装依赖</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#python%E7%8E%AF%E5%A2%83"><span class="toc-number">1.3.1.</span> <span class="toc-text"> python 环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#adb"><span class="toc-number">1.3.2.</span> <span class="toc-text"> adb</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#uiautomator2"><span class="toc-number">1.3.3.</span> <span class="toc-text"> uiautomator2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9deployyaml"><span class="toc-number">1.3.4.</span> <span class="toc-text"> 修改 deploy.yaml</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-shell-%E8%84%9A%E6%9C%AC%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2-alas"><span class="toc-number">1.4.</span> <span class="toc-text"> 使用 shell 脚本启动停止 alas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%87%E5%88%B0%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="toc-number">1.5.</span> <span class="toc-text"> 遇到一些问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#errorpermission-denied"><span class="toc-number">1.5.1.</span> <span class="toc-text"> ERROR:Permission denied</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#errorconda-command-not-found"><span class="toc-number">1.5.2.</span> <span class="toc-text"> ERROR:Conda command not found</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#errorxxx-is-not-a-trusted-or-secure-host"><span class="toc-number">1.5.3.</span> <span class="toc-text"> ERROR:XXX is not a trusted or secure host</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.6.</span> <span class="toc-text"> 总结</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -441,42 +458,32 @@ source ~/.bashrc
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
-</div>
-
-    <span><a href="/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/" title="随机头图">随机头图</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2021/10/27/%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%98%B6%E4%B9%98%E6%A8%A1%E6%9D%BF(C++)/" title="高精度阶乘模板(C++)">高精度阶乘模板(C++)</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Python/" title="分类于 Python">Python</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/03/28/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E7%9A%84%E9%98%B6%E6%A2%AF%E9%97%AE%E9%A2%98/" title="爱因斯坦的阶梯问题">爱因斯坦的阶梯问题</a></span>
+    <span><a href="/2022/11/28/%E4%BD%8D%E8%BF%90%E7%AE%97/" title="位运算">位运算</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 </div>
 
-    <span><a href="/2023/01/10/gcd%E4%B8%8E%E6%AC%A7%E6%8B%89%E8%B4%A8%E6%95%B0%E7%AD%9B%E6%A8%A1%E6%9D%BF/" title="gcd与欧拉质数筛模板">gcd与欧拉质数筛模板</a></span>
+    <span><a href="/2022/05/25/linux%E6%8C%89%E5%90%8D%E6%9F%A5PID%E5%92%8C%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C/" title="linux按名查PID和后台运行">linux按名查PID和后台运行</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+</div>
+
+    <span><a href="/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/" title="bot相关一">bot相关一</a></span>
   </li>
 
       
@@ -488,31 +495,7 @@ source ~/.bashrc
 <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2022/12/30/%E7%BA%BF%E6%AE%B5%E6%A0%91___%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84_%E6%A8%A1%E6%9D%BF/" title="线段树 &#x2F; 树状数组 模板">线段树 / 树状数组 模板</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" title="AcWing 95. 费解的开关">AcWing 95. 费解的开关</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2023/01/05/BFS%E6%A8%A1%E6%9D%BF/" title="BFS模板">BFS模板</a></span>
+    <span><a href="/2023/01/30/KMP/" title="KMP">KMP</a></span>
   </li>
 
       
@@ -521,10 +504,40 @@ source ~/.bashrc
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Java/" title="分类于 Java">Java</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2020/12/24/ArrayList%E5%88%97%E8%A1%A8%E9%9B%86%E5%90%88/" title="ArrayList列表集合">ArrayList列表集合</a></span>
+    <span><a href="/2021/10/23/C++_STL%E5%AE%B9%E5%99%A8%EF%BC%8811%E4%B8%AA%EF%BC%89/" title="C++ STL容器（11个）">C++ STL容器（11个）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Python/" title="分类于 Python">Python</a>
+</div>
+
+    <span><a href="/2021/04/06/python%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC_%E8%A3%85%E9%A5%B0%E5%99%A8/" title="python基础之函数进阶之函数作为返回值&#x2F;装饰器">python基础之函数进阶之函数作为返回值/装饰器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+</div>
+
+    <span><a href="/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E5%88%86%E6%AE%B5%E7%BA%BF%E6%80%A7%E7%82%B9%E8%BF%90%E7%AE%97/" title="图像的分段线性点运算">图像的分段线性点运算</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Python/" title="分类于 Python">Python</a>
+</div>
+
+    <span><a href="/2021/03/17/Python%E5%A3%B0%E6%98%8E%E7%A9%BA%E6%95%B0%E7%BB%84/" title="Python声明空数组">Python声明空数组</a></span>
   </li>
 
       
@@ -545,10 +558,10 @@ source ~/.bashrc
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Q-A/" title="分类于 Q/A">Q/A</a>
+<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
 </div>
 
-    <span><a href="/2021/11/01/img%E6%A0%87%E7%AD%BE%E5%9C%A8%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF/" title="img标签在谷歌浏览器下不显示错误信息">img标签在谷歌浏览器下不显示错误信息</a></span>
+    <span><a href="/2022/09/27/%E4%BC%BD%E9%A9%AC%E6%A0%A1%E6%AD%A3%E8%A1%A5%E5%81%BF/" title="伽马校正补偿">伽马校正补偿</a></span>
   </li>
 
   </ul>

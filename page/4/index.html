@@ -91,12 +91,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipey0a334j20zk0m8qpt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewr8iypj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
         </ul>
       </div>
     </header>
@@ -122,7 +122,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/09/24/%E5%9B%BE%E5%83%8F%E5%A1%AB%E5%85%85/" itemprop="url" title="图像填充"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gicit4jrvuj20zk0m8785.jpg"></a>
+    <a href="/2022/09/24/%E5%9B%BE%E5%83%8F%E5%A1%AB%E5%85%85/" itemprop="url" title="图像填充"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipevgoki5j20zk0m84qp.jpg"></a>
   </div>
   <div class="info">
     
@@ -137,12 +137,14 @@
 
     <h3><a href="/2022/09/24/%E5%9B%BE%E5%83%8F%E5%A1%AB%E5%85%85/" itemprop="url" title="图像填充">图像填充</a></h3>
     <div class="excerpt">
-        函数cv2.copyMakeBorder(src, top, bottom, left, right, borderType, value)
+        # 函数
+cv2.copyMakeBorder(src, top, bottom, left, right, borderType, value)
 
 borderType：填充类型
 value：可选参数
 
-borderType
+# borderType
+
 cv2.BORDER_REPLICATE
 cv2.BORDER_REFLECT
 cv2.BORDER_REFLECT101
@@ -161,7 +163,7 @@ cv2.BORDER_WRAP
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" itemprop="url" title="IMG数组相关"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipexw3o58j20zk0m8e81.jpg"></a>
+    <a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" itemprop="url" title="IMG数组相关"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></a>
   </div>
   <div class="info">
     
@@ -176,18 +178,12 @@ cv2.BORDER_WRAP
 
     <h3><a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" itemprop="url" title="IMG数组相关">IMG数组相关</a></h3>
     <div class="excerpt">
-        图片ROI区域选取：img[0:100,0:100]
-img[垂直区域, 水平区域, 颜色通道]
-
-注：cv2.imread()读取顺序是BGR
+        图片 ROI 区域选取： img[0:100,0:100]
+img[垂直区域, 水平区域, 颜色通道]注： cv2.imread() 读取顺序是 BGR
 
 取单通道值：
-# 将G,B通道写入0
-img[:,:,0] = 0
-img[:,:,1] = 0
-
-垂直翻转：img[::-1,:]
-水平翻转：img[:,::-1]
+# 将 G,B 通道写入 0img[:,:,0] = 0img[:,:,1] = 0垂直翻转： img[::-1,:]
+水平翻转： img[:,::-1]
     </div>
     <div class="meta footer">
       <span>
@@ -201,7 +197,7 @@ img[:,:,1] = 0
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/09/20/cv%E5%9F%BA%E7%A1%80%E7%9B%B8%E5%85%B3%E4%B8%8Efloat_uint8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" itemprop="url" title="cv基础相关与float&#x2F;uint8类型转换"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipevgoki5j20zk0m84qp.jpg"></a>
+    <a href="/2022/09/20/cv%E5%9F%BA%E7%A1%80%E7%9B%B8%E5%85%B3%E4%B8%8Efloat_uint8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" itemprop="url" title="cv基础相关与float&#x2F;uint8类型转换"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></a>
   </div>
   <div class="info">
     
@@ -216,13 +212,11 @@ img[:,:,1] = 0
 
     <h3><a href="/2022/09/20/cv%E5%9F%BA%E7%A1%80%E7%9B%B8%E5%85%B3%E4%B8%8Efloat_uint8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" itemprop="url" title="cv基础相关与float&#x2F;uint8类型转换">cv基础相关与float/uint8类型转换</a></h3>
     <div class="excerpt">
-        cv基本img = cv2.imread(&amp;quot;Path&amp;quot;) #打开图片
-cv2 = imshow(&amp;quot;窗口标题&amp;quot;, img)	#显示
-
-resize()dst = cv2.resize(src,dsize,dst=None,fx=None,fy=None,interpolation=None)
-
+        # cv 基本
+img = cv2.imread(&quot;Path&quot;) #打开图片cv2 = imshow(&quot;窗口标题&quot;, img)	#显示# resize()
+dst = cv2.resize(src,dsize,dst=None,fx=None,fy=None,interpolation=None)
 src：输入图像
-dsize：输出图像的大小。如果该参数为 0，表示缩放之后的大小需要通过公式计算，dsize = Size(round(fx*src.cols),round(fy*src.rows))。其中 fx 与 fy 是图像...
+dsize：输出图像的大小。如果该参数为 0，表示缩放之后的大小需要通过公式计算， dsize = Size(round(fx*src.cols),round(fy*src.rows)) 。其中 fx 与 fy 是图像 Width 方向和...
     </div>
     <div class="meta footer">
       <span>
@@ -236,7 +230,7 @@ dsize：输出图像的大小。如果该参数为 0，表示缩放之后的大�
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/" itemprop="url" title="bot相关一"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipetlbztpj20zk0m84qp.jpg"></a>
+    <a href="/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/" itemprop="url" title="bot相关一"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gicliwyw55j20zk0m8hdt.jpg"></a>
   </div>
   <div class="info">
     
@@ -267,7 +261,7 @@ nohup nb run &amp;amp;
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/06/23/%E8%A1%A8%E6%83%85%E5%8C%85%E6%8F%92%E4%BB%B6%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/" itemprop="url" title="表情包插件相关说明"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gicliierfjj20zk0m8npd.jpg"></a>
+    <a href="/2022/06/23/%E8%A1%A8%E6%83%85%E5%8C%85%E6%8F%92%E4%BB%B6%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/" itemprop="url" title="表情包插件相关说明"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></a>
   </div>
   <div class="info">
     
@@ -282,16 +276,17 @@ nohup nb run &amp;amp;
 
     <h3><a href="/2022/06/23/%E8%A1%A8%E6%83%85%E5%8C%85%E6%8F%92%E4%BB%B6%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/" itemprop="url" title="表情包插件相关说明">表情包插件相关说明</a></h3>
     <div class="excerpt">
-        使用
+        # 使用
 
-触发方式
-指令 + @user，如： &amp;#x2F;爬 @小Q
-指令 + qq号，如：&amp;#x2F;爬 123456
-指令 + 自己，如：&amp;#x2F;爬 自己
-指令 + 图片，如：&amp;#x2F;爬 [图片]
+# 触发方式
 
-前三种触发方式会使用目标qq的头像作为图片
-支持的指令
+指令 + @user，如： / 爬 @小 Q
+指令 + qq 号，如：/ 爬 123456
+指令 + 自己，如：/ 爬 自己
+指令 + 图片，如：/ 爬 [图片]
+
+前三种触发方式会使用目标 qq 的头像作为图片
+# 支持的指令
 
 指令
 效果
@@ -303,11 +298,11 @@ nohup nb run &amp;amp;
 
 摸摸摸摸头摸摸头rua
 
-可使用参数“圆”让头像为圆形如：摸头圆 自己
+可使用参数 “圆” 让头像为圆形如：摸头圆 自己
 
 亲亲亲
 
-可指定一个或两个目标若为一个则为 发送人 亲 目标若为两个则为 目标1 亲 目标2如：亲 114514 自己
+可指定一个或两个目标若为一个则为 发送人 亲 目标若为两个则为 目标 1 亲 目标 2如：亲 114514 自己
 
 贴贴贴蹭蹭蹭
 
@@ -325,7 +320,7 @@ nohup nb run &amp;amp;
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/05/25/linux%E6%8C%89%E5%90%8D%E6%9F%A5PID%E5%92%8C%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C/" itemprop="url" title="linux按名查PID和后台运行"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></a>
+    <a href="/2022/05/25/linux%E6%8C%89%E5%90%8D%E6%9F%A5PID%E5%92%8C%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C/" itemprop="url" title="linux按名查PID和后台运行"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></a>
   </div>
   <div class="info">
     
@@ -357,7 +352,7 @@ nohup [python] [aaa] &amp;amp;
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/" itemprop="url" title="git push出现Everything up-to-date"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclxp31goj20zk0m8qv5.jpg"></a>
+    <a href="/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/" itemprop="url" title="git push出现Everything up-to-date"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclffsa1cj20zk0m811l.jpg"></a>
   </div>
   <div class="info">
     
@@ -372,8 +367,10 @@ nohup [python] [aaa] &amp;amp;
 
     <h3><a href="/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/" itemprop="url" title="git push出现Everything up-to-date">git push出现Everything up-to-date</a></h3>
     <div class="excerpt">
-        原因：没有添加文件
-解决方法：git add .
+        # 原因：
+没有添加文件
+# 解决方法：
+git add .
 git commit -m &amp;quot;commit&amp;quot;
 git push origin master
     </div>
@@ -389,7 +386,7 @@ git push origin master
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/05/21/git_pull%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81%EF%BC%8C%E9%81%BF%E5%85%8D%E8%A6%86%E7%9B%96%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E7%9A%84%E4%BB%A3%E7%A0%81/" itemprop="url" title="git pull拉取仓库代码，避免覆盖本地修改的代码"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gicit31ffoj20zk0m8naf.jpg"></a>
+    <a href="/2022/05/21/git_pull%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81%EF%BC%8C%E9%81%BF%E5%85%8D%E8%A6%86%E7%9B%96%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E7%9A%84%E4%BB%A3%E7%A0%81/" itemprop="url" title="git pull拉取仓库代码，避免覆盖本地修改的代码"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giciusoyjnj219g0u0x56.jpg"></a>
   </div>
   <div class="info">
     
@@ -407,7 +404,7 @@ git push origin master
         先将本地代码放到暂存区
 git stash​​
 
-将远程github（码云等）上面的代码拉取下来
+将远程 github（码云等）上面的代码拉取下来
 git pull​​
 
 将第一步暂存区的代码放回本地
@@ -425,7 +422,7 @@ git stash pop​​
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" itemprop="url" title="卸载Linux图形桌面"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></a>
+    <a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" itemprop="url" title="卸载Linux图形桌面"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></a>
   </div>
   <div class="info">
     
@@ -456,7 +453,7 @@ yum groupremove &amp;quot;X window System&amp;quot; -y
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/04/13/%E5%9F%BA%E4%BA%8ELinux-Anaconda%E9%83%A8%E7%BD%B2AzurLaneAutoScript/" itemprop="url" title="基于Linux-Anaconda部署AzurLaneAutoScript"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giciub8ja1j20zk0m81ky.jpg"></a>
+    <a href="/2022/04/13/%E5%9F%BA%E4%BA%8ELinux-Anaconda%E9%83%A8%E7%BD%B2AzurLaneAutoScript/" itemprop="url" title="基于Linux-Anaconda部署AzurLaneAutoScript"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></a>
   </div>
   <div class="info">
     
@@ -471,16 +468,22 @@ yum groupremove &amp;quot;X window System&amp;quot; -y
 
     <h3><a href="/2022/04/13/%E5%9F%BA%E4%BA%8ELinux-Anaconda%E9%83%A8%E7%BD%B2AzurLaneAutoScript/" itemprop="url" title="基于Linux-Anaconda部署AzurLaneAutoScript">基于Linux-Anaconda部署AzurLaneAutoScript</a></h3>
     <div class="excerpt">
-        在 Linux 上部署 AzurLaneAutoScriptAnaconda相关下载anaconda3wget https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.shanaconda
+        # 在 Linux 上部署 AzurLaneAutoScript
+# Anaconda 相关
+# 下载 anaconda3
+wget https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.shanaconda
 
-修改权限chmod +x Anaconda3-5.2.0-Linux-x86_64.sh
+# 修改权限
+chmod +x Anaconda3-5.2.0-Linux-x86_64.sh
 
-安装./Anaconda3-5.2.0-Linux-x86_64.sh
+# 安装
+./Anaconda3-5.2.0-Linux-x86_64.sh
 # 一路yes&amp;amp;enter
 
-拉取Alas移动到欲安装alas目录下，git整个仓库
+# 拉取 Alas
+移动到欲安装 alas 目录下，git 整个仓库
 cd /home
-git clone...
+git...
     </div>
     <div class="meta footer">
       <span>
@@ -616,10 +619,96 @@ git clone...
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Python/" title="分类于 Python">Python</a>
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/03/17/Python%E5%A3%B0%E6%98%8E%E7%A9%BA%E6%95%B0%E7%BB%84/" title="Python声明空数组">Python声明空数组</a></span>
+    <span><a href="/2022/12/06/C++_%E6%8F%90%E5%8F%96%E5%B0%8F%E6%95%B0/" title="C++ 提取小数">C++ 提取小数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" title="AcWing 95. 费解的开关">AcWing 95. 费解的开关</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2023/01/08/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/" title="树的直径">树的直径</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2021/03/31/%E9%80%92%E5%BD%92_-_%E6%95%B0%E7%BB%84%E7%B4%AF%E5%8A%A0/" title="递归 - 数组累加">递归 - 数组累加</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/" title="XX:XX:XX类型字符串提取数字">XX:XX:XX类型字符串提取数字</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" title="小根堆">小根堆</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2021/10/28/%E5%8D%A1%E5%B8%B8%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%8C%E8%82%86%E6%97%A0%E5%BF%8C%E6%83%AESTL/" title="卡常小技巧，肆无忌惮STL">卡常小技巧，肆无忌惮STL</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+</div>
+
+    <span><a href="/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/" title="git push出现Everything up-to-date">git push出现Everything up-to-date</a></span>
   </li>
 
       
@@ -640,90 +729,10 @@ git clone...
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
-</div>
-
-    <span><a href="/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%BF%90%E7%AE%97%EF%BC%88%E5%AF%B9%E6%95%B0%EF%BC%89/" title="图像的非线性运算（对数）">图像的非线性运算（对数）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2023/01/30/%E5%8D%95%E8%B0%83%E6%A0%88%E3%80%81%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%EF%BC%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%EF%BC%89/" title="单调栈、滑动窗口（单调队列）">单调栈、滑动窗口（单调队列）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2023/02/04/%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/" title="最短路问题">最短路问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E6%95%99%E7%A8%8B/Linux/" title="分类于 Linux">Linux</a>
-</div>
-
-    <span><a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" title="卸载Linux图形桌面">卸载Linux图形桌面</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-</div>
-
-    <span><a href="/2022/06/23/%E8%A1%A8%E6%83%85%E5%8C%85%E6%8F%92%E4%BB%B6%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/" title="表情包插件相关说明">表情包插件相关说明</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
-</div>
-
-    <span><a href="/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/" title="随机头图">随机头图</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" title="AcWing 95. 费解的开关">AcWing 95. 费解的开关</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2021/10/28/%E5%8D%A1%E5%B8%B8%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%8C%E8%82%86%E6%97%A0%E5%BF%8C%E6%83%AESTL/" title="卡常小技巧，肆无忌惮STL">卡常小技巧，肆无忌惮STL</a></span>
+    <span><a href="/2023/01/10/gcd%E4%B8%8E%E6%AC%A7%E6%8B%89%E8%B4%A8%E6%95%B0%E7%AD%9B%E6%A8%A1%E6%9D%BF/" title="gcd与欧拉质数筛模板">gcd与欧拉质数筛模板</a></span>
   </li>
 
   </ul>

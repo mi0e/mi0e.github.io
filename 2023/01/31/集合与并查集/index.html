@@ -102,12 +102,12 @@ mioe = mioe = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
         </ul>
       </div>
     </header>
@@ -153,76 +153,9 @@ mioe = mioe = AC总在意料外^^</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h4 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h4><pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-const int N = 100010;
-
-int son[N][26], cnt[N], idx;
-int n;
-
-void insert(string str)&#123;
-    int p = 0;
-    for(int i = 0; str[i]; i++)&#123;
-        int u = str[i] - &#39;a&#39;;
-        if(!son[p][u]) son[p][u] = ++idx;
-        p = son[p][u];
-    &#125;
-    cnt[p]++;
-&#125;
-
-int query(string str)&#123;
-    int p = 0;
-    for(int i = 0; str[i]; i++)&#123;
-        int u = str[i] - &#39;a&#39;;
-        if(!son[p][u]) return 0;
-        p = son[p][u];
-    &#125;
-
-    return cnt[p];
-&#125;
-
-int main()&#123;
-    cin &gt;&gt; n;
-    while(n--)&#123;
-        char op;
-        string str;
-        cin &gt;&gt; op &gt;&gt; str;
-        if(op == &#39;I&#39;) insert(str);
-        else printf(&quot;%d\n&quot;, query(str)); 
-    &#125;
-
-    return 0;
-&#125;
-</code></pre>
-<h4 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h4><pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-const int N = 10010;
-
-int p[N], n, m;
-
-int find(int x)&#123;
-    if(p[x] != x) p[x] = find(p[x]);
-    return x;
-&#125;
-
-int main()&#123;
-    scanf(&quot;%d%d&quot;, &amp;n, &amp;m);
-    for(int i = 1; i &lt;= n; i++) p[i] = i;
-
-    while(m--)&#123;
-        int z, x, y;
-        scanf(&quot;%d%d%d&quot;, &amp;z, &amp;x, &amp;y);
-        if(z == 1) p[find(x)] = find(y);
-        else&#123;
-            if(find(x) == find(y)) printf(&quot;Y\n&quot;);
-            else printf(&quot;N\n&quot;);
-        &#125;
-    &#125;
-
-    return 0;
-&#125;
-</code></pre>
-
+    <h4 id="集合"><a class="markdownIt-Anchor" href="#集合">#</a> 集合</h4>
+<figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">100010</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">int</span> son<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">26</span><span class="token punctuation">]</span><span class="token punctuation">,</span> cnt<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> idx<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">int</span> n<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token keyword">void</span> <span class="token function">insert</span><span class="token punctuation">(</span>string str<span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>	<span class="token keyword">int</span> p <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> str<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>		<span class="token keyword">int</span> u <span class="token operator">=</span> str<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token char">'a'</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>son<span class="token punctuation">[</span>p<span class="token punctuation">]</span><span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span> son<span class="token punctuation">[</span>p<span class="token punctuation">]</span><span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">++</span>idx<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>		p <span class="token operator">=</span> son<span class="token punctuation">[</span>p<span class="token punctuation">]</span><span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>	<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>	cnt<span class="token punctuation">[</span>p<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token keyword">int</span> <span class="token function">query</span><span class="token punctuation">(</span>string str<span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>	<span class="token keyword">int</span> p <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> str<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>		<span class="token keyword">int</span> u <span class="token operator">=</span> str<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token char">'a'</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="22"></td><td><pre>		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>son<span class="token punctuation">[</span>p<span class="token punctuation">]</span><span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>		p <span class="token operator">=</span> son<span class="token punctuation">[</span>p<span class="token punctuation">]</span><span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="24"></td><td><pre>	<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="25"></td><td><pre></pre></td></tr><tr><td data-num="26"></td><td><pre>	<span class="token keyword">return</span> cnt<span class="token punctuation">[</span>p<span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="27"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="28"></td><td><pre></pre></td></tr><tr><td data-num="29"></td><td><pre><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="30"></td><td><pre>	cin <span class="token operator">>></span> n<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="31"></td><td><pre>	<span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="32"></td><td><pre>		<span class="token keyword">char</span> op<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="33"></td><td><pre>		string str<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="34"></td><td><pre>		cin <span class="token operator">>></span> op <span class="token operator">>></span> str<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="35"></td><td><pre>		<span class="token keyword">if</span><span class="token punctuation">(</span>op <span class="token operator">==</span> <span class="token char">'I'</span><span class="token punctuation">)</span> <span class="token function">insert</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="36"></td><td><pre>		<span class="token keyword">else</span> <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token function">query</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> </pre></td></tr><tr><td data-num="37"></td><td><pre>	<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="38"></td><td><pre></pre></td></tr><tr><td data-num="39"></td><td><pre>	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="40"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><h4 id="并查集"><a class="markdownIt-Anchor" href="#并查集">#</a> 并查集</h4>
+<figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">10010</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">int</span> p<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> n<span class="token punctuation">,</span> m<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">int</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>	<span class="token keyword">if</span><span class="token punctuation">(</span>p<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">!=</span> x<span class="token punctuation">)</span> p<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>p<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>	<span class="token keyword">return</span> x<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token punctuation">,</span> <span class="token operator">&amp;</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre></pre></td></tr><tr><td data-num="16"></td><td><pre>	<span class="token keyword">while</span><span class="token punctuation">(</span>m<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>		<span class="token keyword">int</span> z<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>		<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>z<span class="token punctuation">,</span> <span class="token operator">&amp;</span>x<span class="token punctuation">,</span> <span class="token operator">&amp;</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>		<span class="token keyword">if</span><span class="token punctuation">(</span>z <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> p<span class="token punctuation">[</span><span class="token function">find</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>		<span class="token keyword">else</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>			<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">find</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token function">find</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Y\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="22"></td><td><pre>			<span class="token keyword">else</span> <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"N\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>		<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="24"></td><td><pre>	<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="25"></td><td><pre></pre></td></tr><tr><td data-num="26"></td><td><pre>	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="27"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure>
       <div class="tags">
           <a href="/tags/%E6%A8%A1%E6%9D%BF/" rel="tag"><i class="ic i-tag"></i> 模板</a>
       </div>
@@ -268,7 +201,7 @@ int main()&#123;
     <div class="item left">
       
 
-  <a href="/2023/01/30/KMP/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclize41wj20zk0m87gk.jpg" title="KMP">
+  <a href="/2023/01/30/KMP/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipexbei4hj20zk0m8npd.jpg" title="KMP">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>KMP</h3>
@@ -278,7 +211,7 @@ int main()&#123;
     <div class="item right">
       
 
-  <a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclwuom7cj20zk0m8dvn.jpg" title="小根堆">
+  <a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeyvx1d4j20zk0m8hdt.jpg" title="小根堆">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>小根堆</h3>
@@ -300,7 +233,7 @@ int main()&#123;
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9B%86%E5%90%88"><span class="toc-number">1.</span> <span class="toc-text">集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="toc-number">2.</span> <span class="toc-text">并查集</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9B%86%E5%90%88"><span class="toc-number">1.</span> <span class="toc-text"> 集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="toc-number">2.</span> <span class="toc-text"> 并查集</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -409,6 +342,50 @@ int main()&#123;
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2022/12/19/%E6%95%B0%E5%AD%97%E4%B8%89%E8%A7%92%E5%BD%A2_%EF%BC%88%E5%90%91%E5%B7%A6%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E4%B8%8E%E5%90%91%E5%8F%B3%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E7%9B%B8%E5%B7%AE%E4%B8%8D%E8%83%BD%E8%B6%85%E8%BF%87_1%EF%BC%89/" title="数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）">数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Python/" title="分类于 Python">Python</a>
+</div>
+
+    <span><a href="/2021/04/06/python%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC_%E8%A3%85%E9%A5%B0%E5%99%A8/" title="python基础之函数进阶之函数作为返回值&#x2F;装饰器">python基础之函数进阶之函数作为返回值/装饰器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2020/12/06/Java%E5%8A%A0%E5%BC%BA%E5%9E%8B%E5%BE%AA%E7%8E%AFfor_each/" title="Java加强型循环for each">Java加强型循环for each</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2022/12/25/%E5%9C%A8%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97%E9%87%8C%E5%A4%84%E7%90%86%E6%B5%AE%E7%82%B9%E6%95%B0/" title="在整数运算里处理浮点数">在整数运算里处理浮点数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
 <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
@@ -421,64 +398,12 @@ int main()&#123;
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Q-A/" title="分类于 Q/A">Q/A</a>
-</div>
-
-    <span><a href="/2021/12/31/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/" title="局域网搭建服务器无法访问">局域网搭建服务器无法访问</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Linux/" title="分类于 Linux">Linux</a>
-</div>
-
-    <span><a href="/2022/05/21/git_pull%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81%EF%BC%8C%E9%81%BF%E5%85%8D%E8%A6%86%E7%9B%96%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E7%9A%84%E4%BB%A3%E7%A0%81/" title="git pull拉取仓库代码，避免覆盖本地修改的代码">git pull拉取仓库代码，避免覆盖本地修改的代码</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E6%95%99%E7%A8%8B/Linux/" title="分类于 Linux">Linux</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" title="卸载Linux图形桌面">卸载Linux图形桌面</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
-</div>
-
-    <span><a href="/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" title="DFS与BFS使用场景">DFS与BFS使用场景</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
-</div>
-
-    <span><a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" title="IMG数组相关">IMG数组相关</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-</div>
-
-    <span><a href="/2020/12/06/%E5%BE%AA%E7%8E%AF%E3%80%81%E8%BF%AD%E4%BB%A3%E3%80%81%E9%81%8D%E5%8E%86%E5%92%8C%E9%80%92%E5%BD%92%E7%9A%84%E5%8C%BA%E5%88%AB/" title="循环、迭代、遍历和递归的区别">循环、迭代、遍历和递归的区别</a></span>
+    <span><a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" title="AcWing 95. 费解的开关">AcWing 95. 费解的开关</a></span>
   </li>
 
       
@@ -499,22 +424,32 @@ int main()&#123;
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
+<a href="/categories/Q-A/" title="分类于 Q/A">Q/A</a>
 </div>
 
-    <span><a href="/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/" title="随机头图">随机头图</a></span>
+    <span><a href="/2021/11/01/img%E6%A0%87%E7%AD%BE%E5%9C%A8%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF/" title="img标签在谷歌浏览器下不显示错误信息">img标签在谷歌浏览器下不显示错误信息</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/10/16/%E5%8E%86%E5%B1%8A%E7%9C%9F%E9%A2%98_%E5%88%86%E7%B3%96%E6%9E%9C%E3%80%90%E7%AC%AC%E4%BA%94%E5%B1%8A%E3%80%91%E3%80%90%E7%9C%81%E8%B5%9B%E3%80%91%E3%80%90C%E7%BB%84%E3%80%91/" title="历届真题 分糖果【第五届】【省赛】【C组】">历届真题 分糖果【第五届】【省赛】【C组】</a></span>
+    <span><a href="/2023/01/30/%E5%8D%95%E8%B0%83%E6%A0%88%E3%80%81%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%EF%BC%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%EF%BC%89/" title="单调栈、滑动窗口（单调队列）">单调栈、滑动窗口（单调队列）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2023/02/07/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" title="最小生成树">最小生成树</a></span>
   </li>
 
   </ul>
