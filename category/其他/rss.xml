@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Hexo • Posts by &#34;其他&#34; category</title>
+        <link>http://example.com</link>
+        <description></description>
+        <language>en</language>
+        <pubDate>Mon, 31 Oct 2022 16:28:00 +0800</pubDate>
+        <lastBuildDate>Mon, 31 Oct 2022 16:28:00 +0800</lastBuildDate>
+        <category>BFS</category>
+        <category>算法</category>
+        <category>unity</category>
+        <category>Resilio Sync</category>
+        <category>WolfraAlpha</category>
+        <category>数论</category>
+        <category>github</category>
+        <category>linux</category>
+        <category>Open-cv</category>
+        <category>碧蓝航线</category>
+        <category>Python</category>
+        <category>模板</category>
+        <category>局域网</category>
+        <category>阅读</category>
+        <category>相册</category>
+        <category>算法模板</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/10/31/WolfraAlpha_%E7%9F%A9%E9%98%B5%E7%9B%B8%E5%85%B3/</guid>
+            <title>WolfraAlpha 矩阵相关</title>
+            <link>http://example.com/2022/10/31/WolfraAlpha_%E7%9F%A9%E9%98%B5%E7%9B%B8%E5%85%B3/</link>
+            <category>WolfraAlpha</category>
+            <pubDate>Mon, 31 Oct 2022 16:28:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;+,*, ^, &lt;strong&gt;…&lt;/strong&gt; &lt;strong&gt;—&lt;/strong&gt; 按元素自动作用&lt;/p&gt;
+&lt;p&gt;Dot &lt;strong&gt;—&lt;/strong&gt; 矩阵积，自动处理行向量和列向量&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Inverse &lt;strong&gt;—&lt;/strong&gt; 矩阵逆 (线性系统用 LinearSolve)&lt;/p&gt;
+&lt;p&gt;MatrixRank &lt;strong&gt;—&lt;/strong&gt; 矩阵的秩&lt;/p&gt;
+&lt;p&gt;NullSpace &lt;strong&gt;—&lt;/strong&gt; 跨越矩阵零空间的向量&lt;/p&gt;
+&lt;p&gt;RowReduce &lt;strong&gt;—&lt;/strong&gt; 行简化阶梯形&lt;/p&gt;
+&lt;p&gt;PseudoInverse &lt;strong&gt;—&lt;/strong&gt; 方阵或矩形矩阵的伪逆&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Transpose &lt;strong&gt;—&lt;/strong&gt; 转置($m^T$，用&lt;code&gt;esc&lt;/code&gt; tr &lt;code&gt;esc&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;ConjugateTranspose &lt;strong&gt;—&lt;/strong&gt; 共轭转置($m^+$，用&lt;code&gt;esc&lt;/code&gt; ct &lt;code&gt;esc&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;LowerTriangularize, UpperTriangularize &lt;strong&gt;—&lt;/strong&gt; 提取矩阵的下三角形或上三角形部分&lt;/p&gt;
+&lt;p&gt;Symmetrize &lt;strong&gt;—&lt;/strong&gt; 找出矩阵的对称、反对称等部分&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Diagonal &lt;strong&gt;—&lt;/strong&gt; 获取对角线上的元素列表&lt;/p&gt;
+&lt;p&gt;Tr &lt;strong&gt;—&lt;/strong&gt; 矩阵的迹&lt;/p&gt;
+&lt;p&gt;Det &lt;strong&gt;—&lt;/strong&gt; 行列式&lt;/p&gt;
+&lt;p&gt;Norm &lt;strong&gt;—&lt;/strong&gt; 算子范数，p 范数和 Frobenius 范数&lt;/p&gt;
+&lt;p&gt;Adjugate &lt;strong&gt;—&lt;/strong&gt; 转置伴随&lt;/p&gt;
+&lt;p&gt;Minors &lt;strong&gt;—&lt;/strong&gt; 子式矩阵&lt;/p&gt;
+&lt;p&gt;Permanent &lt;strong&gt;—&lt;/strong&gt; 积和式&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;KroneckerProduct &lt;strong&gt;—&lt;/strong&gt; 矩阵的直积 (外积)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;MatrixPower &lt;strong&gt;—&lt;/strong&gt; 数值矩阵或符号矩阵的幂&lt;/p&gt;
+&lt;p&gt;MatrixExp &lt;strong&gt;—&lt;/strong&gt; 矩阵指数&lt;/p&gt;
+&lt;p&gt;MatrixLog &lt;strong&gt;—&lt;/strong&gt; 矩阵对数&lt;/p&gt;
+&lt;p&gt;MatrixFunction &lt;strong&gt;—&lt;/strong&gt; 一般矩阵函数&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Eigenvalues, Eigenvectors &lt;strong&gt;—&lt;/strong&gt; 具体或近似的特征值或特征向量&lt;/p&gt;
+&lt;p&gt;Eigensystem &lt;strong&gt;—&lt;/strong&gt; 特征值和特征向量&lt;/p&gt;
+&lt;p&gt;CharacteristicPolynomial &lt;strong&gt;—&lt;/strong&gt; 符号的特征多项式&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;转自官方文档 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yZWZlcmVuY2Uud29sZnJhbS5jb20vbGFuZ3VhZ2UvZ3VpZGUvTWF0cml4T3BlcmF0aW9ucy5odG1sLnpo&#34;&gt;https://reference.wolfram.com/language/guide/MatrixOperations.html.zh&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

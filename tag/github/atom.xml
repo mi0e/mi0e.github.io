@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://example.com</id>
+    <title>Hexo • Posts by &#34;github&#34; tag</title>
+    <link href="http://example.com" />
+    <updated>2022-05-21T02:46:00.000Z</updated>
+    <category term="BFS" />
+    <category term="算法" />
+    <category term="unity" />
+    <category term="Resilio Sync" />
+    <category term="WolfraAlpha" />
+    <category term="数论" />
+    <category term="github" />
+    <category term="linux" />
+    <category term="Open-cv" />
+    <category term="碧蓝航线" />
+    <category term="Python" />
+    <category term="模板" />
+    <category term="局域网" />
+    <category term="阅读" />
+    <category term="相册" />
+    <category term="算法模板" />
+    <entry>
+        <id>http://example.com/2022/05/21/git_pull%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81%EF%BC%8C%E9%81%BF%E5%85%8D%E8%A6%86%E7%9B%96%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E7%9A%84%E4%BB%A3%E7%A0%81/</id>
+        <title>git pull拉取仓库代码，避免覆盖本地修改的代码</title>
+        <link rel="alternate" href="http://example.com/2022/05/21/git_pull%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81%EF%BC%8C%E9%81%BF%E5%85%8D%E8%A6%86%E7%9B%96%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E7%9A%84%E4%BB%A3%E7%A0%81/"/>
+        <content type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;先将本地代码放到暂存区&lt;/p&gt;
+&lt;p&gt;git stash​​&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将远程github（码云等）上面的代码拉取下来&lt;/p&gt;
+&lt;p&gt;git pull​​&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将第一步暂存区的代码放回本地&lt;/p&gt;
+&lt;p&gt;git stash pop​​&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="github" />
+        <updated>2022-05-21T02:46:00.000Z</updated>
+    </entry>
+</feed>

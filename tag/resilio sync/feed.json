@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Hexo • All posts by \"resilio sync\" tag",
+    "description": "",
+    "home_page_url": "http://example.com",
+    "items": [
+        {
+            "id": "http://example.com/2021/01/17/Resilio_Sync%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95_+_pro%E8%A7%A3%E9%94%81%E8%A1%A5%E4%B8%81/",
+            "url": "http://example.com/2021/01/17/Resilio_Sync%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95_+_pro%E8%A7%A3%E9%94%81%E8%A1%A5%E4%B8%81/",
+            "title": "Resilio Sync添加右键菜单 + pro解锁补丁",
+            "date_published": "2021-01-17T14:48:00.000Z",
+            "content_html": "<p>最近一直在使用Resilio Sync来下载资源 ::aru:thumb:: ，但发现安装有右键没有同步选项，查阅<span class=\"exturl\" data-url=\"aHR0cHM6Ly9oZWxwLnJlc2lsaW8uY29tL2hjL2VuLXVzL2FydGljbGVzLzIwNjIxNDYyNS1Oby1TeW5jLWljb25zLWluLXRoZS1maWxlLWJyb3dzZXItbm8tU3luYy1yZWxhdGVkLWl0ZW1zLWluLXRoZS1jb250ZXh0LW1lbnUtb24tTWFjLVdpbmRvd3M=\">官方文档</span>，找到了两种解决方法：</p>\n<ul>\n<li>CMD添加(ShellExtensionPath.dll)</li>\n</ul>\n<p>根据官方文档显示，其根目录下ShellExtensionPath.dll为关键拓展，所以我们只需在CMD命令下使用regsvr32为其重新注册dll，命令如下：<br>    regsvr32 &#x2F;i “<em>\\ShellExtensionPath86_</em>.dll”<br>[scode type&#x3D;”share”]需注意的是，”” 里是Resilio Sync根目录地址，如果是64位的，将有两个Sync shell扩展：x64和x86，且下画线后每个用户的编码都不一样。[&#x2F;scode]<br><img data-src=\"https://i.loli.net/2021/01/17/VQcMI9EhS28RBK4.png\" alt=\"官网文档截图\"></p>\n<ul>\n<li>手动添加注册表</li>\n</ul>\n<p>将键值改为1，路径如下：</p>\n<pre><code>HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\EnableLUA\n</code></pre>\n<hr>\n<p>[collapse status&#x3D;”false” title&#x3D;”补丁”]补丁链接：<span class=\"exturl\" data-url=\"aHR0cHM6Ly93d2EubGFuem91cy5jb20vaVBIa0hraW1wdGU=\">蓝奏云</span><br>使用方法：设置-许可证-应用许可证[&#x2F;collapse]</p>\n",
+            "tags": [
+                "Resilio Sync"
+            ]
+        }
+    ]
+}

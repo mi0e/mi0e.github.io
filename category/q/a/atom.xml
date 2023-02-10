@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://example.com</id>
+    <title>Hexo • Posts by &#34;q/a&#34; category</title>
+    <link href="http://example.com" />
+    <updated>2021-12-31T04:15:00.000Z</updated>
+    <category term="BFS" />
+    <category term="算法" />
+    <category term="unity" />
+    <category term="Resilio Sync" />
+    <category term="WolfraAlpha" />
+    <category term="数论" />
+    <category term="github" />
+    <category term="linux" />
+    <category term="Open-cv" />
+    <category term="碧蓝航线" />
+    <category term="Python" />
+    <category term="模板" />
+    <category term="局域网" />
+    <category term="阅读" />
+    <category term="相册" />
+    <category term="算法模板" />
+    <entry>
+        <id>http://example.com/2021/12/31/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/</id>
+        <title>局域网搭建服务器无法访问</title>
+        <link rel="alternate" href="http://example.com/2021/12/31/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/"/>
+        <content type="html">&lt;ul&gt;
+&lt;li&gt;不在同一网段 &amp;#x2F; 网关不一致 （无法ping通）&lt;/li&gt;
+&lt;li&gt;防火墙拦截 （&lt;del&gt;不一定能ping通&lt;/del&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="局域网" />
+        <updated>2021-12-31T04:15:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2021/11/05/C++_STL%E4%B8%AD%E7%9A%84next_permutation/</id>
+        <title>C++ STL中的next_permutation</title>
+        <link rel="alternate" href="http://example.com/2021/11/05/C++_STL%E4%B8%AD%E7%9A%84next_permutation/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;Rearranges the elements in the range &lt;code&gt;[first,last)&lt;/code&gt; into the next &lt;em&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jcGx1c3BsdXMuY29tL2xleGljb2dyYXBoaWNhbF9jb21wYXJl&#34;&gt;lexicographically&lt;/span&gt; greater&lt;/em&gt; permutation.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;将范围内的元素重新排列&lt;code&gt;[first,last)&lt;/code&gt;为下一个&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jcGx1c3BsdXMuY29tL2xleGljb2dyYXBoaWNhbF9jb21wYXJl&#34;&gt;字典序&lt;/span&gt;更大的排列。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jcGx1c3BsdXMuY29tLw==&#34;&gt;–cplusplus.com&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对于next_permutation函数，其函数原型为：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;#include &amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bool next_permutation(iterator start,iterator end)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如下例子：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#include &amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;int main()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    int num[3]=&amp;#123;1, 2, 3&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    do&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        cout &amp;lt;&amp;lt; num[0] &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; num[1] &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; num[2] &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;while(next_permutation(num, num + 3));&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    return 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;输出结果：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;1 2 3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;1 3 2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2 1 3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2 3 1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3 1 2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3 2 1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;当我们把&lt;code&gt;while(next_permutation(num, num + 3))&lt;/code&gt;中的&lt;code&gt;3&lt;/code&gt;改为&lt;code&gt;2&lt;/code&gt;时，输出就变为了：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1 2 3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2 1 3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;由此可见，next_permutation是对数组前n项进行全排列&lt;/p&gt;
+&lt;p&gt;同理，既然有下一个全排列函数，那肯定是有上一个全排列函数：&lt;code&gt;prev_permutation&lt;/code&gt;使用方法与&lt;code&gt;next_permutation&lt;/code&gt;一致。&lt;/p&gt;
+</content>
+        <category term="算法" />
+        <updated>2021-11-05T06:45:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/</id>
+        <title>scanf、cin返回值与连续输入</title>
+        <link rel="alternate" href="http://example.com/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/"/>
+        <content type="html">&lt;p&gt;&lt;code&gt;scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;a, &amp;amp;b);&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;a&lt;/strong&gt; , &lt;strong&gt;b&lt;/strong&gt; 都成功读入，返回值为 &lt;strong&gt;2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;只有 &lt;strong&gt;a&lt;/strong&gt; 成功读入，返回值为 &lt;strong&gt;1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;a&lt;/strong&gt; 和 &lt;strong&gt;b&lt;/strong&gt; 都未成功读入，返回值为 &lt;strong&gt;0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;遇到 &lt;strong&gt;错误&lt;/strong&gt; 或遇到 &lt;strong&gt;end of file&lt;/strong&gt;，返回值为 &lt;strong&gt;EOF&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;std::cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b; 	// cin 无返回值&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;连续输入参考模板：&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;while(scanf(&amp;quot;%d&amp;quot;, &amp;amp;i) != EOF)&amp;#123;...&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;while(cin &amp;gt;&amp;gt; i)&amp;#123;...&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+        <category term="算法" />
+        <updated>2021-11-04T11:43:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/</id>
+        <title>关于矩阵对角线的相关表达</title>
+        <link rel="alternate" href="http://example.com/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/"/>
+        <content type="html">&lt;p&gt;主对角线元素下标满足：&lt;code&gt;i = j&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;副对角线元素下标满足：&lt;code&gt;i + j = n&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;假设一个&lt;code&gt;n×n&lt;/code&gt;的矩阵：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1 2 3 ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4 5 6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7 8 9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;主对角线一定满足 &lt;code&gt;a[1][1], a[2][2], a[3][3]..., a[n][n]&lt;/code&gt; 其中主对角线的每项都有 &lt;code&gt;i == j&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;副对角线一定满足 &lt;code&gt;a[1][n], a[2][n - 1], a[3][n - 3] ... a[n][1]&lt;/code&gt; 其中次对角线的每项都有 &lt;code&gt;i + j == n&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;相关：求秩、八皇后问题…&lt;/p&gt;
+</content>
+        <category term="算法" />
+        <updated>2021-11-04T08:02:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2021/11/01/img%E6%A0%87%E7%AD%BE%E5%9C%A8%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF/</id>
+        <title>img标签在谷歌浏览器下不显示错误信息</title>
+        <link rel="alternate" href="http://example.com/2021/11/01/img%E6%A0%87%E7%AD%BE%E5%9C%A8%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF/"/>
+        <content type="html">&lt;p&gt;添加全局js&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;img[src=&amp;quot;&amp;quot;],img:not([src])&amp;#123;opacity:0;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+        <updated>2021-11-01T01:00:46.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/</id>
+        <title>DFS与BFS使用场景</title>
+        <link rel="alternate" href="http://example.com/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/"/>
+        <content type="html">&lt;p&gt;(&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuaml1emhhbmcuY29tL3FhLzYyMy8=&#34;&gt;九章-马克助教&lt;/span&gt;)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;BFS是用来搜索最短径路的解是比较合适的，比如求最少步数的解，最少交换次数的解，因为BFS搜索过程中遇到的解一定是离根最近的，所以遇到一个解，一定就是最优解，此时搜索算法可以终止。这个时候不适宜使用DFS，因为DFS搜索到的解不一定是离根最近的，只有全局搜索完毕，才能从所有解中找出离根的最近的解。（当然这个DFS的不足，可以使用迭代加深搜索ID-DFS去弥补）&lt;/li&gt;
+&lt;li&gt;空间优劣上，DFS是有优势的，DFS不需要保存搜索过程中的状态，而BFS在搜索过程中需要保存搜索过的状态，而且一般情况需要一个队列来记录。&lt;/li&gt;
+&lt;li&gt;DFS适合搜索全部的解，因为要搜索全部的解，那么BFS搜索过程中，遇到离根最近的解，并没有什么用，也必须遍历完整棵搜索树，DFS搜索也会搜索全部，但是相比DFS不用记录过多信息，所以搜素全部解的问题，DFS显然更加合适。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+</content>
+        <updated>2021-10-29T07:45:26.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/</id>
+        <title>数组粘贴，初始化C++</title>
+        <link rel="alternate" href="http://example.com/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/"/>
+        <content type="html">&lt;p&gt;粘贴：memcpy()&lt;/p&gt;
+&lt;p&gt;初始化（可初始化结构体内的数组元素）：memset()&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;int a[5];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;int b[5] = &amp;#123;1, 2, 3, 4, 5&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;memset(a, 0, sizeof(int));	// 把a中所有数组元素初始化为1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;memcpy(a, b, 5 * sizeof(int));	// 把b数组覆盖到a数组&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+        <updated>2021-10-28T03:51:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2021/10/26/c_str()%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</id>
+        <title>c_str()使用方法</title>
+        <link rel="alternate" href="http://example.com/2021/10/26/c_str()%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+        <content type="html">&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;//标准库的string类提供了三个成员函数来从一个string得到c类型的字符数组&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;//c_str()：生成一个const char*指针，指向以空字符终止的数组。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;int main()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    //string--&amp;gt;char*&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    //c_str()函数返回一个指向正规C字符串的指针, 内容与本string串相同&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    //这个数组的数据是临时的，当有一个改变这些数据的成员函数被调用后，其中的数据就会失效。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    //因此要么现用先转换，要么把它的数据复制到用户自己可以管理的内存中&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    const char *c;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    string s = &amp;quot;1234&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    c = s.c_str();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    cout&amp;lt;&amp;lt;c&amp;lt;&amp;lt;endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    s = &amp;quot;abcde&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    cout&amp;lt;&amp;lt;c&amp;lt;&amp;lt;endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;输出：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1234&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;abcde&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+        <updated>2021-10-26T13:52:15.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2021/10/19/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84sort%E6%8E%92%E5%BA%8F/</id>
+        <title>二维数组sort排序</title>
+        <link rel="alternate" href="http://example.com/2021/10/19/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84sort%E6%8E%92%E5%BA%8F/"/>
+        <content type="html">&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;for(int i = 0; i &amp;lt; n; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	sort(s[i], s[i] + len);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+        <updated>2021-10-19T07:25:51.000Z</updated>
+    </entry>
+</feed>

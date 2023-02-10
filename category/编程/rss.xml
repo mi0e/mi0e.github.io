@@ -1,0 +1,890 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Hexo • Posts by &#34;编程&#34; category</title>
+        <link>http://example.com</link>
+        <description></description>
+        <language>en</language>
+        <pubDate>Wed, 21 Dec 2022 20:19:43 +0800</pubDate>
+        <lastBuildDate>Wed, 21 Dec 2022 20:19:43 +0800</lastBuildDate>
+        <category>BFS</category>
+        <category>算法</category>
+        <category>unity</category>
+        <category>Resilio Sync</category>
+        <category>WolfraAlpha</category>
+        <category>数论</category>
+        <category>github</category>
+        <category>linux</category>
+        <category>Open-cv</category>
+        <category>碧蓝航线</category>
+        <category>Python</category>
+        <category>模板</category>
+        <category>局域网</category>
+        <category>阅读</category>
+        <category>相册</category>
+        <category>算法模板</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/12/21/AcWing_116._%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F/</guid>
+            <title>AcWing 116. 飞行员兄弟</title>
+            <link>http://example.com/2022/12/21/AcWing_116._%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F/</link>
+            <pubDate>Wed, 21 Dec 2022 20:19:43 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;“飞行员兄弟”这个游戏，需要玩家顺利的打开一个拥有 &lt;strong&gt;16&lt;/strong&gt;个把手的冰箱。&lt;/p&gt;
+&lt;p&gt;已知每个把手可以处于以下两种状态之一：打开或关闭。&lt;/p&gt;
+&lt;p&gt;只有当所有把手都打开时，冰箱才会打开。&lt;/p&gt;
+&lt;p&gt;把手可以表示为一个 &lt;strong&gt;4&lt;/strong&gt;×&lt;strong&gt;4&lt;/strong&gt;的矩阵，您可以改变任何一个位置 **[&lt;strong&gt;i&lt;/strong&gt;,&lt;strong&gt;j&lt;/strong&gt;]**上把手的状态。&lt;/p&gt;
+&lt;p&gt;但是，这也会使得第 &lt;strong&gt;i&lt;/strong&gt;行和第 &lt;strong&gt;j&lt;/strong&gt; 列上的所有把手的状态也随着改变。&lt;/p&gt;
+&lt;p&gt;请你求出打开冰箱所需的切换把手的次数最小值是多少。&lt;/p&gt;
+&lt;h4 id=&#34;输入格式&#34;&gt;&lt;a href=&#34;#输入格式&#34; class=&#34;headerlink&#34; title=&#34;输入格式&#34;&gt;&lt;/a&gt;输入格式&lt;/h4&gt;&lt;p&gt;输入一共包含四行，每行包含四个把手的初始状态。&lt;/p&gt;
+&lt;p&gt;符号 &lt;code&gt;+&lt;/code&gt; 表示把手处于闭合状态，而符号 &lt;code&gt;-&lt;/code&gt; 表示把手处于打开状态。&lt;/p&gt;
+&lt;p&gt;至少一个手柄的初始状态是关闭的。&lt;/p&gt;
+&lt;h4 id=&#34;输出格式&#34;&gt;&lt;a href=&#34;#输出格式&#34; class=&#34;headerlink&#34; title=&#34;输出格式&#34;&gt;&lt;/a&gt;输出格式&lt;/h4&gt;&lt;p&gt;第一行输出一个整数 &lt;strong&gt;N&lt;/strong&gt;，表示所需的最小切换把手次数。&lt;/p&gt;
+&lt;p&gt;接下来 &lt;strong&gt;N&lt;/strong&gt; 行描述切换顺序，每行输出两个整数，代表被切换状态的把手的行号和列号，数字之间用空格隔开。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt; ：如果存在多种打开冰箱的方式，则按照优先级整体从上到下，同行从左到右打开。&lt;/p&gt;
+&lt;h4 id=&#34;数据范围&#34;&gt;&lt;a href=&#34;#数据范围&#34; class=&#34;headerlink&#34; title=&#34;数据范围&#34;&gt;&lt;/a&gt;数据范围&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;≤&lt;strong&gt;i&lt;/strong&gt;,&lt;strong&gt;j&lt;/strong&gt;≤&lt;strong&gt;4&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;输入样例：&#34;&gt;&lt;a href=&#34;#输入样例：&#34; class=&#34;headerlink&#34; title=&#34;输入样例：&#34;&gt;&lt;/a&gt;输入样例：&lt;/h4&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;-+--&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;----&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;----&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-+--&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&#34;输出样例：&#34;&gt;&lt;a href=&#34;#输出样例：&#34; class=&#34;headerlink&#34; title=&#34;输出样例：&#34;&gt;&lt;/a&gt;输出样例：&lt;/h4&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;1 1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;1 3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;1 4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4 1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4 3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4 4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;思路，深搜&#34;&gt;&lt;a href=&#34;#思路，深搜&#34; class=&#34;headerlink&#34; title=&#34;思路，深搜&#34;&gt;&lt;/a&gt;思路，深搜&lt;/h3&gt;&lt;figure class=&#34;highlight c++&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;61&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;#&lt;span class=&#34;keyword&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;namespace&lt;/span&gt; std;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; N = &lt;span class=&#34;number&#34;&gt;999&lt;/span&gt;, kk;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;char&lt;/span&gt; m[&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;][&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;], backup[&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;][&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;]; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vector&amp;lt;&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt;&amp;gt; ans, ways;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;type&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;dfs&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;(&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; x, &lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; y, &lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; step)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(x == &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;(&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; i = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;			&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;(&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; j = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;; j &amp;lt; &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;; j++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;				&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(m[i][j] == &lt;span class=&#34;string&#34;&gt;&amp;#x27;+&amp;#x27;&lt;/span&gt;) &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(ans.&lt;span class=&#34;built_in&#34;&gt;empty&lt;/span&gt;())&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;			ans = ways;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(step &amp;lt; N)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;			N = step;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;			ans = ways;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(y == &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;built_in&#34;&gt;dfs&lt;/span&gt;(x + &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, step);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;(&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; i = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		m[x][i] == &lt;span class=&#34;string&#34;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt; ? m[x][i] = &lt;span class=&#34;string&#34;&gt;&amp;#x27;+&amp;#x27;&lt;/span&gt; : m[x][i] = &lt;span class=&#34;string&#34;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		m[i][y] == &lt;span class=&#34;string&#34;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt; ? m[i][y] = &lt;span class=&#34;string&#34;&gt;&amp;#x27;+&amp;#x27;&lt;/span&gt; : m[i][y] = &lt;span class=&#34;string&#34;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	m[x][y] == &lt;span class=&#34;string&#34;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt; ? m[x][y] = &lt;span class=&#34;string&#34;&gt;&amp;#x27;+&amp;#x27;&lt;/span&gt; : m[x][y] = &lt;span class=&#34;string&#34;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	ways.&lt;span class=&#34;built_in&#34;&gt;push_back&lt;/span&gt;(x + &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	ways.&lt;span class=&#34;built_in&#34;&gt;push_back&lt;/span&gt;(y + &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;built_in&#34;&gt;dfs&lt;/span&gt;(x, y + &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, step + &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;(&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; i = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		m[x][i] == &lt;span class=&#34;string&#34;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt; ? m[x][i] = &lt;span class=&#34;string&#34;&gt;&amp;#x27;+&amp;#x27;&lt;/span&gt; : m[x][i] = &lt;span class=&#34;string&#34;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		m[i][y] == &lt;span class=&#34;string&#34;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt; ? m[i][y] = &lt;span class=&#34;string&#34;&gt;&amp;#x27;+&amp;#x27;&lt;/span&gt; : m[i][y] = &lt;span class=&#34;string&#34;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	m[x][y] == &lt;span class=&#34;string&#34;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt; ? m[x][y] = &lt;span class=&#34;string&#34;&gt;&amp;#x27;+&amp;#x27;&lt;/span&gt; : m[x][y] = &lt;span class=&#34;string&#34;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	ways.&lt;span class=&#34;built_in&#34;&gt;pop_back&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	ways.&lt;span class=&#34;built_in&#34;&gt;pop_back&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;built_in&#34;&gt;dfs&lt;/span&gt;(x, y + &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, step);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;(&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; i = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;built_in&#34;&gt;scanf&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;%s&amp;quot;&lt;/span&gt;, &amp;amp;m[i]);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;built_in&#34;&gt;dfs&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	cout &amp;lt;&amp;lt; N &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;(&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; i = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;; i &amp;lt; ans.&lt;span class=&#34;built_in&#34;&gt;size&lt;/span&gt;(); i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		cout &amp;lt;&amp;lt; ans[i] &amp;lt;&amp;lt; &lt;span class=&#34;string&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(i &amp;amp; &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;) cout &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/11/28/%E4%BD%8D%E8%BF%90%E7%AE%97/</guid>
+            <title>位运算</title>
+            <link>http://example.com/2022/11/28/%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
+            <pubDate>Mon, 28 Nov 2022 11:47:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h6 id=&#34;136-Single-Number&#34;&gt;&lt;a href=&#34;#136-Single-Number&#34; class=&#34;headerlink&#34; title=&#34;136. Single Number&#34;&gt;&lt;/a&gt;136. Single Number&lt;/h6&gt;&lt;p&gt;&lt;img data-src=&#34;https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/11/4226140631.png&#34; alt=&#34;136&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;交换律：a ^ b ^ c &amp;lt;&amp;#x3D;&amp;gt; a ^ c ^ b&lt;/li&gt;
+&lt;li&gt;任何数于0异或为任何数 0 ^ n &amp;#x3D;&amp;gt; n&lt;/li&gt;
+&lt;li&gt;相同的数异或为0: n ^ n &amp;#x3D;&amp;gt; 0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;var a = [2, 3, 2, 4, 4]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;2 ^ 3 ^ 2 ^ 4 ^ 4 等价于 2 ^ 2 ^ 4 ^ 4 ^ 3 =&amp;gt; 0 ^ 0 ^3 =&amp;gt; 3&lt;/code&gt;&lt;/p&gt;
+&lt;h6 id=&#34;1758-Minimum-Changes-To-Make-Alternating-Binary-String&#34;&gt;&lt;a href=&#34;#1758-Minimum-Changes-To-Make-Alternating-Binary-String&#34; class=&#34;headerlink&#34; title=&#34;1758. Minimum Changes To Make Alternating Binary String&#34;&gt;&lt;/a&gt;1758. Minimum Changes To Make Alternating Binary String&lt;/h6&gt;&lt;p&gt;&lt;img data-src=&#34;https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/11/2630183447.png&#34; alt=&#34;1758&#34;&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight c++&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 1 &amp;amp; 1 = 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 1 &amp;amp; 0 = 0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 0 &amp;amp; 0 = 0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;minOperations&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;(string s)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;type&#34;&gt;char&lt;/span&gt; a[&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;] = &amp;#123;&lt;span class=&#34;string&#34;&gt;&amp;#x27;0&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;1&amp;#x27;&lt;/span&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; ans = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, t = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;(&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; i = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;; i &amp;lt; s.&lt;span class=&#34;built_in&#34;&gt;size&lt;/span&gt;(); i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(a[i &amp;amp; &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;] == s[i]) ans++;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt; t++;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;min&lt;/span&gt;(ans, t);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E5%88%86%E6%AE%B5%E7%BA%BF%E6%80%A7%E7%82%B9%E8%BF%90%E7%AE%97/</guid>
+            <title>图像的分段线性点运算</title>
+            <link>http://example.com/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E5%88%86%E6%AE%B5%E7%BA%BF%E6%80%A7%E7%82%B9%E8%BF%90%E7%AE%97/</link>
+            <pubDate>Tue, 04 Oct 2022 16:12:44 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;$$&lt;br&gt;\begin{align*}&lt;br&gt;\begin{split}&lt;br&gt;g(i,j)&amp;#x3D; \left {&lt;br&gt;\begin{array}{ll}&lt;br&gt;\alpha f(i,j),&amp;amp;0\le f(i,j)&amp;lt; a\&lt;br&gt;\beta (f(i,j)-a)+g_{a},&amp;amp;a\le f(i,j)&amp;lt; b\&lt;br&gt;\gamma  (f(i,j)-b)+g_{b},&amp;amp;b\le f(i,j)&amp;lt; 255&lt;br&gt;\end{array}&lt;br&gt;\right.&lt;br&gt;\end{split}&lt;br&gt;\end{align*}&lt;/p&gt;
+&lt;p&gt;$$&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; turtle &lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; width&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; matplotlib &lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; pyplot &lt;span class=&#34;keyword&#34;&gt;as&lt;/span&gt; plt&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; cv2,matplotlib&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;fa, fb = &lt;span class=&#34;number&#34;&gt;80&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;200&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;a, b, c = &lt;span class=&#34;number&#34;&gt;1.1&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;1.2&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;1.3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cat = cv2.imread(&lt;span class=&#34;string&#34;&gt;&amp;quot;cat.jpg&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cat = cv2.cvtColor(cat, cv2.COLOR_BGR2GRAY)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;change_cat = cat.copy()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;width = cat.shape[&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;height = cat.shape[&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;range&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, width):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt; j &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;range&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, height):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt; &amp;lt;= change_cat[i][j] &amp;lt; fa:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            change_cat[i][j] = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;elif&lt;/span&gt; fa &amp;lt;= change_cat[i][j] &amp;lt; fb:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            change_cat[i][j] = &lt;span class=&#34;number&#34;&gt;255&lt;/span&gt; * ((change_cat[i][j] - fa) / (fb - fa))&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            change_cat[i][j] = &lt;span class=&#34;number&#34;&gt;255&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;plt.rcParams[&lt;span class=&#34;string&#34;&gt;&amp;#x27;font.family&amp;#x27;&lt;/span&gt;] = &lt;span class=&#34;string&#34;&gt;&amp;#x27;SimHei&amp;#x27;&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;plt.figure(figsize=(&lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;8&lt;/span&gt;), dpi = &lt;span class=&#34;number&#34;&gt;100&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;plt.subplot(&lt;span class=&#34;number&#34;&gt;121&lt;/span&gt;),plt.imshow(cat, cmap=&lt;span class=&#34;string&#34;&gt;&amp;#x27;gray&amp;#x27;&lt;/span&gt;),plt.title(&lt;span class=&#34;string&#34;&gt;&amp;#x27;原图&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;plt.subplot(&lt;span class=&#34;number&#34;&gt;122&lt;/span&gt;),plt.imshow(change_cat, cmap=&lt;span class=&#34;string&#34;&gt;&amp;#x27;gray&amp;#x27;&lt;/span&gt;),plt.title(&lt;span class=&#34;string&#34;&gt;&amp;#x27;调整后&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;plt.show()&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img data-src=&#34;https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/10/2395936215.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/</guid>
+            <title>bot相关一</title>
+            <link>http://example.com/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/</link>
+            <pubDate>Fri, 02 Sep 2022 12:03:00 +0800</pubDate>
+            <description><![CDATA[ &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;kill $(pgrep -f nb2)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;source activate nb2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nohup nb run &amp;amp;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/06/23/%E8%A1%A8%E6%83%85%E5%8C%85%E6%8F%92%E4%BB%B6%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</guid>
+            <title>表情包插件相关说明</title>
+            <link>http://example.com/2022/06/23/%E8%A1%A8%E6%83%85%E5%8C%85%E6%8F%92%E4%BB%B6%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</link>
+            <pubDate>Thu, 23 Jun 2022 09:41:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;使用&#34;&gt;&lt;a href=&#34;#使用&#34; class=&#34;headerlink&#34; title=&#34;使用&#34;&gt;&lt;/a&gt;使用&lt;/h3&gt;&lt;div align=&#34;left&#34;&gt;
+  &lt;img data-src=&#34;https://s2.loli.net/2022/06/09/lCOujwopgJPxD97.jpg&#34; width=&#34;400&#34; /&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&#34;触发方式&#34;&gt;&lt;a href=&#34;#触发方式&#34; class=&#34;headerlink&#34; title=&#34;触发方式&#34;&gt;&lt;/a&gt;触发方式&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;指令 + @user，如： &amp;#x2F;爬 @小Q&lt;/li&gt;
+&lt;li&gt;指令 + qq号，如：&amp;#x2F;爬 123456&lt;/li&gt;
+&lt;li&gt;指令 + 自己，如：&amp;#x2F;爬 自己&lt;/li&gt;
+&lt;li&gt;指令 + 图片，如：&amp;#x2F;爬 [图片]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;前三种触发方式会使用目标qq的头像作为图片&lt;/p&gt;
+&lt;h4 id=&#34;支持的指令&#34;&gt;&lt;a href=&#34;#支持的指令&#34; class=&#34;headerlink&#34; title=&#34;支持的指令&#34;&gt;&lt;/a&gt;支持的指令&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;指令&lt;/th&gt;
+&lt;th&gt;效果&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;万能表情&lt;br&gt;空白表情&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/05/29/C2VRA6iw4hzWZXO.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;简单的图片加文字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;摸&lt;br&gt;摸摸&lt;br&gt;摸头&lt;br&gt;摸摸头&lt;br&gt;rua&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/oNGVO4iuCk73g8S.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;可使用参数“圆”让头像为圆形&lt;br&gt;如：摸头圆 自己&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;亲&lt;br&gt;亲亲&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/RuoiqP8plJBgw9K.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;可指定一个或两个目标&lt;br&gt;若为一个则为 发送人 亲 目标&lt;br&gt;若为两个则为 目标1 亲 目标2&lt;br&gt;如：亲 114514 自己&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;贴&lt;br&gt;贴贴&lt;br&gt;蹭&lt;br&gt;蹭蹭&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/QDCE5YZIfroavub.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;可指定一个或两个目标&lt;br&gt;类似 亲&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;顶&lt;br&gt;玩&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/YwxA7fFgWyshuZX.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;拍&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/5mv6pFJMNtzHhcl.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;撕&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/05/29/FDcam9ROPkqvwxH.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;丢&lt;br&gt;扔&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/LlDrSGYdpcqEINu.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;抛&lt;br&gt;掷&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/10/W8X6cGZS5VMDOmh.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;爬&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/hfmAToDuF2actC1.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;默认为随机选取一张爬表情&lt;br&gt;可使用数字指定特定表情&lt;br&gt;如：爬 13 自己&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;精神支柱&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/WwjNmiz4JXbuE1B.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;一直&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/dAf9Z3kMDwYcRWv.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;支持gif&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;加载中&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/751Oudrah6gBsWe.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;支持gif&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;转&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/HoZaCcDIRgs784Y.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;小天使&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/ZgD1WSMRxLIymCq.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;图中名字为目标qq昵称&lt;br&gt;可指定名字，如：小天使 meetwq 自己&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;不要靠近&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/BTdkAzvhRDLOa3U.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;一样&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/SwAXoOgfdjP4ecE.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;滚&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/atzZsSE53UDIlOe.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;玩游戏&lt;br&gt;来玩游戏&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/05/31/j9ZKB7cFOSklzMe.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;图中描述默认为：来玩休闲游戏啊&lt;br&gt;可指定描述&lt;br&gt;支持gif&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;膜&lt;br&gt;膜拜&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/nPgBJwV5qDb1s9l.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;吃&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/ba8cCtIWEvX9sS1.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;啃&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/k82n76U4KoNwsr3.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;出警&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/05/31/Q7WL1q2TlHgnERr.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;警察&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/12/xYLgKVJcd3HvqfM.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;问问&lt;br&gt;去问问&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/GUyax1BF6q5Hvin.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;名字为qq昵称，可指定名字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;舔&lt;br&gt;舔屏&lt;br&gt;prpr&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/05/WMHpwygtmN5bdEV.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;支持gif&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;搓&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/09/slRF4ue56xSQzra.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;墙纸&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/10/tQRXzLamGyWi24s.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;支持gif&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;国旗&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/10/p7nwCvgsU3LxBDI.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;交个朋友&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/10/SnmkNrjKuFeZvbA.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;名字为qq昵称，可指定名字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;继续干活&lt;br&gt;打工人&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/04/20/LIak2BsJ9Dd5O7l.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;完美&lt;br&gt;完美的&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/10/lUS1nmPAKIYtwih.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;关注&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/12/FlpjRWCte72ozqs.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;名字为qq昵称，可指定名字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;我朋友说&lt;br&gt;我有个朋友说&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/12/cBk4aG3RwIoYbMF.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;默认使用发送者的头像&lt;br&gt;如：我朋友说 来份涩图&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;这像画吗&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/12/PiSAM1T6EvxXWgD.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;震惊&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/12/4krO6y53bKzYpUg.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;兑换券&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/12/6tS7dDaprb1sUxj.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;默认文字为：qq昵称 + 陪睡券&lt;br&gt;可指定文字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;听音乐&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/15/rjgvbXeOJtIW8fF.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;典中典&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/18/ikQ1IB6hS4x3EjD.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;哈哈镜&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/15/DwRPaErSNZWXGgp.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;永远爱你&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/15/o6mhWk7crwdepU5.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;对称&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/15/HXntCy8kc7IRZxp.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;可使用参数“上”、“下”、“左”、“右”指定对称方向&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;安全感&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/15/58pPzrgxJNkUYRT.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;可指定描述&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;永远喜欢&lt;br&gt;我永远喜欢&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/15/EpTiUbcoVGCXLkJ.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;图中名字为目标qq昵称&lt;br&gt;可指定名字&lt;br&gt;可指定多个目标叠buff&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;采访&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/15/AYpkWEc2BrXhKeU.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;可指定描述&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;打拳&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/18/heA9fCPMQWXBxTn.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;群青&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/18/drwXx3yK14IMVCf.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;捣&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/30/M9xUehlV64OpGoY.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;捶&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/30/ElnARr7ohVXjtJx.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;需要&lt;br&gt;你可能需要&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/30/VBDG74QeZUYcunh.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;捂脸&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/30/NLy4Eb6CHKP3Svo.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;敲&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/04/14/uHP8z3bDMtGdOCk.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;垃圾&lt;br&gt;垃圾桶&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/04/14/i1ok2NUYaMfKezT.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;为什么@我&lt;br&gt;为什么at我&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/04/14/qQYydurABV7TMbN.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;像样的亲亲&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/04/14/1KvLjb2uRYQ9mCI.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;啾啾&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/04/20/v3YrbLMnND8BoPK.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;吸&lt;br&gt;嗦&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/04/20/LlFNscXC1IQrkgE.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;锤&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/04/20/ajXFm95tHRM6CzZ.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;紧贴&lt;br&gt;紧紧贴着&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/04/20/FiBwc3ZxvVLObGP.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;注意力涣散&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/05/11/mEtyxoZ3DfwBCn5.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;阿尼亚喜欢&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/05/11/U3ZMXHB1PduKckQ.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;支持gif&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;想什么&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/05/18/ck1jNO2K8Qd6Lo3.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;支持gif&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;远离&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/05/31/lqyOu25WPTsGBcb.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;可指定多个目标&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;结婚申请&lt;br&gt;结婚登记&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/05/31/tZR3ls7cBrdGHTL.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;小画家&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/06/09/bDA6mlUuo3k52nI.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;复读&lt;/td&gt;
+&lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/06/08/nU2dAe3GiVR7Y8I.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
+&lt;td&gt;复读内容默认为“救命啊”&lt;br&gt;可指定多个目标&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/05/25/linux%E6%8C%89%E5%90%8D%E6%9F%A5PID%E5%92%8C%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C/</guid>
+            <title>linux按名查PID和后台运行</title>
+            <link>http://example.com/2022/05/25/linux%E6%8C%89%E5%90%8D%E6%9F%A5PID%E5%92%8C%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C/</link>
+            <pubDate>Wed, 25 May 2022 11:27:00 +0800</pubDate>
+            <description><![CDATA[ &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;pgrep -f name&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// ps -ax | grep [aaa]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nohup [python] [aaa] &amp;amp;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/</guid>
+            <title>git push出现Everything up-to-date</title>
+            <link>http://example.com/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/</link>
+            <pubDate>Sun, 22 May 2022 18:45:19 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;原因：&#34;&gt;&lt;a href=&#34;#原因：&#34; class=&#34;headerlink&#34; title=&#34;原因：&#34;&gt;&lt;/a&gt;原因：&lt;/h2&gt;&lt;p&gt;没有添加文件&lt;/p&gt;
+&lt;h2 id=&#34;解决方法：&#34;&gt;&lt;a href=&#34;#解决方法：&#34; class=&#34;headerlink&#34; title=&#34;解决方法：&#34;&gt;&lt;/a&gt;解决方法：&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git add .&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &amp;quot;commit&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push origin master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/11/08/Map_%E5%8D%95%E8%AF%8D%E5%88%86%E6%9E%90/</guid>
+            <title>Map 单词分析</title>
+            <link>http://example.com/2021/11/08/Map_%E5%8D%95%E8%AF%8D%E5%88%86%E6%9E%90/</link>
+            <category>算法</category>
+            <pubDate>Mon, 08 Nov 2021 15:30:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;strong&gt;蓝桥杯无法使用&lt;code&gt;for(x : y)&amp;#123;&amp;#125;&lt;/code&gt; 、 &lt;code&gt;auto&lt;/code&gt;等的C11语法和关键字&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;#include&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;map&amp;lt;char, int&amp;gt; m;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;int main(void)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	string str;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	char mc;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	int s = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	for(int i = 97; i &amp;lt;= 122; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		m.insert(make_pair((char)i, 0));&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	cin &amp;gt;&amp;gt; str;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	for(int i = 0; i &amp;lt; str.size(); i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		m[str[i]]++;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	for(map&amp;lt;char, int&amp;gt;::iterator i = m.begin(); i != m.end(); i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		if(s &amp;lt; i-&amp;gt;second) mc = i-&amp;gt;first, s = i-&amp;gt;second;		// 记录次数&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	cout &amp;lt;&amp;lt; mc &amp;lt;&amp;lt; endl &amp;lt;&amp;lt; m[mc];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	return 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/</guid>
+            <title>scanf、cin返回值与连续输入</title>
+            <link>http://example.com/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/</link>
+            <category>算法</category>
+            <pubDate>Thu, 04 Nov 2021 19:43:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;code&gt;scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;a, &amp;amp;b);&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;a&lt;/strong&gt; , &lt;strong&gt;b&lt;/strong&gt; 都成功读入，返回值为 &lt;strong&gt;2&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;只有 &lt;strong&gt;a&lt;/strong&gt; 成功读入，返回值为 &lt;strong&gt;1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;a&lt;/strong&gt; 和 &lt;strong&gt;b&lt;/strong&gt; 都未成功读入，返回值为 &lt;strong&gt;0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;遇到 &lt;strong&gt;错误&lt;/strong&gt; 或遇到 &lt;strong&gt;end of file&lt;/strong&gt;，返回值为 &lt;strong&gt;EOF&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;std::cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b; 	// cin 无返回值&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;连续输入参考模板：&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;while(scanf(&amp;quot;%d&amp;quot;, &amp;amp;i) != EOF)&amp;#123;...&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;while(cin &amp;gt;&amp;gt; i)&amp;#123;...&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/</guid>
+            <title>关于矩阵对角线的相关表达</title>
+            <link>http://example.com/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/</link>
+            <category>算法</category>
+            <pubDate>Thu, 04 Nov 2021 16:02:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;主对角线元素下标满足：&lt;code&gt;i = j&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;副对角线元素下标满足：&lt;code&gt;i + j = n&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;假设一个&lt;code&gt;n×n&lt;/code&gt;的矩阵：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1 2 3 ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4 5 6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7 8 9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;主对角线一定满足 &lt;code&gt;a[1][1], a[2][2], a[3][3]..., a[n][n]&lt;/code&gt; 其中主对角线的每项都有 &lt;code&gt;i == j&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;副对角线一定满足 &lt;code&gt;a[1][n], a[2][n - 1], a[3][n - 3] ... a[n][1]&lt;/code&gt; 其中次对角线的每项都有 &lt;code&gt;i + j == n&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;相关：求秩、八皇后问题…&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/11/04/Vector_%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</guid>
+            <title>Vector 二分查找</title>
+            <link>http://example.com/2021/11/04/Vector_%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</link>
+            <category>算法</category>
+            <pubDate>Thu, 04 Nov 2021 15:39:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;二分查找：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;lower_bound：查找第一个大于或等于某个元素的位置。&lt;/li&gt;
+&lt;li&gt;upper_bound：查找第一个大于某个元素的位置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vector 插入元素&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;iterator insert(iterator it, const T&amp;amp; x)：iterator向量中迭代器指向元素前增加一个元素x&lt;/li&gt;
+&lt;li&gt;iterator insert(iterator it, int n,const T&amp;amp; x)：向量中迭代器指向元素前增加n个相同的元素x&lt;/li&gt;
+&lt;li&gt;iterator insert(iterator it, const_iterator first, const_iterator last)：向量中迭代器指向元素前插入另一个相同类型向量的[first, last)间的数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;#include&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;int main(void)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	vector&amp;lt;int&amp;gt; arr;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	int t, k, a;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	for(int i = 0; i &amp;lt; 9; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		cin &amp;gt;&amp;gt; t;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		arr.push_back(t);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	cin &amp;gt;&amp;gt; k;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	auto pos = upper_bound(arr.begin(), arr.end(), k); 	// vector&amp;lt;int&amp;gt;::iterator&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	arr.insert(pos, k);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	for(int i = 0; i &amp;lt; 10; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		cout &amp;lt;&amp;lt; arr[i] &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	return 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/</guid>
+            <title>DFS与BFS使用场景</title>
+            <link>http://example.com/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/</link>
+            <pubDate>Fri, 29 Oct 2021 15:45:26 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;(&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuaml1emhhbmcuY29tL3FhLzYyMy8=&#34;&gt;九章-马克助教&lt;/span&gt;)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;BFS是用来搜索最短径路的解是比较合适的，比如求最少步数的解，最少交换次数的解，因为BFS搜索过程中遇到的解一定是离根最近的，所以遇到一个解，一定就是最优解，此时搜索算法可以终止。这个时候不适宜使用DFS，因为DFS搜索到的解不一定是离根最近的，只有全局搜索完毕，才能从所有解中找出离根的最近的解。（当然这个DFS的不足，可以使用迭代加深搜索ID-DFS去弥补）&lt;/li&gt;
+&lt;li&gt;空间优劣上，DFS是有优势的，DFS不需要保存搜索过程中的状态，而BFS在搜索过程中需要保存搜索过的状态，而且一般情况需要一个队列来记录。&lt;/li&gt;
+&lt;li&gt;DFS适合搜索全部的解，因为要搜索全部的解，那么BFS搜索过程中，遇到离根最近的解，并没有什么用，也必须遍历完整棵搜索树，DFS搜索也会搜索全部，但是相比DFS不用记录过多信息，所以搜素全部解的问题，DFS显然更加合适。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/10/28/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%A8%A1%E6%9D%BF/</guid>
+            <title>二叉树模板</title>
+            <link>http://example.com/2021/10/28/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%A8%A1%E6%9D%BF/</link>
+            <pubDate>Thu, 28 Oct 2021 17:03:28 +0800</pubDate>
+            <description><![CDATA[ &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;#include&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#pragma GCC optimize(2)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;struct tree&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	int left;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	int right;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;tree t[1000];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;int dfs(int n)&amp;#123;		// 深度 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	if(!n) return 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	return max(dfs(t[n].left), dfs(t[n].right)) + 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;void f(int n)&amp;#123;		// 先序 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	cout &amp;lt;&amp;lt; n &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	if(t[n].left) f(t[n].left);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	if(t[n].right) f(t[n].right);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;void s(int n)&amp;#123;		// 中序 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	if(t[n].left) s(t[n].left);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	cout &amp;lt;&amp;lt; n &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	if(t[n].right) s(t[n].right);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;void e(int n)&amp;#123;		// 后序 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	if(t[n].left) e(t[n].left);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	if(t[n].right) e(t[n].right);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	cout &amp;lt;&amp;lt; n &amp;lt;&amp;lt; &amp;quot; &amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;int main(void)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	int n;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	cin &amp;gt;&amp;gt; n;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	for(int i = 1; i &amp;lt;= n; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		cin &amp;gt;&amp;gt; t[i].left &amp;gt;&amp;gt; t[i].right;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	return 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/10/28/%E5%8D%A1%E5%B8%B8%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%8C%E8%82%86%E6%97%A0%E5%BF%8C%E6%83%AESTL/</guid>
+            <title>卡常小技巧，肆无忌惮STL</title>
+            <link>http://example.com/2021/10/28/%E5%8D%A1%E5%B8%B8%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%8C%E8%82%86%E6%97%A0%E5%BF%8C%E6%83%AESTL/</link>
+            <pubDate>Thu, 28 Oct 2021 16:25:00 +0800</pubDate>
+            <description><![CDATA[ &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;#pragma GCC optimize(2)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ios::sync_with_stdio(false);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/</guid>
+            <title>数组粘贴，初始化C++</title>
+            <link>http://example.com/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/</link>
+            <pubDate>Thu, 28 Oct 2021 11:51:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;粘贴：memcpy()&lt;/p&gt;
+&lt;p&gt;初始化（可初始化结构体内的数组元素）：memset()&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;int a[5];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;int b[5] = &amp;#123;1, 2, 3, 4, 5&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;memset(a, 0, sizeof(int));	// 把a中所有数组元素初始化为1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;memcpy(a, b, 5 * sizeof(int));	// 把b数组覆盖到a数组&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/10/26/c_str()%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+            <title>c_str()使用方法</title>
+            <link>http://example.com/2021/10/26/c_str()%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+            <pubDate>Tue, 26 Oct 2021 21:52:15 +0800</pubDate>
+            <description><![CDATA[ &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;//标准库的string类提供了三个成员函数来从一个string得到c类型的字符数组&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;//c_str()：生成一个const char*指针，指向以空字符终止的数组。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;int main()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    //string--&amp;gt;char*&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    //c_str()函数返回一个指向正规C字符串的指针, 内容与本string串相同&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    //这个数组的数据是临时的，当有一个改变这些数据的成员函数被调用后，其中的数据就会失效。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    //因此要么现用先转换，要么把它的数据复制到用户自己可以管理的内存中&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    const char *c;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    string s = &amp;quot;1234&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    c = s.c_str();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    cout&amp;lt;&amp;lt;c&amp;lt;&amp;lt;endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    s = &amp;quot;abcde&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    cout&amp;lt;&amp;lt;c&amp;lt;&amp;lt;endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;输出：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1234&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;abcde&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/10/23/C++_STL%E5%AE%B9%E5%99%A8%EF%BC%8811%E4%B8%AA%EF%BC%89/</guid>
+            <title>C++ STL容器（11个）</title>
+            <link>http://example.com/2021/10/23/C++_STL%E5%AE%B9%E5%99%A8%EF%BC%8811%E4%B8%AA%EF%BC%89/</link>
+            <pubDate>Sat, 23 Oct 2021 16:33:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;deque&#34;&gt;&lt;a href=&#34;#deque&#34; class=&#34;headerlink&#34; title=&#34;deque :&#34;&gt;&lt;/a&gt;&lt;code&gt;deque&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;list&#34;&gt;&lt;a href=&#34;#list&#34; class=&#34;headerlink&#34; title=&#34;list :&#34;&gt;&lt;/a&gt;&lt;code&gt;list&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;queue&#34;&gt;&lt;a href=&#34;#queue&#34; class=&#34;headerlink&#34; title=&#34;queue :&#34;&gt;&lt;/a&gt;&lt;code&gt;queue&lt;/code&gt; :&lt;/h1&gt;&lt;p&gt;&lt;img data-src=&#34;https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/11/3285107056.jpg&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;priority-queue&#34;&gt;&lt;a href=&#34;#priority-queue&#34; class=&#34;headerlink&#34; title=&#34;priority_queue :&#34;&gt;&lt;/a&gt;&lt;code&gt;priority_queue&lt;/code&gt; :&lt;/h1&gt;&lt;h4 id=&#34;默认大顶堆（后两参数可缺省）&#34;&gt;&lt;a href=&#34;#默认大顶堆（后两参数可缺省）&#34; class=&#34;headerlink&#34; title=&#34;#### 默认大顶堆（后两参数可缺省）&#34;&gt;&lt;/a&gt;#### 默认大顶堆（后两参数可缺省）&lt;/h4&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;priority_queue&amp;lt;int&amp;gt; big_heap;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&#34;大顶堆&#34;&gt;&lt;a href=&#34;#大顶堆&#34; class=&#34;headerlink&#34; title=&#34;大顶堆&#34;&gt;&lt;/a&gt;大顶堆&lt;/h4&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;priority_queue&amp;lt;int,vector&amp;lt;int&amp;gt;,less&amp;lt;int&amp;gt;&amp;gt; big_heap2;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&#34;小顶堆&#34;&gt;&lt;a href=&#34;#小顶堆&#34; class=&#34;headerlink&#34; title=&#34;小顶堆&#34;&gt;&lt;/a&gt;小顶堆&lt;/h4&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;priority_queue&amp;lt;int,vector&amp;lt;int&amp;gt;,greater&amp;lt;int&amp;gt;&amp;gt; small_heap;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&#34;函数&#34;&gt;&lt;a href=&#34;#函数&#34; class=&#34;headerlink&#34; title=&#34;函数&#34;&gt;&lt;/a&gt;函数&lt;/h4&gt;&lt;p&gt;&lt;code&gt;bool empty() const&lt;/code&gt;：返回值为true，说明队列为空&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;int size() const&lt;/code&gt;：返回优先队列中元素的数量&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;void pop()&lt;/code&gt;：删除队列顶部的元素，也即根节点&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;int top()&lt;/code&gt;：返回队列中的顶部元素，但不删除该元素&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;void push(int arg)&lt;/code&gt;：将元素arg插入到队列之中；&lt;/p&gt;
+&lt;h1 id=&#34;stack&#34;&gt;&lt;a href=&#34;#stack&#34; class=&#34;headerlink&#34; title=&#34;stack :&#34;&gt;&lt;/a&gt;&lt;code&gt;stack&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;vector&#34;&gt;&lt;a href=&#34;#vector&#34; class=&#34;headerlink&#34; title=&#34;vector :&#34;&gt;&lt;/a&gt;&lt;code&gt;vector&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;map&#34;&gt;&lt;a href=&#34;#map&#34; class=&#34;headerlink&#34; title=&#34;map :&#34;&gt;&lt;/a&gt;&lt;code&gt;map&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;multimap&#34;&gt;&lt;a href=&#34;#multimap&#34; class=&#34;headerlink&#34; title=&#34;multimap :&#34;&gt;&lt;/a&gt;&lt;code&gt;multimap&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;set&#34;&gt;&lt;a href=&#34;#set&#34; class=&#34;headerlink&#34; title=&#34;set :&#34;&gt;&lt;/a&gt;&lt;code&gt;set&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;multiset&#34;&gt;&lt;a href=&#34;#multiset&#34; class=&#34;headerlink&#34; title=&#34;multiset :&#34;&gt;&lt;/a&gt;&lt;code&gt;multiset&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;bitset&#34;&gt;&lt;a href=&#34;#bitset&#34; class=&#34;headerlink&#34; title=&#34;bitset :&#34;&gt;&lt;/a&gt;&lt;code&gt;bitset&lt;/code&gt; :&lt;/h1&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/10/16/%E5%8E%86%E5%B1%8A%E7%9C%9F%E9%A2%98_%E5%88%86%E7%B3%96%E6%9E%9C%E3%80%90%E7%AC%AC%E4%BA%94%E5%B1%8A%E3%80%91%E3%80%90%E7%9C%81%E8%B5%9B%E3%80%91%E3%80%90C%E7%BB%84%E3%80%91/</guid>
+            <title>历届真题 分糖果【第五届】【省赛】【C组】</title>
+            <link>http://example.com/2021/10/16/%E5%8E%86%E5%B1%8A%E7%9C%9F%E9%A2%98_%E5%88%86%E7%B3%96%E6%9E%9C%E3%80%90%E7%AC%AC%E4%BA%94%E5%B1%8A%E3%80%91%E3%80%90%E7%9C%81%E8%B5%9B%E3%80%91%E3%80%90C%E7%BB%84%E3%80%91/</link>
+            <pubDate>Sat, 16 Oct 2021 16:35:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;http://mioe.xyz/usr/uploads/2021/10/3684429808.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;#include&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;int eq(int *t, int l)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	for(int i = 1; i &amp;lt; l; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		if(t[0] != t[i]) return 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	return 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;int main(void)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	int n, m;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	cin &amp;gt;&amp;gt; n;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	int c[n], i, s = 0, bf[n];		// bf[n] 缓存区 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	for(i = 0; i &amp;lt; n; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		cin &amp;gt;&amp;gt; c[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	while(1)&amp;#123;						// 思路：每次分糖果，把第i个 分出 的糖果记录到 对应的 缓存区， &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		for(i = 0; i &amp;lt; n; i++)&amp;#123;		// 		 第i个小朋友的苹果等于 自身糖果的一半 加  i - 1 缓冲区的糖果 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;			c[i] /= 2;				//	例如： 有三个小朋友&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;			bf[i] = c[i];			//         2 2 4 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&amp;#125;							// 对半分：1 1 2(1)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		c[0] += bf[n - 1];			//          / / / &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		for(i = 1; i &amp;lt; n; i++)	 	// 缓冲区：1 1 2 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;			c[i] += bf[i - 1];		//         | | | &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		for(i = 0; i &amp;lt; n; i++)		// 完成：3 2 3(3) &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;			if(c[i] % 2 != 0)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;				c[i]++;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;				s++;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		if(eq(c, n) == 1) break;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	cout &amp;lt;&amp;lt; s;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	return 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/</guid>
+            <title>XX:XX:XX类型字符串提取数字</title>
+            <link>http://example.com/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/</link>
+            <pubDate>Fri, 15 Oct 2021 17:26:16 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;洛谷P1615&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cin &amp;gt;&amp;gt; time1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sscanf(time1.c_str(), &amp;quot;%d:%d:%d&amp;quot;, &amp;amp;h1, &amp;amp;m1, &amp;amp;s1); // c_str()获取字符串地址&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 或者直接这样写 scanf(&amp;quot;%d:%d:%d&amp;quot;, &amp;amp;h1, &amp;amp;m1, &amp;amp;s1);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/10/01/P2911_[USACO08OCT]Bovine_Bones_G_(C)/</guid>
+            <title>P2911 [USACO08OCT]Bovine Bones G (C)</title>
+            <link>http://example.com/2021/10/01/P2911_[USACO08OCT]Bovine_Bones_G_(C)/</link>
+            <pubDate>Fri, 01 Oct 2021 20:40:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/10/01/dcA2xWtmfYQRaqD.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;/*&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	根据题意，总共3个骰子，每个骰子有 S个面，因为数据范围较小，可以直接选择暴力&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	每次总和记录到相应的结构体(Sum = 10 -&amp;gt; struct[10])，结构体中保存两个数据：总和(num)、次数(times) &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	最后使用快排(qsort)筛出次数(times)最小的目标 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;*/ &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;struct A&amp;#123;		// 声明结构体，存放点数总和与次数 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	int num;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	int times;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;int compare(const void *a, const void *b)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	struct A *p1 = (struct A *)a;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	struct A *p2 = (struct A *)b;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	if(p1-&amp;gt;times == p2-&amp;gt;times) return p1-&amp;gt;num - p2-&amp;gt;num;		// 题意：如果出现概率一样时输出最小总和 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	return p2-&amp;gt;times - p1-&amp;gt;times;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;int main(void)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	int s1, s2, s3, s, i, j, k;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	struct A a[80];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	scanf(&amp;quot;%d %d %d&amp;quot;, &amp;amp;s1, &amp;amp;s2, &amp;amp;s3);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	for(i = 0; i &amp;lt; 81; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		 a[i].times = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		 a[i].num = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	for(i = 1; i &amp;lt;= s1; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		for(j = 1; j &amp;lt;= s2; j++)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;			for(k = 1; k &amp;lt;= s3; k++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;				a[i + j + k].num = i + j + k;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;				a[i + j + k].times++;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	qsort(a, 80, sizeof(struct A), compare);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	printf(&amp;quot;%d&amp;quot;, a[0].num);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	return 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/09/10/%E6%B4%9B%E8%B0%B7%E9%A2%98%E5%BA%93%E7%88%AC%E8%99%AB/</guid>
+            <title>洛谷题库爬虫</title>
+            <link>http://example.com/2021/09/10/%E6%B4%9B%E8%B0%B7%E9%A2%98%E5%BA%93%E7%88%AC%E8%99%AB/</link>
+            <pubDate>Fri, 10 Sep 2021 20:39:00 +0800</pubDate>
+            <description><![CDATA[ &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;79&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;80&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;81&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;82&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;83&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;84&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;import re&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;import urllib.request, urllib.error&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;import bs4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;import time&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;baseUrl = &amp;quot;https://www.luogu.com.cn/problem/P&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;savePath = &amp;quot;C:\\Users\\666\\Desktop\\p\\&amp;quot;	# 存放位置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;maxn = 7000	# 最大爬取数&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;def main():&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    print(&amp;quot;计划爬取到P&amp;#123;&amp;#125;&amp;quot;.format(maxn))&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    for i in range(1000, maxn + 1):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        time.sleep(0.2)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        try:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            print(&amp;quot;正在爬取P&amp;#123;&amp;#125;&amp;quot;.format(i))&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            html = getHTML(baseUrl + str(i))&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            problemMD = getMD(html)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            name = getName(html)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            saveData(problemMD, &amp;quot;P&amp;quot; + str(i) + &amp;quot; &amp;quot; + name + &amp;quot;.md&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        except Exception:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            pass&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        continue&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    print(&amp;quot;爬取完毕&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;def getHTML(url):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    headers = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;quot;user-agent&amp;quot;: &amp;quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                      &amp;quot;37.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    request = urllib.request.Request(url=url, headers=headers)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    response = urllib.request.urlopen(request)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    html = response.read().decode(&amp;#x27;utf-8&amp;#x27;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    return html&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;def getName(html):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    bs = bs4.BeautifulSoup(html, &amp;quot;html.parser&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    name = str(bs.select(&amp;quot;h1&amp;quot;)[0])&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    name = re.sub(&amp;quot;&amp;lt;h1&amp;gt;&amp;quot;, &amp;quot;&amp;quot;, name)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    name = re.sub(&amp;quot;&amp;lt;/?[a-zA-Z]+[^&amp;lt;&amp;gt;]*&amp;gt;&amp;quot;, &amp;quot;&amp;quot;, name)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    return name&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;def getMD(html):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    bs = bs4.BeautifulSoup(html, &amp;quot;html.parser&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    core = bs.select(&amp;quot;article&amp;quot;)[0]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    md = str(core)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    md = re.sub(&amp;quot;&amp;lt;h1&amp;gt;&amp;quot;, &amp;quot;# &amp;quot;, md)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    md = re.sub(&amp;quot;&amp;lt;h2&amp;gt;&amp;quot;, &amp;quot;## &amp;quot;, md)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    md = re.sub(&amp;quot;&amp;lt;h3&amp;gt;&amp;quot;, &amp;quot;#### &amp;quot;, md)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    md = re.sub(&amp;quot;&amp;lt;/?[a-zA-Z]+[^&amp;lt;&amp;gt;]*&amp;gt;&amp;quot;, &amp;quot;&amp;quot;, md)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    md = func(md)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    return md&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;def func(s: str) -&amp;gt; str:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    res = &amp;quot;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    left = True&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    for i in s:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        if i != &amp;quot;$&amp;quot;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            res = res + i&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        elif left == True:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            res = res + &amp;quot;`&amp;quot; + i&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            left = not (left)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        else:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            res = res + i + &amp;quot;`&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            left = not (left)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    return res&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;def saveData(data, filename):&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    cfilename = savePath + filename&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    file = open(cfilename, &amp;quot;w&amp;quot;, encoding=&amp;quot;utf-8&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    for d in data:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        file.writelines(d)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    file.close()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;if __name__ == &amp;#x27;__main__&amp;#x27;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    main()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/09/04/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4%E9%97%AE%E9%A2%98%E7%BB%AD%EF%BC%88C%EF%BC%89/</guid>
+            <title>P1223 排队接水问题续（C）</title>
+            <link>http://example.com/2021/09/04/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4%E9%97%AE%E9%A2%98%E7%BB%AD%EF%BC%88C%EF%BC%89/</link>
+            <pubDate>Sat, 04 Sep 2021 18:32:00 +0800</pubDate>
+            <description><![CDATA[ &lt;pre&gt;&lt;code&gt;#include&amp;lt;stdio.h&amp;gt;
+#include&amp;lt;stdlib.h&amp;gt;
+const MAX = 1500;
+
+//创建结构体 
+struct P&amp;#123;
+    int id;
+    int time;
+&amp;#125;;
+
+//排序函数 
+int comp(const void *p1, const void *p2)
+&amp;#123;
+    const struct P *ps1 = (struct P *)p1;
+    const struct P *ps2 = (struct P *)p2;	
+    if(ps1-&amp;gt;time != ps2-&amp;gt;time)
+        return ps1-&amp;gt;time - ps2-&amp;gt;time;
+    else
+        return ps1-&amp;gt;id - ps2-&amp;gt;id;
+&amp;#125;
+
+int main()
+&amp;#123;
+    struct P p[MAX];
+    int count = 0;		//声明总人数 
+    int i, j;
+    double sum = 0.0; 
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;count);
+    for(i = 0; i &amp;lt; count; i++)		//创建(id , time)散列表 
+    &amp;#123;
+        p[i].id = (i + 1);
+        scanf(&amp;quot;%d&amp;quot;, &amp;amp;p[i].time);
+    &amp;#125;
+    qsort(p, count, sizeof(p[1]), comp);		//快排 
+    for(j = 0; j &amp;lt; count; j++)		//贪心算法求和计算总等待时间 
+        sum += p[j].time * (count - j - 1); 
+    for(j = 0; j &amp;lt; count; j++)		//输出最优顺序 
+    &amp;#123;
+        printf(&amp;quot;%d &amp;quot;,p[j].id);
+    &amp;#125;
+    printf(&amp;quot;\n&amp;quot;);
+    printf(&amp;quot;%.2lf\n&amp;quot;, sum / count);		//输出平均等待时间 
+    return 0;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL21pb2UueHl6L2luZGV4LnBocC9hcmNoaXZlcy80Mi8=&#34;&gt;Python解法&lt;/span&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/06/02/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4_python/</guid>
+            <title>P1223 排队接水 python</title>
+            <link>http://example.com/2021/06/02/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4_python/</link>
+            <pubDate>Wed, 02 Jun 2021 21:10:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/06/02/kzh7MsgTyiPWaUK.png&#34; alt=&#34;P1223 排队接水&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;n = int(input())
+list1 = list(map(int, input().split()))
+c = 1
+sum1 = 0
+list2 = []
+for i in range(n):
+    list2.append(&amp;#123;&amp;quot;id&amp;quot;: i + 1, &amp;quot;time&amp;quot;: list1[i]&amp;#125;)
+list2.sort(key=lambda rank: rank[&amp;quot;time&amp;quot;])
+for i in list2:
+    sum1 += i[&amp;quot;time&amp;quot;] * (n - c)
+    c += 1
+for i in range(n):
+    if i == n - 1:
+        print(list2[i][&amp;quot;id&amp;quot;], end=&amp;quot;&amp;quot;)
+    else:
+        print(list2[i][&amp;quot;id&amp;quot;], end=&amp;quot; &amp;quot;)
+print()
+print(&amp;quot;%.2f&amp;quot; % (sum1/n))
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/06/01/%E5%9B%9E%E6%96%87%E8%B4%A8%E6%95%B0_python/</guid>
+            <title>回文质数 python</title>
+            <link>http://example.com/2021/06/01/%E5%9B%9E%E6%96%87%E8%B4%A8%E6%95%B0_python/</link>
+            <pubDate>Tue, 01 Jun 2021 20:02:49 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;http://mioe.xyz/usr/uploads/2021/06/1304133883.png&#34; alt=&#34;6-01-2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;洛谷卡了很长时间，最终还是没有AC，最后两个超时，可能是我回文判断选择用字符串的方式导致的,最后没办法了，选择下策直接打表AC。&lt;/p&gt;
+&lt;p&gt;注：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;除 11 外没有偶数位的回文质数，那么[10000000,100000000] 这个区间根本不用枚举。&lt;/li&gt;
+&lt;li&gt;只需要[2, sqrt(i) + 1]&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import math
+a, b = map(int, input().split())
+list1 = []
+if b &amp;gt; 10000000:
+    b = 10000000
+for i in range(a, b + 1):
+    if str(i) == str(i)[::-1]:
+        for j in range(2, int(math.sqrt(i)) + 1):
+            if i % j == 0:
+                break
+        else:
+            print(i)
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/06/01/%E6%B4%9B%E8%B0%B7_P1106_%E5%88%A0%E6%95%B0%E9%97%AE%E9%A2%98_python%E8%A7%A3%E6%B3%95/</guid>
+            <title>洛谷 P1106 删数问题 python解法</title>
+            <link>http://example.com/2021/06/01/%E6%B4%9B%E8%B0%B7_P1106_%E5%88%A0%E6%95%B0%E9%97%AE%E9%A2%98_python%E8%A7%A3%E6%B3%95/</link>
+            <pubDate>Tue, 01 Jun 2021 19:48:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;http://mioe.xyz/usr/uploads/2021/06/3479330492.png&#34; alt=&#34;6-01-1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第一次提交时，因为读题不清，3个WA。一开始理解为依次删除最大数，例50074897 2得500747，结果一直WA，然后被迫下载测试数据，发现正确答案为 4897。&lt;/p&gt;
+&lt;p&gt;思索了一番，发现是个贪心问题,还是用 50074897 2 举例:&lt;br&gt;        (1) 5 &amp;gt; 0 , 删除5, 0074897&lt;br&gt;        (2) 0 &amp;#x3D; 0 , 不动 0074897&lt;br&gt;        (3) 0 &amp;#x3D; 0 , 同理 0074897&lt;br&gt;        (5) 7 &amp;gt; 4 , 删除7，004897&lt;br&gt;        (6) 去零整理，答案为 4897&lt;br&gt;Python天下第一，代码如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;m = input()
+n = int(input())
+i = 0   # 用于下标索引
+while quit:
+    # 边界默认和0比
+    if i + 1 == len(m):
+        m = m[:len(m) - 1]
+        n -= 1
+        i -= 1
+    # 判断是否单调递增
+    elif m[i] &amp;lt;= m[i + 1]:
+        i += 1
+        continue
+    # 删除非递增项
+    else:
+        m = m.replace(m[i], &amp;quot;&amp;quot;, 1)
+        n -= 1
+        i -= 1
+    # 循环结束
+    if n == 0:
+        break
+print(int(m))
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</guid>
+            <title>贪婪算法之背包问题</title>
+            <link>http://example.com/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</link>
+            <pubDate>Mon, 31 May 2021 21:54:41 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;http://mioe.xyz/usr/uploads/2021/05/33685418.png&#34; alt=&#34;5-31.png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;coins, capacity = map(int, input().split())
+emt = []
+sum_coin = 0.0
+for i in range(coins):
+    temp_weight, temp_coin = map(int, input().split())
+    emt.append(&amp;#123;&amp;#39;coin&amp;#39;: temp_coin, &amp;#39;weight&amp;#39;: temp_weight, &amp;#39;avg&amp;#39;: temp_coin/temp_weight&amp;#125;)
+emt.sort(key=lambda emt_d: emt_d[&amp;#39;avg&amp;#39;], reverse=True)
+for i in range(len(emt)):
+    if capacity &amp;gt;= emt[i][&amp;#39;weight&amp;#39;]:
+        sum_coin += emt[i][&amp;#39;coin&amp;#39;]
+        capacity -= emt[i][&amp;#39;weight&amp;#39;]
+    elif capacity &amp;lt; emt[i][&amp;#39;weight&amp;#39;] and capacity != 0:
+        sum_coin += emt[i][&amp;#39;avg&amp;#39;] * capacity
+        break
+print(&amp;#39;%.2f&amp;#39; % sum_coin)
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2020/12/24/ArrayList%E5%88%97%E8%A1%A8%E9%9B%86%E5%90%88/</guid>
+            <title>ArrayList列表集合</title>
+            <link>http://example.com/2020/12/24/ArrayList%E5%88%97%E8%A1%A8%E9%9B%86%E5%90%88/</link>
+            <pubDate>Thu, 24 Dec 2020 20:57:00 +0800</pubDate>
+            <description><![CDATA[ &lt;pre&gt;&lt;code&gt;List&amp;lt;Type&amp;gt; variable = new ArrayList&amp;lt;&amp;gt;([size]);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Type：int String method …&lt;br&gt;size：可写可不写 &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class user&amp;#123;
+    private String name;
+    private int age;
+    public user(String string, int i) &amp;#123;
+        this.name = string;
+        this.age = i;
+    &amp;#125;
+    public String getName() &amp;#123;
+        return name;
+    &amp;#125;
+    public int getAge() &amp;#123;
+        return age;
+    &amp;#125;
+&amp;#125;
+
+    List&amp;lt;user&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();
+    list.add(new user(&amp;quot;张三&amp;quot;,15));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;集合的遍历：&lt;/p&gt;
+&lt;p&gt;方法一&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;for (int i = 0; i &amp;lt; list.size(); i++) &amp;#123;
+    System.out.print(list.get(i).getName());
+    System.out.println(list.get(i).getAge());
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;方法二&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;for (user user : list) &amp;#123;
+    System.out.println(user.getAge() + user.getName());
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2020/12/06/Java%E5%8A%A0%E5%BC%BA%E5%9E%8B%E5%BE%AA%E7%8E%AFfor_each/</guid>
+            <title>Java加强型循环for each</title>
+            <link>http://example.com/2020/12/06/Java%E5%8A%A0%E5%BC%BA%E5%9E%8B%E5%BE%AA%E7%8E%AFfor_each/</link>
+            <pubDate>Sun, 06 Dec 2020 17:59:00 +0800</pubDate>
+            <description><![CDATA[ &lt;pre&gt;&lt;code&gt;for(type element: array)  
+&amp;#123;  
+  System.out.println(element);  
+&amp;#125;  
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2020/12/06/%E5%BE%AA%E7%8E%AF%E3%80%81%E8%BF%AD%E4%BB%A3%E3%80%81%E9%81%8D%E5%8E%86%E5%92%8C%E9%80%92%E5%BD%92%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+            <title>循环、迭代、遍历和递归的区别</title>
+            <link>http://example.com/2020/12/06/%E5%BE%AA%E7%8E%AF%E3%80%81%E8%BF%AD%E4%BB%A3%E3%80%81%E9%81%8D%E5%8E%86%E5%92%8C%E9%80%92%E5%BD%92%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+            <pubDate>Sun, 06 Dec 2020 14:47:33 +0800</pubDate>
+            <description><![CDATA[ &lt;ul&gt;
+&lt;li&gt;**循环（loop）**，指的是在满足条件的情况下，重复执行同一段代码。比如，while语句。&lt;/li&gt;&lt;br&gt;
+&lt;li&gt;**迭代（iterate）**，指的是按照某种顺序逐个访问列表中的每一项。比如，for语句。&lt;/li&gt;&lt;br&gt;
+&lt;li&gt;**遍历（traversal）**，指的是按照一定的规则访问树形结构中的每个节点，而且每个节点都只访问一次。&lt;/li&gt;&lt;br&gt;
+&lt;li&gt;**递归（recursion）**，指的是一个函数不断调用自身的行为。比如，以编程方式输出著名的斐波纳契数列。&lt;/li&gt;&lt;br&gt;
+&lt;/ul&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2019/10/20/%E7%AE%80%E5%8D%95%E9%80%9A%E4%BF%97%E7%9A%84%E8%AF%B4%E4%B8%80%E4%B8%8B%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
+            <title>简单通俗的说一下什么是面向过程和面向对象</title>
+            <link>http://example.com/2019/10/20/%E7%AE%80%E5%8D%95%E9%80%9A%E4%BF%97%E7%9A%84%E8%AF%B4%E4%B8%80%E4%B8%8B%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+            <pubDate>Sun, 20 Oct 2019 15:47:36 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;网上关于这两个的回答真的很多，但是都有一个共同特点：————不容易懂。&lt;/p&gt;
+&lt;p&gt;我今天就简单通俗的说一下（当然，如果你要非常深入的了解，这篇不适合你。如果你只是为了了解什么是面向过程和面向对象，怎么面对考试，面对面试，怎么和别人说两者区别，看我下面几段话够了。）&lt;/p&gt;
+&lt;p&gt;———————————————先来两小段通俗解释&lt;/p&gt;
+&lt;p&gt;面向过程（Procedure Oriented 简称PO ：像C语言）：&lt;/p&gt;
+&lt;p&gt;    看名字它是注重过程的。当解决一个问题的时候，面向过程会把事情拆分成： 一个个函数和数据（用于方法的参数） 。然后按照一定的顺序，执行完这些方法（每个方法看作一个个过程），等方法执行完了，事情就搞定了。&lt;/p&gt;
+&lt;p&gt;面向对象（Object Oriented简称OO ：像C++，JAVA等语言）：&lt;/p&gt;
+&lt;p&gt;    看名字它是注重对象的。当解决一个问题的时候，面向对象会把事物抽象成对象的概念，就是说这个问题里面有哪些对象，然后给对象赋一些属性和方法，然后让每个对象去执行自己的方法，问题得到解决。&lt;/p&gt;
+&lt;p&gt;——————————————最后来个例子&lt;/p&gt;
+&lt;p&gt;  问题：  冰箱里面放有脏衣服，怎么洗干净？&lt;/p&gt;
+&lt;p&gt;   面向过程：&lt;br&gt;                    1 执行加洗衣粉方法；&lt;br&gt;                    2 执行加水方法；&lt;br&gt;                    3 执行洗衣服方法；&lt;br&gt;                    4 执行清洗方法；&lt;br&gt;                    5 执行烘干方法；&lt;br&gt;———-解决问题       拆成一个个方法，是没有对象去调用的。 通过一个个方法的执行解决问题。&lt;br&gt;   面向对象： 我先搞个洗衣机对象和人对象 &lt;/p&gt;
+&lt;p&gt;   洗衣机： 加入一些属性和方法  洗衣服方法  清洗方法  烘干方法       人：加洗衣粉方法  加水方法&lt;/p&gt;
+&lt;p&gt;   然后 人.加洗衣粉 人.加水   洗衣机.洗衣服 洗衣机.清洗  洗衣机.烘干&lt;/p&gt;
+&lt;p&gt;———-同样解决问题    先抽象出对象，然后用对象执行方法的方式解决问题。&lt;/p&gt;
+&lt;p&gt;然后在来一个我以前知乎看到的例子  ：  男女亲密例子      man   gril   &lt;/p&gt;
+&lt;p&gt; 面向过程：        make_love(man，gril)  ———解决问题      拆成一个动作，把数据丢进去&lt;/p&gt;
+&lt;p&gt; 面向对象：        man.make_love(gril)  或者 gril.make_love（man） —–解决问题    抽象出对象，对象执行动作 。 &lt;/p&gt;
+&lt;p&gt;当然，你面试的时候，你不要做make_love   ….你可以说是打牌 。   &lt;/p&gt;
+&lt;p&gt;面向过程就是    打牌 （你，我，他）&lt;/p&gt;
+&lt;p&gt;面向对象就是  我.打牌（你，他） or 你.打牌（我，他）  or 他.打牌(我，你)&lt;br&gt;————————————————&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

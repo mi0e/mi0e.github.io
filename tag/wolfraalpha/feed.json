@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Hexo • All posts by \"wolfraalpha\" tag",
+    "description": "",
+    "home_page_url": "http://example.com",
+    "items": [
+        {
+            "id": "http://example.com/2022/10/31/WolfraAlpha_%E7%9F%A9%E9%98%B5%E7%9B%B8%E5%85%B3/",
+            "url": "http://example.com/2022/10/31/WolfraAlpha_%E7%9F%A9%E9%98%B5%E7%9B%B8%E5%85%B3/",
+            "title": "WolfraAlpha 矩阵相关",
+            "date_published": "2022-10-31T08:28:00.000Z",
+            "content_html": "<p>+,*, ^, <strong>…</strong> <strong>—</strong> 按元素自动作用</p>\n<p>Dot <strong>—</strong> 矩阵积，自动处理行向量和列向量</p>\n<hr>\n<p>Inverse <strong>—</strong> 矩阵逆 (线性系统用 LinearSolve)</p>\n<p>MatrixRank <strong>—</strong> 矩阵的秩</p>\n<p>NullSpace <strong>—</strong> 跨越矩阵零空间的向量</p>\n<p>RowReduce <strong>—</strong> 行简化阶梯形</p>\n<p>PseudoInverse <strong>—</strong> 方阵或矩形矩阵的伪逆</p>\n<hr>\n<p>Transpose <strong>—</strong> 转置($m^T$，用<code>esc</code> tr <code>esc</code>)</p>\n<p>ConjugateTranspose <strong>—</strong> 共轭转置($m^+$，用<code>esc</code> ct <code>esc</code>)</p>\n<p>LowerTriangularize, UpperTriangularize <strong>—</strong> 提取矩阵的下三角形或上三角形部分</p>\n<p>Symmetrize <strong>—</strong> 找出矩阵的对称、反对称等部分</p>\n<hr>\n<p>Diagonal <strong>—</strong> 获取对角线上的元素列表</p>\n<p>Tr <strong>—</strong> 矩阵的迹</p>\n<p>Det <strong>—</strong> 行列式</p>\n<p>Norm <strong>—</strong> 算子范数，p 范数和 Frobenius 范数</p>\n<p>Adjugate <strong>—</strong> 转置伴随</p>\n<p>Minors <strong>—</strong> 子式矩阵</p>\n<p>Permanent <strong>—</strong> 积和式</p>\n<hr>\n<p>KroneckerProduct <strong>—</strong> 矩阵的直积 (外积)</p>\n<hr>\n<p>MatrixPower <strong>—</strong> 数值矩阵或符号矩阵的幂</p>\n<p>MatrixExp <strong>—</strong> 矩阵指数</p>\n<p>MatrixLog <strong>—</strong> 矩阵对数</p>\n<p>MatrixFunction <strong>—</strong> 一般矩阵函数</p>\n<hr>\n<p>Eigenvalues, Eigenvectors <strong>—</strong> 具体或近似的特征值或特征向量</p>\n<p>Eigensystem <strong>—</strong> 特征值和特征向量</p>\n<p>CharacteristicPolynomial <strong>—</strong> 符号的特征多项式</p>\n<blockquote>\n<p>转自官方文档 <span class=\"exturl\" data-url=\"aHR0cHM6Ly9yZWZlcmVuY2Uud29sZnJhbS5jb20vbGFuZ3VhZ2UvZ3VpZGUvTWF0cml4T3BlcmF0aW9ucy5odG1sLnpo\">https://reference.wolfram.com/language/guide/MatrixOperations.html.zh</span></p>\n</blockquote>\n",
+            "tags": [
+                "WolfraAlpha"
+            ]
+        }
+    ]
+}
