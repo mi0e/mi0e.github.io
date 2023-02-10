@@ -4,10 +4,10 @@
     <title>mioe • Posts by &#34;算法模板&#34; tag</title>
     <link href="http://example.com" />
     <updated>2023-01-20T11:29:00.000Z</updated>
-    <category term="算法" />
     <category term="BFS" />
-    <category term="Resilio Sync" />
+    <category term="算法" />
     <category term="unity" />
+    <category term="Resilio Sync" />
     <category term="WolfraAlpha" />
     <category term="github" />
     <category term="数论" />
@@ -24,7 +24,63 @@
         <id>http://example.com/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/</id>
         <title>离散化区间和</title>
         <link rel="alternate" href="http://example.com/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/"/>
-        <content type="html">&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&amp;lt;bits/stdc++.h&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;namespace&lt;/span&gt; std&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; N &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;typedef&lt;/span&gt; pair&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; PII&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; m&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; arr&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;N&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; sum&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;N&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;vector&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; alls&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;vector&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;PII&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; add&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; query&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 查找 x 在 alls 数组中的下标&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;find&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; l &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; r &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; alls&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; mid&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;l &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; r&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		mid &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; l &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; r &lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;alls&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;mid&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&gt;=&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; r &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; mid&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt; l &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; mid &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; l &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	cin &lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt; n &lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt; m&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; c&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		cin &lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt; x &lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt; c&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		add&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;push_back&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; c&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		alls&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;push_back&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; l&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; r&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; m&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		cin &lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt; l &lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt; r&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		query&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;push_back&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;l&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; r&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		alls&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;push_back&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;l&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		alls&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;push_back&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;r&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;39&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;40&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token comment&#34;&gt;// 排序去重&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;41&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token function&#34;&gt;sort&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;alls&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; alls&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;42&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	alls&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;erase&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;unique&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;alls&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; alls&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; alls&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;43&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;44&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;auto&lt;/span&gt; item &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; add&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;45&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		arr&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;find&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;item&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;first&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; item&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;second&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;46&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;47&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token comment&#34;&gt;// 处理前缀和&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;48&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;=&lt;/span&gt; alls&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;49&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		sum&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; sum&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; arr&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;50&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;51&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;auto&lt;/span&gt; item &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; query&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;52&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;%d\n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; sum&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;find&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;item&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;second&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; sum&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;find&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;item&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;first&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;53&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;54&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;55&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <content type="html">&lt;pre&gt;&lt;code class=&#34;cpp&#34;&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+const int N = 100;
+typedef pair&amp;lt;int, int&amp;gt; PII;
+
+int n, m;
+int arr[N], sum[N];
+vector&amp;lt;int&amp;gt; alls;
+vector&amp;lt;PII&amp;gt; add, query;
+
+// 查找x在alls数组中的下标
+int find(int x)&amp;#123;
+    int l = 0, r = alls.size() - 1, mid;
+    while(l &amp;lt; r)&amp;#123;
+        mid = l + r &amp;gt;&amp;gt; 1;
+        if(alls[mid] &amp;gt;= x) r = mid;
+        else l = mid + 1;
+    &amp;#125;
+    return l + 1;
+&amp;#125;
+
+int main()&amp;#123;
+    cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;
+
+    int x, c;
+    for(int i = 0; i &amp;lt; n; i++)&amp;#123;
+        cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; c;
+        add.push_back(&amp;#123;x, c&amp;#125;);
+        alls.push_back(x);
+    &amp;#125;
+
+    int l, r;
+    for(int i = 0; i &amp;lt; m; i++)&amp;#123;
+        cin &amp;gt;&amp;gt; l &amp;gt;&amp;gt; r;
+        query.push_back(&amp;#123;l, r&amp;#125;);
+        alls.push_back(l);
+        alls.push_back(r);
+    &amp;#125;
+
+    // 排序去重
+    sort(alls.begin(), alls.end());
+    alls.erase(unique(alls.begin(), alls.end()), alls.end());
+
+    for(auto item : add)
+        arr[find(item.first)] += item.second;
+
+    // 处理前缀和
+    for(int i = 1; i &amp;lt;= alls.size(); i++)
+        sum[i] = sum[i - 1] + arr[i];
+
+    for(auto item : query)
+        printf(&amp;quot;%d\n&amp;quot;, sum[find(item.second)] - sum[find(item.first) - 1]);
+
+    return 0;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
         <category term="算法模板" />
         <updated>2023-01-20T11:29:00.000Z</updated>
     </entry>
@@ -32,22 +88,14 @@
         <id>http://example.com/2022/12/30/%E7%BA%BF%E6%AE%B5%E6%A0%91___%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84_%E6%A8%A1%E6%9D%BF/</id>
         <title>线段树 / 树状数组 模板</title>
         <link rel="alternate" href="http://example.com/2022/12/30/%E7%BA%BF%E6%AE%B5%E6%A0%91___%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84_%E6%A8%A1%E6%9D%BF/"/>
-        <content type="html">&lt;h4 id=&#34;题目&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#题目&#34;&gt;#&lt;/a&gt; 题目&lt;/h4&gt;
-&lt;p&gt;给定 &lt;strong&gt;n&lt;/strong&gt; 个数组成的一个数列，规定有两种操作，一是修改某个元素，二是求子数列 &lt;strong&gt;[&lt;strong&gt;a&lt;/strong&gt;,&lt;strong&gt;b&lt;/strong&gt;]&lt;/strong&gt; 的连续和。&lt;/p&gt;
-&lt;h4 id=&#34;输入格式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#输入格式&#34;&gt;#&lt;/a&gt; 输入格式&lt;/h4&gt;
-&lt;p&gt;第一行包含两个整数 &lt;strong&gt;n&lt;/strong&gt; 和 &lt;strong&gt;m&lt;/strong&gt;，分别表示数的个数和操作次数。&lt;/p&gt;
+        <content type="html">&lt;h4 id=&#34;题目&#34;&gt;&lt;a href=&#34;#题目&#34; class=&#34;headerlink&#34; title=&#34;题目&#34;&gt;&lt;/a&gt;题目&lt;/h4&gt;&lt;p&gt;给定 &lt;strong&gt;n&lt;/strong&gt; 个数组成的一个数列，规定有两种操作，一是修改某个元素，二是求子数列 &lt;strong&gt;[&lt;strong&gt;a&lt;/strong&gt;,&lt;strong&gt;b&lt;/strong&gt;]&lt;/strong&gt; 的连续和。&lt;/p&gt;
+&lt;h4 id=&#34;输入格式&#34;&gt;&lt;a href=&#34;#输入格式&#34; class=&#34;headerlink&#34; title=&#34;输入格式&#34;&gt;&lt;/a&gt;输入格式&lt;/h4&gt;&lt;p&gt;第一行包含两个整数 &lt;strong&gt;n&lt;/strong&gt; 和 &lt;strong&gt;m&lt;/strong&gt;，分别表示数的个数和操作次数。&lt;/p&gt;
 &lt;p&gt;第二行包含 &lt;strong&gt;n&lt;/strong&gt; 个整数，表示完整数列。&lt;/p&gt;
-&lt;p&gt;接下来 &lt;strong&gt;m&lt;/strong&gt; 行，每行包含三个整数 &lt;strong&gt;k&lt;/strong&gt;,&lt;strong&gt;a&lt;/strong&gt;,&lt;strong&gt;b&lt;/strong&gt; （&lt;strong&gt;k=0&lt;/strong&gt;，表示求子数列 &lt;strong&gt;[a,b]&lt;/strong&gt; 的和；&lt;strong&gt;k=1&lt;/strong&gt;，表示第 &lt;strong&gt;a&lt;/strong&gt; 个数加 &lt;strong&gt;b&lt;/strong&gt;）。&lt;/p&gt;
+&lt;p&gt;接下来 &lt;strong&gt;m&lt;/strong&gt; 行，每行包含三个整数 &lt;strong&gt;k&lt;/strong&gt;,&lt;strong&gt;a&lt;/strong&gt;,&lt;strong&gt;b&lt;/strong&gt; （&lt;strong&gt;k&amp;#x3D;0&lt;/strong&gt;，表示求子数列 &lt;strong&gt;[a,b]&lt;/strong&gt; 的和；&lt;strong&gt;k&amp;#x3D;1&lt;/strong&gt;，表示第 &lt;strong&gt;a&lt;/strong&gt; 个数加 &lt;strong&gt;b&lt;/strong&gt;）。&lt;/p&gt;
 &lt;p&gt;数列从 &lt;strong&gt;1&lt;/strong&gt; 开始计数。&lt;/p&gt;
-&lt;h4 id=&#34;输出格式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#输出格式&#34;&gt;#&lt;/a&gt; 输出格式&lt;/h4&gt;
-&lt;p&gt;输出若干行数字，表示 &lt;strong&gt;k&lt;/strong&gt;=&lt;strong&gt;0&lt;/strong&gt; 时，对应的子数列 &lt;strong&gt;[&lt;strong&gt;a&lt;/strong&gt;,&lt;strong&gt;b&lt;/strong&gt;]&lt;/strong&gt; 的连续和。&lt;/p&gt;
-&lt;h4 id=&#34;数据范围&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据范围&#34;&gt;#&lt;/a&gt; 数据范围&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;≤&lt;strong&gt;n&lt;/strong&gt;≤&lt;strong&gt;100000&lt;/strong&gt;,&lt;br&gt;
-&lt;strong&gt;1&lt;/strong&gt;≤&lt;strong&gt;m&lt;/strong&gt;≤&lt;strong&gt;100000，&lt;br&gt;
-1&lt;/strong&gt;≤&lt;strong&gt;a&lt;/strong&gt;≤&lt;strong&gt;b&lt;/strong&gt;≤&lt;strong&gt;n&lt;/strong&gt;,&lt;br&gt;
- 数据保证在任何时候，数列中所有元素之和均在 int 范围内。&lt;/p&gt;
-&lt;h4 id=&#34;输入样例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#输入样例&#34;&gt;#&lt;/a&gt; 输入样例：&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;10 5
+&lt;h4 id=&#34;输出格式&#34;&gt;&lt;a href=&#34;#输出格式&#34; class=&#34;headerlink&#34; title=&#34;输出格式&#34;&gt;&lt;/a&gt;输出格式&lt;/h4&gt;&lt;p&gt;输出若干行数字，表示 &lt;strong&gt;k&lt;/strong&gt;&amp;#x3D;&lt;strong&gt;0&lt;/strong&gt; 时，对应的子数列 &lt;strong&gt;[&lt;strong&gt;a&lt;/strong&gt;,&lt;strong&gt;b&lt;/strong&gt;]&lt;/strong&gt; 的连续和。&lt;/p&gt;
+&lt;h4 id=&#34;数据范围&#34;&gt;&lt;a href=&#34;#数据范围&#34; class=&#34;headerlink&#34; title=&#34;数据范围&#34;&gt;&lt;/a&gt;数据范围&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;≤&lt;strong&gt;n&lt;/strong&gt;≤&lt;strong&gt;100000&lt;/strong&gt;,&lt;br&gt;&lt;strong&gt;1&lt;/strong&gt;≤&lt;strong&gt;m&lt;/strong&gt;≤&lt;strong&gt;100000，&lt;br&gt;1&lt;/strong&gt;≤&lt;strong&gt;a&lt;/strong&gt;≤&lt;strong&gt;b&lt;/strong&gt;≤&lt;strong&gt;n&lt;/strong&gt;,&lt;br&gt;数据保证在任何时候，数列中所有元素之和均在 int 范围内。&lt;/p&gt;
+&lt;h4 id=&#34;输入样例：&#34;&gt;&lt;a href=&#34;#输入样例：&#34; class=&#34;headerlink&#34; title=&#34;输入样例：&#34;&gt;&lt;/a&gt;输入样例：&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;10 5
 1 2 3 4 5 6 7 8 9 10
 1 1 5
 0 1 3
@@ -55,13 +103,11 @@
 1 7 5
 0 4 8
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;输出样例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#输出样例&#34;&gt;#&lt;/a&gt; 输出样例：&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;11
+&lt;h4 id=&#34;输出样例：&#34;&gt;&lt;a href=&#34;#输出样例：&#34; class=&#34;headerlink&#34; title=&#34;输出样例：&#34;&gt;&lt;/a&gt;输出样例：&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;11
 30
 35
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;树状数组模板&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#树状数组模板&#34;&gt;#&lt;/a&gt; 树状数组模板&lt;/h4&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
+&lt;h4 id=&#34;树状数组模板&#34;&gt;&lt;a href=&#34;#树状数组模板&#34; class=&#34;headerlink&#34; title=&#34;树状数组模板&#34;&gt;&lt;/a&gt;树状数组模板&lt;/h4&gt;&lt;pre&gt;&lt;code class=&#34;c++&#34;&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
 using namespace std;
 const int N = 100010;
 
@@ -69,47 +115,46 @@ int n, m;
 int arr[N], tr[N];
 
 int lowbit(int i)&amp;#123;
-	return i &amp;amp; -i;
+    return i &amp;amp; -i;
 &amp;#125;
 
 void add(int index, int x)&amp;#123;
-	for(int i = index; i &amp;lt;= n; i += lowbit(i))
-		tr[i] += x;
-	return;
+    for(int i = index; i &amp;lt;= n; i += lowbit(i))
+        tr[i] += x;
+    return;
 &amp;#125;
 
 void change(int index, int x)&amp;#123;
-	int c = x - arr[index];
-	for(int i = index; i &amp;lt;= n; i += lowbit(i))
-		tr[i] += c;
-	return;
+    int c = x - arr[index];
+    for(int i = index; i &amp;lt;= n; i += lowbit(i))
+        tr[i] += c;
+    return;
 &amp;#125;
 
 int query(int index)&amp;#123;
-	int res = 0;
-	for(int i = index; i; i -= lowbit(i))
-		res += tr[i];
-	return res;
+    int res = 0;
+    for(int i = index; i; i -= lowbit(i))
+        res += tr[i];
+    return res;
 &amp;#125;
 
 int main()&amp;#123;
-	cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;
-	for(int i = 1; i &amp;lt;= n; i++) scanf(&amp;quot;%d&amp;quot;, &amp;amp;arr[i]);
-	for(int i = 1; i &amp;lt;= n; i++) add(i, arr[i]);
+    cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;
+    for(int i = 1; i &amp;lt;= n; i++) scanf(&amp;quot;%d&amp;quot;, &amp;amp;arr[i]);
+    for(int i = 1; i &amp;lt;= n; i++) add(i, arr[i]);
 
-	while(m--)&amp;#123;
-		int tag, l, r;
-		int res;
-		scanf(&amp;quot;%d %d %d&amp;quot;, &amp;amp;tag, &amp;amp;l, &amp;amp;r);
-		if(tag) add(l, r);
-		else printf(&amp;quot;%d\n&amp;quot;, query(r) - query(l - 1));
-	&amp;#125;
+    while(m--)&amp;#123;
+        int tag, l, r;
+        int res;
+        scanf(&amp;quot;%d %d %d&amp;quot;, &amp;amp;tag, &amp;amp;l, &amp;amp;r);
+        if(tag) add(l, r);
+        else printf(&amp;quot;%d\n&amp;quot;, query(r) - query(l - 1));
+    &amp;#125;
 
-	return 0;
+    return 0;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;线段树模板&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#线段树模板&#34;&gt;#&lt;/a&gt; 线段树模板&lt;/h4&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
+&lt;h4 id=&#34;线段树模板&#34;&gt;&lt;a href=&#34;#线段树模板&#34; class=&#34;headerlink&#34; title=&#34;线段树模板&#34;&gt;&lt;/a&gt;线段树模板&lt;/h4&gt;&lt;pre&gt;&lt;code class=&#34;c++&#34;&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
 using namespace std;
 const int N = 100010;
 
@@ -117,59 +162,59 @@ int n, m;
 int num[N];
 
 struct node&amp;#123;
-	int l, r;
-	int sum;
+    int l, r;
+    int sum;
 &amp;#125;sgt[N * 4];		// 需要开N * 4
 
 // 更新当前节点
 void pushup(int root)&amp;#123;
-	sgt[root].sum = sgt[root &amp;lt;&amp;lt; 1].sum + sgt[root &amp;lt;&amp;lt; 1 | 1].sum;
+    sgt[root].sum = sgt[root &amp;lt;&amp;lt; 1].sum + sgt[root &amp;lt;&amp;lt; 1 | 1].sum;
 &amp;#125;
 
 // 初始化线段树
 void build(int root, int l, int r)&amp;#123;
-	if(l == r) sgt[root].sum = num[l];
-	else&amp;#123;
-		sgt[root] = &amp;#123;l, r&amp;#125;;
-		int mid = l + r &amp;gt;&amp;gt; 1;
-		build(root &amp;lt;&amp;lt; 1, l, mid);
-		build(root &amp;lt;&amp;lt; 1 | 1, mid + 1, r);
-		pushup(root);
-	&amp;#125;
-	return;
+    if(l == r) sgt[root].sum = num[l];
+    else&amp;#123;
+        sgt[root] = &amp;#123;l, r&amp;#125;;
+        int mid = l + r &amp;gt;&amp;gt; 1;
+        build(root &amp;lt;&amp;lt; 1, l, mid);
+        build(root &amp;lt;&amp;lt; 1 | 1, mid + 1, r);
+        pushup(root);
+    &amp;#125;
+    return;
 &amp;#125;
 
 int query(int root, int l, int r)&amp;#123;
-	if(sgt[root].l &amp;gt;= l &amp;amp;&amp;amp; sgt[root].r &amp;lt;= r) return sgt[root].sum;
-	int mid = sgt[root].l + sgt[root].r &amp;gt;&amp;gt; 1;
-	int sum = 0;
-	if(l &amp;lt;= mid) sum += query(root &amp;lt;&amp;lt; 1, l, r);
-	if(r &amp;gt; mid) sum += query(root &amp;lt;&amp;lt; 1 | 1, l, r);
-	return sum;
+    if(sgt[root].l &amp;gt;= l &amp;amp;&amp;amp; sgt[root].r &amp;lt;= r) return sgt[root].sum;
+    int mid = sgt[root].l + sgt[root].r &amp;gt;&amp;gt; 1;
+    int sum = 0;
+    if(l &amp;lt;= mid) sum += query(root &amp;lt;&amp;lt; 1, l, r);
+    if(r &amp;gt; mid) sum += query(root &amp;lt;&amp;lt; 1 | 1, l, r);
+    return sum;
 &amp;#125;
 
 void modify(int root, int index, int c)&amp;#123;
-	if(sgt[root].l == sgt[root].r) sgt[root].sum += c;
-	else&amp;#123;
-		int mid = sgt[root].l + sgt[root].r &amp;gt;&amp;gt; 1;
-		if(index &amp;lt;= mid) modify(root &amp;lt;&amp;lt; 1, index, c);
-		else modify(root &amp;lt;&amp;lt; 1 | 1, index, c);
-		pushup(root);
-	&amp;#125;
+    if(sgt[root].l == sgt[root].r) sgt[root].sum += c;
+    else&amp;#123;
+        int mid = sgt[root].l + sgt[root].r &amp;gt;&amp;gt; 1;
+        if(index &amp;lt;= mid) modify(root &amp;lt;&amp;lt; 1, index, c);
+        else modify(root &amp;lt;&amp;lt; 1 | 1, index, c);
+        pushup(root);
+    &amp;#125;
 &amp;#125;
 
 int main()&amp;#123;
-	cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;
-	for(int i = 1; i &amp;lt;= n; i++) scanf(&amp;quot;%d&amp;quot;, &amp;amp;num[i]);
-	build(1, 1, n);
-	int k, a, b;
-	while(m--)&amp;#123;
-		scanf(&amp;quot;%d %d %d&amp;quot;, &amp;amp;k, &amp;amp;a, &amp;amp;b);
-		if(k) modify(1, a, b);
-		else printf(&amp;quot;%d\n&amp;quot;, query(1, a, b));
-	&amp;#125;
+    cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m;
+    for(int i = 1; i &amp;lt;= n; i++) scanf(&amp;quot;%d&amp;quot;, &amp;amp;num[i]);
+    build(1, 1, n);
+    int k, a, b;
+    while(m--)&amp;#123;
+        scanf(&amp;quot;%d %d %d&amp;quot;, &amp;amp;k, &amp;amp;a, &amp;amp;b);
+        if(k) modify(1, a, b);
+        else printf(&amp;quot;%d\n&amp;quot;, query(1, a, b));
+    &amp;#125;
 
-	return 0;
+    return 0;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
 </content>
