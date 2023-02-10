@@ -3,7 +3,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -15,15 +15,17 @@
   <meta http-equiv="Cache-Control" content="no-siteapp">
 
 
-<link rel="alternate" type="application/rss+xml" title="Hexo" href="http://example.com/rss.xml" />
-<link rel="alternate" type="application/atom+xml" title="Hexo" href="http://example.com/atom.xml" />
-<link rel="alternate" type="application/json" title="Hexo" href="http://example.com/feed.json" />
+<link rel="alternate" type="application/rss+xml" title="mioe" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="mioe" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="mioe" href="http://example.com/feed.json" />
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
+  <meta name="keywords" content="C++,C,Linux" />
+
 
 <link rel="canonical" href="http://example.com/2021/10/01/P2911_[USACO08OCT]Bovine_Bones_G_(C)/">
 
@@ -31,7 +33,7 @@
 
   <title>
 P2911 [USACO08OCT]Bovine Bones G (C) - C/C++ - 算法 - 编程 |
-Yume Shoka = Hexo</title>
+mioe = mioe = AC总在意料外^^</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div id="loading">
@@ -62,11 +64,11 @@ Yume Shoka = Hexo</title>
   </h1>
   
 <div class="meta">
-  <span class="item" title="Created: 2021-10-01 20:40:00">
+  <span class="item" title="创建时间：2021-10-01 20:40:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <span class="text">Posted on</span>
+    <span class="text">发表于</span>
     <time itemprop="dateCreated datePublished" datetime="2021-10-01T20:40:00+08:00">2021-10-01</time>
   </span>
 </div>
@@ -77,14 +79,14 @@ Yume Shoka = Hexo</title>
         <nav id="nav">
   <div class="inner">
     <div class="toggle">
-      <div class="lines" aria-label="Toggle navigation bar">
+      <div class="lines" aria-label="切换导航栏">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
       </div>
     </div>
     <ul class="menu">
-      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+      <li class="item title"><a href="/" rel="start">mioe</a></li>
     </ul>
     <ul class="right">
       <li class="item theme">
@@ -100,12 +102,12 @@ Yume Shoka = Hexo</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclx6phq6j20zk0m8e36.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
         </ul>
       </div>
     </header>
@@ -130,35 +132,75 @@ Yume Shoka = Hexo</title>
     
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
-<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
-<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="item" rel="index" title="In 编程"><span itemprop="name">编程</span></a>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="item" rel="index" title="分类于 编程"><span itemprop="name">编程</span></a>
 <meta itemprop="position" content="1" /></span>
 <i class="ic i-angle-right"></i>
-<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" itemprop="item" rel="index" title="In 算法"><span itemprop="name">算法</span></a>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" itemprop="item" rel="index" title="分类于 算法"><span itemprop="name">算法</span></a>
 <meta itemprop="position" content="2" /></span>
 <i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" itemprop="item" rel="index" title="In C/C++"><span itemprop="name">C/C++</span></a>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" itemprop="item" rel="index" title="分类于 C/C++"><span itemprop="name">C/C++</span></a>
 <meta itemprop="position" content="3" /></span>
 </div>
 
-    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
   <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/01/P2911_[USACO08OCT]Bovine_Bones_G_(C)/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
-    <meta itemprop="name" content="John Doe">
-    <meta itemprop="description" content=", ">
+    <meta itemprop="name" content="mioe">
+    <meta itemprop="description" content="AC总在意料外^^, 花店不开了，花继续开">
   </span>
 
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
+    <meta itemprop="name" content="mioe">
   </span>
 
   <div class="body md" itemprop="articleBody">
     
 
     <p><img data-src="https://i.loli.net/2021/10/01/dcA2xWtmfYQRaqD.png" alt="image.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">	根据题意，总共3个骰子，每个骰子有 S个面，因为数据范围较小，可以直接选择暴力</span><br><span class="line">	每次总和记录到相应的结构体(Sum = 10 -&gt; struct[10])，结构体中保存两个数据：总和(num)、次数(times) </span><br><span class="line">	最后使用快排(qsort)筛出次数(times)最小的目标 </span><br><span class="line">*/ </span><br><span class="line"></span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">struct A&#123;		// 声明结构体，存放点数总和与次数 </span><br><span class="line">	int num;</span><br><span class="line">	int times;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">int compare(const void *a, const void *b)&#123;</span><br><span class="line">	struct A *p1 = (struct A *)a;</span><br><span class="line">	struct A *p2 = (struct A *)b;</span><br><span class="line">	if(p1-&gt;times == p2-&gt;times) return p1-&gt;num - p2-&gt;num;		// 题意：如果出现概率一样时输出最小总和 </span><br><span class="line">	return p2-&gt;times - p1-&gt;times;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main(void)&#123;</span><br><span class="line">	int s1, s2, s3, s, i, j, k;</span><br><span class="line">	struct A a[80];</span><br><span class="line">	scanf(&quot;%d %d %d&quot;, &amp;s1, &amp;s2, &amp;s3);</span><br><span class="line">	for(i = 0; i &lt; 81; i++)&#123;</span><br><span class="line">		 a[i].times = 0;</span><br><span class="line">		 a[i].num = 0;</span><br><span class="line">	&#125;</span><br><span class="line">	for(i = 1; i &lt;= s1; i++)</span><br><span class="line">		for(j = 1; j &lt;= s2; j++)</span><br><span class="line">			for(k = 1; k &lt;= s3; k++)&#123;</span><br><span class="line">				a[i + j + k].num = i + j + k;</span><br><span class="line">				a[i + j + k].times++;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">	qsort(a, 80, sizeof(struct A), compare);</span><br><span class="line">	printf(&quot;%d&quot;, a[0].num);</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>/*
+	根据题意，总共3个骰子，每个骰子有 S个面，因为数据范围较小，可以直接选择暴力
+	每次总和记录到相应的结构体(Sum = 10 -&gt; struct[10])，结构体中保存两个数据：总和(num)、次数(times) 
+	最后使用快排(qsort)筛出次数(times)最小的目标 
+*/ 
+
+#include&lt;stdio.h&gt;
+
+struct A&#123;		// 声明结构体，存放点数总和与次数 
+	int num;
+	int times;
+&#125;;
+
+int compare(const void *a, const void *b)&#123;
+	struct A *p1 = (struct A *)a;
+	struct A *p2 = (struct A *)b;
+	if(p1-&gt;times == p2-&gt;times) return p1-&gt;num - p2-&gt;num;		// 题意：如果出现概率一样时输出最小总和 
+	return p2-&gt;times - p1-&gt;times;
+&#125;
+
+int main(void)&#123;
+	int s1, s2, s3, s, i, j, k;
+	struct A a[80];
+	scanf(&quot;%d %d %d&quot;, &amp;s1, &amp;s2, &amp;s3);
+	for(i = 0; i &lt; 81; i++)&#123;
+		 a[i].times = 0;
+		 a[i].num = 0;
+	&#125;
+	for(i = 1; i &lt;= s1; i++)
+		for(j = 1; j &lt;= s2; j++)
+			for(k = 1; k &lt;= s3; k++)&#123;
+				a[i + j + k].num = i + j + k;
+				a[i + j + k].times++;
+			&#125;
+
+	qsort(a, 80, sizeof(struct A), compare);
+	printf(&quot;%d&quot;, a[0].num);
+
+	return 0;
+&#125;
+</code></pre>
 
   </div>
 
@@ -169,32 +211,9 @@ Yume Shoka = Hexo</title>
     <span class="icon">
       <i class="ic i-calendar-check"></i>
     </span>
-    <span class="text">Edited on</span>
-    <time title="Modified: 2021-10-01 20:41:00" itemprop="dateModified" datetime="2021-10-01T20:41:00+08:00">2021-10-01</time>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-10-01 20:41:00" itemprop="dateModified" datetime="2021-10-01T20:41:00+08:00">2021-10-01</time>
   </span>
-</div>
-
-      
-<div class="reward">
-  <button><i class="ic i-heartbeat"></i> Donate</button>
-  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
-  <div id="qr">
-      
-      <div>
-        <img data-src="/images/wechatpay.png" alt="John Doe WeChat Pay">
-        <p>WeChat Pay</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/alipay.png" alt="John Doe Alipay">
-        <p>Alipay</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/paypal.png" alt="John Doe PayPal">
-        <p>PayPal</p>
-      </div>
-  </div>
 </div>
 
       
@@ -202,14 +221,14 @@ Yume Shoka = Hexo</title>
 <div id="copyright">
 <ul>
   <li class="author">
-    <strong>Post author:  </strong>mi0e <i class="ic i-at"><em>@</em></i>Hexo
+    <strong>本文作者： </strong>mi0e <i class="ic i-at"><em>@</em></i>mioe
   </li>
   <li class="link">
-    <strong>Post link: </strong>
+    <strong>本文链接：</strong>
     <a href="http://example.com/2021/10/01/P2911_[USACO08OCT]Bovine_Bones_G_(C)/" title="P2911 [USACO08OCT]Bovine Bones G (C)">http://example.com/2021/10/01/P2911_[USACO08OCT]Bovine_Bones_G_(C)/</a>
   </li>
   <li class="license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>
@@ -225,8 +244,8 @@ Yume Shoka = Hexo</title>
     <div class="item left">
       
 
-  <a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeu7txpzj20zk0m81kx.jpg" title="冒泡排序 C语言">
-  <span class="type">Previous Post</span>
+  <a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giph4baakhj20zk0m8h5q.jpg" title="冒泡排序 C语言">
+  <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>冒泡排序 C语言</h3>
   </a>
@@ -235,8 +254,8 @@ Yume Shoka = Hexo</title>
     <div class="item right">
       
 
-  <a href="/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicit31ffoj20zk0m8naf.jpg" title="XX:XX:XX类型字符串提取数字">
-  <span class="type">Next Post</span>
+  <a href="/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclj9410cj20zk0m8h12.jpg" title="XX:XX:XX类型字符串提取数字">
+  <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>XX:XX:XX类型字符串提取数字</h3>
   </a>
@@ -256,52 +275,79 @@ Yume Shoka = Hexo</title>
 
   <div class="panels">
     <div class="inner">
-      <div class="contents panel pjax" data-title="Contents">
+      <div class="contents panel pjax" data-title="文章目录">
       </div>
-      <div class="related panel pjax" data-title="Related">
+      <div class="related panel pjax" data-title="系列文章">
         <ul>
           <li class="active"><a href="/2021/10/01/P2911_%5BUSACO08OCT%5DBovine_Bones_G_(C)/" rel="bookmark" title="P2911 [USACO08OCT]Bovine Bones G (C)">P2911 [USACO08OCT]Bovine Bones G (C)</a></li><li><a href="/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/" rel="bookmark" title="XX:XX:XX类型字符串提取数字">XX:XX:XX类型字符串提取数字</a></li><li><a href="/2021/10/28/%E5%8D%A1%E5%B8%B8%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%8C%E8%82%86%E6%97%A0%E5%BF%8C%E6%83%AESTL/" rel="bookmark" title="卡常小技巧，肆无忌惮STL">卡常小技巧，肆无忌惮STL</a></li><li><a href="/2021/10/28/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%A8%A1%E6%9D%BF/" rel="bookmark" title="二叉树模板">二叉树模板</a></li><li><a href="/2021/11/04/Vector_%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" rel="bookmark" title="Vector 二分查找">Vector 二分查找</a></li><li><a href="/2021/11/08/Map_%E5%8D%95%E8%AF%8D%E5%88%86%E6%9E%90/" rel="bookmark" title="Map 单词分析">Map 单词分析</a></li>
         </ul>
       </div>
-      <div class="overview panel" data-title="Overview">
+      <div class="overview panel" data-title="站点概览">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <img class="image" itemprop="image" alt="John Doe"
+  <img class="image" itemprop="image" alt="mioe"
       data-src="/images/avatar.jpg">
-  <p class="name" itemprop="name">John Doe</p>
-  <div class="description" itemprop="description"></div>
+  <p class="name" itemprop="name">mioe</p>
+  <div class="description" itemprop="description">花店不开了，花继续开</div>
 </div>
 
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
         <span class="count">81</span>
-        <span class="name">posts</span>
+        <span class="name">文章</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
         <span class="count">24</span>
-        <span class="name">categories</span>
+        <span class="name">分类</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
         <span class="count">16</span>
-        <span class="name">tags</span>
+        <span class="name">标签</span>
       </a>
     </div>
 </nav>
 
 <div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RhYmluZzg1" title="https:&#x2F;&#x2F;github.com&#x2F;dabing85"><i class="ic i-github"></i></span>
 </div>
 
 <ul class="menu">
   
     
   <li class="item">
-    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
   </li>
 
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
 
 </ul>
 
@@ -311,12 +357,12 @@ Yume Shoka = Hexo</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+        <a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+        <a href="/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -332,59 +378,69 @@ Yume Shoka = Hexo</title>
         <div class="widgets">
           
 <div class="rpost pjax">
-  <h2>Random Posts</h2>
+  <h2>随机文章</h2>
   <ul>
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="In 编程">编程</a>
+<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
+</div>
+
+    <span><a href="/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/" title="随机头图">随机头图</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
+</div>
+
+    <span><a href="/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%BF%90%E7%AE%97%EF%BC%88%E5%AF%B9%E6%95%B0%EF%BC%89/" title="图像的非线性运算（对数）">图像的非线性运算（对数）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2023/02/04/%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/" title="最短路问题">最短路问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="In Q/A">Q/A</a>
-</div>
-
-    <span><a href="/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/" title="关于矩阵对角线的相关表达">关于矩阵对角线的相关表达</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Python/" title="In Python">Python</a>
-</div>
-
-    <span><a href="/2021/03/17/Python%E5%A3%B0%E6%98%8E%E7%A9%BA%E6%95%B0%E7%BB%84/" title="Python声明空数组">Python声明空数组</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E9%9A%8F%E7%AC%94/" title="In 随笔">随笔</a>
-</div>
-
-    <span><a href="/2022/03/27/%E6%99%95%E8%BD%AE%E6%95%88%E5%BA%94/" title="晕轮效应">晕轮效应</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="In 编程">编程</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="In Python">Python</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/09/10/%E6%B4%9B%E8%B0%B7%E9%A2%98%E5%BA%93%E7%88%AC%E8%99%AB/" title="洛谷题库爬虫">洛谷题库爬虫</a></span>
+    <span><a href="/2021/10/01/P2911_%5BUSACO08OCT%5DBovine_Bones_G_(C)/" title="P2911 [USACO08OCT]Bovine Bones G (C)">P2911 [USACO08OCT]Bovine Bones G (C)</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="In 算法">算法</a>
+<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
+</div>
+
+    <span><a href="/2020/03/18/%E6%99%BA%E6%85%A7%E6%A0%91%E5%8A%A9%E6%89%8B/" title="智慧树助手">智慧树助手</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="In C/C++">C/C++</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
     <span><a href="/2023/01/20/%E5%8F%8C%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" title="双指针数组去重">双指针数组去重</a></span>
@@ -394,62 +450,50 @@ Yume Shoka = Hexo</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="In 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="In C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2023/02/02/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/" title="字符串哈希">字符串哈希</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="In 编程">编程</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="In C/C++">C/C++</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/10/23/C++_STL%E5%AE%B9%E5%99%A8%EF%BC%8811%E4%B8%AA%EF%BC%89/" title="C++ STL容器（11个）">C++ STL容器（11个）</a></span>
+    <span><a href="/2021/10/28/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%A8%A1%E6%9D%BF/" title="二叉树模板">二叉树模板</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="In 算法">算法</a>
+<a href="/categories/Python/" title="分类于 Python">Python</a>
 </div>
 
-    <span><a href="/2023/02/03/%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%EF%BC%88%E9%82%BB%E6%8E%A5%E8%A1%A8%EF%BC%89/" title="树的深度优先遍历（邻接表）">树的深度优先遍历（邻接表）</a></span>
+    <span><a href="/2021/04/06/python%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC_%E8%A3%85%E9%A5%B0%E5%99%A8/" title="python基础之函数进阶之函数作为返回值&#x2F;装饰器">python基础之函数进阶之函数作为返回值/装饰器</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="In 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="In C/C++">C/C++</a>
+<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
 </div>
 
-    <span><a href="/2022/12/30/%E7%BA%BF%E6%AE%B5%E6%A0%91___%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84_%E6%A8%A1%E6%9D%BF/" title="线段树 &#x2F; 树状数组 模板">线段树 / 树状数组 模板</a></span>
+    <span><a href="/2022/09/25/%E5%9B%BE%E7%89%87%E8%AE%A1%E7%AE%97/" title="图片计算">图片计算</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="In 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 </div>
 
-    <span><a href="/2023/01/10/gcd%E4%B8%8E%E6%AC%A7%E6%8B%89%E8%B4%A8%E6%95%B0%E7%AD%9B%E6%A8%A1%E6%9D%BF/" title="gcd与欧拉质数筛模板">gcd与欧拉质数筛模板</a></span>
+    <span><a href="/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/" title="git push出现Everything up-to-date">git push出现Everything up-to-date</a></span>
   </li>
 
   </ul>
 </div>
 <div>
-  <h2>Recent Comments</h2>
+  <h2>最新评论</h2>
   <ul class="leancloud-recent-comment"></ul>
 </div>
 
@@ -462,10 +506,10 @@ Yume Shoka = Hexo</title>
     <span class="with-love">
       <i class="ic i-sakura rotate"></i>
     </span>
-    <span class="author" itemprop="copyrightHolder">John Doe @ Yume Shoka</span>
+    <span class="author" itemprop="copyrightHolder">mioe @ mioe</span>
   </div>
   <div class="powered-by">
-    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
   </div>
 </div>
 
@@ -476,16 +520,16 @@ Yume Shoka = Hexo</title>
   var LOCAL = {
     path: '2021/10/01/P2911_[USACO08OCT]Bovine_Bones_G_(C)/',
     favicon: {
-      show: "（●´3｀●）Goooood",
-      hide: "(´Д｀)Booooom"
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
     },
     search : {
-      placeholder: "Search for Posts",
-      empty: "We didn't find any results for the search: ${query}",
-      stats: "${hits} results found in ${time} ms"
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
     },
     valine: true,fancybox: true,
-    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
     ignores : [
       function(uri) {
         return uri.includes('#');

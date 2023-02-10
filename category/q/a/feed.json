@@ -1,7 +1,7 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Hexo • All posts by \"q/a\" category",
-    "description": "",
+    "title": "mioe • All posts by \"q/a\" category",
+    "description": "花店不开了，花继续开",
     "home_page_url": "http://example.com",
     "items": [
         {
@@ -9,7 +9,7 @@
             "url": "http://example.com/2021/12/31/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/",
             "title": "局域网搭建服务器无法访问",
             "date_published": "2021-12-31T04:15:00.000Z",
-            "content_html": "<ul>\n<li>不在同一网段 &#x2F; 网关不一致 （无法ping通）</li>\n<li>防火墙拦截 （<del>不一定能ping通</del>）</li>\n</ul>\n",
+            "content_html": "<ul>\n<li>不在同一网段 / 网关不一致 （无法 ping 通）</li>\n<li>防火墙拦截 （<s>不一定能 ping 通</s>）</li>\n</ul>\n",
             "tags": [
                 "局域网"
             ]
@@ -19,7 +19,7 @@
             "url": "http://example.com/2021/11/05/C++_STL%E4%B8%AD%E7%9A%84next_permutation/",
             "title": "C++ STL中的next_permutation",
             "date_published": "2021-11-05T06:45:00.000Z",
-            "content_html": "<blockquote>\n<p>Rearranges the elements in the range <code>[first,last)</code> into the next <em><span class=\"exturl\" data-url=\"aHR0cHM6Ly9jcGx1c3BsdXMuY29tL2xleGljb2dyYXBoaWNhbF9jb21wYXJl\">lexicographically</span> greater</em> permutation.</p>\n<p><em>将范围内的元素重新排列<code>[first,last)</code>为下一个<span class=\"exturl\" data-url=\"aHR0cHM6Ly9jcGx1c3BsdXMuY29tL2xleGljb2dyYXBoaWNhbF9jb21wYXJl\">字典序</span>更大的排列。</em></p>\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly9jcGx1c3BsdXMuY29tLw==\">–cplusplus.com</span></p>\n</blockquote>\n<p>对于next_permutation函数，其函数原型为：</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">#include &lt;algorithm&gt;</span><br><span class=\"line\">bool next_permutation(iterator start,iterator end)</span><br></pre></td></tr></table></figure>\n\n<p>如下例子：</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br><span class=\"line\">8</span><br><span class=\"line\">9</span><br><span class=\"line\">10</span><br><span class=\"line\">11</span><br><span class=\"line\">12</span><br><span class=\"line\">13</span><br><span class=\"line\">14</span><br><span class=\"line\">15</span><br><span class=\"line\">16</span><br><span class=\"line\">17</span><br><span class=\"line\">18</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">#include &lt;iostream&gt;</span><br><span class=\"line\">#include &lt;algorithm&gt;</span><br><span class=\"line\">using namespace std;</span><br><span class=\"line\">int main()&#123;</span><br><span class=\"line\">    int num[3]=&#123;1, 2, 3&#125;;</span><br><span class=\"line\">    do&#123;</span><br><span class=\"line\">        cout &lt;&lt; num[0] &lt;&lt; &quot; &quot; &lt;&lt; num[1] &lt;&lt; &quot; &quot; &lt;&lt; num[2] &lt;&lt; endl;</span><br><span class=\"line\">    &#125;while(next_permutation(num, num + 3));</span><br><span class=\"line\">    return 0;</span><br><span class=\"line\">&#125;</span><br><span class=\"line\"></span><br><span class=\"line\">输出结果：</span><br><span class=\"line\">1 2 3</span><br><span class=\"line\">1 3 2</span><br><span class=\"line\">2 1 3</span><br><span class=\"line\">2 3 1</span><br><span class=\"line\">3 1 2</span><br><span class=\"line\">3 2 1</span><br></pre></td></tr></table></figure>\n\n<p>当我们把<code>while(next_permutation(num, num + 3))</code>中的<code>3</code>改为<code>2</code>时，输出就变为了：</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">1 2 3</span><br><span class=\"line\">2 1 3</span><br></pre></td></tr></table></figure>\n\n<p>由此可见，next_permutation是对数组前n项进行全排列</p>\n<p>同理，既然有下一个全排列函数，那肯定是有上一个全排列函数：<code>prev_permutation</code>使用方法与<code>next_permutation</code>一致。</p>\n",
+            "content_html": "<blockquote>\n<p>Rearranges the elements in the range  <code>[first,last)</code>  into the next <em><span class=\"exturl\" data-url=\"aHR0cHM6Ly9jcGx1c3BsdXMuY29tL2xleGljb2dyYXBoaWNhbF9jb21wYXJl\">lexicographically</span> greater</em> permutation.</p>\n<p><em>将范围内的元素重新排列 <code>[first,last)</code>  为下一个<span class=\"exturl\" data-url=\"aHR0cHM6Ly9jcGx1c3BsdXMuY29tL2xleGljb2dyYXBoaWNhbF9jb21wYXJl\">字典序</span>更大的排列。</em></p>\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly9jcGx1c3BsdXMuY29t\">–cplusplus.com</span></p>\n</blockquote>\n<p>对于 next_permutation 函数，其函数原型为：</p>\n<pre><code> #include &lt;algorithm&gt;\n bool next_permutation(iterator start,iterator end)\n</code></pre>\n<p>如下例子：</p>\n<pre><code>#include &lt;iostream&gt;\n#include &lt;algorithm&gt;\nusing namespace std;\nint main()&#123;\n    int num[3]=&#123;1, 2, 3&#125;;\n    do&#123;\n        cout &lt;&lt; num[0] &lt;&lt; &quot; &quot; &lt;&lt; num[1] &lt;&lt; &quot; &quot; &lt;&lt; num[2] &lt;&lt; endl;\n    &#125;while(next_permutation(num, num + 3));\n    return 0;\n&#125;\n\n输出结果：\n1 2 3\n1 3 2\n2 1 3\n2 3 1\n3 1 2\n3 2 1\n</code></pre>\n<p>当我们把 <code>while(next_permutation(num, num + 3))</code>  中的 <code>3</code>  改为 <code>2</code>  时，输出就变为了：</p>\n<pre><code>1 2 3\n2 1 3\n</code></pre>\n<p>由此可见，next_permutation 是对数组前 n 项进行全排列</p>\n<p>同理，既然有下一个全排列函数，那肯定是有上一个全排列函数： <code>prev_permutation</code>  使用方法与 <code>next_permutation</code>  一致。</p>\n",
             "tags": [
                 "算法"
             ]
@@ -29,7 +29,7 @@
             "url": "http://example.com/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/",
             "title": "scanf、cin返回值与连续输入",
             "date_published": "2021-11-04T11:43:00.000Z",
-            "content_html": "<p><code>scanf(&quot;%d %d&quot;, &amp;a, &amp;b);</code></p>\n<ul>\n<li><strong>a</strong> , <strong>b</strong> 都成功读入，返回值为 <strong>2</strong></li>\n<li>只有 <strong>a</strong> 成功读入，返回值为 <strong>1</strong></li>\n<li><strong>a</strong> 和 <strong>b</strong> 都未成功读入，返回值为 <strong>0</strong></li>\n<li>遇到 <strong>错误</strong> 或遇到 <strong>end of file</strong>，返回值为 <strong>EOF</strong></li>\n</ul>\n<p><code>std::cin &gt;&gt; a &gt;&gt; b; \t// cin 无返回值</code></p>\n<p><strong>连续输入参考模板：</strong></p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">while(scanf(&quot;%d&quot;, &amp;i) != EOF)&#123;...&#125;</span><br><span class=\"line\"></span><br><span class=\"line\">while(cin &gt;&gt; i)&#123;...&#125;</span><br></pre></td></tr></table></figure>\n",
+            "content_html": "<p><code>scanf(&quot;%d %d&quot;, &amp;a, &amp;b);</code></p>\n<ul>\n<li><strong>a</strong> , <strong>b</strong> 都成功读入，返回值为 <strong>2</strong></li>\n<li>只有 <strong>a</strong> 成功读入，返回值为 <strong>1</strong></li>\n<li><strong>a</strong> 和 <strong>b</strong> 都未成功读入，返回值为 <strong>0</strong></li>\n<li>遇到 <strong>错误</strong> 或遇到 <strong>end of file</strong>，返回值为 <strong>EOF</strong></li>\n</ul>\n<p><code>std::cin &gt;&gt; a &gt;&gt; b; \t// cin 无返回值</code></p>\n<p><strong>连续输入参考模板：</strong></p>\n<pre><code>while(scanf(&quot;%d&quot;, &amp;i) != EOF)&#123;...&#125;\n\nwhile(cin &gt;&gt; i)&#123;...&#125;\n</code></pre>\n",
             "tags": [
                 "算法"
             ]
@@ -39,7 +39,7 @@
             "url": "http://example.com/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/",
             "title": "关于矩阵对角线的相关表达",
             "date_published": "2021-11-04T08:02:00.000Z",
-            "content_html": "<p>主对角线元素下标满足：<code>i = j</code></p>\n<p>副对角线元素下标满足：<code>i + j = n</code></p>\n<p>假设一个<code>n×n</code>的矩阵：</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">1 2 3 ...</span><br><span class=\"line\">4 5 6</span><br><span class=\"line\">7 8 9</span><br><span class=\"line\">...</span><br></pre></td></tr></table></figure>\n\n<p>主对角线一定满足 <code>a[1][1], a[2][2], a[3][3]..., a[n][n]</code> 其中主对角线的每项都有 <code>i == j</code></p>\n<p>副对角线一定满足 <code>a[1][n], a[2][n - 1], a[3][n - 3] ... a[n][1]</code> 其中次对角线的每项都有 <code>i + j == n</code></p>\n<hr>\n<p>相关：求秩、八皇后问题…</p>\n",
+            "content_html": "<p>主对角线元素下标满足： <code>i = j</code></p>\n<p>副对角线元素下标满足： <code>i + j = n</code></p>\n<p>假设一个 <code>n×n</code>  的矩阵：</p>\n<pre><code>1 2 3 ...\n4 5 6\n7 8 9\n...\n</code></pre>\n<p>主对角线一定满足  <code>a[1][1], a[2][2], a[3][3]..., a[n][n]</code>  其中主对角线的每项都有  <code>i == j</code></p>\n<p>副对角线一定满足  <code>a[1][n], a[2][n - 1], a[3][n - 3] ... a[n][1]</code>  其中次对角线的每项都有  <code>i + j == n</code></p>\n<hr>\n<p>相关：求秩、八皇后问题…</p>\n",
             "tags": [
                 "算法"
             ]
@@ -49,7 +49,7 @@
             "url": "http://example.com/2021/11/01/img%E6%A0%87%E7%AD%BE%E5%9C%A8%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF/",
             "title": "img标签在谷歌浏览器下不显示错误信息",
             "date_published": "2021-11-01T01:00:46.000Z",
-            "content_html": "<p>添加全局js</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">&lt;style&gt;</span><br><span class=\"line\">img[src=&quot;&quot;],img:not([src])&#123;opacity:0;&#125;</span><br><span class=\"line\">&lt;/style&gt;</span><br></pre></td></tr></table></figure>\n",
+            "content_html": "<p>添加全局 js</p>\n<pre><code>&lt;style&gt;\nimg[src=&quot;&quot;],img:not([src])&#123;opacity:0;&#125;\n&lt;/style&gt;\n</code></pre>\n",
             "tags": []
         },
         {
@@ -57,7 +57,7 @@
             "url": "http://example.com/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/",
             "title": "DFS与BFS使用场景",
             "date_published": "2021-10-29T07:45:26.000Z",
-            "content_html": "<p>(<span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cuaml1emhhbmcuY29tL3FhLzYyMy8=\">九章-马克助教</span>)</p>\n<blockquote>\n<ol>\n<li>BFS是用来搜索最短径路的解是比较合适的，比如求最少步数的解，最少交换次数的解，因为BFS搜索过程中遇到的解一定是离根最近的，所以遇到一个解，一定就是最优解，此时搜索算法可以终止。这个时候不适宜使用DFS，因为DFS搜索到的解不一定是离根最近的，只有全局搜索完毕，才能从所有解中找出离根的最近的解。（当然这个DFS的不足，可以使用迭代加深搜索ID-DFS去弥补）</li>\n<li>空间优劣上，DFS是有优势的，DFS不需要保存搜索过程中的状态，而BFS在搜索过程中需要保存搜索过的状态，而且一般情况需要一个队列来记录。</li>\n<li>DFS适合搜索全部的解，因为要搜索全部的解，那么BFS搜索过程中，遇到离根最近的解，并没有什么用，也必须遍历完整棵搜索树，DFS搜索也会搜索全部，但是相比DFS不用记录过多信息，所以搜素全部解的问题，DFS显然更加合适。</li>\n</ol>\n</blockquote>\n",
+            "content_html": "<p>(<span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cuaml1emhhbmcuY29tL3FhLzYyMy8=\">九章 - 马克助教</span>)</p>\n<blockquote>\n<ol>\n<li>BFS 是用来搜索最短径路的解是比较合适的，比如求最少步数的解，最少交换次数的解，因为 BFS 搜索过程中遇到的解一定是离根最近的，所以遇到一个解，一定就是最优解，此时搜索算法可以终止。这个时候不适宜使用 DFS，因为 DFS 搜索到的解不一定是离根最近的，只有全局搜索完毕，才能从所有解中找出离根的最近的解。（当然这个 DFS 的不足，可以使用迭代加深搜索 ID-DFS 去弥补）</li>\n<li>空间优劣上，DFS 是有优势的，DFS 不需要保存搜索过程中的状态，而 BFS 在搜索过程中需要保存搜索过的状态，而且一般情况需要一个队列来记录。</li>\n<li>DFS 适合搜索全部的解，因为要搜索全部的解，那么 BFS 搜索过程中，遇到离根最近的解，并没有什么用，也必须遍历完整棵搜索树，DFS 搜索也会搜索全部，但是相比 DFS 不用记录过多信息，所以搜素全部解的问题，DFS 显然更加合适。</li>\n</ol>\n</blockquote>\n",
             "tags": []
         },
         {
@@ -65,7 +65,7 @@
             "url": "http://example.com/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/",
             "title": "数组粘贴，初始化C++",
             "date_published": "2021-10-28T03:51:00.000Z",
-            "content_html": "<p>粘贴：memcpy()</p>\n<p>初始化（可初始化结构体内的数组元素）：memset()</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">int a[5];</span><br><span class=\"line\">int b[5] = &#123;1, 2, 3, 4, 5&#125;</span><br><span class=\"line\">memset(a, 0, sizeof(int));\t// 把a中所有数组元素初始化为1</span><br><span class=\"line\">memcpy(a, b, 5 * sizeof(int));\t// 把b数组覆盖到a数组</span><br></pre></td></tr></table></figure>\n",
+            "content_html": "<p>粘贴：memcpy ()</p>\n<p>初始化（可初始化结构体内的数组元素）：memset ()</p>\n<pre><code>int a[5];\nint b[5] = &#123;1, 2, 3, 4, 5&#125;\nmemset(a, 0, sizeof(int));\t// 把a中所有数组元素初始化为1\nmemcpy(a, b, 5 * sizeof(int));\t// 把b数组覆盖到a数组\n</code></pre>\n",
             "tags": []
         },
         {
@@ -73,7 +73,7 @@
             "url": "http://example.com/2021/10/26/c_str()%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/",
             "title": "c_str()使用方法",
             "date_published": "2021-10-26T13:52:15.000Z",
-            "content_html": "<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br><span class=\"line\">8</span><br><span class=\"line\">9</span><br><span class=\"line\">10</span><br><span class=\"line\">11</span><br><span class=\"line\">12</span><br><span class=\"line\">13</span><br><span class=\"line\">14</span><br><span class=\"line\">15</span><br><span class=\"line\">16</span><br><span class=\"line\">17</span><br><span class=\"line\">18</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">//标准库的string类提供了三个成员函数来从一个string得到c类型的字符数组</span><br><span class=\"line\">//c_str()：生成一个const char*指针，指向以空字符终止的数组。</span><br><span class=\"line\">#include &lt;bits/stdc++.h&gt;</span><br><span class=\"line\">using namespace std;</span><br><span class=\"line\"> </span><br><span class=\"line\">int main()</span><br><span class=\"line\">&#123;</span><br><span class=\"line\">    //string--&gt;char*</span><br><span class=\"line\">    //c_str()函数返回一个指向正规C字符串的指针, 内容与本string串相同</span><br><span class=\"line\">    //这个数组的数据是临时的，当有一个改变这些数据的成员函数被调用后，其中的数据就会失效。</span><br><span class=\"line\">    //因此要么现用先转换，要么把它的数据复制到用户自己可以管理的内存中</span><br><span class=\"line\">    const char *c;</span><br><span class=\"line\">    string s = &quot;1234&quot;;</span><br><span class=\"line\">    c = s.c_str();</span><br><span class=\"line\">    cout&lt;&lt;c&lt;&lt;endl;</span><br><span class=\"line\">    s = &quot;abcde&quot;;</span><br><span class=\"line\">    cout&lt;&lt;c&lt;&lt;endl;</span><br><span class=\"line\">&#125;</span><br></pre></td></tr></table></figure>\n\n<p>输出：</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">1234</span><br><span class=\"line\">abcde</span><br></pre></td></tr></table></figure>\n",
+            "content_html": "<pre><code>//标准库的string类提供了三个成员函数来从一个string得到c类型的字符数组\n//c_str()：生成一个const char*指针，指向以空字符终止的数组。\n#include &lt;bits/stdc++.h&gt;\nusing namespace std;\n \nint main()\n&#123;\n    //string--&gt;char*\n    //c_str()函数返回一个指向正规C字符串的指针, 内容与本string串相同\n    //这个数组的数据是临时的，当有一个改变这些数据的成员函数被调用后，其中的数据就会失效。\n    //因此要么现用先转换，要么把它的数据复制到用户自己可以管理的内存中\n    const char *c;\n    string s = &quot;1234&quot;;\n    c = s.c_str();\n    cout&lt;&lt;c&lt;&lt;endl;\n    s = &quot;abcde&quot;;\n    cout&lt;&lt;c&lt;&lt;endl;\n&#125;\n</code></pre>\n<p>输出：</p>\n<pre><code>1234\nabcde\n</code></pre>\n",
             "tags": []
         },
         {
@@ -81,7 +81,7 @@
             "url": "http://example.com/2021/10/19/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84sort%E6%8E%92%E5%BA%8F/",
             "title": "二维数组sort排序",
             "date_published": "2021-10-19T07:25:51.000Z",
-            "content_html": "<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">for(int i = 0; i &lt; n; i++)</span><br><span class=\"line\">\tsort(s[i], s[i] + len);</span><br></pre></td></tr></table></figure>\n",
+            "content_html": "<pre><code>for(int i = 0; i &lt; n; i++)\n\tsort(s[i], s[i] + len);\n</code></pre>\n",
             "tags": []
         }
     ]

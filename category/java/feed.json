@@ -1,7 +1,7 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Hexo • All posts by \"java\" category",
-    "description": "",
+    "title": "mioe • All posts by \"java\" category",
+    "description": "花店不开了，花继续开",
     "home_page_url": "http://example.com",
     "items": [
         {
@@ -9,7 +9,7 @@
             "url": "http://example.com/2020/12/24/ArrayList%E5%88%97%E8%A1%A8%E9%9B%86%E5%90%88/",
             "title": "ArrayList列表集合",
             "date_published": "2020-12-24T12:57:00.000Z",
-            "content_html": "<pre><code>List&lt;Type&gt; variable = new ArrayList&lt;&gt;([size]);\n</code></pre>\n<p>Type：int String method …<br>size：可写可不写 </p>\n<pre><code>class user&#123;\n    private String name;\n    private int age;\n    public user(String string, int i) &#123;\n        this.name = string;\n        this.age = i;\n    &#125;\n    public String getName() &#123;\n        return name;\n    &#125;\n    public int getAge() &#123;\n        return age;\n    &#125;\n&#125;\n\n    List&lt;user&gt; list = new ArrayList&lt;&gt;();\n    list.add(new user(&quot;张三&quot;,15));\n</code></pre>\n<hr>\n<p>集合的遍历：</p>\n<p>方法一</p>\n<pre><code>for (int i = 0; i &lt; list.size(); i++) &#123;\n    System.out.print(list.get(i).getName());\n    System.out.println(list.get(i).getAge());\n&#125;\n</code></pre>\n<p>方法二</p>\n<pre><code>for (user user : list) &#123;\n    System.out.println(user.getAge() + user.getName());\n&#125;\n</code></pre>\n",
+            "content_html": "<pre><code>List&lt;Type&gt; variable = new ArrayList&lt;&gt;([size]);\n</code></pre>\n<p>Type：int String method …<br>\nsize：可写可不写</p>\n<pre><code>class user&#123;\n\tprivate String name;\n\tprivate int age;\n\tpublic user(String string, int i) &#123;\n\t\tthis.name = string;\n\t\tthis.age = i;\n\t&#125;\n\tpublic String getName() &#123;\n\t\treturn name;\n\t&#125;\n\tpublic int getAge() &#123;\n\t\treturn age;\n\t&#125;\n&#125;\n\n\tList&lt;user&gt; list = new ArrayList&lt;&gt;();\n\tlist.add(new user(&quot;张三&quot;,15));\n</code></pre>\n<hr>\n<p>集合的遍历：</p>\n<p>方法一</p>\n<pre><code>for (int i = 0; i &lt; list.size(); i++) &#123;\n\tSystem.out.print(list.get(i).getName());\n\tSystem.out.println(list.get(i).getAge());\n&#125;\n</code></pre>\n<p>方法二</p>\n<pre><code>for (user user : list) &#123;\n    System.out.println(user.getAge() + user.getName());\n&#125;\n</code></pre>\n",
             "tags": []
         },
         {
@@ -17,7 +17,7 @@
             "url": "http://example.com/2020/12/06/Java%E5%8A%A0%E5%BC%BA%E5%9E%8B%E5%BE%AA%E7%8E%AFfor_each/",
             "title": "Java加强型循环for each",
             "date_published": "2020-12-06T09:59:00.000Z",
-            "content_html": "<pre><code>for(type element: array)  \n&#123;  \n  System.out.println(element);  \n&#125;  \n</code></pre>\n",
+            "content_html": "<pre><code>for(type element: array)  \n&#123;  \n  System.out.println(element);  \n&#125;  </code></pre>\n",
             "tags": []
         }
     ]

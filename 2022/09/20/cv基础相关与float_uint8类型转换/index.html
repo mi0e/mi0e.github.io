@@ -3,7 +3,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -15,15 +15,17 @@
   <meta http-equiv="Cache-Control" content="no-siteapp">
 
 
-<link rel="alternate" type="application/rss+xml" title="Hexo" href="http://example.com/rss.xml" />
-<link rel="alternate" type="application/atom+xml" title="Hexo" href="http://example.com/atom.xml" />
-<link rel="alternate" type="application/json" title="Hexo" href="http://example.com/feed.json" />
+<link rel="alternate" type="application/rss+xml" title="mioe" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="mioe" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="mioe" href="http://example.com/feed.json" />
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
+  <meta name="keywords" content="C++,C,Linux" />
+
 
 <link rel="canonical" href="http://example.com/2022/09/20/cv%E5%9F%BA%E7%A1%80%E7%9B%B8%E5%85%B3%E4%B8%8Efloat_uint8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">
 
@@ -31,7 +33,7 @@
 
   <title>
 cv基础相关与float/uint8类型转换 - Opencv |
-Yume Shoka = Hexo</title>
+mioe = mioe = AC总在意料外^^</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div id="loading">
@@ -62,11 +64,11 @@ Yume Shoka = Hexo</title>
   </h1>
   
 <div class="meta">
-  <span class="item" title="Created: 2022-09-20 23:37:00">
+  <span class="item" title="创建时间：2022-09-20 23:37:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <span class="text">Posted on</span>
+    <span class="text">发表于</span>
     <time itemprop="dateCreated datePublished" datetime="2022-09-20T23:37:00+08:00">2022-09-20</time>
   </span>
 </div>
@@ -77,14 +79,14 @@ Yume Shoka = Hexo</title>
         <nav id="nav">
   <div class="inner">
     <div class="toggle">
-      <div class="lines" aria-label="Toggle navigation bar">
+      <div class="lines" aria-label="切换导航栏">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
       </div>
     </div>
     <ul class="menu">
-      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+      <li class="item title"><a href="/" rel="start">mioe</a></li>
     </ul>
     <ul class="right">
       <li class="item theme">
@@ -100,12 +102,12 @@ Yume Shoka = Hexo</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeu1usa7j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
         </ul>
       </div>
     </header>
@@ -130,70 +132,69 @@ Yume Shoka = Hexo</title>
     
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
-<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Opencv/" itemprop="item" rel="index" title="In Opencv"><span itemprop="name">Opencv</span></a>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Opencv/" itemprop="item" rel="index" title="分类于 Opencv"><span itemprop="name">Opencv</span></a>
 <meta itemprop="position" content="1" /></span>
 </div>
 
-    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
   <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/20/cv%E5%9F%BA%E7%A1%80%E7%9B%B8%E5%85%B3%E4%B8%8Efloat_uint8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
-    <meta itemprop="name" content="John Doe">
-    <meta itemprop="description" content=", ">
+    <meta itemprop="name" content="mioe">
+    <meta itemprop="description" content="AC总在意料外^^, 花店不开了，花继续开">
   </span>
 
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
+    <meta itemprop="name" content="mioe">
   </span>
 
   <div class="body md" itemprop="articleBody">
     
 
-    <h3 id="cv基本"><a href="#cv基本" class="headerlink" title="cv基本"></a>cv基本</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">img = cv2.imread(<span class="string">&quot;Path&quot;</span>)    <span class="comment">#打开图片</span></span><br><span class="line">cv2 = imshow(<span class="string">&quot;窗口标题&quot;</span>, img)	<span class="comment">#显示</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="resize"><a href="#resize" class="headerlink" title="resize()"></a>resize()</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dst = cv2.resize(src,dsize,dst=<span class="literal">None</span>,fx=<span class="literal">None</span>,fy=<span class="literal">None</span>,interpolation=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
+    <h3 id="cv基本"><a class="markdownIt-Anchor" href="#cv基本">#</a> cv 基本</h3>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>img <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span><span class="token string">"Path"</span><span class="token punctuation">)</span>    <span class="token comment">#打开图片</span></pre></td></tr><tr><td data-num="2"></td><td><pre>cv2 <span class="token operator">=</span> imshow<span class="token punctuation">(</span><span class="token string">"窗口标题"</span><span class="token punctuation">,</span> img<span class="token punctuation">)</span>	<span class="token comment">#显示</span></pre></td></tr></table></figure><h3 id="resize"><a class="markdownIt-Anchor" href="#resize">#</a> resize()</h3>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>dst <span class="token operator">=</span> cv2<span class="token punctuation">.</span>resize<span class="token punctuation">(</span>src<span class="token punctuation">,</span>dsize<span class="token punctuation">,</span>dst<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>fx<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>fy<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>interpolation<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span></pre></td></tr></table></figure><ul>
 <li><strong>src</strong>：输入图像</li>
-<li><strong>dsize</strong>：输出图像的大小。如果该参数为 0，表示缩放之后的大小需要通过公式计算，<code>dsize = Size(round(fx*src.cols),round(fy*src.rows))</code>。其中 <code>fx</code> 与 <code>fy</code> 是图像 Width 方向和 Height 方向的缩放比例。</li>
-<li><strong>fx</strong>：Width 方向的缩放比例，如果是 0，按照 <code>dsize * width/src.cols</code> 计算</li>
-<li><strong>fy</strong>：Height 方向的缩放比例，如果是 0，按照 <code>dsize * height/src.rows</code> 计算</li>
+<li><strong>dsize</strong>：输出图像的大小。如果该参数为 0，表示缩放之后的大小需要通过公式计算， <code>dsize = Size(round(fx*src.cols),round(fy*src.rows))</code> 。其中  <code>fx</code>  与  <code>fy</code>  是图像 Width 方向和 Height 方向的缩放比例。</li>
+<li><strong>fx</strong>：Width 方向的缩放比例，如果是 0，按照  <code>dsize * width/src.cols</code>  计算</li>
+<li><strong>fy</strong>：Height 方向的缩放比例，如果是 0，按照  <code>dsize * height/src.rows</code>  计算</li>
 <li><strong>interpolation</strong>：插值算法类型，或者叫做插值方式，默认为双线性插值</li>
 <li>方法返回结果 dst 表示输出图像。</li>
 </ul>
-<h3 id="相关参数"><a href="#相关参数" class="headerlink" title="相关参数"></a>相关参数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=cv2.imread(<span class="string">&quot;1.jpg&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a.shape[<span class="number">0</span>], a.shape[<span class="number">1</span>], a.shape[<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
-
-<p>shape0 : 垂直尺寸</p>
+<h3 id="相关参数"><a class="markdownIt-Anchor" href="#相关参数">#</a> 相关参数</h3>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>a<span class="token operator">=</span>cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span><span class="token string">"1.jpg"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>shape0 : 垂直尺寸</p>
 <p>shape1 : 水平尺寸</p>
 <p>shape2 : 颜色通道</p>
-<h3 id="数据类型查看与转换"><a href="#数据类型查看与转换" class="headerlink" title="数据类型查看与转换"></a>数据类型查看与转换</h3><h5 id="type-dtype-astype-区别"><a href="#type-dtype-astype-区别" class="headerlink" title="type() ,dtype() ,astype()区别"></a>type() ,dtype() ,astype()区别</h5><table>
+<h3 id="数据类型查看与转换"><a class="markdownIt-Anchor" href="#数据类型查看与转换">#</a> 数据类型查看与转换</h3>
+<h5 id="type-dtype-astype区别"><a class="markdownIt-Anchor" href="#type-dtype-astype区别">#</a> type () ,dtype () ,astype () 区别</h5>
+<table>
 <thead>
 <tr>
 <th>函数</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>type()</td>
 <td>返回数据结构类型（list、dict、numpy、ndarray 等）</td>
 </tr>
 <tr>
 <td>dtype()</td>
-<td>返回数据元素的数据类型（int、float等）<br />备注：<br />1）由于 list、dict 等可以包含不同的数据类型，因此不可调用dtype()函数<br />2）np.array 中要求所有元素属于同一数据类型，因此可调用dtype()函数</td>
+<td>返回数据元素的数据类型（int、float 等）<br />备注：<br />1）由于 list、dict 等可以包含不同的数据类型，因此不可调用 dtype () 函数<br />2）np.array 中要求所有元素属于同一数据类型，因此可调用 dtype () 函数</td>
 </tr>
 <tr>
 <td>astype()</td>
-<td>改变np.array中所有数据元素的数据类型。<br />备注：能用dtype() 才能用 astype()</td>
+<td>改变 np.array 中所有数据元素的数据类型。<br />备注：能用 dtype () 才能用 astype ()</td>
 </tr>
-</tbody></table>
-<h5 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h5><p>方法1：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过np转换类型后除以255得到float类型</span></span><br><span class="line">a = a.astype(np.float32)</span><br><span class="line">a/=<span class="number">255.0</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br></pre></td></tr></table></figure>
-
-<p>方法2：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 直接使用skimage转换</span></span><br><span class="line">a = skimage.img_as_float(a)  <span class="comment">#默认为float64，可选img_as_float32</span></span><br></pre></td></tr></table></figure>
-
+</tbody>
+</table>
+<h5 id="类型转换"><a class="markdownIt-Anchor" href="#类型转换">#</a> 类型转换</h5>
+<p>方法 1：</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 通过 np 转换类型后除以 255 得到 float 类型</span></pre></td></tr><tr><td data-num="2"></td><td><pre>a <span class="token operator">=</span> a<span class="token punctuation">.</span>astype<span class="token punctuation">(</span>np<span class="token punctuation">.</span>float32<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre>a<span class="token operator">/=</span><span class="token number">255.0</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span></pre></td></tr></table></figure><p>方法 2：</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 直接使用 skimage 转换</span></pre></td></tr><tr><td data-num="2"></td><td><pre>a <span class="token operator">=</span> skimage<span class="token punctuation">.</span>img_as_float<span class="token punctuation">(</span>a<span class="token punctuation">)</span>  <span class="token comment">#默认为 float64，可选 img_as_float32</span></pre></td></tr></table></figure>
   </div>
 
    <footer>
@@ -203,32 +204,9 @@ Yume Shoka = Hexo</title>
     <span class="icon">
       <i class="ic i-calendar-check"></i>
     </span>
-    <span class="text">Edited on</span>
-    <time title="Modified: 2022-09-20 23:38:37" itemprop="dateModified" datetime="2022-09-20T23:38:37+08:00">2022-09-20</time>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-09-20 23:38:37" itemprop="dateModified" datetime="2022-09-20T23:38:37+08:00">2022-09-20</time>
   </span>
-</div>
-
-      
-<div class="reward">
-  <button><i class="ic i-heartbeat"></i> Donate</button>
-  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
-  <div id="qr">
-      
-      <div>
-        <img data-src="/images/wechatpay.png" alt="John Doe WeChat Pay">
-        <p>WeChat Pay</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/alipay.png" alt="John Doe Alipay">
-        <p>Alipay</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/paypal.png" alt="John Doe PayPal">
-        <p>PayPal</p>
-      </div>
-  </div>
 </div>
 
       
@@ -236,14 +214,14 @@ Yume Shoka = Hexo</title>
 <div id="copyright">
 <ul>
   <li class="author">
-    <strong>Post author:  </strong>mi0e <i class="ic i-at"><em>@</em></i>Hexo
+    <strong>本文作者： </strong>mi0e <i class="ic i-at"><em>@</em></i>mioe
   </li>
   <li class="link">
-    <strong>Post link: </strong>
+    <strong>本文链接：</strong>
     <a href="http://example.com/2022/09/20/cv%E5%9F%BA%E7%A1%80%E7%9B%B8%E5%85%B3%E4%B8%8Efloat_uint8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="cv基础相关与float&#x2F;uint8类型转换">http://example.com/2022/09/20/cv基础相关与float_uint8类型转换/</a>
   </li>
   <li class="license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>
@@ -259,8 +237,8 @@ Yume Shoka = Hexo</title>
     <div class="item left">
       
 
-  <a href="/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicli9lfebj20zk0m84qp.jpg" title="bot相关一">
-  <span class="type">Previous Post</span>
+  <a href="/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciszlczyj20zk0m816d.jpg" title="bot相关一">
+  <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 编程</span>
   <h3>bot相关一</h3>
   </a>
@@ -269,8 +247,8 @@ Yume Shoka = Hexo</title>
     <div class="item right">
       
 
-  <a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciuv0socj20zk0m8qes.jpg" title="IMG数组相关">
-  <span class="type">Next Post</span>
+  <a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhnx9glj20zk0m8npd.jpg" title="IMG数组相关">
+  <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> Opencv</span>
   <h3>IMG数组相关</h3>
   </a>
@@ -290,53 +268,80 @@ Yume Shoka = Hexo</title>
 
   <div class="panels">
     <div class="inner">
-      <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#cv%E5%9F%BA%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">cv基本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#resize"><span class="toc-number">2.</span> <span class="toc-text">resize()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text">相关参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9F%A5%E7%9C%8B%E4%B8%8E%E8%BD%AC%E6%8D%A2"><span class="toc-number">4.</span> <span class="toc-text">数据类型查看与转换</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#type-dtype-astype-%E5%8C%BA%E5%88%AB"><span class="toc-number">4.0.1.</span> <span class="toc-text">type() ,dtype() ,astype()区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">4.0.2.</span> <span class="toc-text">类型转换</span></a></li></ol></li></ol></li></ol>
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#cv%E5%9F%BA%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text"> cv 基本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#resize"><span class="toc-number">2.</span> <span class="toc-text"> resize()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text"> 相关参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9F%A5%E7%9C%8B%E4%B8%8E%E8%BD%AC%E6%8D%A2"><span class="toc-number">4.</span> <span class="toc-text"> 数据类型查看与转换</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#type-dtype-astype%E5%8C%BA%E5%88%AB"><span class="toc-number">4.0.1.</span> <span class="toc-text"> type () ,dtype () ,astype () 区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">4.0.2.</span> <span class="toc-text"> 类型转换</span></a></li></ol></li></ol></li></ol>
       </div>
-      <div class="related panel pjax" data-title="Related">
+      <div class="related panel pjax" data-title="系列文章">
         <ul>
           <li class="active"><a href="/2022/09/20/cv%E5%9F%BA%E7%A1%80%E7%9B%B8%E5%85%B3%E4%B8%8Efloat_uint8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" rel="bookmark" title="cv基础相关与float/uint8类型转换">cv基础相关与float/uint8类型转换</a></li><li><a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" rel="bookmark" title="IMG数组相关">IMG数组相关</a></li><li><a href="/2022/09/24/%E5%9B%BE%E5%83%8F%E5%A1%AB%E5%85%85/" rel="bookmark" title="图像填充">图像填充</a></li><li><a href="/2022/09/25/%E5%9B%BE%E7%89%87%E8%AE%A1%E7%AE%97/" rel="bookmark" title="图片计算">图片计算</a></li><li><a href="/2022/09/27/%E4%BC%BD%E9%A9%AC%E6%A0%A1%E6%AD%A3%E8%A1%A5%E5%81%BF/" rel="bookmark" title="伽马校正补偿">伽马校正补偿</a></li><li><a href="/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%BF%90%E7%AE%97%EF%BC%88%E5%AF%B9%E6%95%B0%EF%BC%89/" rel="bookmark" title="图像的非线性运算（对数）">图像的非线性运算（对数）</a></li>
         </ul>
       </div>
-      <div class="overview panel" data-title="Overview">
+      <div class="overview panel" data-title="站点概览">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <img class="image" itemprop="image" alt="John Doe"
+  <img class="image" itemprop="image" alt="mioe"
       data-src="/images/avatar.jpg">
-  <p class="name" itemprop="name">John Doe</p>
-  <div class="description" itemprop="description"></div>
+  <p class="name" itemprop="name">mioe</p>
+  <div class="description" itemprop="description">花店不开了，花继续开</div>
 </div>
 
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
         <span class="count">81</span>
-        <span class="name">posts</span>
+        <span class="name">文章</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
         <span class="count">24</span>
-        <span class="name">categories</span>
+        <span class="name">分类</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
         <span class="count">16</span>
-        <span class="name">tags</span>
+        <span class="name">标签</span>
       </a>
     </div>
 </nav>
 
 <div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RhYmluZzg1" title="https:&#x2F;&#x2F;github.com&#x2F;dabing85"><i class="ic i-github"></i></span>
 </div>
 
 <ul class="menu">
   
     
   <li class="item">
-    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
   </li>
 
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
 
 </ul>
 
@@ -346,12 +351,12 @@ Yume Shoka = Hexo</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+        <a href="/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+        <a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -367,120 +372,122 @@ Yume Shoka = Hexo</title>
         <div class="widgets">
           
 <div class="rpost pjax">
-  <h2>Random Posts</h2>
+  <h2>随机文章</h2>
   <ul>
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="In 编程">编程</a>
-</div>
-
-    <span><a href="/2022/06/23/%E8%A1%A8%E6%83%85%E5%8C%85%E6%8F%92%E4%BB%B6%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/" title="表情包插件相关说明">表情包插件相关说明</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="In 算法">算法</a>
-</div>
-
-    <span><a href="/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/" title="离散化区间和">离散化区间和</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="In 编程">编程</a>
-</div>
-
-    <span><a href="/2022/05/25/linux%E6%8C%89%E5%90%8D%E6%9F%A5PID%E5%92%8C%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C/" title="linux按名查PID和后台运行">linux按名查PID和后台运行</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Python/" title="In Python">Python</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="In 算法">算法</a>
-</div>
-
-    <span><a href="/2021/03/31/%E9%80%92%E5%BD%92_-_%E6%95%B0%E7%BB%84%E7%B4%AF%E5%8A%A0/" title="递归 - 数组累加">递归 - 数组累加</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Opencv/" title="In Opencv">Opencv</a>
-</div>
-
-    <span><a href="/2022/09/20/cv%E5%9F%BA%E7%A1%80%E7%9B%B8%E5%85%B3%E4%B8%8Efloat_uint8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="cv基础相关与float&#x2F;uint8类型转换">cv基础相关与float/uint8类型转换</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Python/" title="In Python">Python</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="In 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2021/03/28/%E8%BF%AD%E4%BB%A3_-_%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0/" title="迭代 - 水仙花数">迭代 - 水仙花数</a></span>
+    <span><a href="/2021/06/01/%E6%B4%9B%E8%B0%B7_P1106_%E5%88%A0%E6%95%B0%E9%97%AE%E9%A2%98_python%E8%A7%A3%E6%B3%95/" title="洛谷 P1106 删数问题 python解法">洛谷 P1106 删数问题 python解法</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="In 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 </div>
 
-    <span><a href="/2021/03/31/%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B(D&amp;C%EF%BC%89/" title="分而治之(D&amp;C）">分而治之(D&amp;C）</a></span>
+    <span><a href="/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/" title="bot相关一">bot相关一</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="In 算法">算法</a>
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2021/10/27/%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%98%B6%E4%B9%98%E6%A8%A1%E6%9D%BF(C++)/" title="高精度阶乘模板(C++)">高精度阶乘模板(C++)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="In C/C++">C/C++</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2022/12/25/%E5%9C%A8%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97%E9%87%8C%E5%A4%84%E7%90%86%E6%B5%AE%E7%82%B9%E6%95%B0/" title="在整数运算里处理浮点数">在整数运算里处理浮点数</a></span>
+    <span><a href="/2023/01/20/%E5%8F%8C%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" title="双指针数组去重">双指针数组去重</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="In 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+</div>
+
+    <span><a href="/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/" title="git push出现Everything up-to-date">git push出现Everything up-to-date</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+</div>
+
+    <span><a href="/2020/12/06/%E5%BE%AA%E7%8E%AF%E3%80%81%E8%BF%AD%E4%BB%A3%E3%80%81%E9%81%8D%E5%8E%86%E5%92%8C%E9%80%92%E5%BD%92%E7%9A%84%E5%8C%BA%E5%88%AB/" title="循环、迭代、遍历和递归的区别">循环、迭代、遍历和递归的区别</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2023/02/04/%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/" title="最短路问题">最短路问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+</div>
+
+    <span><a href="/2019/10/20/%E7%AE%80%E5%8D%95%E9%80%9A%E4%BF%97%E7%9A%84%E8%AF%B4%E4%B8%80%E4%B8%8B%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="简单通俗的说一下什么是面向过程和面向对象">简单通俗的说一下什么是面向过程和面向对象</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="In C/C++">C/C++</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2023/02/02/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/" title="字符串哈希">字符串哈希</a></span>
+    <span><a href="/2021/11/04/Vector_%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="Vector 二分查找">Vector 二分查找</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="In 教程">教程</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 </div>
 
-    <span><a href="/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/" title="随机头图">随机头图</a></span>
+    <span><a href="/2022/12/21/AcWing_116._%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F/" title="AcWing 116. 飞行员兄弟">AcWing 116. 飞行员兄弟</a></span>
   </li>
 
   </ul>
 </div>
 <div>
-  <h2>Recent Comments</h2>
+  <h2>最新评论</h2>
   <ul class="leancloud-recent-comment"></ul>
 </div>
 
@@ -493,10 +500,10 @@ Yume Shoka = Hexo</title>
     <span class="with-love">
       <i class="ic i-sakura rotate"></i>
     </span>
-    <span class="author" itemprop="copyrightHolder">John Doe @ Yume Shoka</span>
+    <span class="author" itemprop="copyrightHolder">mioe @ mioe</span>
   </div>
   <div class="powered-by">
-    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
   </div>
 </div>
 
@@ -507,16 +514,16 @@ Yume Shoka = Hexo</title>
   var LOCAL = {
     path: '2022/09/20/cv基础相关与float_uint8类型转换/',
     favicon: {
-      show: "（●´3｀●）Goooood",
-      hide: "(´Д｀)Booooom"
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
     },
     search : {
-      placeholder: "Search for Posts",
-      empty: "We didn't find any results for the search: ${query}",
-      stats: "${hits} results found in ${time} ms"
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
     },
     valine: true,fancybox: true,
-    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
     ignores : [
       function(uri) {
         return uri.includes('#');

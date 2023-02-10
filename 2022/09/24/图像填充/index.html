@@ -3,7 +3,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -15,15 +15,17 @@
   <meta http-equiv="Cache-Control" content="no-siteapp">
 
 
-<link rel="alternate" type="application/rss+xml" title="Hexo" href="http://example.com/rss.xml" />
-<link rel="alternate" type="application/atom+xml" title="Hexo" href="http://example.com/atom.xml" />
-<link rel="alternate" type="application/json" title="Hexo" href="http://example.com/feed.json" />
+<link rel="alternate" type="application/rss+xml" title="mioe" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="mioe" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="mioe" href="http://example.com/feed.json" />
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
+  <meta name="keywords" content="C++,C,Linux" />
+
 
 <link rel="canonical" href="http://example.com/2022/09/24/%E5%9B%BE%E5%83%8F%E5%A1%AB%E5%85%85/">
 
@@ -31,7 +33,7 @@
 
   <title>
 图像填充 - Opencv |
-Yume Shoka = Hexo</title>
+mioe = mioe = AC总在意料外^^</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div id="loading">
@@ -62,11 +64,11 @@ Yume Shoka = Hexo</title>
   </h1>
   
 <div class="meta">
-  <span class="item" title="Created: 2022-09-24 13:15:00">
+  <span class="item" title="创建时间：2022-09-24 13:15:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <span class="text">Posted on</span>
+    <span class="text">发表于</span>
     <time itemprop="dateCreated datePublished" datetime="2022-09-24T13:15:00+08:00">2022-09-24</time>
   </span>
 </div>
@@ -77,14 +79,14 @@ Yume Shoka = Hexo</title>
         <nav id="nav">
   <div class="inner">
     <div class="toggle">
-      <div class="lines" aria-label="Toggle navigation bar">
+      <div class="lines" aria-label="切换导航栏">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
       </div>
     </div>
     <ul class="menu">
-      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+      <li class="item title"><a href="/" rel="start">mioe</a></li>
     </ul>
     <ul class="right">
       <li class="item theme">
@@ -100,12 +102,12 @@ Yume Shoka = Hexo</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicliwyw55j20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
         </ul>
       </div>
     </header>
@@ -130,33 +132,35 @@ Yume Shoka = Hexo</title>
     
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
-<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Opencv/" itemprop="item" rel="index" title="In Opencv"><span itemprop="name">Opencv</span></a>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Opencv/" itemprop="item" rel="index" title="分类于 Opencv"><span itemprop="name">Opencv</span></a>
 <meta itemprop="position" content="1" /></span>
 </div>
 
-    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
   <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/24/%E5%9B%BE%E5%83%8F%E5%A1%AB%E5%85%85/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
-    <meta itemprop="name" content="John Doe">
-    <meta itemprop="description" content=", ">
+    <meta itemprop="name" content="mioe">
+    <meta itemprop="description" content="AC总在意料外^^, 花店不开了，花继续开">
   </span>
 
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
+    <meta itemprop="name" content="mioe">
   </span>
 
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p><code>cv2.copyMakeBorder(src, top, bottom, left, right, borderType, value)</code></p>
+    <h1 id="函数"><a class="markdownIt-Anchor" href="#函数">#</a> 函数</h1>
+<p><code>cv2.copyMakeBorder(src, top, bottom, left, right, borderType, value)</code></p>
 <ul>
 <li>borderType：填充类型</li>
 <li>value：可选参数</li>
 </ul>
-<h2 id="borderType"><a href="#borderType" class="headerlink" title="borderType"></a>borderType</h2><ul>
+<h2 id="bordertype"><a class="markdownIt-Anchor" href="#bordertype">#</a> borderType</h2>
+<ul>
 <li><code>cv2.BORDER_REPLICATE</code></li>
 <li><code>cv2.BORDER_REFLECT</code></li>
 <li><code>cv2.BORDER_REFLECT101</code></li>
@@ -173,32 +177,9 @@ Yume Shoka = Hexo</title>
     <span class="icon">
       <i class="ic i-calendar-check"></i>
     </span>
-    <span class="text">Edited on</span>
-    <time title="Modified: 2022-09-25 18:49:20" itemprop="dateModified" datetime="2022-09-25T18:49:20+08:00">2022-09-25</time>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-09-25 18:49:20" itemprop="dateModified" datetime="2022-09-25T18:49:20+08:00">2022-09-25</time>
   </span>
-</div>
-
-      
-<div class="reward">
-  <button><i class="ic i-heartbeat"></i> Donate</button>
-  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
-  <div id="qr">
-      
-      <div>
-        <img data-src="/images/wechatpay.png" alt="John Doe WeChat Pay">
-        <p>WeChat Pay</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/alipay.png" alt="John Doe Alipay">
-        <p>Alipay</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/paypal.png" alt="John Doe PayPal">
-        <p>PayPal</p>
-      </div>
-  </div>
 </div>
 
       
@@ -206,14 +187,14 @@ Yume Shoka = Hexo</title>
 <div id="copyright">
 <ul>
   <li class="author">
-    <strong>Post author:  </strong>mi0e <i class="ic i-at"><em>@</em></i>Hexo
+    <strong>本文作者： </strong>mi0e <i class="ic i-at"><em>@</em></i>mioe
   </li>
   <li class="link">
-    <strong>Post link: </strong>
+    <strong>本文链接：</strong>
     <a href="http://example.com/2022/09/24/%E5%9B%BE%E5%83%8F%E5%A1%AB%E5%85%85/" title="图像填充">http://example.com/2022/09/24/图像填充/</a>
   </li>
   <li class="license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>
@@ -229,8 +210,8 @@ Yume Shoka = Hexo</title>
     <div class="item left">
       
 
-  <a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclip4jbpj20zk0m87cv.jpg" title="IMG数组相关">
-  <span class="type">Previous Post</span>
+  <a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicitspjpbj20zk0m81ky.jpg" title="IMG数组相关">
+  <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> Opencv</span>
   <h3>IMG数组相关</h3>
   </a>
@@ -239,8 +220,8 @@ Yume Shoka = Hexo</title>
     <div class="item right">
       
 
-  <a href="/2022/09/25/%E5%9B%BE%E7%89%87%E8%AE%A1%E7%AE%97/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclip4jbpj20zk0m87cv.jpg" title="图片计算">
-  <span class="type">Next Post</span>
+  <a href="/2022/09/25/%E5%9B%BE%E7%89%87%E8%AE%A1%E7%AE%97/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeyonbf9j20zk0m8e81.jpg" title="图片计算">
+  <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> Opencv</span>
   <h3>图片计算</h3>
   </a>
@@ -260,53 +241,80 @@ Yume Shoka = Hexo</title>
 
   <div class="panels">
     <div class="inner">
-      <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#borderType"><span class="toc-number">1.1.</span> <span class="toc-text">borderType</span></a></li></ol></li></ol>
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text"> 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#bordertype"><span class="toc-number">1.1.</span> <span class="toc-text"> borderType</span></a></li></ol></li></ol>
       </div>
-      <div class="related panel pjax" data-title="Related">
+      <div class="related panel pjax" data-title="系列文章">
         <ul>
           <li><a href="/2022/09/20/cv%E5%9F%BA%E7%A1%80%E7%9B%B8%E5%85%B3%E4%B8%8Efloat_uint8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" rel="bookmark" title="cv基础相关与float/uint8类型转换">cv基础相关与float/uint8类型转换</a></li><li><a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" rel="bookmark" title="IMG数组相关">IMG数组相关</a></li><li class="active"><a href="/2022/09/24/%E5%9B%BE%E5%83%8F%E5%A1%AB%E5%85%85/" rel="bookmark" title="图像填充">图像填充</a></li><li><a href="/2022/09/25/%E5%9B%BE%E7%89%87%E8%AE%A1%E7%AE%97/" rel="bookmark" title="图片计算">图片计算</a></li><li><a href="/2022/09/27/%E4%BC%BD%E9%A9%AC%E6%A0%A1%E6%AD%A3%E8%A1%A5%E5%81%BF/" rel="bookmark" title="伽马校正补偿">伽马校正补偿</a></li><li><a href="/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%BF%90%E7%AE%97%EF%BC%88%E5%AF%B9%E6%95%B0%EF%BC%89/" rel="bookmark" title="图像的非线性运算（对数）">图像的非线性运算（对数）</a></li>
         </ul>
       </div>
-      <div class="overview panel" data-title="Overview">
+      <div class="overview panel" data-title="站点概览">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <img class="image" itemprop="image" alt="John Doe"
+  <img class="image" itemprop="image" alt="mioe"
       data-src="/images/avatar.jpg">
-  <p class="name" itemprop="name">John Doe</p>
-  <div class="description" itemprop="description"></div>
+  <p class="name" itemprop="name">mioe</p>
+  <div class="description" itemprop="description">花店不开了，花继续开</div>
 </div>
 
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
         <span class="count">81</span>
-        <span class="name">posts</span>
+        <span class="name">文章</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
         <span class="count">24</span>
-        <span class="name">categories</span>
+        <span class="name">分类</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
         <span class="count">16</span>
-        <span class="name">tags</span>
+        <span class="name">标签</span>
       </a>
     </div>
 </nav>
 
 <div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RhYmluZzg1" title="https:&#x2F;&#x2F;github.com&#x2F;dabing85"><i class="ic i-github"></i></span>
 </div>
 
 <ul class="menu">
   
     
   <li class="item">
-    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
   </li>
 
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
 
 </ul>
 
@@ -316,12 +324,12 @@ Yume Shoka = Hexo</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+        <a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2022/09/25/%E5%9B%BE%E7%89%87%E8%AE%A1%E7%AE%97/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+        <a href="/2022/09/25/%E5%9B%BE%E7%89%87%E8%AE%A1%E7%AE%97/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -337,128 +345,122 @@ Yume Shoka = Hexo</title>
         <div class="widgets">
           
 <div class="rpost pjax">
-  <h2>Random Posts</h2>
+  <h2>随机文章</h2>
   <ul>
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="In 编程">编程</a>
+<a href="/categories/%E9%9A%8F%E7%AC%94/" title="分类于 随笔">随笔</a>
 </div>
 
-    <span><a href="/2022/12/21/AcWing_116._%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F/" title="AcWing 116. 飞行员兄弟">AcWing 116. 飞行员兄弟</a></span>
+    <span><a href="/2022/03/27/%E6%99%95%E8%BD%AE%E6%95%88%E5%BA%94/" title="晕轮效应">晕轮效应</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="In 编程">编程</a>
-</div>
-
-    <span><a href="/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E5%88%86%E6%AE%B5%E7%BA%BF%E6%80%A7%E7%82%B9%E8%BF%90%E7%AE%97/" title="图像的分段线性点运算">图像的分段线性点运算</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="In 编程">编程</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="In 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="In C/C++">C/C++</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2021/10/01/P2911_%5BUSACO08OCT%5DBovine_Bones_G_(C)/" title="P2911 [USACO08OCT]Bovine Bones G (C)">P2911 [USACO08OCT]Bovine Bones G (C)</a></span>
+    <span><a href="/2021/06/01/%E6%B4%9B%E8%B0%B7_P1106_%E5%88%A0%E6%95%B0%E9%97%AE%E9%A2%98_python%E8%A7%A3%E6%B3%95/" title="洛谷 P1106 删数问题 python解法">洛谷 P1106 删数问题 python解法</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="In 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="In Q/A">Q/A</a>
+<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
 </div>
 
-    <span><a href="/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/" title="scanf、cin返回值与连续输入">scanf、cin返回值与连续输入</a></span>
+    <span><a href="/2020/03/18/%E6%99%BA%E6%85%A7%E6%A0%91%E5%8A%A9%E6%89%8B/" title="智慧树助手">智慧树助手</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/C-C/" title="In C/C++">C/C++</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2022/12/19/%E6%95%B0%E5%AD%97%E4%B8%89%E8%A7%92%E5%BD%A2_%EF%BC%88%E5%90%91%E5%B7%A6%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E4%B8%8E%E5%90%91%E5%8F%B3%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E7%9B%B8%E5%B7%AE%E4%B8%8D%E8%83%BD%E8%B6%85%E8%BF%87_1%EF%BC%89/" title="数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）">数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）</a></span>
+    <span><a href="/2021/06/01/%E5%9B%9E%E6%96%87%E8%B4%A8%E6%95%B0_python/" title="回文质数 python">回文质数 python</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Q-A/" title="In Q/A">Q/A</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/11/01/img%E6%A0%87%E7%AD%BE%E5%9C%A8%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF/" title="img标签在谷歌浏览器下不显示错误信息">img标签在谷歌浏览器下不显示错误信息</a></span>
+    <span><a href="/2023/01/30/KMP/" title="KMP">KMP</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="In 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="In C/C++">C/C++</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/Q-A/" title="In Q/A">Q/A</a>
+<a href="/categories/Q-A/" title="分类于 Q/A">Q/A</a>
 </div>
 
-    <span><a href="/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/" title="数组粘贴，初始化C++">数组粘贴，初始化C++</a></span>
+    <span><a href="/2021/12/31/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/" title="局域网搭建服务器无法访问">局域网搭建服务器无法访问</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="In 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="In 算法">算法</a>
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/09/04/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4%E9%97%AE%E9%A2%98%E7%BB%AD%EF%BC%88C%EF%BC%89/" title="P1223 排队接水问题续（C）">P1223 排队接水问题续（C）</a></span>
+    <span><a href="/2022/11/11/C++%E5%A4%A7%E4%BD%9C%E4%B8%9A/" title="C++大作业">C++大作业</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="In 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="In C/C++">C/C++</a>
+<a href="/categories/Unity/" title="分类于 Unity">Unity</a>
 </div>
 
-    <span><a href="/2023/01/20/%E5%8F%8C%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" title="双指针数组去重">双指针数组去重</a></span>
+    <span><a href="/2022/10/27/Unity%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%BA%A2%E7%BB%BF%E7%81%AF%E8%87%AA%E5%8A%A8%E5%8F%98%E6%8D%A2/" title="Unity回调函数实现简单红绿灯自动变换">Unity回调函数实现简单红绿灯自动变换</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/C-C/" title="In C/C++">C/C++</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/C-C/Q-A/" title="In Q/A">Q/A</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2021/10/19/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84sort%E6%8E%92%E5%BA%8F/" title="二维数组sort排序">二维数组sort排序</a></span>
+    <span><a href="/2023/02/03/%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%EF%BC%88%E9%82%BB%E6%8E%A5%E8%A1%A8%EF%BC%89/" title="树的深度优先遍历（邻接表）">树的深度优先遍历（邻接表）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2022/11/10/DFS%E5%88%A4%E6%96%AD%E8%BF%B7%E5%AE%AB%E6%97%A0%E8%A7%A3/" title="DFS判断迷宫无解">DFS判断迷宫无解</a></span>
   </li>
 
   </ul>
 </div>
 <div>
-  <h2>Recent Comments</h2>
+  <h2>最新评论</h2>
   <ul class="leancloud-recent-comment"></ul>
 </div>
 
@@ -471,10 +473,10 @@ Yume Shoka = Hexo</title>
     <span class="with-love">
       <i class="ic i-sakura rotate"></i>
     </span>
-    <span class="author" itemprop="copyrightHolder">John Doe @ Yume Shoka</span>
+    <span class="author" itemprop="copyrightHolder">mioe @ mioe</span>
   </div>
   <div class="powered-by">
-    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
   </div>
 </div>
 
@@ -485,16 +487,16 @@ Yume Shoka = Hexo</title>
   var LOCAL = {
     path: '2022/09/24/图像填充/',
     favicon: {
-      show: "（●´3｀●）Goooood",
-      hide: "(´Д｀)Booooom"
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
     },
     search : {
-      placeholder: "Search for Posts",
-      empty: "We didn't find any results for the search: ${query}",
-      stats: "${hits} results found in ${time} ms"
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
     },
     valine: true,fancybox: true,
-    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
     ignores : [
       function(uri) {
         return uri.includes('#');
