@@ -6,43 +6,48 @@
     <updated>2022-12-21T12:19:43.000Z</updated>
     <category term="BFS" />
     <category term="算法" />
-    <category term="unity" />
     <category term="Resilio Sync" />
+    <category term="unity" />
     <category term="WolfraAlpha" />
-    <category term="github" />
     <category term="数论" />
+    <category term="github" />
     <category term="linux" />
     <category term="Open-cv" />
-    <category term="模板" />
     <category term="碧蓝航线" />
     <category term="Python" />
-    <category term="局域网" />
+    <category term="模板" />
     <category term="阅读" />
+    <category term="局域网" />
     <category term="相册" />
     <category term="算法模板" />
     <entry>
         <id>http://example.com/2022/12/21/AcWing_116._%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F/</id>
         <title>AcWing 116. 飞行员兄弟</title>
         <link rel="alternate" href="http://example.com/2022/12/21/AcWing_116._%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F/"/>
-        <content type="html">&lt;p&gt;“飞行员兄弟”这个游戏，需要玩家顺利的打开一个拥有 &lt;strong&gt;16&lt;/strong&gt;个把手的冰箱。&lt;/p&gt;
+        <content type="html">&lt;p&gt;“飞行员兄弟” 这个游戏，需要玩家顺利的打开一个拥有 &lt;strong&gt;16&lt;/strong&gt; 个把手的冰箱。&lt;/p&gt;
 &lt;p&gt;已知每个把手可以处于以下两种状态之一：打开或关闭。&lt;/p&gt;
 &lt;p&gt;只有当所有把手都打开时，冰箱才会打开。&lt;/p&gt;
-&lt;p&gt;把手可以表示为一个 &lt;strong&gt;4&lt;/strong&gt;×&lt;strong&gt;4&lt;/strong&gt;的矩阵，您可以改变任何一个位置 **[&lt;strong&gt;i&lt;/strong&gt;,&lt;strong&gt;j&lt;/strong&gt;]**上把手的状态。&lt;/p&gt;
-&lt;p&gt;但是，这也会使得第 &lt;strong&gt;i&lt;/strong&gt;行和第 &lt;strong&gt;j&lt;/strong&gt; 列上的所有把手的状态也随着改变。&lt;/p&gt;
+&lt;p&gt;把手可以表示为一个 &lt;strong&gt;4&lt;/strong&gt;×&lt;strong&gt;4&lt;/strong&gt; 的矩阵，您可以改变任何一个位置 **[&lt;strong&gt;i&lt;/strong&gt;,&lt;strong&gt;j&lt;/strong&gt;]** 上把手的状态。&lt;/p&gt;
+&lt;p&gt;但是，这也会使得第 &lt;strong&gt;i&lt;/strong&gt; 行和第 &lt;strong&gt;j&lt;/strong&gt; 列上的所有把手的状态也随着改变。&lt;/p&gt;
 &lt;p&gt;请你求出打开冰箱所需的切换把手的次数最小值是多少。&lt;/p&gt;
-&lt;h4 id=&#34;输入格式&#34;&gt;&lt;a href=&#34;#输入格式&#34; class=&#34;headerlink&#34; title=&#34;输入格式&#34;&gt;&lt;/a&gt;输入格式&lt;/h4&gt;&lt;p&gt;输入一共包含四行，每行包含四个把手的初始状态。&lt;/p&gt;
-&lt;p&gt;符号 &lt;code&gt;+&lt;/code&gt; 表示把手处于闭合状态，而符号 &lt;code&gt;-&lt;/code&gt; 表示把手处于打开状态。&lt;/p&gt;
+&lt;h4 id=&#34;输入格式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#输入格式&#34;&gt;#&lt;/a&gt; 输入格式&lt;/h4&gt;
+&lt;p&gt;输入一共包含四行，每行包含四个把手的初始状态。&lt;/p&gt;
+&lt;p&gt;符号  &lt;code&gt;+&lt;/code&gt;  表示把手处于闭合状态，而符号  &lt;code&gt;-&lt;/code&gt;  表示把手处于打开状态。&lt;/p&gt;
 &lt;p&gt;至少一个手柄的初始状态是关闭的。&lt;/p&gt;
-&lt;h4 id=&#34;输出格式&#34;&gt;&lt;a href=&#34;#输出格式&#34; class=&#34;headerlink&#34; title=&#34;输出格式&#34;&gt;&lt;/a&gt;输出格式&lt;/h4&gt;&lt;p&gt;第一行输出一个整数 &lt;strong&gt;N&lt;/strong&gt;，表示所需的最小切换把手次数。&lt;/p&gt;
+&lt;h4 id=&#34;输出格式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#输出格式&#34;&gt;#&lt;/a&gt; 输出格式&lt;/h4&gt;
+&lt;p&gt;第一行输出一个整数 &lt;strong&gt;N&lt;/strong&gt;，表示所需的最小切换把手次数。&lt;/p&gt;
 &lt;p&gt;接下来 &lt;strong&gt;N&lt;/strong&gt; 行描述切换顺序，每行输出两个整数，代表被切换状态的把手的行号和列号，数字之间用空格隔开。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt; ：如果存在多种打开冰箱的方式，则按照优先级整体从上到下，同行从左到右打开。&lt;/p&gt;
-&lt;h4 id=&#34;数据范围&#34;&gt;&lt;a href=&#34;#数据范围&#34; class=&#34;headerlink&#34; title=&#34;数据范围&#34;&gt;&lt;/a&gt;数据范围&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;≤&lt;strong&gt;i&lt;/strong&gt;,&lt;strong&gt;j&lt;/strong&gt;≤&lt;strong&gt;4&lt;/strong&gt;&lt;/p&gt;
-&lt;h4 id=&#34;输入样例：&#34;&gt;&lt;a href=&#34;#输入样例：&#34; class=&#34;headerlink&#34; title=&#34;输入样例：&#34;&gt;&lt;/a&gt;输入样例：&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;-+--
+&lt;h4 id=&#34;数据范围&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据范围&#34;&gt;#&lt;/a&gt; 数据范围&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;≤&lt;strong&gt;i&lt;/strong&gt;,&lt;strong&gt;j&lt;/strong&gt;≤&lt;strong&gt;4&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;输入样例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#输入样例&#34;&gt;#&lt;/a&gt; 输入样例：&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;-+--
 ----
 ----
 -+--
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;输出样例：&#34;&gt;&lt;a href=&#34;#输出样例：&#34; class=&#34;headerlink&#34; title=&#34;输出样例：&#34;&gt;&lt;/a&gt;输出样例：&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;6
+&lt;h4 id=&#34;输出样例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#输出样例&#34;&gt;#&lt;/a&gt; 输出样例：&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;6
 1 1
 1 3
 1 4
@@ -50,7 +55,8 @@
 4 3
 4 4
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;思路，深搜&#34;&gt;&lt;a href=&#34;#思路，深搜&#34; class=&#34;headerlink&#34; title=&#34;思路，深搜&#34;&gt;&lt;/a&gt;思路，深搜&lt;/h3&gt;&lt;pre&gt;&lt;code class=&#34;c++&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+&lt;h3 id=&#34;思路深搜&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#思路深搜&#34;&gt;#&lt;/a&gt; 思路，深搜&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
 using namespace std;
 
 int N = 999, kk;
@@ -58,58 +64,58 @@ char m[4][4], backup[4][4];
 vector&amp;lt;int&amp;gt; ans, ways;
 
 void dfs(int x, int y, int step)&amp;#123;
-    if(x == 4)&amp;#123;
-        for(int i = 0; i &amp;lt; 4; i++)&amp;#123;
-            for(int j = 0; j &amp;lt; 4; j++)&amp;#123;
-                if(m[i][j] == &amp;#39;+&amp;#39;) return;
-            &amp;#125;
-        &amp;#125;
-        if(ans.empty())&amp;#123;
-            ans = ways;
-        &amp;#125;
-        if(step &amp;lt; N)&amp;#123;
-            N = step;
-            ans = ways;
-        &amp;#125;
-        return;
-    &amp;#125;
-    if(y == 4)&amp;#123;
-        dfs(x + 1, 0, step);
-        return;
-    &amp;#125;
-    for(int i = 0; i &amp;lt; 4; i++)&amp;#123;
-        m[x][i] == &amp;#39;-&amp;#39; ? m[x][i] = &amp;#39;+&amp;#39; : m[x][i] = &amp;#39;-&amp;#39;;
-        m[i][y] == &amp;#39;-&amp;#39; ? m[i][y] = &amp;#39;+&amp;#39; : m[i][y] = &amp;#39;-&amp;#39;;
-    &amp;#125;
-    m[x][y] == &amp;#39;-&amp;#39; ? m[x][y] = &amp;#39;+&amp;#39; : m[x][y] = &amp;#39;-&amp;#39;;
-    ways.push_back(x + 1);
-    ways.push_back(y + 1);
-    dfs(x, y + 1, step + 1);
+	if(x == 4)&amp;#123;
+		for(int i = 0; i &amp;lt; 4; i++)&amp;#123;
+			for(int j = 0; j &amp;lt; 4; j++)&amp;#123;
+				if(m[i][j] == &#39;+&#39;) return;
+			&amp;#125;
+		&amp;#125;
+		if(ans.empty())&amp;#123;
+			ans = ways;
+		&amp;#125;
+		if(step &amp;lt; N)&amp;#123;
+			N = step;
+			ans = ways;
+		&amp;#125;
+		return;
+	&amp;#125;
+	if(y == 4)&amp;#123;
+		dfs(x + 1, 0, step);
+		return;
+	&amp;#125;
+	for(int i = 0; i &amp;lt; 4; i++)&amp;#123;
+		m[x][i] == &#39;-&#39; ? m[x][i] = &#39;+&#39; : m[x][i] = &#39;-&#39;;
+		m[i][y] == &#39;-&#39; ? m[i][y] = &#39;+&#39; : m[i][y] = &#39;-&#39;;
+	&amp;#125;
+	m[x][y] == &#39;-&#39; ? m[x][y] = &#39;+&#39; : m[x][y] = &#39;-&#39;;
+	ways.push_back(x + 1);
+	ways.push_back(y + 1);
+	dfs(x, y + 1, step + 1);
 
-    for(int i = 0; i &amp;lt; 4; i++)&amp;#123;
-        m[x][i] == &amp;#39;-&amp;#39; ? m[x][i] = &amp;#39;+&amp;#39; : m[x][i] = &amp;#39;-&amp;#39;;
-        m[i][y] == &amp;#39;-&amp;#39; ? m[i][y] = &amp;#39;+&amp;#39; : m[i][y] = &amp;#39;-&amp;#39;;
-    &amp;#125;
-    m[x][y] == &amp;#39;-&amp;#39; ? m[x][y] = &amp;#39;+&amp;#39; : m[x][y] = &amp;#39;-&amp;#39;;
-    ways.pop_back();
-    ways.pop_back();
-    dfs(x, y + 1, step);
+	for(int i = 0; i &amp;lt; 4; i++)&amp;#123;
+		m[x][i] == &#39;-&#39; ? m[x][i] = &#39;+&#39; : m[x][i] = &#39;-&#39;;
+		m[i][y] == &#39;-&#39; ? m[i][y] = &#39;+&#39; : m[i][y] = &#39;-&#39;;
+	&amp;#125;
+	m[x][y] == &#39;-&#39; ? m[x][y] = &#39;+&#39; : m[x][y] = &#39;-&#39;;
+	ways.pop_back();
+	ways.pop_back();
+	dfs(x, y + 1, step);
 &amp;#125;
 
 int main()&amp;#123;
-    for(int i = 0; i &amp;lt; 4; i++)&amp;#123;
-        scanf(&amp;quot;%s&amp;quot;, &amp;amp;m[i]);
-    &amp;#125;
+	for(int i = 0; i &amp;lt; 4; i++)&amp;#123;
+		scanf(&amp;quot;%s&amp;quot;, &amp;amp;m[i]);
+	&amp;#125;
 
-    dfs(0, 0, 0);
+	dfs(0, 0, 0);
 
-    cout &amp;lt;&amp;lt; N &amp;lt;&amp;lt; endl;
-    for(int i = 0; i &amp;lt; ans.size(); i++)&amp;#123;
-        cout &amp;lt;&amp;lt; ans[i] &amp;lt;&amp;lt; &amp;quot; &amp;quot;;
-        if(i &amp;amp; 1) cout &amp;lt;&amp;lt; endl;
-    &amp;#125;
+	cout &amp;lt;&amp;lt; N &amp;lt;&amp;lt; endl;
+	for(int i = 0; i &amp;lt; ans.size(); i++)&amp;#123;
+		cout &amp;lt;&amp;lt; ans[i] &amp;lt;&amp;lt; &amp;quot; &amp;quot;;
+		if(i &amp;amp; 1) cout &amp;lt;&amp;lt; endl;
+	&amp;#125;
 
-    return 0;
+	return 0;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
 </content>
@@ -119,23 +125,25 @@ int main()&amp;#123;
         <id>http://example.com/2022/11/28/%E4%BD%8D%E8%BF%90%E7%AE%97/</id>
         <title>位运算</title>
         <link rel="alternate" href="http://example.com/2022/11/28/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
-        <content type="html">&lt;h6 id=&#34;136-Single-Number&#34;&gt;&lt;a href=&#34;#136-Single-Number&#34; class=&#34;headerlink&#34; title=&#34;136. Single Number&#34;&gt;&lt;/a&gt;136. Single Number&lt;/h6&gt;&lt;p&gt;&lt;img data-src=&#34;https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/11/4226140631.png&#34; alt=&#34;136&#34;&gt;&lt;/p&gt;
+        <content type="html">&lt;h6 id=&#34;136-single-number&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#136-single-number&#34;&gt;#&lt;/a&gt; 136. Single Number&lt;/h6&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/11/4226140631.png&#34; alt=&#34;136&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;交换律：a ^ b ^ c &amp;lt;&amp;#x3D;&amp;gt; a ^ c ^ b&lt;/li&gt;
-&lt;li&gt;任何数于0异或为任何数 0 ^ n &amp;#x3D;&amp;gt; n&lt;/li&gt;
-&lt;li&gt;相同的数异或为0: n ^ n &amp;#x3D;&amp;gt; 0&lt;/li&gt;
+&lt;li&gt;交换律：a ^ b ^ c &amp;lt;=&amp;gt; a ^ c ^ b&lt;/li&gt;
+&lt;li&gt;任何数于 0 异或为任何数 0 ^ n =&amp;gt; n&lt;/li&gt;
+&lt;li&gt;相同的数异或为 0: n ^ n =&amp;gt; 0&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;var a = [2, 3, 2, 4, 4]&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;2 ^ 3 ^ 2 ^ 4 ^ 4 等价于 2 ^ 2 ^ 4 ^ 4 ^ 3 =&amp;gt; 0 ^ 0 ^3 =&amp;gt; 3&lt;/code&gt;&lt;/p&gt;
-&lt;h6 id=&#34;1758-Minimum-Changes-To-Make-Alternating-Binary-String&#34;&gt;&lt;a href=&#34;#1758-Minimum-Changes-To-Make-Alternating-Binary-String&#34; class=&#34;headerlink&#34; title=&#34;1758. Minimum Changes To Make Alternating Binary String&#34;&gt;&lt;/a&gt;1758. Minimum Changes To Make Alternating Binary String&lt;/h6&gt;&lt;p&gt;&lt;img data-src=&#34;https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/11/2630183447.png&#34; alt=&#34;1758&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;c++&#34;&gt;// 1 &amp;amp; 1 = 1
+&lt;h6 id=&#34;1758-minimum-changes-to-make-alternating-binary-string&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1758-minimum-changes-to-make-alternating-binary-string&#34;&gt;#&lt;/a&gt; 1758. Minimum Changes To Make Alternating Binary String&lt;/h6&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/11/2630183447.png&#34; alt=&#34;1758&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;// 1 &amp;amp; 1 = 1
 
 // 1 &amp;amp; 0 = 0
 
 // 0 &amp;amp; 0 = 0
 
 int minOperations(string s) &amp;#123;
-        char a[2] = &amp;#123;&amp;#39;0&amp;#39;, &amp;#39;1&amp;#39;&amp;#125;;
+        char a[2] = &amp;#123;&#39;0&#39;, &#39;1&#39;&amp;#125;;
         int ans = 0, t = 0;
         for(int i = 0; i &amp;lt; s.size(); i++) &amp;#123;
             if(a[i &amp;amp; 1] == s[i]) ans++;
@@ -151,36 +159,20 @@ int minOperations(string s) &amp;#123;
         <id>http://example.com/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E5%88%86%E6%AE%B5%E7%BA%BF%E6%80%A7%E7%82%B9%E8%BF%90%E7%AE%97/</id>
         <title>图像的分段线性点运算</title>
         <link rel="alternate" href="http://example.com/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E5%88%86%E6%AE%B5%E7%BA%BF%E6%80%A7%E7%82%B9%E8%BF%90%E7%AE%97/"/>
-        <content type="html">&lt;p&gt;$$&lt;br&gt;\begin{align*}&lt;br&gt;\begin{split}&lt;br&gt;g(i,j)&amp;#x3D; \left {&lt;br&gt;\begin{array}{ll}&lt;br&gt;\alpha f(i,j),&amp;amp;0\le f(i,j)&amp;lt; a\&lt;br&gt;\beta (f(i,j)-a)+g_{a},&amp;amp;a\le f(i,j)&amp;lt; b\&lt;br&gt;\gamma  (f(i,j)-b)+g_{b},&amp;amp;b\le f(i,j)&amp;lt; 255&lt;br&gt;\end{array}&lt;br&gt;\right.&lt;br&gt;\end{split}&lt;br&gt;\end{align*}&lt;/p&gt;
-&lt;p&gt;$$&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;from turtle import width
-from matplotlib import pyplot as plt
-import cv2,matplotlib
+        <content type="html">\begin{align*}
+\begin{split}
+g(i,j)= \left \{
+\begin{array}{ll}
+\alpha f(i,j),&amp;0\le f(i,j)&lt; a\\
+\beta (f(i,j)-a)+g_{a},&amp;a\le f(i,j)&lt; b\\
+\gamma  (f(i,j)-b)+g_{b},&amp;b\le f(i,j)&lt; 255
+\end{array}
+\right.
+\end{split}
+\end{align*}
 
-fa, fb = 80, 200
-a, b, c = 1.1, 1.2, 1.3
-cat = cv2.imread(&amp;quot;cat.jpg&amp;quot;)
-cat = cv2.cvtColor(cat, cv2.COLOR_BGR2GRAY)
-change_cat = cat.copy()
-width = cat.shape[0]
-height = cat.shape[1]
 
-for i in range(0, width):
-    for j in range(0, height):
-        if 0 &amp;lt;= change_cat[i][j] &amp;lt; fa:
-            change_cat[i][j] = 0
-        elif fa &amp;lt;= change_cat[i][j] &amp;lt; fb:
-            change_cat[i][j] = 255 * ((change_cat[i][j] - fa) / (fb - fa))
-        else:
-            change_cat[i][j] = 255
-
-plt.rcParams[&amp;#39;font.family&amp;#39;] = &amp;#39;SimHei&amp;#39; 
-plt.figure(figsize=(10, 8), dpi = 100)
-plt.subplot(121),plt.imshow(cat, cmap=&amp;#39;gray&amp;#39;),plt.title(&amp;#39;原图&amp;#39;)
-plt.subplot(122),plt.imshow(change_cat, cmap=&amp;#39;gray&amp;#39;),plt.title(&amp;#39;调整后&amp;#39;)
-plt.show()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/10/2395936215.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; turtle &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; width&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; matplotlib &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; pyplot &lt;span class=&#34;token keyword&#34;&gt;as&lt;/span&gt; plt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; cv2&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;matplotlib&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;fa&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; fb &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;200&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;a&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; b&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1.1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1.2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1.3&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cat &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; cv2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;imread&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;cat.jpg&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cat &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; cv2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;cvtColor&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;cat&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; cv2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;COLOR_BGR2GRAY&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;change_cat &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; cat&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;copy&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;width &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; cat&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;shape&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;height &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; cat&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;shape&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; width&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; j &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; height&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;=&lt;/span&gt; change_cat&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; fa&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            change_cat&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;elif&lt;/span&gt; fa &lt;span class=&#34;token operator&#34;&gt;&amp;lt;=&lt;/span&gt; change_cat&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; fb&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            change_cat&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;255&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;change_cat&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; fa&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fb &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; fa&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            change_cat&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;255&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;plt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;rcParams&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;font.family&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;SimHei&#39;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;plt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;figure&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;figsize&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; dpi &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;plt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;subplot&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;121&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;plt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;imshow&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;cat&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; cmap&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;gray&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;plt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;title&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;原图&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;plt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;subplot&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;122&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;plt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;imshow&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;change_cat&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; cmap&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;gray&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;plt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;title&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;调整后&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;plt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;show&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/10/2395936215.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
 </content>
         <updated>2022-10-04T08:12:44.000Z</updated>
     </entry>
@@ -199,18 +191,20 @@ nohup nb run &amp;amp;
         <id>http://example.com/2022/06/23/%E8%A1%A8%E6%83%85%E5%8C%85%E6%8F%92%E4%BB%B6%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/</id>
         <title>表情包插件相关说明</title>
         <link rel="alternate" href="http://example.com/2022/06/23/%E8%A1%A8%E6%83%85%E5%8C%85%E6%8F%92%E4%BB%B6%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/"/>
-        <content type="html">&lt;h3 id=&#34;使用&#34;&gt;&lt;a href=&#34;#使用&#34; class=&#34;headerlink&#34; title=&#34;使用&#34;&gt;&lt;/a&gt;使用&lt;/h3&gt;&lt;div align=&#34;left&#34;&gt;
+        <content type="html">&lt;h3 id=&#34;使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用&#34;&gt;#&lt;/a&gt; 使用&lt;/h3&gt;
+&lt;div align=&#34;left&#34;&gt;
   &lt;img data-src=&#34;https://s2.loli.net/2022/06/09/lCOujwopgJPxD97.jpg&#34; width=&#34;400&#34; /&gt;
 &lt;/div&gt;
-
-&lt;h4 id=&#34;触发方式&#34;&gt;&lt;a href=&#34;#触发方式&#34; class=&#34;headerlink&#34; title=&#34;触发方式&#34;&gt;&lt;/a&gt;触发方式&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;指令 + @user，如： &amp;#x2F;爬 @小Q&lt;/li&gt;
-&lt;li&gt;指令 + qq号，如：&amp;#x2F;爬 123456&lt;/li&gt;
-&lt;li&gt;指令 + 自己，如：&amp;#x2F;爬 自己&lt;/li&gt;
-&lt;li&gt;指令 + 图片，如：&amp;#x2F;爬 [图片]&lt;/li&gt;
+&lt;h4 id=&#34;触发方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#触发方式&#34;&gt;#&lt;/a&gt; 触发方式&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;指令 + @user，如： / 爬 @小 Q&lt;/li&gt;
+&lt;li&gt;指令 + qq 号，如：/ 爬 123456&lt;/li&gt;
+&lt;li&gt;指令 + 自己，如：/ 爬 自己&lt;/li&gt;
+&lt;li&gt;指令 + 图片，如：/ 爬 [图片]&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;前三种触发方式会使用目标qq的头像作为图片&lt;/p&gt;
-&lt;h4 id=&#34;支持的指令&#34;&gt;&lt;a href=&#34;#支持的指令&#34; class=&#34;headerlink&#34; title=&#34;支持的指令&#34;&gt;&lt;/a&gt;支持的指令&lt;/h4&gt;&lt;table&gt;
+&lt;p&gt;前三种触发方式会使用目标 qq 的头像作为图片&lt;/p&gt;
+&lt;h4 id=&#34;支持的指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#支持的指令&#34;&gt;#&lt;/a&gt; 支持的指令&lt;/h4&gt;
+&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;指令&lt;/th&gt;
@@ -218,7 +212,8 @@ nohup nb run &amp;amp;
 &lt;th&gt;备注&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
 &lt;td&gt;万能表情&lt;br&gt;空白表情&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/05/29/C2VRA6iw4hzWZXO.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
 &lt;td&gt;简单的图片加文字&lt;/td&gt;
@@ -226,12 +221,12 @@ nohup nb run &amp;amp;
 &lt;tr&gt;
 &lt;td&gt;摸&lt;br&gt;摸摸&lt;br&gt;摸头&lt;br&gt;摸摸头&lt;br&gt;rua&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/oNGVO4iuCk73g8S.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
-&lt;td&gt;可使用参数“圆”让头像为圆形&lt;br&gt;如：摸头圆 自己&lt;/td&gt;
+&lt;td&gt;可使用参数 “圆” 让头像为圆形&lt;br&gt;如：摸头圆 自己&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;亲&lt;br&gt;亲亲&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/RuoiqP8plJBgw9K.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
-&lt;td&gt;可指定一个或两个目标&lt;br&gt;若为一个则为 发送人 亲 目标&lt;br&gt;若为两个则为 目标1 亲 目标2&lt;br&gt;如：亲 114514 自己&lt;/td&gt;
+&lt;td&gt;可指定一个或两个目标&lt;br&gt;若为一个则为 发送人 亲 目标&lt;br&gt;若为两个则为 目标 1 亲 目标 2&lt;br&gt;如：亲 114514 自己&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;贴&lt;br&gt;贴贴&lt;br&gt;蹭&lt;br&gt;蹭蹭&lt;/td&gt;
@@ -276,12 +271,12 @@ nohup nb run &amp;amp;
 &lt;tr&gt;
 &lt;td&gt;一直&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/dAf9Z3kMDwYcRWv.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
-&lt;td&gt;支持gif&lt;/td&gt;
+&lt;td&gt;支持 gif&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;加载中&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/751Oudrah6gBsWe.gif&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
-&lt;td&gt;支持gif&lt;/td&gt;
+&lt;td&gt;支持 gif&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;转&lt;/td&gt;
@@ -291,7 +286,7 @@ nohup nb run &amp;amp;
 &lt;tr&gt;
 &lt;td&gt;小天使&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/ZgD1WSMRxLIymCq.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
-&lt;td&gt;图中名字为目标qq昵称&lt;br&gt;可指定名字，如：小天使 meetwq 自己&lt;/td&gt;
+&lt;td&gt;图中名字为目标 qq 昵称&lt;br&gt;可指定名字，如：小天使 meetwq 自己&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;不要靠近&lt;/td&gt;
@@ -311,7 +306,7 @@ nohup nb run &amp;amp;
 &lt;tr&gt;
 &lt;td&gt;玩游戏&lt;br&gt;来玩游戏&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/05/31/j9ZKB7cFOSklzMe.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
-&lt;td&gt;图中描述默认为：来玩休闲游戏啊&lt;br&gt;可指定描述&lt;br&gt;支持gif&lt;/td&gt;
+&lt;td&gt;图中描述默认为：来玩休闲游戏啊&lt;br&gt;可指定描述&lt;br&gt;支持 gif&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;膜&lt;br&gt;膜拜&lt;/td&gt;
@@ -341,12 +336,12 @@ nohup nb run &amp;amp;
 &lt;tr&gt;
 &lt;td&gt;问问&lt;br&gt;去问问&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/02/23/GUyax1BF6q5Hvin.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
-&lt;td&gt;名字为qq昵称，可指定名字&lt;/td&gt;
+&lt;td&gt;名字为 qq 昵称，可指定名字&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;舔&lt;br&gt;舔屏&lt;br&gt;prpr&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/05/WMHpwygtmN5bdEV.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
-&lt;td&gt;支持gif&lt;/td&gt;
+&lt;td&gt;支持 gif&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;搓&lt;/td&gt;
@@ -356,7 +351,7 @@ nohup nb run &amp;amp;
 &lt;tr&gt;
 &lt;td&gt;墙纸&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/10/tQRXzLamGyWi24s.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
-&lt;td&gt;支持gif&lt;/td&gt;
+&lt;td&gt;支持 gif&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;国旗&lt;/td&gt;
@@ -366,7 +361,7 @@ nohup nb run &amp;amp;
 &lt;tr&gt;
 &lt;td&gt;交个朋友&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/10/SnmkNrjKuFeZvbA.jpg&#34; width=&#34;200&#34; /&gt;&lt;/td&gt;
-&lt;td&gt;名字为qq昵称，可指定名字&lt;/td&gt;
+&lt;td&gt;名字为 qq 昵称，可指定名字&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;继续干活&lt;br&gt;打工人&lt;/td&gt;
@@ -381,7 +376,7 @@ nohup nb run &amp;amp;
 &lt;tr&gt;
 &lt;td&gt;关注&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/12/FlpjRWCte72ozqs.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
-&lt;td&gt;名字为qq昵称，可指定名字&lt;/td&gt;
+&lt;td&gt;名字为 qq 昵称，可指定名字&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;我朋友说&lt;br&gt;我有个朋友说&lt;/td&gt;
@@ -401,7 +396,7 @@ nohup nb run &amp;amp;
 &lt;tr&gt;
 &lt;td&gt;兑换券&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/12/6tS7dDaprb1sUxj.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
-&lt;td&gt;默认文字为：qq昵称 + 陪睡券&lt;br&gt;可指定文字&lt;/td&gt;
+&lt;td&gt;默认文字为：qq 昵称 + 陪睡券&lt;br&gt;可指定文字&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;听音乐&lt;/td&gt;
@@ -426,7 +421,7 @@ nohup nb run &amp;amp;
 &lt;tr&gt;
 &lt;td&gt;对称&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/15/HXntCy8kc7IRZxp.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
-&lt;td&gt;可使用参数“上”、“下”、“左”、“右”指定对称方向&lt;/td&gt;
+&lt;td&gt;可使用参数 “上”、“下”、“左”、“右” 指定对称方向&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;安全感&lt;/td&gt;
@@ -436,7 +431,7 @@ nohup nb run &amp;amp;
 &lt;tr&gt;
 &lt;td&gt;永远喜欢&lt;br&gt;我永远喜欢&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/03/15/EpTiUbcoVGCXLkJ.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
-&lt;td&gt;图中名字为目标qq昵称&lt;br&gt;可指定名字&lt;br&gt;可指定多个目标叠buff&lt;/td&gt;
+&lt;td&gt;图中名字为目标 qq 昵称&lt;br&gt;可指定名字&lt;br&gt;可指定多个目标叠 buff&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;采访&lt;/td&gt;
@@ -484,7 +479,7 @@ nohup nb run &amp;amp;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;为什么@我&lt;br&gt;为什么at我&lt;/td&gt;
+&lt;td&gt;为什么 @我&lt;br&gt;为什么 at 我&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/04/14/qQYydurABV7TMbN.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
@@ -521,12 +516,12 @@ nohup nb run &amp;amp;
 &lt;tr&gt;
 &lt;td&gt;阿尼亚喜欢&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/05/11/U3ZMXHB1PduKckQ.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
-&lt;td&gt;支持gif&lt;/td&gt;
+&lt;td&gt;支持 gif&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;想什么&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/05/18/ck1jNO2K8Qd6Lo3.jpg&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
-&lt;td&gt;支持gif&lt;/td&gt;
+&lt;td&gt;支持 gif&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;远离&lt;/td&gt;
@@ -546,9 +541,10 @@ nohup nb run &amp;amp;
 &lt;tr&gt;
 &lt;td&gt;复读&lt;/td&gt;
 &lt;td&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/06/08/nU2dAe3GiVR7Y8I.gif&#34; width=&#34;200&#34; &gt;&lt;/td&gt;
-&lt;td&gt;复读内容默认为“救命啊”&lt;br&gt;可指定多个目标&lt;/td&gt;
+&lt;td&gt;复读内容默认为 “救命啊”&lt;br&gt;可指定多个目标&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </content>
         <updated>2022-06-23T01:41:00.000Z</updated>
     </entry>
@@ -568,8 +564,10 @@ nohup [python] [aaa] &amp;amp;
         <id>http://example.com/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/</id>
         <title>git push出现Everything up-to-date</title>
         <link rel="alternate" href="http://example.com/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/"/>
-        <content type="html">&lt;h2 id=&#34;原因：&#34;&gt;&lt;a href=&#34;#原因：&#34; class=&#34;headerlink&#34; title=&#34;原因：&#34;&gt;&lt;/a&gt;原因：&lt;/h2&gt;&lt;p&gt;没有添加文件&lt;/p&gt;
-&lt;h2 id=&#34;解决方法：&#34;&gt;&lt;a href=&#34;#解决方法：&#34; class=&#34;headerlink&#34; title=&#34;解决方法：&#34;&gt;&lt;/a&gt;解决方法：&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;git add .
+        <content type="html">&lt;h2 id=&#34;原因&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#原因&#34;&gt;#&lt;/a&gt; 原因：&lt;/h2&gt;
+&lt;p&gt;没有添加文件&lt;/p&gt;
+&lt;h2 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法：&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;git add .
 git commit -m &amp;quot;commit&amp;quot;
 git push origin master
 &lt;/code&gt;&lt;/pre&gt;
@@ -580,29 +578,29 @@ git push origin master
         <id>http://example.com/2021/11/08/Map_%E5%8D%95%E8%AF%8D%E5%88%86%E6%9E%90/</id>
         <title>Map 单词分析</title>
         <link rel="alternate" href="http://example.com/2021/11/08/Map_%E5%8D%95%E8%AF%8D%E5%88%86%E6%9E%90/"/>
-        <content type="html">&lt;p&gt;&lt;strong&gt;蓝桥杯无法使用&lt;code&gt;for(x : y)&amp;#123;&amp;#125;&lt;/code&gt; 、 &lt;code&gt;auto&lt;/code&gt;等的C11语法和关键字&lt;/strong&gt;&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;strong&gt;蓝桥杯无法使用 &lt;code&gt;for(x : y)&amp;#123;&amp;#125;&lt;/code&gt;  、  &lt;code&gt;auto&lt;/code&gt;  等的 C11 语法和关键字&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
 using namespace std;
 
 map&amp;lt;char, int&amp;gt; m;
 
 int main(void)&amp;#123;
-    string str;
-    char mc;
-    int s = 0;
-    for(int i = 97; i &amp;lt;= 122; i++)&amp;#123;
-        m.insert(make_pair((char)i, 0));
-    &amp;#125;
-    cin &amp;gt;&amp;gt; str;
-    for(int i = 0; i &amp;lt; str.size(); i++)&amp;#123;
-        m[str[i]]++;
-    &amp;#125;
-    for(map&amp;lt;char, int&amp;gt;::iterator i = m.begin(); i != m.end(); i++)&amp;#123;
-        if(s &amp;lt; i-&amp;gt;second) mc = i-&amp;gt;first, s = i-&amp;gt;second;		// 记录次数
-    &amp;#125;
-    cout &amp;lt;&amp;lt; mc &amp;lt;&amp;lt; endl &amp;lt;&amp;lt; m[mc];
+	string str;
+	char mc;
+	int s = 0;
+	for(int i = 97; i &amp;lt;= 122; i++)&amp;#123;
+		m.insert(make_pair((char)i, 0));
+	&amp;#125;
+	cin &amp;gt;&amp;gt; str;
+	for(int i = 0; i &amp;lt; str.size(); i++)&amp;#123;
+		m[str[i]]++;
+	&amp;#125;
+	for(map&amp;lt;char, int&amp;gt;::iterator i = m.begin(); i != m.end(); i++)&amp;#123;
+		if(s &amp;lt; i-&amp;gt;second) mc = i-&amp;gt;first, s = i-&amp;gt;second;		// 记录次数
+	&amp;#125;
+	cout &amp;lt;&amp;lt; mc &amp;lt;&amp;lt; endl &amp;lt;&amp;lt; m[mc];
 
-    return 0;
+	return 0;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
 </content>
@@ -634,16 +632,16 @@ while(cin &amp;gt;&amp;gt; i)&amp;#123;...&amp;#125;
         <id>http://example.com/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/</id>
         <title>关于矩阵对角线的相关表达</title>
         <link rel="alternate" href="http://example.com/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/"/>
-        <content type="html">&lt;p&gt;主对角线元素下标满足：&lt;code&gt;i = j&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;副对角线元素下标满足：&lt;code&gt;i + j = n&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;假设一个&lt;code&gt;n×n&lt;/code&gt;的矩阵：&lt;/p&gt;
+        <content type="html">&lt;p&gt;主对角线元素下标满足： &lt;code&gt;i = j&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;副对角线元素下标满足： &lt;code&gt;i + j = n&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;假设一个 &lt;code&gt;n×n&lt;/code&gt;  的矩阵：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1 2 3 ...
 4 5 6
 7 8 9
 ...
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;主对角线一定满足 &lt;code&gt;a[1][1], a[2][2], a[3][3]..., a[n][n]&lt;/code&gt; 其中主对角线的每项都有 &lt;code&gt;i == j&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;副对角线一定满足 &lt;code&gt;a[1][n], a[2][n - 1], a[3][n - 3] ... a[n][1]&lt;/code&gt; 其中次对角线的每项都有 &lt;code&gt;i + j == n&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;主对角线一定满足  &lt;code&gt;a[1][1], a[2][2], a[3][3]..., a[n][n]&lt;/code&gt;  其中主对角线的每项都有  &lt;code&gt;i == j&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;副对角线一定满足  &lt;code&gt;a[1][n], a[2][n - 1], a[3][n - 3] ... a[n][1]&lt;/code&gt;  其中次对角线的每项都有  &lt;code&gt;i + j == n&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;相关：求秩、八皇后问题…&lt;/p&gt;
 </content>
@@ -661,27 +659,27 @@ while(cin &amp;gt;&amp;gt; i)&amp;#123;...&amp;#125;
 &lt;/ul&gt;
 &lt;p&gt;Vector 插入元素&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;iterator insert(iterator it, const T&amp;amp; x)：iterator向量中迭代器指向元素前增加一个元素x&lt;/li&gt;
-&lt;li&gt;iterator insert(iterator it, int n,const T&amp;amp; x)：向量中迭代器指向元素前增加n个相同的元素x&lt;/li&gt;
-&lt;li&gt;iterator insert(iterator it, const_iterator first, const_iterator last)：向量中迭代器指向元素前插入另一个相同类型向量的[first, last)间的数据&lt;/li&gt;
+&lt;li&gt;iterator insert (iterator it, const T&amp;amp; x)：iterator 向量中迭代器指向元素前增加一个元素 x&lt;/li&gt;
+&lt;li&gt;iterator insert (iterator it, int n,const T&amp;amp; x)：向量中迭代器指向元素前增加 n 个相同的元素 x&lt;/li&gt;
+&lt;li&gt;iterator insert (iterator it, const_iterator first, const_iterator last)：向量中迭代器指向元素前插入另一个相同类型向量的 [first, last) 间的数据&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
 using namespace std;
 
 int main(void)&amp;#123;
-    vector&amp;lt;int&amp;gt; arr;
-    int t, k, a;
-    for(int i = 0; i &amp;lt; 9; i++)&amp;#123;
-        cin &amp;gt;&amp;gt; t;
-        arr.push_back(t);
-    &amp;#125;
-    cin &amp;gt;&amp;gt; k;
-    auto pos = upper_bound(arr.begin(), arr.end(), k); 	// vector&amp;lt;int&amp;gt;::iterator
-    arr.insert(pos, k);
-    for(int i = 0; i &amp;lt; 10; i++)
-        cout &amp;lt;&amp;lt; arr[i] &amp;lt;&amp;lt; endl;
+	vector&amp;lt;int&amp;gt; arr;
+	int t, k, a;
+	for(int i = 0; i &amp;lt; 9; i++)&amp;#123;
+		cin &amp;gt;&amp;gt; t;
+		arr.push_back(t);
+	&amp;#125;
+	cin &amp;gt;&amp;gt; k;
+	auto pos = upper_bound(arr.begin(), arr.end(), k); 	// vector&amp;lt;int&amp;gt;::iterator
+	arr.insert(pos, k);
+	for(int i = 0; i &amp;lt; 10; i++)
+		cout &amp;lt;&amp;lt; arr[i] &amp;lt;&amp;lt; endl;
 
-    return 0;
+	return 0;
 &amp;#125; 
 &lt;/code&gt;&lt;/pre&gt;
 </content>
@@ -692,12 +690,12 @@ int main(void)&amp;#123;
         <id>http://example.com/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/</id>
         <title>DFS与BFS使用场景</title>
         <link rel="alternate" href="http://example.com/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/"/>
-        <content type="html">&lt;p&gt;(&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuaml1emhhbmcuY29tL3FhLzYyMy8=&#34;&gt;九章-马克助教&lt;/span&gt;)&lt;/p&gt;
+        <content type="html">&lt;p&gt;(&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuaml1emhhbmcuY29tL3FhLzYyMy8=&#34;&gt;九章 - 马克助教&lt;/span&gt;)&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
-&lt;li&gt;BFS是用来搜索最短径路的解是比较合适的，比如求最少步数的解，最少交换次数的解，因为BFS搜索过程中遇到的解一定是离根最近的，所以遇到一个解，一定就是最优解，此时搜索算法可以终止。这个时候不适宜使用DFS，因为DFS搜索到的解不一定是离根最近的，只有全局搜索完毕，才能从所有解中找出离根的最近的解。（当然这个DFS的不足，可以使用迭代加深搜索ID-DFS去弥补）&lt;/li&gt;
-&lt;li&gt;空间优劣上，DFS是有优势的，DFS不需要保存搜索过程中的状态，而BFS在搜索过程中需要保存搜索过的状态，而且一般情况需要一个队列来记录。&lt;/li&gt;
-&lt;li&gt;DFS适合搜索全部的解，因为要搜索全部的解，那么BFS搜索过程中，遇到离根最近的解，并没有什么用，也必须遍历完整棵搜索树，DFS搜索也会搜索全部，但是相比DFS不用记录过多信息，所以搜素全部解的问题，DFS显然更加合适。&lt;/li&gt;
+&lt;li&gt;BFS 是用来搜索最短径路的解是比较合适的，比如求最少步数的解，最少交换次数的解，因为 BFS 搜索过程中遇到的解一定是离根最近的，所以遇到一个解，一定就是最优解，此时搜索算法可以终止。这个时候不适宜使用 DFS，因为 DFS 搜索到的解不一定是离根最近的，只有全局搜索完毕，才能从所有解中找出离根的最近的解。（当然这个 DFS 的不足，可以使用迭代加深搜索 ID-DFS 去弥补）&lt;/li&gt;
+&lt;li&gt;空间优劣上，DFS 是有优势的，DFS 不需要保存搜索过程中的状态，而 BFS 在搜索过程中需要保存搜索过的状态，而且一般情况需要一个队列来记录。&lt;/li&gt;
+&lt;li&gt;DFS 适合搜索全部的解，因为要搜索全部的解，那么 BFS 搜索过程中，遇到离根最近的解，并没有什么用，也必须遍历完整棵搜索树，DFS 搜索也会搜索全部，但是相比 DFS 不用记录过多信息，所以搜素全部解的问题，DFS 显然更加合适。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 </content>
@@ -712,42 +710,42 @@ int main(void)&amp;#123;
 using namespace std;
 
 struct tree&amp;#123;
-    int left;
-    int right;
+	int left;
+	int right;
 &amp;#125;;
 
 tree t[1000];
 
 int dfs(int n)&amp;#123;		// 深度 
-    if(!n) return 0;
-    return max(dfs(t[n].left), dfs(t[n].right)) + 1;
+	if(!n) return 0;
+	return max(dfs(t[n].left), dfs(t[n].right)) + 1;
 &amp;#125;
 
 void f(int n)&amp;#123;		// 先序 
-    cout &amp;lt;&amp;lt; n &amp;lt;&amp;lt; &amp;quot; &amp;quot;;
-    if(t[n].left) f(t[n].left);
-    if(t[n].right) f(t[n].right);
+	cout &amp;lt;&amp;lt; n &amp;lt;&amp;lt; &amp;quot; &amp;quot;;
+	if(t[n].left) f(t[n].left);
+	if(t[n].right) f(t[n].right);
 &amp;#125;
 
 void s(int n)&amp;#123;		// 中序 
-    if(t[n].left) s(t[n].left);
-    cout &amp;lt;&amp;lt; n &amp;lt;&amp;lt; &amp;quot; &amp;quot;;
-    if(t[n].right) s(t[n].right);
+	if(t[n].left) s(t[n].left);
+	cout &amp;lt;&amp;lt; n &amp;lt;&amp;lt; &amp;quot; &amp;quot;;
+	if(t[n].right) s(t[n].right);
 &amp;#125;
 
 void e(int n)&amp;#123;		// 后序 
-    if(t[n].left) e(t[n].left);
-    if(t[n].right) e(t[n].right);
-    cout &amp;lt;&amp;lt; n &amp;lt;&amp;lt; &amp;quot; &amp;quot;;
+	if(t[n].left) e(t[n].left);
+	if(t[n].right) e(t[n].right);
+	cout &amp;lt;&amp;lt; n &amp;lt;&amp;lt; &amp;quot; &amp;quot;;
 &amp;#125;
 
 int main(void)&amp;#123;
-    int n;
-    cin &amp;gt;&amp;gt; n;
-    for(int i = 1; i &amp;lt;= n; i++)
-        cin &amp;gt;&amp;gt; t[i].left &amp;gt;&amp;gt; t[i].right;
-    
-    return 0;
+	int n;
+	cin &amp;gt;&amp;gt; n;
+	for(int i = 1; i &amp;lt;= n; i++)
+		cin &amp;gt;&amp;gt; t[i].left &amp;gt;&amp;gt; t[i].right;
+	
+	return 0;
 &amp;#125; 
 &lt;/code&gt;&lt;/pre&gt;
 </content>
@@ -767,8 +765,8 @@ ios::sync_with_stdio(false);
         <id>http://example.com/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/</id>
         <title>数组粘贴，初始化C++</title>
         <link rel="alternate" href="http://example.com/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/"/>
-        <content type="html">&lt;p&gt;粘贴：memcpy()&lt;/p&gt;
-&lt;p&gt;初始化（可初始化结构体内的数组元素）：memset()&lt;/p&gt;
+        <content type="html">&lt;p&gt;粘贴：memcpy ()&lt;/p&gt;
+&lt;p&gt;初始化（可初始化结构体内的数组元素）：memset ()&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;int a[5];
 int b[5] = &amp;#123;1, 2, 3, 4, 5&amp;#125;
 memset(a, 0, sizeof(int));	// 把a中所有数组元素初始化为1
@@ -811,19 +809,34 @@ abcde
         <id>http://example.com/2021/10/23/C++_STL%E5%AE%B9%E5%99%A8%EF%BC%8811%E4%B8%AA%EF%BC%89/</id>
         <title>C++ STL容器（11个）</title>
         <link rel="alternate" href="http://example.com/2021/10/23/C++_STL%E5%AE%B9%E5%99%A8%EF%BC%8811%E4%B8%AA%EF%BC%89/"/>
-        <content type="html">&lt;h1 id=&#34;deque&#34;&gt;&lt;a href=&#34;#deque&#34; class=&#34;headerlink&#34; title=&#34;deque :&#34;&gt;&lt;/a&gt;&lt;code&gt;deque&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;list&#34;&gt;&lt;a href=&#34;#list&#34; class=&#34;headerlink&#34; title=&#34;list :&#34;&gt;&lt;/a&gt;&lt;code&gt;list&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;queue&#34;&gt;&lt;a href=&#34;#queue&#34; class=&#34;headerlink&#34; title=&#34;queue :&#34;&gt;&lt;/a&gt;&lt;code&gt;queue&lt;/code&gt; :&lt;/h1&gt;&lt;p&gt;&lt;img data-src=&#34;https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/11/3285107056.jpg&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;priority-queue&#34;&gt;&lt;a href=&#34;#priority-queue&#34; class=&#34;headerlink&#34; title=&#34;priority_queue :&#34;&gt;&lt;/a&gt;&lt;code&gt;priority_queue&lt;/code&gt; :&lt;/h1&gt;&lt;h4 id=&#34;默认大顶堆（后两参数可缺省）&#34;&gt;&lt;a href=&#34;#默认大顶堆（后两参数可缺省）&#34; class=&#34;headerlink&#34; title=&#34;#### 默认大顶堆（后两参数可缺省）&#34;&gt;&lt;/a&gt;#### 默认大顶堆（后两参数可缺省）&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;priority_queue&amp;lt;int&amp;gt; big_heap;
+        <content type="html">&lt;h1 id=&#34;deque&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#deque&#34;&gt;#&lt;/a&gt;  &lt;code&gt;deque&lt;/code&gt;  :&lt;/h1&gt;
+&lt;h1 id=&#34;list&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#list&#34;&gt;#&lt;/a&gt;  &lt;code&gt;list&lt;/code&gt;  :&lt;/h1&gt;
+&lt;h1 id=&#34;queue&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#queue&#34;&gt;#&lt;/a&gt;  &lt;code&gt;queue&lt;/code&gt;  :&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/11/3285107056.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;priority_queue&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#priority_queue&#34;&gt;#&lt;/a&gt;  &lt;code&gt;priority_queue&lt;/code&gt;  :&lt;/h1&gt;
+&lt;h4 id=&#34;默认大顶堆后两参数可缺省&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#默认大顶堆后两参数可缺省&#34;&gt;#&lt;/a&gt; #### 默认大顶堆（后两参数可缺省）&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;priority_queue&amp;lt;int&amp;gt; big_heap;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;大顶堆&#34;&gt;&lt;a href=&#34;#大顶堆&#34; class=&#34;headerlink&#34; title=&#34;大顶堆&#34;&gt;&lt;/a&gt;大顶堆&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;priority_queue&amp;lt;int,vector&amp;lt;int&amp;gt;,less&amp;lt;int&amp;gt;&amp;gt; big_heap2;
+&lt;h4 id=&#34;大顶堆&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#大顶堆&#34;&gt;#&lt;/a&gt; 大顶堆&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;priority_queue&amp;lt;int,vector&amp;lt;int&amp;gt;,less&amp;lt;int&amp;gt;&amp;gt; big_heap2;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;小顶堆&#34;&gt;&lt;a href=&#34;#小顶堆&#34; class=&#34;headerlink&#34; title=&#34;小顶堆&#34;&gt;&lt;/a&gt;小顶堆&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;priority_queue&amp;lt;int,vector&amp;lt;int&amp;gt;,greater&amp;lt;int&amp;gt;&amp;gt; small_heap;
+&lt;h4 id=&#34;小顶堆&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#小顶堆&#34;&gt;#&lt;/a&gt; 小顶堆&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;priority_queue&amp;lt;int,vector&amp;lt;int&amp;gt;,greater&amp;lt;int&amp;gt;&amp;gt; small_heap;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;函数&#34;&gt;&lt;a href=&#34;#函数&#34; class=&#34;headerlink&#34; title=&#34;函数&#34;&gt;&lt;/a&gt;函数&lt;/h4&gt;&lt;p&gt;&lt;code&gt;bool empty() const&lt;/code&gt;：返回值为true，说明队列为空&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;int size() const&lt;/code&gt;：返回优先队列中元素的数量&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;void pop()&lt;/code&gt;：删除队列顶部的元素，也即根节点&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;int top()&lt;/code&gt;：返回队列中的顶部元素，但不删除该元素&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;void push(int arg)&lt;/code&gt;：将元素arg插入到队列之中；&lt;/p&gt;
-&lt;h1 id=&#34;stack&#34;&gt;&lt;a href=&#34;#stack&#34; class=&#34;headerlink&#34; title=&#34;stack :&#34;&gt;&lt;/a&gt;&lt;code&gt;stack&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;vector&#34;&gt;&lt;a href=&#34;#vector&#34; class=&#34;headerlink&#34; title=&#34;vector :&#34;&gt;&lt;/a&gt;&lt;code&gt;vector&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;map&#34;&gt;&lt;a href=&#34;#map&#34; class=&#34;headerlink&#34; title=&#34;map :&#34;&gt;&lt;/a&gt;&lt;code&gt;map&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;multimap&#34;&gt;&lt;a href=&#34;#multimap&#34; class=&#34;headerlink&#34; title=&#34;multimap :&#34;&gt;&lt;/a&gt;&lt;code&gt;multimap&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;set&#34;&gt;&lt;a href=&#34;#set&#34; class=&#34;headerlink&#34; title=&#34;set :&#34;&gt;&lt;/a&gt;&lt;code&gt;set&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;multiset&#34;&gt;&lt;a href=&#34;#multiset&#34; class=&#34;headerlink&#34; title=&#34;multiset :&#34;&gt;&lt;/a&gt;&lt;code&gt;multiset&lt;/code&gt; :&lt;/h1&gt;&lt;h1 id=&#34;bitset&#34;&gt;&lt;a href=&#34;#bitset&#34; class=&#34;headerlink&#34; title=&#34;bitset :&#34;&gt;&lt;/a&gt;&lt;code&gt;bitset&lt;/code&gt; :&lt;/h1&gt;</content>
+&lt;h4 id=&#34;函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#函数&#34;&gt;#&lt;/a&gt; 函数&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;bool empty() const&lt;/code&gt; ：返回值为 true，说明队列为空&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;int size() const&lt;/code&gt; ：返回优先队列中元素的数量&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;void pop()&lt;/code&gt; ：删除队列顶部的元素，也即根节点&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;int top()&lt;/code&gt; ：返回队列中的顶部元素，但不删除该元素&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;void push(int arg)&lt;/code&gt; ：将元素 arg 插入到队列之中；&lt;/p&gt;
+&lt;h1 id=&#34;stack&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#stack&#34;&gt;#&lt;/a&gt;  &lt;code&gt;stack&lt;/code&gt;  :&lt;/h1&gt;
+&lt;h1 id=&#34;vector&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vector&#34;&gt;#&lt;/a&gt;  &lt;code&gt;vector&lt;/code&gt;  :&lt;/h1&gt;
+&lt;h1 id=&#34;map&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#map&#34;&gt;#&lt;/a&gt;  &lt;code&gt;map&lt;/code&gt;  :&lt;/h1&gt;
+&lt;h1 id=&#34;multimap&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#multimap&#34;&gt;#&lt;/a&gt;  &lt;code&gt;multimap&lt;/code&gt;  :&lt;/h1&gt;
+&lt;h1 id=&#34;set&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#set&#34;&gt;#&lt;/a&gt;  &lt;code&gt;set&lt;/code&gt;  :&lt;/h1&gt;
+&lt;h1 id=&#34;multiset&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#multiset&#34;&gt;#&lt;/a&gt;  &lt;code&gt;multiset&lt;/code&gt;  :&lt;/h1&gt;
+&lt;h1 id=&#34;bitset&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#bitset&#34;&gt;#&lt;/a&gt;  &lt;code&gt;bitset&lt;/code&gt;  :&lt;/h1&gt;
+</content>
         <updated>2021-10-23T08:33:00.000Z</updated>
     </entry>
     <entry>
@@ -835,35 +848,35 @@ abcde
 using namespace std;
 
 int eq(int *t, int l)&amp;#123;
-    for(int i = 1; i &amp;lt; l; i++)
-        if(t[0] != t[i]) return 0;
-    return 1;
+	for(int i = 1; i &amp;lt; l; i++)
+		if(t[0] != t[i]) return 0;
+	return 1;
 &amp;#125;
 
 int main(void)&amp;#123;
-    int n, m;
-    cin &amp;gt;&amp;gt; n;
-    int c[n], i, s = 0, bf[n];		// bf[n] 缓存区 
-    for(i = 0; i &amp;lt; n; i++)
-        cin &amp;gt;&amp;gt; c[i];
-    while(1)&amp;#123;						// 思路：每次分糖果，把第i个 分出 的糖果记录到 对应的 缓存区， 
-        for(i = 0; i &amp;lt; n; i++)&amp;#123;		// 		 第i个小朋友的苹果等于 自身糖果的一半 加  i - 1 缓冲区的糖果 
-            c[i] /= 2;				//	例如： 有三个小朋友
-            bf[i] = c[i];			//         2 2 4 
-        &amp;#125;							// 对半分：1 1 2(1)
-        c[0] += bf[n - 1];			//          / / / 
-        for(i = 1; i &amp;lt; n; i++)	 	// 缓冲区：1 1 2 
-            c[i] += bf[i - 1];		//         | | | 
-        for(i = 0; i &amp;lt; n; i++)		// 完成：3 2 3(3) 
-            if(c[i] % 2 != 0)&amp;#123;
-                c[i]++;
-                s++;
-            &amp;#125;
-        if(eq(c, n) == 1) break;
-    &amp;#125;
+	int n, m;
+	cin &amp;gt;&amp;gt; n;
+	int c[n], i, s = 0, bf[n];		// bf[n] 缓存区 
+	for(i = 0; i &amp;lt; n; i++)
+		cin &amp;gt;&amp;gt; c[i];
+	while(1)&amp;#123;						// 思路：每次分糖果，把第i个 分出 的糖果记录到 对应的 缓存区， 
+		for(i = 0; i &amp;lt; n; i++)&amp;#123;		// 		 第i个小朋友的苹果等于 自身糖果的一半 加  i - 1 缓冲区的糖果 
+			c[i] /= 2;				//	例如： 有三个小朋友
+			bf[i] = c[i];			//         2 2 4 
+		&amp;#125;							// 对半分：1 1 2(1)
+		c[0] += bf[n - 1];			//          / / / 
+		for(i = 1; i &amp;lt; n; i++)	 	// 缓冲区：1 1 2 
+			c[i] += bf[i - 1];		//         | | | 
+		for(i = 0; i &amp;lt; n; i++)		// 完成：3 2 3(3) 
+			if(c[i] % 2 != 0)&amp;#123;
+				c[i]++;
+				s++;
+			&amp;#125;
+		if(eq(c, n) == 1) break;
+	&amp;#125;
 
-    cout &amp;lt;&amp;lt; s;
-    return 0;
+	cout &amp;lt;&amp;lt; s;
+	return 0;
 &amp;#125; 
 &lt;/code&gt;&lt;/pre&gt;
 </content>
@@ -873,7 +886,7 @@ int main(void)&amp;#123;
         <id>http://example.com/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/</id>
         <title>XX:XX:XX类型字符串提取数字</title>
         <link rel="alternate" href="http://example.com/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/"/>
-        <content type="html">&lt;p&gt;洛谷P1615&lt;/p&gt;
+        <content type="html">&lt;p&gt;洛谷 P1615&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cin &amp;gt;&amp;gt; time1
 sscanf(time1.c_str(), &amp;quot;%d:%d:%d&amp;quot;, &amp;amp;h1, &amp;amp;m1, &amp;amp;s1); // c_str()获取字符串地址
 // 或者直接这样写 scanf(&amp;quot;%d:%d:%d&amp;quot;, &amp;amp;h1, &amp;amp;m1, &amp;amp;s1);
@@ -887,44 +900,44 @@ sscanf(time1.c_str(), &amp;quot;%d:%d:%d&amp;quot;, &amp;amp;h1, &amp;amp;m1, &a
         <link rel="alternate" href="http://example.com/2021/10/01/P2911_[USACO08OCT]Bovine_Bones_G_(C)/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/10/01/dcA2xWtmfYQRaqD.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;/*
-    根据题意，总共3个骰子，每个骰子有 S个面，因为数据范围较小，可以直接选择暴力
-    每次总和记录到相应的结构体(Sum = 10 -&amp;gt; struct[10])，结构体中保存两个数据：总和(num)、次数(times) 
-    最后使用快排(qsort)筛出次数(times)最小的目标 
+	根据题意，总共3个骰子，每个骰子有 S个面，因为数据范围较小，可以直接选择暴力
+	每次总和记录到相应的结构体(Sum = 10 -&amp;gt; struct[10])，结构体中保存两个数据：总和(num)、次数(times) 
+	最后使用快排(qsort)筛出次数(times)最小的目标 
 */ 
 
 #include&amp;lt;stdio.h&amp;gt;
 
 struct A&amp;#123;		// 声明结构体，存放点数总和与次数 
-    int num;
-    int times;
+	int num;
+	int times;
 &amp;#125;;
 
 int compare(const void *a, const void *b)&amp;#123;
-    struct A *p1 = (struct A *)a;
-    struct A *p2 = (struct A *)b;
-    if(p1-&amp;gt;times == p2-&amp;gt;times) return p1-&amp;gt;num - p2-&amp;gt;num;		// 题意：如果出现概率一样时输出最小总和 
-    return p2-&amp;gt;times - p1-&amp;gt;times;
+	struct A *p1 = (struct A *)a;
+	struct A *p2 = (struct A *)b;
+	if(p1-&amp;gt;times == p2-&amp;gt;times) return p1-&amp;gt;num - p2-&amp;gt;num;		// 题意：如果出现概率一样时输出最小总和 
+	return p2-&amp;gt;times - p1-&amp;gt;times;
 &amp;#125;
 
 int main(void)&amp;#123;
-    int s1, s2, s3, s, i, j, k;
-    struct A a[80];
-    scanf(&amp;quot;%d %d %d&amp;quot;, &amp;amp;s1, &amp;amp;s2, &amp;amp;s3);
-    for(i = 0; i &amp;lt; 81; i++)&amp;#123;
-         a[i].times = 0;
-         a[i].num = 0;
-    &amp;#125;
-    for(i = 1; i &amp;lt;= s1; i++)
-        for(j = 1; j &amp;lt;= s2; j++)
-            for(k = 1; k &amp;lt;= s3; k++)&amp;#123;
-                a[i + j + k].num = i + j + k;
-                a[i + j + k].times++;
-            &amp;#125;
+	int s1, s2, s3, s, i, j, k;
+	struct A a[80];
+	scanf(&amp;quot;%d %d %d&amp;quot;, &amp;amp;s1, &amp;amp;s2, &amp;amp;s3);
+	for(i = 0; i &amp;lt; 81; i++)&amp;#123;
+		 a[i].times = 0;
+		 a[i].num = 0;
+	&amp;#125;
+	for(i = 1; i &amp;lt;= s1; i++)
+		for(j = 1; j &amp;lt;= s2; j++)
+			for(k = 1; k &amp;lt;= s3; k++)&amp;#123;
+				a[i + j + k].num = i + j + k;
+				a[i + j + k].times++;
+			&amp;#125;
 
-    qsort(a, 80, sizeof(struct A), compare);
-    printf(&amp;quot;%d&amp;quot;, a[0].num);
+	qsort(a, 80, sizeof(struct A), compare);
+	printf(&amp;quot;%d&amp;quot;, a[0].num);
 
-    return 0;
+	return 0;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
 </content>
@@ -968,7 +981,7 @@ def getHTML(url):
     &amp;#125;
     request = urllib.request.Request(url=url, headers=headers)
     response = urllib.request.urlopen(request)
-    html = response.read().decode(&amp;#39;utf-8&amp;#39;)
+    html = response.read().decode(&#39;utf-8&#39;)
     return html
 
 
@@ -1015,8 +1028,9 @@ def saveData(data, filename):
     file.close()
 
 
-if __name__ == &amp;#39;__main__&amp;#39;:
+if __name__ == &#39;__main__&#39;:
     main()
+
 &lt;/code&gt;&lt;/pre&gt;
 </content>
         <updated>2021-09-10T12:39:00.000Z</updated>
@@ -1031,46 +1045,46 @@ const MAX = 1500;
 
 //创建结构体 
 struct P&amp;#123;
-    int id;
-    int time;
+	int id;
+	int time;
 &amp;#125;;
 
 //排序函数 
 int comp(const void *p1, const void *p2)
 &amp;#123;
-    const struct P *ps1 = (struct P *)p1;
-    const struct P *ps2 = (struct P *)p2;	
-    if(ps1-&amp;gt;time != ps2-&amp;gt;time)
-        return ps1-&amp;gt;time - ps2-&amp;gt;time;
-    else
-        return ps1-&amp;gt;id - ps2-&amp;gt;id;
+	const struct P *ps1 = (struct P *)p1;
+	const struct P *ps2 = (struct P *)p2;	
+	if(ps1-&amp;gt;time != ps2-&amp;gt;time)
+		return ps1-&amp;gt;time - ps2-&amp;gt;time;
+	else
+		return ps1-&amp;gt;id - ps2-&amp;gt;id;
 &amp;#125;
 
 int main()
 &amp;#123;
-    struct P p[MAX];
-    int count = 0;		//声明总人数 
-    int i, j;
-    double sum = 0.0; 
-    scanf(&amp;quot;%d&amp;quot;, &amp;amp;count);
-    for(i = 0; i &amp;lt; count; i++)		//创建(id , time)散列表 
-    &amp;#123;
-        p[i].id = (i + 1);
-        scanf(&amp;quot;%d&amp;quot;, &amp;amp;p[i].time);
-    &amp;#125;
-    qsort(p, count, sizeof(p[1]), comp);		//快排 
-    for(j = 0; j &amp;lt; count; j++)		//贪心算法求和计算总等待时间 
-        sum += p[j].time * (count - j - 1); 
-    for(j = 0; j &amp;lt; count; j++)		//输出最优顺序 
-    &amp;#123;
-        printf(&amp;quot;%d &amp;quot;,p[j].id);
-    &amp;#125;
-    printf(&amp;quot;\n&amp;quot;);
-    printf(&amp;quot;%.2lf\n&amp;quot;, sum / count);		//输出平均等待时间 
-    return 0;
+	struct P p[MAX];
+	int count = 0;		//声明总人数 
+	int i, j;
+	double sum = 0.0; 
+	scanf(&amp;quot;%d&amp;quot;, &amp;amp;count);
+	for(i = 0; i &amp;lt; count; i++)		//创建(id , time)散列表 
+	&amp;#123;
+		p[i].id = (i + 1);
+		scanf(&amp;quot;%d&amp;quot;, &amp;amp;p[i].time);
+	&amp;#125;
+	qsort(p, count, sizeof(p[1]), comp);		//快排 
+	for(j = 0; j &amp;lt; count; j++)		//贪心算法求和计算总等待时间 
+		sum += p[j].time * (count - j - 1); 
+	for(j = 0; j &amp;lt; count; j++)		//输出最优顺序 
+	&amp;#123;
+		printf(&amp;quot;%d &amp;quot;,p[j].id);
+	&amp;#125;
+	printf(&amp;quot;\n&amp;quot;);
+	printf(&amp;quot;%.2lf\n&amp;quot;, sum / count);		//输出平均等待时间 
+	return 0;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL21pb2UueHl6L2luZGV4LnBocC9hcmNoaXZlcy80Mi8=&#34;&gt;Python解法&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL21pb2UueHl6L2luZGV4LnBocC9hcmNoaXZlcy80Mi8=&#34;&gt;Python 解法&lt;/span&gt;&lt;/p&gt;
 </content>
         <updated>2021-09-04T10:32:00.000Z</updated>
     </entry>
@@ -1106,11 +1120,11 @@ print(&amp;quot;%.2f&amp;quot; % (sum1/n))
         <title>回文质数 python</title>
         <link rel="alternate" href="http://example.com/2021/06/01/%E5%9B%9E%E6%96%87%E8%B4%A8%E6%95%B0_python/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;http://mioe.xyz/usr/uploads/2021/06/1304133883.png&#34; alt=&#34;6-01-2.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;洛谷卡了很长时间，最终还是没有AC，最后两个超时，可能是我回文判断选择用字符串的方式导致的,最后没办法了，选择下策直接打表AC。&lt;/p&gt;
+&lt;p&gt;洛谷卡了很长时间，最终还是没有 AC，最后两个超时，可能是我回文判断选择用字符串的方式导致的，最后没办法了，选择下策直接打表 AC。&lt;/p&gt;
 &lt;p&gt;注：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;除 11 外没有偶数位的回文质数，那么[10000000,100000000] 这个区间根本不用枚举。&lt;/li&gt;
-&lt;li&gt;只需要[2, sqrt(i) + 1]&lt;/li&gt;
+&lt;li&gt;除 11 外没有偶数位的回文质数，那么 [10000000,100000000] 这个区间根本不用枚举。&lt;/li&gt;
+&lt;li&gt;只需要 [2, sqrt (i) + 1]&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;代码如下：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;import math
@@ -1124,8 +1138,7 @@ for i in range(a, b + 1):
             if i % j == 0:
                 break
         else:
-            print(i)
-&lt;/code&gt;&lt;/pre&gt;
+            print(i)&lt;/code&gt;&lt;/pre&gt;
 </content>
         <updated>2021-06-01T12:02:49.000Z</updated>
     </entry>
@@ -1134,8 +1147,14 @@ for i in range(a, b + 1):
         <title>洛谷 P1106 删数问题 python解法</title>
         <link rel="alternate" href="http://example.com/2021/06/01/%E6%B4%9B%E8%B0%B7_P1106_%E5%88%A0%E6%95%B0%E9%97%AE%E9%A2%98_python%E8%A7%A3%E6%B3%95/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;http://mioe.xyz/usr/uploads/2021/06/3479330492.png&#34; alt=&#34;6-01-1.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;第一次提交时，因为读题不清，3个WA。一开始理解为依次删除最大数，例50074897 2得500747，结果一直WA，然后被迫下载测试数据，发现正确答案为 4897。&lt;/p&gt;
-&lt;p&gt;思索了一番，发现是个贪心问题,还是用 50074897 2 举例:&lt;br&gt;        (1) 5 &amp;gt; 0 , 删除5, 0074897&lt;br&gt;        (2) 0 &amp;#x3D; 0 , 不动 0074897&lt;br&gt;        (3) 0 &amp;#x3D; 0 , 同理 0074897&lt;br&gt;        (5) 7 &amp;gt; 4 , 删除7，004897&lt;br&gt;        (6) 去零整理，答案为 4897&lt;br&gt;Python天下第一，代码如下：&lt;/p&gt;
+&lt;p&gt;第一次提交时，因为读题不清，3 个 WA。一开始理解为依次删除最大数，例 50074897 2 得 500747，结果一直 WA，然后被迫下载测试数据，发现正确答案为 4897。&lt;/p&gt;
+&lt;p&gt;思索了一番，发现是个贪心问题，还是用 50074897 2 举例:&lt;br&gt;
+(1) 5 &amp;gt; 0 , 删除 5, 0074897&lt;br&gt;
+ (2) 0 = 0 , 不动 0074897&lt;br&gt;
+ (3) 0 = 0 , 同理 0074897&lt;br&gt;
+ (5) 7 &amp;gt; 4 , 删除 7，004897&lt;br&gt;
+ (6) 去零整理，答案为 4897&lt;br&gt;
+Python 天下第一，代码如下：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;m = input()
 n = int(input())
 i = 0   # 用于下标索引
@@ -1172,17 +1191,16 @@ emt = []
 sum_coin = 0.0
 for i in range(coins):
     temp_weight, temp_coin = map(int, input().split())
-    emt.append(&amp;#123;&amp;#39;coin&amp;#39;: temp_coin, &amp;#39;weight&amp;#39;: temp_weight, &amp;#39;avg&amp;#39;: temp_coin/temp_weight&amp;#125;)
-emt.sort(key=lambda emt_d: emt_d[&amp;#39;avg&amp;#39;], reverse=True)
+    emt.append(&amp;#123;&#39;coin&#39;: temp_coin, &#39;weight&#39;: temp_weight, &#39;avg&#39;: temp_coin/temp_weight&amp;#125;)
+emt.sort(key=lambda emt_d: emt_d[&#39;avg&#39;], reverse=True)
 for i in range(len(emt)):
-    if capacity &amp;gt;= emt[i][&amp;#39;weight&amp;#39;]:
-        sum_coin += emt[i][&amp;#39;coin&amp;#39;]
-        capacity -= emt[i][&amp;#39;weight&amp;#39;]
-    elif capacity &amp;lt; emt[i][&amp;#39;weight&amp;#39;] and capacity != 0:
-        sum_coin += emt[i][&amp;#39;avg&amp;#39;] * capacity
+    if capacity &amp;gt;= emt[i][&#39;weight&#39;]:
+        sum_coin += emt[i][&#39;coin&#39;]
+        capacity -= emt[i][&#39;weight&#39;]
+    elif capacity &amp;lt; emt[i][&#39;weight&#39;] and capacity != 0:
+        sum_coin += emt[i][&#39;avg&#39;] * capacity
         break
-print(&amp;#39;%.2f&amp;#39; % sum_coin)
-&lt;/code&gt;&lt;/pre&gt;
+print(&#39;%.2f&#39; % sum_coin)&lt;/code&gt;&lt;/pre&gt;
 </content>
         <updated>2021-05-31T13:54:41.000Z</updated>
     </entry>
@@ -1192,31 +1210,32 @@ print(&amp;#39;%.2f&amp;#39; % sum_coin)
         <link rel="alternate" href="http://example.com/2020/12/24/ArrayList%E5%88%97%E8%A1%A8%E9%9B%86%E5%90%88/"/>
         <content type="html">&lt;pre&gt;&lt;code&gt;List&amp;lt;Type&amp;gt; variable = new ArrayList&amp;lt;&amp;gt;([size]);
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Type：int String method …&lt;br&gt;size：可写可不写 &lt;/p&gt;
+&lt;p&gt;Type：int String method …&lt;br&gt;
+size：可写可不写&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;class user&amp;#123;
-    private String name;
-    private int age;
-    public user(String string, int i) &amp;#123;
-        this.name = string;
-        this.age = i;
-    &amp;#125;
-    public String getName() &amp;#123;
-        return name;
-    &amp;#125;
-    public int getAge() &amp;#123;
-        return age;
-    &amp;#125;
+	private String name;
+	private int age;
+	public user(String string, int i) &amp;#123;
+		this.name = string;
+		this.age = i;
+	&amp;#125;
+	public String getName() &amp;#123;
+		return name;
+	&amp;#125;
+	public int getAge() &amp;#123;
+		return age;
+	&amp;#125;
 &amp;#125;
 
-    List&amp;lt;user&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();
-    list.add(new user(&amp;quot;张三&amp;quot;,15));
+	List&amp;lt;user&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();
+	list.add(new user(&amp;quot;张三&amp;quot;,15));
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
 &lt;p&gt;集合的遍历：&lt;/p&gt;
 &lt;p&gt;方法一&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;for (int i = 0; i &amp;lt; list.size(); i++) &amp;#123;
-    System.out.print(list.get(i).getName());
-    System.out.println(list.get(i).getAge());
+	System.out.print(list.get(i).getName());
+	System.out.println(list.get(i).getAge());
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;方法二&lt;/p&gt;
@@ -1234,8 +1253,7 @@ print(&amp;#39;%.2f&amp;#39; % sum_coin)
         <content type="html">&lt;pre&gt;&lt;code&gt;for(type element: array)  
 &amp;#123;  
   System.out.println(element);  
-&amp;#125;  
-&lt;/code&gt;&lt;/pre&gt;
+&amp;#125;  &lt;/code&gt;&lt;/pre&gt;
 </content>
         <updated>2020-12-06T09:59:00.000Z</updated>
     </entry>
@@ -1255,25 +1273,33 @@ print(&amp;#39;%.2f&amp;#39; % sum_coin)
         <id>http://example.com/2019/10/20/%E7%AE%80%E5%8D%95%E9%80%9A%E4%BF%97%E7%9A%84%E8%AF%B4%E4%B8%80%E4%B8%8B%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
         <title>简单通俗的说一下什么是面向过程和面向对象</title>
         <link rel="alternate" href="http://example.com/2019/10/20/%E7%AE%80%E5%8D%95%E9%80%9A%E4%BF%97%E7%9A%84%E8%AF%B4%E4%B8%80%E4%B8%8B%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-        <content type="html">&lt;p&gt;网上关于这两个的回答真的很多，但是都有一个共同特点：————不容易懂。&lt;/p&gt;
+        <content type="html">&lt;p&gt;网上关于这两个的回答真的很多，但是都有一个共同特点：------------ 不容易懂。&lt;/p&gt;
 &lt;p&gt;我今天就简单通俗的说一下（当然，如果你要非常深入的了解，这篇不适合你。如果你只是为了了解什么是面向过程和面向对象，怎么面对考试，面对面试，怎么和别人说两者区别，看我下面几段话够了。）&lt;/p&gt;
-&lt;p&gt;———————————————先来两小段通俗解释&lt;/p&gt;
-&lt;p&gt;面向过程（Procedure Oriented 简称PO ：像C语言）：&lt;/p&gt;
-&lt;p&gt;    看名字它是注重过程的。当解决一个问题的时候，面向过程会把事情拆分成： 一个个函数和数据（用于方法的参数） 。然后按照一定的顺序，执行完这些方法（每个方法看作一个个过程），等方法执行完了，事情就搞定了。&lt;/p&gt;
-&lt;p&gt;面向对象（Object Oriented简称OO ：像C++，JAVA等语言）：&lt;/p&gt;
-&lt;p&gt;    看名字它是注重对象的。当解决一个问题的时候，面向对象会把事物抽象成对象的概念，就是说这个问题里面有哪些对象，然后给对象赋一些属性和方法，然后让每个对象去执行自己的方法，问题得到解决。&lt;/p&gt;
-&lt;p&gt;——————————————最后来个例子&lt;/p&gt;
-&lt;p&gt;  问题：  冰箱里面放有脏衣服，怎么洗干净？&lt;/p&gt;
-&lt;p&gt;   面向过程：&lt;br&gt;                    1 执行加洗衣粉方法；&lt;br&gt;                    2 执行加水方法；&lt;br&gt;                    3 执行洗衣服方法；&lt;br&gt;                    4 执行清洗方法；&lt;br&gt;                    5 执行烘干方法；&lt;br&gt;———-解决问题       拆成一个个方法，是没有对象去调用的。 通过一个个方法的执行解决问题。&lt;br&gt;   面向对象： 我先搞个洗衣机对象和人对象 &lt;/p&gt;
-&lt;p&gt;   洗衣机： 加入一些属性和方法  洗衣服方法  清洗方法  烘干方法       人：加洗衣粉方法  加水方法&lt;/p&gt;
-&lt;p&gt;   然后 人.加洗衣粉 人.加水   洗衣机.洗衣服 洗衣机.清洗  洗衣机.烘干&lt;/p&gt;
-&lt;p&gt;———-同样解决问题    先抽象出对象，然后用对象执行方法的方式解决问题。&lt;/p&gt;
-&lt;p&gt;然后在来一个我以前知乎看到的例子  ：  男女亲密例子      man   gril   &lt;/p&gt;
-&lt;p&gt; 面向过程：        make_love(man，gril)  ———解决问题      拆成一个动作，把数据丢进去&lt;/p&gt;
-&lt;p&gt; 面向对象：        man.make_love(gril)  或者 gril.make_love（man） —–解决问题    抽象出对象，对象执行动作 。 &lt;/p&gt;
-&lt;p&gt;当然，你面试的时候，你不要做make_love   ….你可以说是打牌 。   &lt;/p&gt;
+&lt;p&gt;--------------------------------------------- 先来两小段通俗解释&lt;/p&gt;
+&lt;p&gt;面向过程（Procedure Oriented 简称 PO ：像 C 语言）：&lt;/p&gt;
+&lt;p&gt;看名字它是注重过程的。当解决一个问题的时候，面向过程会把事情拆分成： 一个个函数和数据（用于方法的参数） 。然后按照一定的顺序，执行完这些方法（每个方法看作一个个过程），等方法执行完了，事情就搞定了。&lt;/p&gt;
+&lt;p&gt;面向对象（Object Oriented 简称 OO ：像 C++，JAVA 等语言）：&lt;/p&gt;
+&lt;p&gt;看名字它是注重对象的。当解决一个问题的时候，面向对象会把事物抽象成对象的概念，就是说这个问题里面有哪些对象，然后给对象赋一些属性和方法，然后让每个对象去执行自己的方法，问题得到解决。&lt;/p&gt;
+&lt;p&gt;------------------------------------------ 最后来个例子&lt;/p&gt;
+&lt;p&gt;问题：  冰箱里面放有脏衣服，怎么洗干净？&lt;/p&gt;
+&lt;p&gt;面向过程：&lt;br&gt;
+                    1 执行加洗衣粉方法；&lt;br&gt;
+                    2 执行加水方法；&lt;br&gt;
+                    3 执行洗衣服方法；&lt;br&gt;
+                    4 执行清洗方法；&lt;br&gt;
+                    5 执行烘干方法；&lt;br&gt;
+---------- 解决问题       拆成一个个方法，是没有对象去调用的。 通过一个个方法的执行解决问题。&lt;br&gt;
+   面向对象： 我先搞个洗衣机对象和人对象&lt;/p&gt;
+&lt;p&gt;洗衣机： 加入一些属性和方法  洗衣服方法  清洗方法  烘干方法       人：加洗衣粉方法  加水方法&lt;/p&gt;
+&lt;p&gt;然后 人。加洗衣粉 人。加水   洗衣机。洗衣服 洗衣机。清洗  洗衣机。烘干&lt;/p&gt;
+&lt;p&gt;---------- 同样解决问题    先抽象出对象，然后用对象执行方法的方式解决问题。&lt;/p&gt;
+&lt;p&gt;然后在来一个我以前知乎看到的例子  ：  男女亲密例子      man   gril&lt;/p&gt;
+&lt;p&gt;面向过程：        make_love (man，gril)  --------- 解决问题      拆成一个动作，把数据丢进去&lt;/p&gt;
+&lt;p&gt;面向对象：        man.make_love (gril)  或者 gril.make_love（man） ----- 解决问题    抽象出对象，对象执行动作 。&lt;/p&gt;
+&lt;p&gt;当然，你面试的时候，你不要做 make_love   … 你可以说是打牌 。&lt;/p&gt;
 &lt;p&gt;面向过程就是    打牌 （你，我，他）&lt;/p&gt;
-&lt;p&gt;面向对象就是  我.打牌（你，他） or 你.打牌（我，他）  or 他.打牌(我，你)&lt;br&gt;————————————————&lt;/p&gt;
+&lt;p&gt;面向对象就是  我。打牌（你，他） or 你。打牌（我，他）  or 他。打牌 (我，你)&lt;br&gt;
+————————————————&lt;/p&gt;
 </content>
         <updated>2019-10-20T07:47:36.000Z</updated>
     </entry>
