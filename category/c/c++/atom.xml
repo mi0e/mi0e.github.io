@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://example.com</id>
-    <title>mioe • Posts by &#34;c/c++&#34; category</title>
+    <title> • Posts by &#34;c/c++&#34; category</title>
     <link href="http://example.com" />
     <updated>2023-02-07T11:45:54.000Z</updated>
     <category term="BFS" />
     <category term="算法" />
-    <category term="Resilio Sync" />
     <category term="unity" />
+    <category term="Resilio Sync" />
     <category term="WolfraAlpha" />
     <category term="数论" />
     <category term="github" />
@@ -16,8 +16,8 @@
     <category term="碧蓝航线" />
     <category term="Python" />
     <category term="模板" />
-    <category term="阅读" />
     <category term="局域网" />
+    <category term="阅读" />
     <category term="相册" />
     <category term="算法模板" />
     <entry>
@@ -1100,9 +1100,9 @@ int main(void)&amp;#123;
         <updated>2021-10-16T08:35:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/</id>
-        <title>XX:XX:XX类型字符串提取数字</title>
-        <link rel="alternate" href="http://example.com/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/"/>
+        <id>http://example.com/2021/10/15/%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/</id>
+        <title>类型字符串提取数字</title>
+        <link rel="alternate" href="http://example.com/2021/10/15/%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/"/>
         <content type="html">&lt;p&gt;洛谷 P1615&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cin &amp;gt;&amp;gt; time1
 sscanf(time1.c_str(), &amp;quot;%d:%d:%d&amp;quot;, &amp;amp;h1, &amp;amp;m1, &amp;amp;s1); // c_str()获取字符串地址

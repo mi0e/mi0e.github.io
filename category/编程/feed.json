@@ -1,6 +1,6 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "mioe • All posts by \"编程\" category",
+    "title": "null • All posts by \"编程\" category",
     "description": "花店不开了，花继续开",
     "home_page_url": "http://example.com",
     "items": [
@@ -157,9 +157,9 @@
             "tags": []
         },
         {
-            "id": "http://example.com/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/",
-            "url": "http://example.com/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/",
-            "title": "XX:XX:XX类型字符串提取数字",
+            "id": "http://example.com/2021/10/15/%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/",
+            "url": "http://example.com/2021/10/15/%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/",
+            "title": "类型字符串提取数字",
             "date_published": "2021-10-15T09:26:16.000Z",
             "content_html": "<p>洛谷 P1615</p>\n<pre><code>cin &gt;&gt; time1\nsscanf(time1.c_str(), &quot;%d:%d:%d&quot;, &amp;h1, &amp;m1, &amp;s1); // c_str()获取字符串地址\n// 或者直接这样写 scanf(&quot;%d:%d:%d&quot;, &amp;h1, &amp;m1, &amp;s1);\n</code></pre>\n",
             "tags": []
