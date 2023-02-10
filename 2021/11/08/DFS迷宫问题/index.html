@@ -102,12 +102,12 @@ mioe = mioe = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicljitigmj20zk0m87fp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicli9lfebj20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipey0a334j20zk0m8qpt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
         </ul>
       </div>
     </header>
@@ -165,50 +165,50 @@ int xS, yS, xE, yE;
 int s;
 
 void dfs(int x, int y)&#123;
-	if(x == xE &amp;&amp; y == yE)&#123;
-		s++;
-		return;
-	&#125;else&#123;		// 遍历四个方向 
-		m[x][y] = 0;
-		if(m[x + 1][y])&#123;
-			m[x + 1][y] = 0;		// 占位，防止死循环 
-			dfs(x + 1, y);
-			m[x + 1][y] = 1;
-		&#125;
-		if(m[x - 1][y])&#123;
-			m[x - 1][y] = 0;
-			dfs(x - 1, y);
-			m[x - 1][y] = 1;
-		&#125;
-		if(m[x][y + 1])&#123;
-			m[x][y + 1] = 0;
-			dfs(x, y + 1);
-			m[x][y + 1] = 1;
-		&#125;
-		if(m[x][y - 1])&#123;
-			m[x][y - 1] = 0;
-			dfs(x, y - 1);
-			m[x][y - 1] = 1;
-		&#125;
-	&#125;
+    if(x == xE &amp;&amp; y == yE)&#123;
+        s++;
+        return;
+    &#125;else&#123;		// 遍历四个方向 
+        m[x][y] = 0;
+        if(m[x + 1][y])&#123;
+            m[x + 1][y] = 0;		// 占位，防止死循环 
+            dfs(x + 1, y);
+            m[x + 1][y] = 1;
+        &#125;
+        if(m[x - 1][y])&#123;
+            m[x - 1][y] = 0;
+            dfs(x - 1, y);
+            m[x - 1][y] = 1;
+        &#125;
+        if(m[x][y + 1])&#123;
+            m[x][y + 1] = 0;
+            dfs(x, y + 1);
+            m[x][y + 1] = 1;
+        &#125;
+        if(m[x][y - 1])&#123;
+            m[x][y - 1] = 0;
+            dfs(x, y - 1);
+            m[x][y - 1] = 1;
+        &#125;
+    &#125;
 &#125;
 
 int main(void)&#123;
-	ios::sync_with_stdio(false);
-	int x, y, k, Ox, Oy;
-	cin &gt;&gt; x &gt;&gt; y &gt;&gt; k;
-	for(int i = 1; i &lt;= x; i++)	// 棋盘预定义
-		for(int j = 1; j &lt;= y; j++)
-			m[i][j] = 1;
-	cin &gt;&gt; xS &gt;&gt; yS &gt;&gt; xE &gt;&gt; yE;
-	for(int i = 0; i &lt; k; i++)&#123;	// 预先写入障碍
-		cin &gt;&gt; Ox &gt;&gt; Oy;
-		m[Ox][Oy] = 0;
-	&#125;
-	dfs(xS, yS);
-	cout &lt;&lt; s;
+    ios::sync_with_stdio(false);
+    int x, y, k, Ox, Oy;
+    cin &gt;&gt; x &gt;&gt; y &gt;&gt; k;
+    for(int i = 1; i &lt;= x; i++)	// 棋盘预定义
+        for(int j = 1; j &lt;= y; j++)
+            m[i][j] = 1;
+    cin &gt;&gt; xS &gt;&gt; yS &gt;&gt; xE &gt;&gt; yE;
+    for(int i = 0; i &lt; k; i++)&#123;	// 预先写入障碍
+        cin &gt;&gt; Ox &gt;&gt; Oy;
+        m[Ox][Oy] = 0;
+    &#125;
+    dfs(xS, yS);
+    cout &lt;&lt; s;
 
-	return 0;
+    return 0;
 &#125; 
 </code></pre>
 
@@ -257,7 +257,7 @@ int main(void)&#123;
     <div class="item left">
       
 
-  <a href="/2021/11/05/C++_STL%E4%B8%AD%E7%9A%84next_permutation/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipexbei4hj20zk0m8npd.jpg" title="C++ STL中的next_permutation">
+  <a href="/2021/11/05/C++_STL%E4%B8%AD%E7%9A%84next_permutation/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclil3m4ej20zk0m8tn8.jpg" title="C++ STL中的next_permutation">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> Q/A</span>
   <h3>C++ STL中的next_permutation</h3>
@@ -267,7 +267,7 @@ int main(void)&#123;
     <div class="item right">
       
 
-  <a href="/2021/11/08/Map_%E5%8D%95%E8%AF%8D%E5%88%86%E6%9E%90/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicmnywqgpj20zk0m8dwx.jpg" title="Map 单词分析">
+  <a href="/2021/11/08/Map_%E5%8D%95%E8%AF%8D%E5%88%86%E6%9E%90/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhnx9glj20zk0m8npd.jpg" title="Map 单词分析">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>Map 单词分析</h3>
@@ -397,68 +397,48 @@ int main(void)&#123;
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2022/11/10/DFS%E5%88%A4%E6%96%AD%E8%BF%B7%E5%AE%AB%E6%97%A0%E8%A7%A3/" title="DFS判断迷宫无解">DFS判断迷宫无解</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2021/11/04/Vector_%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="Vector 二分查找">Vector 二分查找</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2021/10/01/P2911_%5BUSACO08OCT%5DBovine_Bones_G_(C)/" title="P2911 [USACO08OCT]Bovine Bones G (C)">P2911 [USACO08OCT]Bovine Bones G (C)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
 </div>
 
-    <span><a href="/2022/09/25/%E5%9B%BE%E7%89%87%E8%AE%A1%E7%AE%97/" title="图片计算">图片计算</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2023/01/30/KMP/" title="KMP">KMP</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
-</div>
-
-    <span><a href="/2021/01/17/Resilio_Sync%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95_+_pro%E8%A7%A3%E9%94%81%E8%A1%A5%E4%B8%81/" title="Resilio Sync添加右键菜单 + pro解锁补丁">Resilio Sync添加右键菜单 + pro解锁补丁</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2022/11/28/%E4%BD%8D%E8%BF%90%E7%AE%97/" title="位运算">位运算</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
-</div>
-
-    <span><a href="/2021/10/26/c_str()%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="c_str()使用方法">c_str()使用方法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2022/12/19/%E6%95%B0%E5%AD%97%E4%B8%89%E8%A7%92%E5%BD%A2_%EF%BC%88%E5%90%91%E5%B7%A6%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E4%B8%8E%E5%90%91%E5%8F%B3%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E7%9B%B8%E5%B7%AE%E4%B8%8D%E8%83%BD%E8%B6%85%E8%BF%87_1%EF%BC%89/" title="数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）">数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）</a></span>
+    <span><a href="/2022/09/24/%E5%9B%BE%E5%83%8F%E5%A1%AB%E5%85%85/" title="图像填充">图像填充</a></span>
   </li>
 
       
@@ -468,27 +448,45 @@ int main(void)&#123;
 <a href="/categories/Q-A/" title="分类于 Q/A">Q/A</a>
 </div>
 
-    <span><a href="/2021/11/01/img%E6%A0%87%E7%AD%BE%E5%9C%A8%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF/" title="img标签在谷歌浏览器下不显示错误信息">img标签在谷歌浏览器下不显示错误信息</a></span>
+    <span><a href="/2021/12/31/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/" title="局域网搭建服务器无法访问">局域网搭建服务器无法访问</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2023/01/31/%E9%9B%86%E5%90%88%E4%B8%8E%E5%B9%B6%E6%9F%A5%E9%9B%86/" title="集合与并查集">集合与并查集</a></span>
+    <span><a href="/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="贪婪算法之背包问题">贪婪算法之背包问题</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Python/" title="分类于 Python">Python</a>
+<a href="/categories/%E5%85%B6%E4%BB%96/" title="分类于 其他">其他</a>
 </div>
 
-    <span><a href="/2021/04/06/python%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC_%E8%A3%85%E9%A5%B0%E5%99%A8/" title="python基础之函数进阶之函数作为返回值&#x2F;装饰器">python基础之函数进阶之函数作为返回值/装饰器</a></span>
+    <span><a href="/2022/10/31/WolfraAlpha_%E7%9F%A9%E9%98%B5%E7%9B%B8%E5%85%B3/" title="WolfraAlpha 矩阵相关">WolfraAlpha 矩阵相关</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2021/06/01/%E6%B4%9B%E8%B0%B7_P1106_%E5%88%A0%E6%95%B0%E9%97%AE%E9%A2%98_python%E8%A7%A3%E6%B3%95/" title="洛谷 P1106 删数问题 python解法">洛谷 P1106 删数问题 python解法</a></span>
   </li>
 
       
@@ -501,6 +499,18 @@ int main(void)&#123;
 </div>
 
     <span><a href="/2021/03/28/%E8%BF%AD%E4%BB%A3_-_%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0/" title="迭代 - 水仙花数">迭代 - 水仙花数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9A%8F%E7%AC%94/" title="分类于 随笔">随笔</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E9%9A%8F%E7%AC%94/%E7%9B%B8%E5%86%8C/" title="分类于 相册">相册</a>
+</div>
+
+    <span><a href="/2019/05/20/%E6%9C%89%E8%B6%A3%E7%9A%84%E7%81%B5%E9%AD%82%E7%BB%88%E4%BC%9A%E7%9B%B8%E9%81%87/" title="有趣的灵魂终会相遇">有趣的灵魂终会相遇</a></span>
   </li>
 
   </ul>

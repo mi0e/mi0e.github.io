@@ -102,12 +102,12 @@ mioe = mioe = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
         </ul>
       </div>
     </header>
@@ -153,10 +153,9 @@ mioe = mioe = AC总在意料外^^</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p><strong>因为装饰器需要用到返回函数的知识，所以在这里将返回函数和装饰器合并讲解。</strong><br>
-<strong>什么是返回函数？</strong></p>
-<p>我们知道，一个函数中 return 可以返回一个或者多个值，但其实，return 不仅可以返回值，还可以返回函数。</p>
-<p>实例：</p>
+    <p><strong>因为装饰器需要用到返回函数的知识，所以在这里将返回函数和装饰器合并讲解。</strong><br><strong>什么是返回函数？</strong></p>
+<p>我们知道，一个函数中return可以返回一个或者多个值，但其实，return不仅可以返回值，还可以返回函数。</p>
+<p> 实例：</p>
 <pre><code>def col(*arg):
     def sum():
         res_sum=0
@@ -171,6 +170,7 @@ print(a)#结果：15
 #a()==sum()
 </code></pre>
 <p style="color:red">并且因为sum()定义在col()函数中，所以sum()继承了col()函数的局部变量和参数，这就是闭包。</p>（比如，col()的arg参数就被sum()所继承）
+
 <p>下面来看一个我在检验上面加红的句话时所碰到的一个问题：</p>
 <pre><code>#还是用上面这段代码。稍稍修改一下
 def col(*arg):
@@ -183,11 +183,12 @@ def col(*arg):
 a=col(1,2,3,4,5)
 print(a())       
 
-结果报错：local variable 'res_sum' referenced before assignment
+结果报错：local variable &#39;res_sum&#39; referenced before assignment
 #既然内部函数可以引用外部函数的变量，为什么res_sum没有被内#部函数所引用？
 </code></pre>
-<p>为啥会报错？我当时很是疑惑，后来终于弄明白，错在这句：res_sum=res_sum+i</p>
+<p>为啥会报错？我当时很是疑惑，后来终于弄明白，错在这句：res_sum&#x3D;res_sum+i     </p>
 <p style="color:blue">这句导致内部函数修改了外部函数的局部变量res_sum，这时，Python认为res_sum是内部函数的局部变量，而res_sum=res_sum+i之前并没有事先定义res_sum，所以当然会发生这种错误。</p>
+
 <p>所以，需要这样进行修改：</p>
 <pre><code>def col(*arg):
     res_sum=0         
@@ -208,21 +209,20 @@ def open():
     pass
 </code></pre>
 <p>上例就是一个装饰器的例子。</p>
-<p><strong>装饰器的作用：</strong><br>
-当我们定义了 open 函数后（可以帮助我们打开某个文件），过了一段时间，发现我们需要在进行 open 之前进行验证用户，如何在<p style="color:red">不修改 open 函数的条件下将 login 函数和 open 函数进行结合</p>，即：运行 open 之前先运行 login？ 这里就要用到装饰器。</p>
+<p><strong>装饰器的作用：</strong><br>当我们定义了open函数后（可以帮助我们打开某个文件），过了一段时间，发现我们需要在进行open之前进行验证用户，如何在<p style="color:red">不修改open函数的条件下将login函数和open函数进行结合</p>，即：运行open之前先运行login？ 这里就要用到装饰器。</p>
 <p>下面我们来看一个真正的装饰器的实例：</p>
 <pre><code>def login(fun):
     def real_login():
-        print('please input your password')
+        print(&#39;please input your password&#39;)
         return fun()
     return real_login
 @login
 def open():
-    print('hello world')
+    print(&#39;hello world&#39;)
 open()
 </code></pre>
-<p>@login 相当于 open=login (open)   也就是将 open 函数偷梁换柱了一番。</p>
-<p>当我们运行 open () 时：</p>
+<p>@login相当于open&#x3D;login(open)   也就是将open函数偷梁换柱了一番。</p>
+<p>当我们运行open()时：</p>
 <pre><code>open=login(open)　　#login(open)中的参数及局部变量：fun=open(原)　　#open=login(open)的返回值！
 　　#即：open=real_login　　
 open()=real_login()
@@ -232,9 +232,9 @@ open()=real_login()
 <p>实现一个可以接受任意参数的装饰器：</p>
 <pre><code>def outer(func):
     def inner(*args,**kwargs):
-        print('start')
+        print(&#39;start&#39;)
         r=func(*args,**kwargs)    # 这里func(*args,**kwargs)相当于f(a,b)
-        print('end')
+        print(&#39;end&#39;)
         return r
     return inner
 
@@ -253,7 +253,8 @@ start
 end
 start
 6
-end</code></pre>
+end
+</code></pre>
 
   </div>
 
@@ -297,7 +298,7 @@ end</code></pre>
     <div class="item left">
       
 
-  <a href="/2021/03/31/%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B(D&amp;C%EF%BC%89/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipetfk5zwj20zk0m8e81.jpg" title="分而治之(D&amp;C）">
+  <a href="/2021/03/31/%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B(D&amp;C%EF%BC%89/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipex2cdtbj20zk0m8x6p.jpg" title="分而治之(D&amp;C）">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 算法</span>
   <h3>分而治之(D&amp;C）</h3>
@@ -307,7 +308,7 @@ end</code></pre>
     <div class="item right">
       
 
-  <a href="/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipesng5oej20zk0m87d4.jpg" title="贪婪算法之背包问题">
+  <a href="/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipexw3o58j20zk0m8e81.jpg" title="贪婪算法之背包问题">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> 算法</span>
   <h3>贪婪算法之背包问题</h3>
@@ -437,26 +438,10 @@ end</code></pre>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2023/01/08/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/" title="树的直径">树的直径</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
-</div>
-
-    <span><a href="/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/" title="数组粘贴，初始化C++">数组粘贴，初始化C++</a></span>
+    <span><a href="/2022/12/06/C++_%E6%8F%90%E5%8F%96%E5%B0%8F%E6%95%B0/" title="C++ 提取小数">C++ 提取小数</a></span>
   </li>
 
       
@@ -468,51 +453,37 @@ end</code></pre>
 <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/11/08/DFS%E8%BF%B7%E5%AE%AB%E9%97%AE%E9%A2%98/" title="DFS迷宫问题">DFS迷宫问题</a></span>
+    <span><a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" title="小根堆">小根堆</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E5%88%86%E6%AE%B5%E7%BA%BF%E6%80%A7%E7%82%B9%E8%BF%90%E7%AE%97/" title="图像的分段线性点运算">图像的分段线性点运算</a></span>
+    <span><a href="/2023/02/07/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" title="最小生成树">最小生成树</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E9%9A%8F%E7%AC%94/" title="分类于 随笔">随笔</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E9%9A%8F%E7%AC%94/%E7%9B%B8%E5%86%8C/" title="分类于 相册">相册</a>
+<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
 </div>
 
-    <span><a href="/2019/05/20/%E6%9C%89%E8%B6%A3%E7%9A%84%E7%81%B5%E9%AD%82%E7%BB%88%E4%BC%9A%E7%9B%B8%E9%81%87/" title="有趣的灵魂终会相遇">有趣的灵魂终会相遇</a></span>
+    <span><a href="/2021/01/17/Resilio_Sync%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95_+_pro%E8%A7%A3%E9%94%81%E8%A1%A5%E4%B8%81/" title="Resilio Sync添加右键菜单 + pro解锁补丁">Resilio Sync添加右键菜单 + pro解锁补丁</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
+<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
 </div>
 
-    <span><a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" title="IMG数组相关">IMG数组相关</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
-</div>
-
-    <span><a href="/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/" title="关于矩阵对角线的相关表达">关于矩阵对角线的相关表达</a></span>
+    <span><a href="/2020/03/18/%E6%99%BA%E6%85%A7%E6%A0%91%E5%8A%A9%E6%89%8B/" title="智慧树助手">智慧树助手</a></span>
   </li>
 
       
@@ -521,22 +492,10 @@ end</code></pre>
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Java/" title="分类于 Java">Java</a>
 </div>
 
-    <span><a href="/2021/09/04/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4%E9%97%AE%E9%A2%98%E7%BB%AD%EF%BC%88C%EF%BC%89/" title="P1223 排队接水问题续（C）">P1223 排队接水问题续（C）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Python/" title="分类于 Python">Python</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-</div>
-
-    <span><a href="/2021/03/31/%E9%80%92%E5%BD%92_-_%E6%95%B0%E7%BB%84%E7%B4%AF%E5%8A%A0/" title="递归 - 数组累加">递归 - 数组累加</a></span>
+    <span><a href="/2020/12/06/Java%E5%8A%A0%E5%BC%BA%E5%9E%8B%E5%BE%AA%E7%8E%AFfor_each/" title="Java加强型循环for each">Java加强型循环for each</a></span>
   </li>
 
       
@@ -544,11 +503,43 @@ end</code></pre>
     
 <div class="breadcrumb">
 <a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2023/01/30/KMP/" title="KMP">KMP</a></span>
+    <span><a href="/2023/01/31/%E9%9B%86%E5%90%88%E4%B8%8E%E5%B9%B6%E6%9F%A5%E9%9B%86/" title="集合与并查集">集合与并查集</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+</div>
+
+    <span><a href="/2022/06/23/%E8%A1%A8%E6%83%85%E5%8C%85%E6%8F%92%E4%BB%B6%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/" title="表情包插件相关说明">表情包插件相关说明</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2021/06/02/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4_python/" title="P1223 排队接水 python">P1223 排队接水 python</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+</div>
+
+    <span><a href="/2020/12/06/%E5%BE%AA%E7%8E%AF%E3%80%81%E8%BF%AD%E4%BB%A3%E3%80%81%E9%81%8D%E5%8E%86%E5%92%8C%E9%80%92%E5%BD%92%E7%9A%84%E5%8C%BA%E5%88%AB/" title="循环、迭代、遍历和递归的区别">循环、迭代、遍历和递归的区别</a></span>
   </li>
 
   </ul>

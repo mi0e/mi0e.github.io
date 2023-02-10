@@ -12,14 +12,14 @@
         <category>Resilio Sync</category>
         <category>unity</category>
         <category>WolfraAlpha</category>
-        <category>github</category>
         <category>数论</category>
+        <category>github</category>
         <category>linux</category>
         <category>Open-cv</category>
-        <category>模板</category>
-        <category>局域网</category>
         <category>碧蓝航线</category>
         <category>Python</category>
+        <category>模板</category>
+        <category>局域网</category>
         <category>阅读</category>
         <category>相册</category>
         <category>算法模板</category>
@@ -29,25 +29,22 @@
             <link>http://example.com/2023/01/10/gcd%E4%B8%8E%E6%AC%A7%E6%8B%89%E8%B4%A8%E6%95%B0%E7%AD%9B%E6%A8%A1%E6%9D%BF/</link>
             <category>数论</category>
             <pubDate>Tue, 10 Jan 2023 16:04:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;欧几里得辗转相除法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#欧几里得辗转相除法&#34;&gt;#&lt;/a&gt; 欧几里得辗转相除法&lt;/h2&gt;
-&lt;p&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mtext&gt; &lt;/mtext&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mtext&gt; &lt;/mtext&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo separator=&#34;true&#34;&gt;⋅&lt;/mo&gt;&lt;mo separator=&#34;true&#34;&gt;⋅&lt;/mo&gt;&lt;mo separator=&#34;true&#34;&gt;⋅&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;gcd(a, b)=gcd(b,a\ mod\ b)=···=gcd(n,0)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mspace&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mspace&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.44445em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;⋅&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;⋅&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;⋅&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;int gcd(int a, int b)&amp;#123;
-	return b ? gcd(b, a % b) : a;
+            <description><![CDATA[ &lt;h2 id=&#34;欧几里得辗转相除法&#34;&gt;&lt;a href=&#34;#欧几里得辗转相除法&#34; class=&#34;headerlink&#34; title=&#34;欧几里得辗转相除法&#34;&gt;&lt;/a&gt;欧几里得辗转相除法&lt;/h2&gt;&lt;p&gt;$gcd(a, b)&amp;#x3D;gcd(b,a\ mod\ b)&amp;#x3D;···&amp;#x3D;gcd(n,0)$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;c++&#34;&gt;int gcd(int a, int b)&amp;#123;
+    return b ? gcd(b, a % b) : a;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;欧拉质数筛&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#欧拉质数筛&#34;&gt;#&lt;/a&gt; 欧拉质数筛&lt;/h2&gt;
-&lt;h4 id=&#34;时间复杂度on&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#时间复杂度on&#34;&gt;#&lt;/a&gt; 时间复杂度&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;O(n)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/h4&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;const int N = 1e8 + 10;
+&lt;h2 id=&#34;欧拉质数筛&#34;&gt;&lt;a href=&#34;#欧拉质数筛&#34; class=&#34;headerlink&#34; title=&#34;欧拉质数筛&#34;&gt;&lt;/a&gt;欧拉质数筛&lt;/h2&gt;&lt;h4 id=&#34;时间复杂度-O-n&#34;&gt;&lt;a href=&#34;#时间复杂度-O-n&#34; class=&#34;headerlink&#34; title=&#34;时间复杂度$O(n)$&#34;&gt;&lt;/a&gt;时间复杂度$O(n)$&lt;/h4&gt;&lt;pre&gt;&lt;code class=&#34;c++&#34;&gt;const int N = 1e8 + 10;
 int p[N], cnt;
 bool st[N];
 void get_primes(int n)&amp;#123;
-	for(int i = 2; i &amp;lt;= n; i++)&amp;#123;
-		if(!st[i]) p[cnt++] = i;
-		for(int j = 0; i * p[i] &amp;lt;= n; j++)&amp;#123;
-			st[p[j] * i] = true;
-			if(i % p[j] == 0) break;
-		&amp;#125;
-	&amp;#125;
+    for(int i = 2; i &amp;lt;= n; i++)&amp;#123;
+        if(!st[i]) p[cnt++] = i;
+        for(int j = 0; i * p[i] &amp;lt;= n; j++)&amp;#123;
+            st[p[j] * i] = true;
+            if(i % p[j] == 0) break;
+        &amp;#125;
+    &amp;#125;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
  ]]></description>

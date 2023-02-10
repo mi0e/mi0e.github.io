@@ -91,12 +91,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipesx5fdwj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicm0n457cj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
         </ul>
       </div>
     </header>
@@ -123,7 +123,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/07/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" itemprop="url" title="最小生成树"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclize41wj20zk0m87gk.jpg"></a>
+    <a href="/2023/02/07/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" itemprop="url" title="最小生成树"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></a>
   </div>
   <div class="info">
     
@@ -138,9 +138,24 @@
 
     <h3><a href="/2023/02/07/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" itemprop="url" title="最小生成树">最小生成树</a></h3>
     <div class="excerpt">
-        # 最短生成树
-# Prim
-#include&amp;lt;iostream&gt;#include&amp;lt;cstring&gt;using namespace std;const int N = 505, INF = 0x3f3f3f3f;int n, m;int g[N][N];int dist[N];bool st[N];intprim()&amp;#123; memset(dist, 0x3f, sizeof dist); dist[1] = 0; // 第一个点一定在最小生成树中 int res = 0; // 用来存放权值之和 for(int i = 0; i...
+        最短生成树Prim#include&amp;lt;iostream&amp;gt;
+#include&amp;lt;cstring&amp;gt;
+using namespace std;
+
+const int N = 505, INF = 0x3f3f3f3f;
+
+int n, m;
+int g[N][N];
+int dist[N];
+bool st[N];
+
+intprim()
+&amp;#123;
+memset(dist, 0x3f, sizeof dist);
+dist[1] = 0; // 第一个点一定在最小生成树中
+
+int res = 0; // 用来存放权值之和
+for(int...
     </div>
     <div class="meta footer">
       <span>
@@ -154,7 +169,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/04/%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/" itemprop="url" title="最短路问题"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></a>
+    <a href="/2023/02/04/%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/" itemprop="url" title="最短路问题"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></a>
   </div>
   <div class="info">
     
@@ -169,9 +184,23 @@
 
     <h3><a href="/2023/02/04/%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/" itemprop="url" title="最短路问题">最短路问题</a></h3>
     <div class="excerpt">
-        # 单源最短路
-# dijkstra 稠密图
-#include&amp;lt;bits/stdc++.h&gt;using namespace std;const int N = 1e4;int n, m, s;int g[N][N];int dist[N];bool st[N];void dijkstra() &amp;#123; memset(dist, 0x3f, sizeof dist); dist[s] = 0; for (int i = 0; i &amp;lt; n; i++) &amp;#123; int t = -1; for (int j = 1; j &amp;lt;=...
+        单源最短路dijkstra 稠密图#include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+const int N = 1e4;
+
+int n, m, s;
+int g[N][N];
+int dist[N];
+bool st[N];
+
+void dijkstra() &amp;#123;
+memset(dist, 0x3f, sizeof dist);
+
+dist[s] = 0;
+
+for (int i = 0; i &amp;lt; n; i++) &amp;#123;
+int t = -1;
+for (int j = 1; j...
     </div>
     <div class="meta footer">
       <span>
@@ -185,7 +214,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/03/%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%EF%BC%88%E9%82%BB%E6%8E%A5%E8%A1%A8%EF%BC%89/" itemprop="url" title="树的深度优先遍历（邻接表）"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipewf5l51j20zk0m8b29.jpg"></a>
+    <a href="/2023/02/03/%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%EF%BC%88%E9%82%BB%E6%8E%A5%E8%A1%A8%EF%BC%89/" itemprop="url" title="树的深度优先遍历（邻接表）"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipeun65urj20zk0m81ii.jpg"></a>
   </div>
   <div class="info">
     
@@ -200,8 +229,24 @@
 
     <h3><a href="/2023/02/03/%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%EF%BC%88%E9%82%BB%E6%8E%A5%E8%A1%A8%EF%BC%89/" itemprop="url" title="树的深度优先遍历（邻接表）">树的深度优先遍历（邻接表）</a></h3>
     <div class="excerpt">
-        # DFS
-#include&amp;lt;bits/stdc++.h&gt;using namespace std;const int N = 100;int idx, n;int h[N], e[N], ne[N];bool st[N];void ins(int a, int b)&amp;#123;	e[idx] = b;	ne[idx] = h[a];	h[a] = idx++;&amp;#125;void dfs(int u)&amp;#123;	st[u] = true;	cout &amp;lt;&amp;lt; u;	for(int i = h[u]; i != -1; i =...
+        DFS#include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+const int N = 100;
+
+int idx, n;
+int h[N], e[N], ne[N];
+bool st[N];
+
+void ins(int a, int b)&amp;#123;
+e[idx] = b;
+ne[idx] = h[a];
+h[a] = idx++;
+&amp;#125;
+
+void dfs(int u)&amp;#123;
+st[u] = true;
+cout &amp;lt;&amp;lt; u;
+for(int i = h[u];...
     </div>
     <div class="meta footer">
       <span>
@@ -215,7 +260,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/02/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/" itemprop="url" title="字符串哈希"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipesng5oej20zk0m87d4.jpg"></a>
+    <a href="/2023/02/02/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/" itemprop="url" title="字符串哈希"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipexbei4hj20zk0m8npd.jpg"></a>
   </div>
   <div class="info">
     
@@ -230,7 +275,20 @@
 
     <h3><a href="/2023/02/02/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/" itemprop="url" title="字符串哈希">字符串哈希</a></h3>
     <div class="excerpt">
-        #include&amp;lt;bits/stdc++.h&gt;using namespace std;const int N = 1010, P = 131;unsigned long long h[N], p[N];int n, m;char str[N];unsigned long long gethash(int l, int r)&amp;#123;	return h[r] - h[l - 1] * p[r - l + 1];&amp;#125;int main()&amp;#123;	scanf(&quot;%d %d %s&quot;, &amp;amp;n,...
+        #include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+const int N = 1010, P = 131;
+
+unsigned long long h[N], p[N];
+int n, m;
+char str[N];
+
+unsigned long long gethash(int l, int r)&amp;#123;
+return h[r] - h[l - 1] * p[r - l + 1];
+&amp;#125;
+
+int main()&amp;#123;
+scanf(&amp;quot;%d %d...
     </div>
     <div class="meta footer">
       <span>
@@ -244,7 +302,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" itemprop="url" title="小根堆"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></a>
+    <a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" itemprop="url" title="小根堆"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></a>
   </div>
   <div class="info">
     
@@ -259,7 +317,17 @@
 
     <h3><a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" itemprop="url" title="小根堆">小根堆</a></h3>
     <div class="excerpt">
-        #include&amp;lt;bits/stdc++.h&gt;using namespace std;const int N = 1e6+10;int hp[N], idx;int n;void down(int k)&amp;#123;	int t = k;	if(hp[k &amp;lt;&amp;lt; 1] &amp;lt; hp[t] &amp;amp;&amp;amp; (k &amp;lt;&amp;lt; 1) &amp;lt;= idx) t = k &amp;lt;&amp;lt; 1;	if(hp[k &amp;lt;&amp;lt; 1 | 1] &amp;lt;...
+        #include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+const int N = 1e6+10;
+
+int hp[N], idx;
+int n;
+
+void down(int k)&amp;#123;
+int t = k;
+if(hp[k &amp;lt;&amp;lt; 1] &amp;lt; hp[t] &amp;amp;&amp;amp; (k &amp;lt;&amp;lt; 1) &amp;lt;= idx) t = k &amp;lt;&amp;lt; 1;
+if(hp[k &amp;lt;&amp;lt; 1 |...
     </div>
     <div class="meta footer">
       <span>
@@ -273,7 +341,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/31/%E9%9B%86%E5%90%88%E4%B8%8E%E5%B9%B6%E6%9F%A5%E9%9B%86/" itemprop="url" title="集合与并查集"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclxfdlttj20zk0m8npd.jpg"></a>
+    <a href="/2023/01/31/%E9%9B%86%E5%90%88%E4%B8%8E%E5%B9%B6%E6%9F%A5%E9%9B%86/" itemprop="url" title="集合与并查集"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></a>
   </div>
   <div class="info">
     
@@ -288,8 +356,19 @@
 
     <h3><a href="/2023/01/31/%E9%9B%86%E5%90%88%E4%B8%8E%E5%B9%B6%E6%9F%A5%E9%9B%86/" itemprop="url" title="集合与并查集">集合与并查集</a></h3>
     <div class="excerpt">
-        # 集合
-#include&amp;lt;bits/stdc++.h&gt;using namespace std;const int N = 100010;int son[N][26], cnt[N], idx;int n;void insert(string str)&amp;#123;	int p = 0;	for(int i = 0; str[i]; i++)&amp;#123;		int u = str[i] - &#39;a&#39;;		if(!son[p][u]) son[p][u] = ++idx;		p =...
+        集合#include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+const int N = 100010;
+
+int son[N][26], cnt[N], idx;
+int n;
+
+void insert(string str)&amp;#123;
+int p = 0;
+for(int i = 0; str[i]; i++)&amp;#123;
+int u = str[i] - &amp;#39;a&amp;#39;;
+if(!son[p][u]) son[p][u] = ++idx;
+p =...
     </div>
     <div class="meta footer">
       <span>
@@ -303,7 +382,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/30/KMP/" itemprop="url" title="KMP"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></a>
+    <a href="/2023/01/30/KMP/" itemprop="url" title="KMP"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></a>
   </div>
   <div class="info">
     
@@ -318,7 +397,19 @@
 
     <h3><a href="/2023/01/30/KMP/" itemprop="url" title="KMP">KMP</a></h3>
     <div class="excerpt">
-        #include&amp;lt;bits/stdc++.h&gt;using namespace std;const int N = 100, M = 1000;int n, m;char p[N], s[M];int ne[N];int main()&amp;#123;	cin &gt;&gt; n &gt;&gt; p + 1 &gt;&gt; m &gt;&gt; s + 1;	for(int i = 2, j = 0; i &amp;lt;= n; i++)&amp;#123;		while(j &amp;amp;&amp;amp; p[i] != p[j + 1]) j =...
+        #include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+const int N = 100, M = 1000;
+
+int n, m;
+char p[N], s[M];
+int ne[N];
+
+int main()&amp;#123;
+cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; p + 1 &amp;gt;&amp;gt; m &amp;gt;&amp;gt; s + 1;
+
+for(int i = 2, j = 0; i &amp;lt;= n; i++)&amp;#123;
+while(j...
     </div>
     <div class="meta footer">
       <span>
@@ -332,7 +423,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/30/%E5%8D%95%E8%B0%83%E6%A0%88%E3%80%81%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%EF%BC%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%EF%BC%89/" itemprop="url" title="单调栈、滑动窗口（单调队列）"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></a>
+    <a href="/2023/01/30/%E5%8D%95%E8%B0%83%E6%A0%88%E3%80%81%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%EF%BC%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%EF%BC%89/" itemprop="url" title="单调栈、滑动窗口（单调队列）"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></a>
   </div>
   <div class="info">
     
@@ -347,8 +438,20 @@
 
     <h3><a href="/2023/01/30/%E5%8D%95%E8%B0%83%E6%A0%88%E3%80%81%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%EF%BC%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%EF%BC%89/" itemprop="url" title="单调栈、滑动窗口（单调队列）">单调栈、滑动窗口（单调队列）</a></h3>
     <div class="excerpt">
-        # 单调栈
-#include&amp;lt;bits/stdc++.h&gt;using namespace std;const int N = 100;int stk[N], arr[N];int n, t;int main()&amp;#123;	cin &gt;&gt; n;	for(int i = 0; i &amp;lt; n; i++)&amp;#123;		cin &gt;&gt; arr[i];		while(t &amp;amp;&amp;amp; arr[i] &amp;lt;= stk[t]) t--;			if(t) cout &amp;lt;&amp;lt;...
+        单调栈#include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+const int N = 100;
+
+int stk[N], arr[N];
+int n, t;
+
+int main()&amp;#123;
+cin &amp;gt;&amp;gt; n;
+for(int i = 0; i &amp;lt; n; i++)&amp;#123;
+cin &amp;gt;&amp;gt; arr[i];
+while(t &amp;amp;&amp;amp; arr[i] &amp;lt;= stk[t]) t--;
+
+if(t) cout...
     </div>
     <div class="meta footer">
       <span>
@@ -362,7 +465,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/20/%E5%8F%8C%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" itemprop="url" title="双指针数组去重"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclxfdlttj20zk0m8npd.jpg"></a>
+    <a href="/2023/01/20/%E5%8F%8C%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" itemprop="url" title="双指针数组去重"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></a>
   </div>
   <div class="info">
     
@@ -377,7 +480,20 @@
 
     <h3><a href="/2023/01/20/%E5%8F%8C%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" itemprop="url" title="双指针数组去重">双指针数组去重</a></h3>
     <div class="excerpt">
-        #include&amp;lt;bits/stdc++.h&gt;using namespace std;const int N = 100;int n; int arr[N];int main()&amp;#123;	cin &gt;&gt; n;	for(int i = 0; i &amp;lt; n; i++) cin &gt;&gt; arr[i];	int j = 0;	// 非重复个数	for(int i = 0; i &amp;lt; n; i++)		if(!i || arr[i] != arr[i - 1])			arr[j++] = arr[i];	return...
+        #include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+const int N = 100;
+
+int n;
+int arr[N];
+
+int main()&amp;#123;
+cin &amp;gt;&amp;gt; n;
+for(int i = 0; i &amp;lt; n; i++) cin &amp;gt;&amp;gt; arr[i];
+
+int j = 0;	// 非重复个数
+for(int i = 0; i &amp;lt; n; i++)
+if(!i || arr[i] != arr[i -...
     </div>
     <div class="meta footer">
       <span>
@@ -391,7 +507,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/" itemprop="url" title="离散化区间和"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipey84bjtj20zk0m8hdt.jpg"></a>
+    <a href="/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/" itemprop="url" title="离散化区间和"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></a>
   </div>
   <div class="info">
     
@@ -406,7 +522,19 @@
 
     <h3><a href="/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/" itemprop="url" title="离散化区间和">离散化区间和</a></h3>
     <div class="excerpt">
-        #include&amp;lt;bits/stdc++.h&gt;using namespace std;const int N = 100;typedef pair&amp;lt;int, int&gt; PII;int n, m;int arr[N], sum[N];vector&amp;lt;int&gt; alls;vector&amp;lt;PII&gt; add, query;// 查找 x 在 alls 数组中的下标int find(int x)&amp;#123;	int l = 0, r = alls.size() - 1, mid;	while(l &amp;lt;...
+        #include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+const int N = 100;
+typedef pair&amp;lt;int, int&amp;gt; PII;
+
+int n, m;
+int arr[N], sum[N];
+vector&amp;lt;int&amp;gt; alls;
+vector&amp;lt;PII&amp;gt; add, query;
+
+// 查找x在alls数组中的下标
+int find(int x)&amp;#123;
+int l = 0, r = alls.size() - 1,...
     </div>
     <div class="meta footer">
       <span>
@@ -541,76 +669,22 @@
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/%E6%95%99%E7%A8%8B/Linux/" title="分类于 Linux">Linux</a>
 </div>
 
-    <span><a href="/2021/06/02/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4_python/" title="P1223 排队接水 python">P1223 排队接水 python</a></span>
+    <span><a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" title="卸载Linux图形桌面">卸载Linux图形桌面</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
 </div>
 
-    <span><a href="/2021/10/23/C++_STL%E5%AE%B9%E5%99%A8%EF%BC%8811%E4%B8%AA%EF%BC%89/" title="C++ STL容器（11个）">C++ STL容器（11个）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
-</div>
-
-    <span><a href="/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" title="DFS与BFS使用场景">DFS与BFS使用场景</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2021/11/08/Map_%E5%8D%95%E8%AF%8D%E5%88%86%E6%9E%90/" title="Map 单词分析">Map 单词分析</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
-</div>
-
-    <span><a href="/2021/09/10/%E6%B4%9B%E8%B0%B7%E9%A2%98%E5%BA%93%E7%88%AC%E8%99%AB/" title="洛谷题库爬虫">洛谷题库爬虫</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2023/01/05/BFS%E6%A8%A1%E6%9D%BF/" title="BFS模板">BFS模板</a></span>
+    <span><a href="/2020/03/18/%E6%99%BA%E6%85%A7%E6%A0%91%E5%8A%A9%E6%89%8B/" title="智慧树助手">智慧树助手</a></span>
   </li>
 
       
@@ -629,12 +703,10 @@
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
 </div>
 
-    <span><a href="/2023/01/30/KMP/" title="KMP">KMP</a></span>
+    <span><a href="/2022/09/25/%E5%9B%BE%E7%89%87%E8%AE%A1%E7%AE%97/" title="图片计算">图片计算</a></span>
   </li>
 
       
@@ -646,7 +718,17 @@
 <a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
 </div>
 
-    <span><a href="/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/" title="scanf、cin返回值与连续输入">scanf、cin返回值与连续输入</a></span>
+    <span><a href="/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/" title="关于矩阵对角线的相关表达">关于矩阵对角线的相关表达</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2022/11/11/C++%E5%A4%A7%E4%BD%9C%E4%B8%9A/" title="C++大作业">C++大作业</a></span>
   </li>
 
       
@@ -658,7 +740,43 @@
 <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2022/12/25/%E5%9C%A8%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97%E9%87%8C%E5%A4%84%E7%90%86%E6%B5%AE%E7%82%B9%E6%95%B0/" title="在整数运算里处理浮点数">在整数运算里处理浮点数</a></span>
+    <span><a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" title="小根堆">小根堆</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/2022/05/21/git_pull%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81%EF%BC%8C%E9%81%BF%E5%85%8D%E8%A6%86%E7%9B%96%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E7%9A%84%E4%BB%A3%E7%A0%81/" title="git pull拉取仓库代码，避免覆盖本地修改的代码">git pull拉取仓库代码，避免覆盖本地修改的代码</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
+</div>
+
+    <span><a href="/2021/09/10/%E6%B4%9B%E8%B0%B7%E9%A2%98%E5%BA%93%E7%88%AC%E8%99%AB/" title="洛谷题库爬虫">洛谷题库爬虫</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2021/06/02/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4_python/" title="P1223 排队接水 python">P1223 排队接水 python</a></span>
   </li>
 
   </ul>

@@ -102,12 +102,12 @@ mioe = mioe = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
         </ul>
       </div>
     </header>
@@ -157,66 +157,57 @@ mioe = mioe = AC总在意料外^^</title>
     
 
     <p>某涉密单位下发了某种票据，并要在年终全部收回。</p>
-<p>每张票据有唯一的 ID 号。</p>
-<p>全年所有票据的 ID 号是连续的，但 ID 的开始数码是随机选定的。</p>
-<p>因为工作人员疏忽，在录入 ID 号的时候发生了一处错误，造成了某个 ID 断号，另外一个 ID 重号。</p>
-<p>你的任务是通过编程，找出断号的 ID 和重号的 ID。</p>
+<p>每张票据有唯一的ID号。</p>
+<p>全年所有票据的ID号是连续的，但ID的开始数码是随机选定的。</p>
+<p>因为工作人员疏忽，在录入ID号的时候发生了一处错误，造成了某个ID断号，另外一个ID重号。</p>
+<p>你的任务是通过编程，找出断号的ID和重号的ID。</p>
 <p>假设断号不可能发生在最大和最小号。</p>
-<h4 id="输入格式"><a class="markdownIt-Anchor" href="#输入格式">#</a> 输入格式</h4>
-<p>第一行包含整数 <strong>N</strong>，表示后面共有 <strong>N</strong> 行数据。</p>
-<p>接下来 <strong>N</strong> 行，每行包含空格分开的若干个（不大于 100 个）正整数（不大于 100000），每个整数代表一个 ID 号。</p>
-<h4 id="输出格式"><a class="markdownIt-Anchor" href="#输出格式">#</a> 输出格式</h4>
-<p>要求程序输出 1 行，含两个整数 <strong>m</strong>,<strong>n</strong> 用空格分隔。</p>
-<p>其中，<strong>m</strong> 表示断号 ID，<strong>n</strong> 表示重号 ID。</p>
-<h4 id="数据范围"><a class="markdownIt-Anchor" href="#数据范围">#</a> 数据范围</h4>
-<p><strong>1</strong>≤<strong>N</strong>≤<strong>100</strong></p>
-<h4 id="输入样例"><a class="markdownIt-Anchor" href="#输入样例">#</a> 输入样例：</h4>
-<pre><code>2
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行包含整数 <strong>N</strong>，表示后面共有 <strong>N</strong> 行数据。</p>
+<p>接下来 <strong>N</strong> 行，每行包含空格分开的若干个（不大于100个）正整数（不大于100000），每个整数代表一个ID号。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>要求程序输出1行，含两个整数 <strong>m</strong>,<strong>n</strong>用空格分隔。</p>
+<p>其中，<strong>m</strong>表示断号ID，<strong>n</strong>表示重号ID。</p>
+<h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p><strong>1</strong>≤<strong>N</strong>≤<strong>100</strong></p>
+<h4 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h4><pre><code>2
 5 6 8 11 9 
 10 12 9
 </code></pre>
-<h4 id="输出样例"><a class="markdownIt-Anchor" href="#输出样例">#</a> 输出样例：</h4>
-<pre><code>7 9
+<h4 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h4><pre><code>7 9
 </code></pre>
-<h4 id="ac代码"><a class="markdownIt-Anchor" href="#ac代码">#</a> AC 代码</h4>
-<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+<h4 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h4><pre><code class="c++">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 int a[10001];
 int c, n;
 
 int main()&#123;
-	cin &gt;&gt; n;
-	string line;
-	getline(cin, line);	\\ cin 会读取换行符
-	while(n--)&#123;
-		getline(cin, line);
-		stringstream ssin(line);
-		while(ssin &gt;&gt; a[c])&#123;
-			c++;
-		&#125;
-	&#125;
-	sort(a, a + c);
-	int r1, r2;
-	for(int i = 1; i &lt; c; i++)&#123;
-		if(a[i] == a[i - 1]) r1 = a[i];
-		if(a[i] - 2 == a[i - 1]) r2 = a[i] - 1;
-	&#125;
-	cout &lt;&lt; r2 &lt;&lt; &quot; &quot; &lt;&lt; r1;
+    cin &gt;&gt; n;
+    string line;
+    getline(cin, line);	\\ cin 会读取换行符
+    while(n--)&#123;
+        getline(cin, line);
+        stringstream ssin(line);
+        while(ssin &gt;&gt; a[c])&#123;
+            c++;
+        &#125;
+    &#125;
+    sort(a, a + c);
+    int r1, r2;
+    for(int i = 1; i &lt; c; i++)&#123;
+        if(a[i] == a[i - 1]) r1 = a[i];
+        if(a[i] - 2 == a[i - 1]) r2 = a[i] - 1;
+    &#125;
+    cout &lt;&lt; r2 &lt;&lt; &quot; &quot; &lt;&lt; r1;
 
-	return 0;
+    return 0;
 &#125;
 </code></pre>
-<h4 id="stringstream技巧"><a class="markdownIt-Anchor" href="#stringstream技巧">#</a> stringstream 技巧：</h4>
-<h5 id="转intdouble"><a class="markdownIt-Anchor" href="#转intdouble">#</a> 转 int/double</h5>
-<pre><code class="language-c++">string result = &quot;10000&quot;;	// double 同理, result = &quot;1.5&quot;;
+<h4 id="stringstream技巧："><a href="#stringstream技巧：" class="headerlink" title="stringstream技巧："></a>stringstream技巧：</h4><h5 id="转int-x2F-double"><a href="#转int-x2F-double" class="headerlink" title="转int&#x2F;double"></a>转int&#x2F;double</h5><pre><code class="c++">string result = &quot;10000&quot;;	// double 同理, result = &quot;1.5&quot;;
 stringstream stream(result);	// 可以是字符串也可以是数字，总之后面直接输入到目标变量里面
 int n = 0;
 stream &gt;&gt; n;	//n 等于10000
 </code></pre>
-<h5 id="转intdouble数组"><a class="markdownIt-Anchor" href="#转intdouble数组">#</a> 转 int/double 数组</h5>
-<p><code>stringstream</code>  以空格作为分隔符</p>
-<pre><code class="language-c++">string str = &quot;1 2 3 4 5&quot;;	// double 同理
+<h5 id="转int-x2F-double数组"><a href="#转int-x2F-double数组" class="headerlink" title="转int&#x2F;double数组"></a>转int&#x2F;double数组</h5><p><code>stringstream</code>以空格作为分隔符</p>
+<pre><code class="c++">string str = &quot;1 2 3 4 5&quot;;	// double 同理
 stringstream ssin(str);
 int i = 0;
 int a[10] = &#123;0&#125;;
@@ -265,7 +256,7 @@ while(ssin &gt;&gt; a[i]) i++;	// 此时a[0] = 1, a[1] = 2 ...
     <div class="item left">
       
 
-  <a href="/2022/12/25/%E5%9C%A8%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97%E9%87%8C%E5%A4%84%E7%90%86%E6%B5%AE%E7%82%B9%E6%95%B0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipetlbztpj20zk0m84qp.jpg" title="在整数运算里处理浮点数">
+  <a href="/2022/12/25/%E5%9C%A8%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97%E9%87%8C%E5%A4%84%E7%90%86%E6%B5%AE%E7%82%B9%E6%95%B0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicmnywqgpj20zk0m8dwx.jpg" title="在整数运算里处理浮点数">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>在整数运算里处理浮点数</h3>
@@ -275,7 +266,7 @@ while(ssin &gt;&gt; a[i]) i++;	// 此时a[0] = 1, a[1] = 2 ...
     <div class="item right">
       
 
-  <a href="/2022/12/30/%E7%BA%BF%E6%AE%B5%E6%A0%91___%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84_%E6%A8%A1%E6%9D%BF/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclwrdwyaj20zk0m8are.jpg" title="线段树 &#x2F; 树状数组 模板">
+  <a href="/2022/12/30/%E7%BA%BF%E6%AE%B5%E6%A0%91___%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84_%E6%A8%A1%E6%9D%BF/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclize41wj20zk0m87gk.jpg" title="线段树 &#x2F; 树状数组 模板">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>线段树 / 树状数组 模板</h3>
@@ -297,7 +288,7 @@ while(ssin &gt;&gt; a[i]) i++;	// 此时a[0] = 1, a[1] = 2 ...
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text"> 输入格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text"> 输出格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="toc-number">3.</span> <span class="toc-text"> 数据范围</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text"> 输入样例：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="toc-number">5.</span> <span class="toc-text"> 输出样例：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ac%E4%BB%A3%E7%A0%81"><span class="toc-number">6.</span> <span class="toc-text"> AC 代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#stringstream%E6%8A%80%E5%B7%A7"><span class="toc-number">7.</span> <span class="toc-text"> stringstream 技巧：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BD%ACintdouble"><span class="toc-number">7.1.</span> <span class="toc-text"> 转 int&#x2F;double</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BD%ACintdouble%E6%95%B0%E7%BB%84"><span class="toc-number">7.2.</span> <span class="toc-text"> 转 int&#x2F;double 数组</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="toc-number">3.</span> <span class="toc-text">数据范围</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">4.</span> <span class="toc-text">输入样例：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">5.</span> <span class="toc-text">输出样例：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AC%E4%BB%A3%E7%A0%81"><span class="toc-number">6.</span> <span class="toc-text">AC代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#stringstream%E6%8A%80%E5%B7%A7%EF%BC%9A"><span class="toc-number">7.</span> <span class="toc-text">stringstream技巧：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BD%ACint-x2F-double"><span class="toc-number">7.1.</span> <span class="toc-text">转int&#x2F;double</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BD%ACint-x2F-double%E6%95%B0%E7%BB%84"><span class="toc-number">7.2.</span> <span class="toc-text">转int&#x2F;double数组</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -407,37 +398,21 @@ while(ssin &gt;&gt; a[i]) i++;	// 此时a[0] = 1, a[1] = 2 ...
     
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2021/06/01/%E5%9B%9E%E6%96%87%E8%B4%A8%E6%95%B0_python/" title="回文质数 python">回文质数 python</a></span>
+    <span><a href="/2022/12/21/AcWing_116._%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F/" title="AcWing 116. 飞行员兄弟">AcWing 116. 飞行员兄弟</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="贪婪算法之背包问题">贪婪算法之背包问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-</div>
-
-    <span><a href="/2022/05/25/linux%E6%8C%89%E5%90%8D%E6%9F%A5PID%E5%92%8C%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C/" title="linux按名查PID和后台运行">linux按名查PID和后台运行</a></span>
+    <span><a href="/2023/01/08/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/" title="树的直径">树的直径</a></span>
   </li>
 
       
@@ -458,22 +433,22 @@ while(ssin &gt;&gt; a[i]) i++;	// 此时a[0] = 1, a[1] = 2 ...
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/" title="随机头图">随机头图</a></span>
+    <span><a href="/2021/09/04/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4%E9%97%AE%E9%A2%98%E7%BB%AD%EF%BC%88C%EF%BC%89/" title="P1223 排队接水问题续（C）">P1223 排队接水问题续（C）</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 </div>
 
-    <span><a href="/2022/12/25/%E5%9C%A8%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97%E9%87%8C%E5%A4%84%E7%90%86%E6%B5%AE%E7%82%B9%E6%95%B0/" title="在整数运算里处理浮点数">在整数运算里处理浮点数</a></span>
+    <span><a href="/2022/06/23/%E8%A1%A8%E6%83%85%E5%8C%85%E6%8F%92%E4%BB%B6%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/" title="表情包插件相关说明">表情包插件相关说明</a></span>
   </li>
 
       
@@ -495,19 +470,7 @@ while(ssin &gt;&gt; a[i]) i++;	// 此时a[0] = 1, a[1] = 2 ...
 <a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
 </div>
 
-    <span><a href="/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/" title="关于矩阵对角线的相关表达">关于矩阵对角线的相关表达</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" title="小根堆">小根堆</a></span>
+    <span><a href="/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" title="DFS与BFS使用场景">DFS与BFS使用场景</a></span>
   </li>
 
       
@@ -516,10 +479,34 @@ while(ssin &gt;&gt; a[i]) i++;	// 此时a[0] = 1, a[1] = 2 ...
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" title="DFS与BFS使用场景">DFS与BFS使用场景</a></span>
+    <span><a href="/2022/11/28/%E4%BD%8D%E8%BF%90%E7%AE%97/" title="位运算">位运算</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2021/10/15/XX_XX_XX%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/" title="XX:XX:XX类型字符串提取数字">XX:XX:XX类型字符串提取数字</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
+</div>
+
+    <span><a href="/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/" title="随机头图">随机头图</a></span>
   </li>
 
   </ul>

@@ -9,14 +9,14 @@
     <category term="Resilio Sync" />
     <category term="unity" />
     <category term="WolfraAlpha" />
-    <category term="github" />
     <category term="数论" />
+    <category term="github" />
     <category term="linux" />
     <category term="Open-cv" />
-    <category term="模板" />
-    <category term="局域网" />
     <category term="碧蓝航线" />
     <category term="Python" />
+    <category term="模板" />
+    <category term="局域网" />
     <category term="阅读" />
     <category term="相册" />
     <category term="算法模板" />
@@ -25,8 +25,8 @@
         <title>局域网搭建服务器无法访问</title>
         <link rel="alternate" href="http://example.com/2021/12/31/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/"/>
         <content type="html">&lt;ul&gt;
-&lt;li&gt;不在同一网段 / 网关不一致 （无法 ping 通）&lt;/li&gt;
-&lt;li&gt;防火墙拦截 （&lt;s&gt;不一定能 ping 通&lt;/s&gt;）&lt;/li&gt;
+&lt;li&gt;不在同一网段 &amp;#x2F; 网关不一致 （无法ping通）&lt;/li&gt;
+&lt;li&gt;防火墙拦截 （&lt;del&gt;不一定能ping通&lt;/del&gt;）&lt;/li&gt;
 &lt;/ul&gt;
 </content>
         <category term="局域网" />
