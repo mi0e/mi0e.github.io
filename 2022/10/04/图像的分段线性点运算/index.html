@@ -100,12 +100,12 @@ mioe = 書架 = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?959937"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?542753"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?947628"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?175649"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?615149"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?856526"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?885542"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?827624"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?540499"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?18110"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?441513"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?864580"></li>
         </ul>
       </div>
     </header>
@@ -151,20 +151,36 @@ mioe = 書架 = AC总在意料外^^</title>
   <div class="body md" itemprop="articleBody">
     
 
-    \begin{align*}
-\begin{split}
-g(i,j)= \left \{
-\begin{array}{ll}
-\alpha f(i,j),&0\le f(i,j)< a\\
-\beta (f(i,j)-a)+g_{a},&a\le f(i,j)< b\\
-\gamma  (f(i,j)-b)+g_{b},&b\le f(i,j)< 255
-\end{array}
-\right.
-\end{split}
-\end{align*}
+    <p>$$<br>\begin{align*}<br>\begin{split}<br>g(i,j)&#x3D; \left {<br>\begin{array}{ll}<br>\alpha f(i,j),&amp;0\le f(i,j)&lt; a\<br>\beta (f(i,j)-a)+g_{a},&amp;a\le f(i,j)&lt; b\<br>\gamma  (f(i,j)-b)+g_{b},&amp;b\le f(i,j)&lt; 255<br>\end{array}<br>\right.<br>\end{split}<br>\end{align*}</p>
+<p>$$</p>
+<pre><code class="python">from turtle import width
+from matplotlib import pyplot as plt
+import cv2,matplotlib
 
+fa, fb = 80, 200
+a, b, c = 1.1, 1.2, 1.3
+cat = cv2.imread(&quot;cat.jpg&quot;)
+cat = cv2.cvtColor(cat, cv2.COLOR_BGR2GRAY)
+change_cat = cat.copy()
+width = cat.shape[0]
+height = cat.shape[1]
 
-<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">from</span> turtle <span class="token keyword">import</span> width</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">from</span> matplotlib <span class="token keyword">import</span> pyplot <span class="token keyword">as</span> plt</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">import</span> cv2<span class="token punctuation">,</span>matplotlib</pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>fa<span class="token punctuation">,</span> fb <span class="token operator">=</span> <span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">200</span></pre></td></tr><tr><td data-num="6"></td><td><pre>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">1.2</span><span class="token punctuation">,</span> <span class="token number">1.3</span></pre></td></tr><tr><td data-num="7"></td><td><pre>cat <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span><span class="token string">"cat.jpg"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre>cat <span class="token operator">=</span> cv2<span class="token punctuation">.</span>cvtColor<span class="token punctuation">(</span>cat<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>COLOR_BGR2GRAY<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>change_cat <span class="token operator">=</span> cat<span class="token punctuation">.</span>copy<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre>width <span class="token operator">=</span> cat<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="11"></td><td><pre>height <span class="token operator">=</span> cat<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> width<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        <span class="token keyword">if</span> <span class="token number">0</span> <span class="token operator">&lt;=</span> change_cat<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> fa<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="16"></td><td><pre>            change_cat<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span></pre></td></tr><tr><td data-num="17"></td><td><pre>        <span class="token keyword">elif</span> fa <span class="token operator">&lt;=</span> change_cat<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> fb<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="18"></td><td><pre>            change_cat<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">255</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>change_cat<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">-</span> fa<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>fb <span class="token operator">-</span> fa<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="19"></td><td><pre>        <span class="token keyword">else</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="20"></td><td><pre>            change_cat<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">255</span></pre></td></tr><tr><td data-num="21"></td><td><pre></pre></td></tr><tr><td data-num="22"></td><td><pre>plt<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.family'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'SimHei'</span> </pre></td></tr><tr><td data-num="23"></td><td><pre>plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="24"></td><td><pre>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">121</span><span class="token punctuation">)</span><span class="token punctuation">,</span>plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>cat<span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'gray'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'原图'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="25"></td><td><pre>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">122</span><span class="token punctuation">)</span><span class="token punctuation">,</span>plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>change_cat<span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'gray'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'调整后'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="26"></td><td><pre>plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p><img data-src="https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/10/2395936215.png" alt="image.png"></p>
+for i in range(0, width):
+    for j in range(0, height):
+        if 0 &lt;= change_cat[i][j] &lt; fa:
+            change_cat[i][j] = 0
+        elif fa &lt;= change_cat[i][j] &lt; fb:
+            change_cat[i][j] = 255 * ((change_cat[i][j] - fa) / (fb - fa))
+        else:
+            change_cat[i][j] = 255
+
+plt.rcParams[&#39;font.family&#39;] = &#39;SimHei&#39; 
+plt.figure(figsize=(10, 8), dpi = 100)
+plt.subplot(121),plt.imshow(cat, cmap=&#39;gray&#39;),plt.title(&#39;原图&#39;)
+plt.subplot(122),plt.imshow(change_cat, cmap=&#39;gray&#39;),plt.title(&#39;调整后&#39;)
+plt.show()
+</code></pre>
+<p><img data-src="https://mioe-xyz.oss-cn-shanghai.aliyuncs.com/usr/uploads/2022/10/2395936215.png" alt="image.png"></p>
 
   </div>
 
@@ -201,7 +217,7 @@ g(i,j)= \left \{
     <div class="item left">
       
 
-  <a href="/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%BF%90%E7%AE%97%EF%BC%88%E5%AF%B9%E6%95%B0%EF%BC%89/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?631976" title="图像的非线性运算（对数）">
+  <a href="/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%BF%90%E7%AE%97%EF%BC%88%E5%AF%B9%E6%95%B0%EF%BC%89/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?394246" title="图像的非线性运算（对数）">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> Opencv</span>
   <h3>图像的非线性运算（对数）</h3>
@@ -211,7 +227,7 @@ g(i,j)= \left \{
     <div class="item right">
       
 
-  <a href="/2022/10/27/Unity%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%BA%A2%E7%BB%BF%E7%81%AF%E8%87%AA%E5%8A%A8%E5%8F%98%E6%8D%A2/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?793326" title="Unity回调函数实现简单红绿灯自动变换">
+  <a href="/2022/10/27/Unity%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%BA%A2%E7%BB%BF%E7%81%AF%E8%87%AA%E5%8A%A8%E5%8F%98%E6%8D%A2/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?282085" title="Unity回调函数实现简单红绿灯自动变换">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> Unity</span>
   <h3>Unity回调函数实现简单红绿灯自动变换</h3>
@@ -341,38 +357,22 @@ g(i,j)= \left \{
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 </div>
 
-    <span><a href="/2022/11/11/C++%E5%A4%A7%E4%BD%9C%E4%B8%9A/" title="C++大作业">C++大作业</a></span>
+    <span><a href="/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/" title="bot相关一">bot相关一</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/%E9%9A%8F%E7%AC%94/" title="分类于 随笔">随笔</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E9%9A%8F%E7%AC%94/%E7%9B%B8%E5%86%8C/" title="分类于 相册">相册</a>
 </div>
 
-    <span><a href="/2021/10/28/%E5%8D%A1%E5%B8%B8%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%8C%E8%82%86%E6%97%A0%E5%BF%8C%E6%83%AESTL/" title="卡常小技巧，肆无忌惮STL">卡常小技巧，肆无忌惮STL</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2021/11/08/Map_%E5%8D%95%E8%AF%8D%E5%88%86%E6%9E%90/" title="Map 单词分析">Map 单词分析</a></span>
+    <span><a href="/2019/05/20/%E6%9C%89%E8%B6%A3%E7%9A%84%E7%81%B5%E9%AD%82%E7%BB%88%E4%BC%9A%E7%9B%B8%E9%81%87/" title="有趣的灵魂终会相遇">有趣的灵魂终会相遇</a></span>
   </li>
 
       
@@ -384,29 +384,17 @@ g(i,j)= \left \{
 <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" title="冒泡排序 C语言">冒泡排序 C语言</a></span>
+    <span><a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" title="小根堆">小根堆</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Python/" title="分类于 Python">Python</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/03/28/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E7%9A%84%E9%98%B6%E6%A2%AF%E9%97%AE%E9%A2%98/" title="爱因斯坦的阶梯问题">爱因斯坦的阶梯问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-</div>
-
-    <span><a href="/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/" title="git push出现Everything up-to-date">git push出现Everything up-to-date</a></span>
+    <span><a href="/2022/12/19/%E6%95%B0%E5%AD%97%E4%B8%89%E8%A7%92%E5%BD%A2_%EF%BC%88%E5%90%91%E5%B7%A6%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E4%B8%8E%E5%90%91%E5%8F%B3%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E7%9B%B8%E5%B7%AE%E4%B8%8D%E8%83%BD%E8%B6%85%E8%BF%87_1%EF%BC%89/" title="数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）">数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）</a></span>
   </li>
 
       
@@ -423,20 +411,36 @@ g(i,j)= \left \{
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%BF%90%E7%AE%97%EF%BC%88%E5%AF%B9%E6%95%B0%EF%BC%89/" title="图像的非线性运算（对数）">图像的非线性运算（对数）</a></span>
+    <span><a href="/2021/09/04/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4%E9%97%AE%E9%A2%98%E7%BB%AD%EF%BC%88C%EF%BC%89/" title="P1223 排队接水问题续（C）">P1223 排队接水问题续（C）</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Q-A/" title="分类于 Q/A">Q/A</a>
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
 </div>
 
-    <span><a href="/2021/12/31/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/" title="局域网搭建服务器无法访问">局域网搭建服务器无法访问</a></span>
+    <span><a href="/2021/11/05/C++_STL%E4%B8%AD%E7%9A%84next_permutation/" title="C++ STL中的next_permutation">C++ STL中的next_permutation</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%95%99%E7%A8%8B/Linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" title="卸载Linux图形桌面">卸载Linux图形桌面</a></span>
   </li>
 
       
@@ -446,7 +450,19 @@ g(i,j)= \left \{
 <a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/" title="离散化区间和">离散化区间和</a></span>
+    <span><a href="/2023/02/04/%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/" title="最短路问题">最短路问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2023/01/05/BFS%E6%A8%A1%E6%9D%BF/" title="BFS模板">BFS模板</a></span>
   </li>
 
   </ul>

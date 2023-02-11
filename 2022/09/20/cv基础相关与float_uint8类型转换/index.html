@@ -100,12 +100,12 @@ mioe = 書架 = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?871292"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?837863"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?996107"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?884127"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?611370"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?354018"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?602856"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?85382"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?278383"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?324025"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?899133"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?475632"></li>
         </ul>
       </div>
     </header>
@@ -151,48 +151,56 @@ mioe = 書架 = AC总在意料外^^</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h3 id="cv基本"><a class="markdownIt-Anchor" href="#cv基本">#</a> cv 基本</h3>
-<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>img <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span><span class="token string">"Path"</span><span class="token punctuation">)</span>    <span class="token comment">#打开图片</span></pre></td></tr><tr><td data-num="2"></td><td><pre>cv2 <span class="token operator">=</span> imshow<span class="token punctuation">(</span><span class="token string">"窗口标题"</span><span class="token punctuation">,</span> img<span class="token punctuation">)</span>	<span class="token comment">#显示</span></pre></td></tr></table></figure><h3 id="resize"><a class="markdownIt-Anchor" href="#resize">#</a> resize()</h3>
-<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>dst <span class="token operator">=</span> cv2<span class="token punctuation">.</span>resize<span class="token punctuation">(</span>src<span class="token punctuation">,</span>dsize<span class="token punctuation">,</span>dst<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>fx<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>fy<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>interpolation<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span></pre></td></tr></table></figure><ul>
+    <h3 id="cv基本"><a href="#cv基本" class="headerlink" title="cv基本"></a>cv基本</h3><pre><code class="python">img = cv2.imread(&quot;Path&quot;)    #打开图片
+cv2 = imshow(&quot;窗口标题&quot;, img)	#显示
+</code></pre>
+<h3 id="resize"><a href="#resize" class="headerlink" title="resize()"></a>resize()</h3><pre><code class="python">dst = cv2.resize(src,dsize,dst=None,fx=None,fy=None,interpolation=None)
+</code></pre>
+<ul>
 <li><strong>src</strong>：输入图像</li>
-<li><strong>dsize</strong>：输出图像的大小。如果该参数为 0，表示缩放之后的大小需要通过公式计算， <code>dsize = Size(round(fx*src.cols),round(fy*src.rows))</code> 。其中  <code>fx</code>  与  <code>fy</code>  是图像 Width 方向和 Height 方向的缩放比例。</li>
-<li><strong>fx</strong>：Width 方向的缩放比例，如果是 0，按照  <code>dsize * width/src.cols</code>  计算</li>
-<li><strong>fy</strong>：Height 方向的缩放比例，如果是 0，按照  <code>dsize * height/src.rows</code>  计算</li>
+<li><strong>dsize</strong>：输出图像的大小。如果该参数为 0，表示缩放之后的大小需要通过公式计算，<code>dsize = Size(round(fx*src.cols),round(fy*src.rows))</code>。其中 <code>fx</code> 与 <code>fy</code> 是图像 Width 方向和 Height 方向的缩放比例。</li>
+<li><strong>fx</strong>：Width 方向的缩放比例，如果是 0，按照 <code>dsize * width/src.cols</code> 计算</li>
+<li><strong>fy</strong>：Height 方向的缩放比例，如果是 0，按照 <code>dsize * height/src.rows</code> 计算</li>
 <li><strong>interpolation</strong>：插值算法类型，或者叫做插值方式，默认为双线性插值</li>
 <li>方法返回结果 dst 表示输出图像。</li>
 </ul>
-<h3 id="相关参数"><a class="markdownIt-Anchor" href="#相关参数">#</a> 相关参数</h3>
-<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>a<span class="token operator">=</span>cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span><span class="token string">"1.jpg"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>shape0 : 垂直尺寸</p>
+<h3 id="相关参数"><a href="#相关参数" class="headerlink" title="相关参数"></a>相关参数</h3><pre><code class="python">a=cv2.imread(&quot;1.jpg&quot;)
+print(a.shape[0], a.shape[1], a.shape[2])
+</code></pre>
+<p>shape0 : 垂直尺寸</p>
 <p>shape1 : 水平尺寸</p>
 <p>shape2 : 颜色通道</p>
-<h3 id="数据类型查看与转换"><a class="markdownIt-Anchor" href="#数据类型查看与转换">#</a> 数据类型查看与转换</h3>
-<h5 id="type-dtype-astype区别"><a class="markdownIt-Anchor" href="#type-dtype-astype区别">#</a> type () ,dtype () ,astype () 区别</h5>
-<table>
+<h3 id="数据类型查看与转换"><a href="#数据类型查看与转换" class="headerlink" title="数据类型查看与转换"></a>数据类型查看与转换</h3><h5 id="type-dtype-astype-区别"><a href="#type-dtype-astype-区别" class="headerlink" title="type() ,dtype() ,astype()区别"></a>type() ,dtype() ,astype()区别</h5><table>
 <thead>
 <tr>
 <th>函数</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>type()</td>
 <td>返回数据结构类型（list、dict、numpy、ndarray 等）</td>
 </tr>
 <tr>
 <td>dtype()</td>
-<td>返回数据元素的数据类型（int、float 等）<br />备注：<br />1）由于 list、dict 等可以包含不同的数据类型，因此不可调用 dtype () 函数<br />2）np.array 中要求所有元素属于同一数据类型，因此可调用 dtype () 函数</td>
+<td>返回数据元素的数据类型（int、float等）<br />备注：<br />1）由于 list、dict 等可以包含不同的数据类型，因此不可调用dtype()函数<br />2）np.array 中要求所有元素属于同一数据类型，因此可调用dtype()函数</td>
 </tr>
 <tr>
 <td>astype()</td>
-<td>改变 np.array 中所有数据元素的数据类型。<br />备注：能用 dtype () 才能用 astype ()</td>
+<td>改变np.array中所有数据元素的数据类型。<br />备注：能用dtype() 才能用 astype()</td>
 </tr>
-</tbody>
-</table>
-<h5 id="类型转换"><a class="markdownIt-Anchor" href="#类型转换">#</a> 类型转换</h5>
-<p>方法 1：</p>
-<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 通过 np 转换类型后除以 255 得到 float 类型</span></pre></td></tr><tr><td data-num="2"></td><td><pre>a <span class="token operator">=</span> a<span class="token punctuation">.</span>astype<span class="token punctuation">(</span>np<span class="token punctuation">.</span>float32<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre>a<span class="token operator">/=</span><span class="token number">255.0</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span></pre></td></tr></table></figure><p>方法 2：</p>
-<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 直接使用 skimage 转换</span></pre></td></tr><tr><td data-num="2"></td><td><pre>a <span class="token operator">=</span> skimage<span class="token punctuation">.</span>img_as_float<span class="token punctuation">(</span>a<span class="token punctuation">)</span>  <span class="token comment">#默认为 float64，可选 img_as_float32</span></pre></td></tr></table></figure>
+</tbody></table>
+<h5 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h5><p>方法1：</p>
+<pre><code class="python"># 通过np转换类型后除以255得到float类型
+a = a.astype(np.float32)
+a/=255.0
+print(a)
+</code></pre>
+<p>方法2：</p>
+<pre><code class="python"># 直接使用skimage转换
+a = skimage.img_as_float(a)  #默认为float64，可选img_as_float32
+</code></pre>
+
   </div>
 
    <footer>
@@ -235,7 +243,7 @@ mioe = 書架 = AC总在意料外^^</title>
     <div class="item left">
       
 
-  <a href="/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?130835" title="bot相关一">
+  <a href="/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?22176" title="bot相关一">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 编程</span>
   <h3>bot相关一</h3>
@@ -245,7 +253,7 @@ mioe = 書架 = AC总在意料外^^</title>
     <div class="item right">
       
 
-  <a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?958376" title="IMG数组相关">
+  <a href="/2022/09/24/IMG%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?107232" title="IMG数组相关">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> Opencv</span>
   <h3>IMG数组相关</h3>
@@ -267,7 +275,7 @@ mioe = 書架 = AC总在意料外^^</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#cv%E5%9F%BA%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text"> cv 基本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#resize"><span class="toc-number">2.</span> <span class="toc-text"> resize()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text"> 相关参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9F%A5%E7%9C%8B%E4%B8%8E%E8%BD%AC%E6%8D%A2"><span class="toc-number">4.</span> <span class="toc-text"> 数据类型查看与转换</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#type-dtype-astype%E5%8C%BA%E5%88%AB"><span class="toc-number">4.0.1.</span> <span class="toc-text"> type () ,dtype () ,astype () 区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">4.0.2.</span> <span class="toc-text"> 类型转换</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#cv%E5%9F%BA%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">cv基本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#resize"><span class="toc-number">2.</span> <span class="toc-text">resize()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text">相关参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9F%A5%E7%9C%8B%E4%B8%8E%E8%BD%AC%E6%8D%A2"><span class="toc-number">4.</span> <span class="toc-text">数据类型查看与转换</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#type-dtype-astype-%E5%8C%BA%E5%88%AB"><span class="toc-number">4.0.1.</span> <span class="toc-text">type() ,dtype() ,astype()区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">4.0.2.</span> <span class="toc-text">类型转换</span></a></li></ol></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -376,36 +384,24 @@ mioe = 書架 = AC总在意料外^^</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/10/01/P2911_%5BUSACO08OCT%5DBovine_Bones_G_(C)/" title="P2911 [USACO08OCT]Bovine Bones G (C)">P2911 [USACO08OCT]Bovine Bones G (C)</a></span>
+    <span><a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" title="冒泡排序 C语言">冒泡排序 C语言</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2022/11/28/%E4%BD%8D%E8%BF%90%E7%AE%97/" title="位运算">位运算</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2022/11/11/C++%E5%A4%A7%E4%BD%9C%E4%B8%9A/" title="C++大作业">C++大作业</a></span>
+    <span><a href="/2023/01/20/%E5%8F%8C%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" title="双指针数组去重">双指针数组去重</a></span>
   </li>
 
       
@@ -426,46 +422,56 @@ mioe = 書架 = AC总在意料外^^</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/Python/" title="分类于 Python">Python</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2021/09/04/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4%E9%97%AE%E9%A2%98%E7%BB%AD%EF%BC%88C%EF%BC%89/" title="P1223 排队接水问题续（C）">P1223 排队接水问题续（C）</a></span>
+    <span><a href="/2021/03/21/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="二分查找">二分查找</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-</div>
-
-    <span><a href="/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/" title="离散化区间和">离散化区间和</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/Python/" title="分类于 Python">Python</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Java/" title="分类于 Java">Java</a>
+<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2020/12/06/Java%E5%8A%A0%E5%BC%BA%E5%9E%8B%E5%BE%AA%E7%8E%AFfor_each/" title="Java加强型循环for each">Java加强型循环for each</a></span>
+    <span><a href="/2021/03/28/%E8%BF%AD%E4%BB%A3_-_%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0/" title="迭代 - 水仙花数">迭代 - 水仙花数</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+</div>
+
+    <span><a href="/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/" title="bot相关一">bot相关一</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2022/11/11/C++%E5%A4%A7%E4%BD%9C%E4%B8%9A/" title="C++大作业">C++大作业</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9A%8F%E7%AC%94/" title="分类于 随笔">随笔</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E9%9A%8F%E7%AC%94/%E7%9B%B8%E5%86%8C/" title="分类于 相册">相册</a>
 </div>
 
-    <span><a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" title="AcWing 95. 费解的开关">AcWing 95. 费解的开关</a></span>
+    <span><a href="/2019/05/20/%E6%9C%89%E8%B6%A3%E7%9A%84%E7%81%B5%E9%AD%82%E7%BB%88%E4%BC%9A%E7%9B%B8%E9%81%87/" title="有趣的灵魂终会相遇">有趣的灵魂终会相遇</a></span>
   </li>
 
       
@@ -475,17 +481,17 @@ mioe = 書架 = AC总在意料外^^</title>
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 </div>
 
-    <span><a href="/2019/10/20/%E7%AE%80%E5%8D%95%E9%80%9A%E4%BF%97%E7%9A%84%E8%AF%B4%E4%B8%80%E4%B8%8B%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="简单通俗的说一下什么是面向过程和面向对象">简单通俗的说一下什么是面向过程和面向对象</a></span>
+    <span><a href="/2022/05/25/linux%E6%8C%89%E5%90%8D%E6%9F%A5PID%E5%92%8C%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C/" title="linux按名查PID和后台运行">linux按名查PID和后台运行</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E5%88%86%E6%AE%B5%E7%BA%BF%E6%80%A7%E7%82%B9%E8%BF%90%E7%AE%97/" title="图像的分段线性点运算">图像的分段线性点运算</a></span>
+    <span><a href="/2021/10/27/%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%98%B6%E4%B9%98%E6%A8%A1%E6%9D%BF(C++)/" title="高精度阶乘模板(C++)">高精度阶乘模板(C++)</a></span>
   </li>
 
   </ul>

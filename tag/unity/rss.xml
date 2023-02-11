@@ -7,10 +7,10 @@
         <language>zh-CN</language>
         <pubDate>Thu, 27 Oct 2022 21:24:00 +0800</pubDate>
         <lastBuildDate>Thu, 27 Oct 2022 21:24:00 +0800</lastBuildDate>
-        <category>算法</category>
         <category>BFS</category>
-        <category>unity</category>
+        <category>算法</category>
         <category>Resilio Sync</category>
+        <category>unity</category>
         <category>WolfraAlpha</category>
         <category>数论</category>
         <category>github</category>
@@ -29,7 +29,7 @@
             <link>http://example.com/2022/10/27/Unity%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%BA%A2%E7%BB%BF%E7%81%AF%E8%87%AA%E5%8A%A8%E5%8F%98%E6%8D%A2/</link>
             <category>unity</category>
             <pubDate>Thu, 27 Oct 2022 21:24:00 +0800</pubDate>
-            <description><![CDATA[ &lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;using System.Collections;
+            <description><![CDATA[ &lt;pre&gt;&lt;code class=&#34;c#&#34;&gt;using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -59,7 +59,6 @@ public class AutoChangeColor : MonoBehaviour
         if (i == 3) i = 0;
     &amp;#125;
 &amp;#125;
-
 &lt;/code&gt;&lt;/pre&gt;
  ]]></description>
         </item>

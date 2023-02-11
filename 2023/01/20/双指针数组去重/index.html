@@ -100,12 +100,12 @@ mioe = 書架 = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?463710"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?474660"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?638067"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?417206"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?8171"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?793969"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?722471"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?518999"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?165460"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?860462"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?100295"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?997924"></li>
         </ul>
       </div>
     </header>
@@ -154,7 +154,26 @@ mioe = 書架 = AC总在意料外^^</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">int</span> n<span class="token punctuation">;</span> </pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">int</span> arr<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>	cin <span class="token operator">>></span> n<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> cin <span class="token operator">>></span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre>	<span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>	<span class="token comment">// 非重复个数</span></pre></td></tr><tr><td data-num="13"></td><td><pre>	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre>		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>i <span class="token operator">||</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> arr<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="15"></td><td><pre>			arr<span class="token punctuation">[</span>j<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="16"></td><td><pre></pre></td></tr><tr><td data-num="17"></td><td><pre>	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure>
+    <pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+const int N = 100;
+
+int n; 
+int arr[N];
+
+int main()&#123;
+    cin &gt;&gt; n;
+    for(int i = 0; i &lt; n; i++) cin &gt;&gt; arr[i];
+
+    int j = 0;	// 非重复个数
+    for(int i = 0; i &lt; n; i++)
+        if(!i || arr[i] != arr[i - 1])
+            arr[j++] = arr[i];
+
+    return 0;
+&#125;
+</code></pre>
+
   </div>
 
    <footer>
@@ -190,7 +209,7 @@ mioe = 書架 = AC总在意料外^^</title>
     <div class="item left">
       
 
-  <a href="/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?187650" title="离散化区间和">
+  <a href="/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?798865" title="离散化区间和">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 算法</span>
   <h3>离散化区间和</h3>
@@ -200,7 +219,7 @@ mioe = 書架 = AC总在意料外^^</title>
     <div class="item right">
       
 
-  <a href="/2023/01/30/%E5%8D%95%E8%B0%83%E6%A0%88%E3%80%81%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%EF%BC%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%EF%BC%89/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?795972" title="单调栈、滑动窗口（单调队列）">
+  <a href="/2023/01/30/%E5%8D%95%E8%B0%83%E6%A0%88%E3%80%81%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%EF%BC%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%EF%BC%89/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?961004" title="单调栈、滑动窗口（单调队列）">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>单调栈、滑动窗口（单调队列）</h3>
@@ -331,11 +350,9 @@ mioe = 書架 = AC总在意料外^^</title>
     
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Java/" title="分类于 Java">Java</a>
 </div>
 
-    <span><a href="/2020/12/24/ArrayList%E5%88%97%E8%A1%A8%E9%9B%86%E5%90%88/" title="ArrayList列表集合">ArrayList列表集合</a></span>
+    <span><a href="/2022/05/25/linux%E6%8C%89%E5%90%8D%E6%9F%A5PID%E5%92%8C%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C/" title="linux按名查PID和后台运行">linux按名查PID和后台运行</a></span>
   </li>
 
       
@@ -347,7 +364,29 @@ mioe = 書架 = AC总在意料外^^</title>
 <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" title="AcWing 95. 费解的开关">AcWing 95. 费解的开关</a></span>
+    <span><a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" title="冒泡排序 C语言">冒泡排序 C语言</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
+</div>
+
+    <span><a href="/2021/10/19/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84sort%E6%8E%92%E5%BA%8F/" title="二维数组sort排序">二维数组sort排序</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2022/11/11/C++%E5%A4%A7%E4%BD%9C%E4%B8%9A/" title="C++大作业">C++大作业</a></span>
   </li>
 
       
@@ -359,17 +398,7 @@ mioe = 書架 = AC总在意料外^^</title>
 <a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2021/03/28/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E7%9A%84%E9%98%B6%E6%A2%AF%E9%97%AE%E9%A2%98/" title="爱因斯坦的阶梯问题">爱因斯坦的阶梯问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-</div>
-
-    <span><a href="/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E5%88%86%E6%AE%B5%E7%BA%BF%E6%80%A7%E7%82%B9%E8%BF%90%E7%AE%97/" title="图像的分段线性点运算">图像的分段线性点运算</a></span>
+    <span><a href="/2021/03/31/%E9%80%92%E5%BD%92_-_%E6%95%B0%E7%BB%84%E7%B4%AF%E5%8A%A0/" title="递归 - 数组累加">递归 - 数组累加</a></span>
   </li>
 
       
@@ -378,46 +407,22 @@ mioe = 書架 = AC总在意料外^^</title>
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/10/26/c_str()%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="c_str()使用方法">c_str()使用方法</a></span>
+    <span><a href="/2021/10/15/%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/" title="类型字符串提取数字">类型字符串提取数字</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2022/12/19/%E6%95%B0%E5%AD%97%E4%B8%89%E8%A7%92%E5%BD%A2_%EF%BC%88%E5%90%91%E5%B7%A6%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E4%B8%8E%E5%90%91%E5%8F%B3%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E7%9B%B8%E5%B7%AE%E4%B8%8D%E8%83%BD%E8%B6%85%E8%BF%87_1%EF%BC%89/" title="数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）">数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
-</div>
-
-    <span><a href="/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" title="DFS与BFS使用场景">DFS与BFS使用场景</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
-</div>
-
-    <span><a href="/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/" title="关于矩阵对角线的相关表达">关于矩阵对角线的相关表达</a></span>
+    <span><a href="/2023/02/03/%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%EF%BC%88%E9%82%BB%E6%8E%A5%E8%A1%A8%EF%BC%89/" title="树的深度优先遍历（邻接表）">树的深度优先遍历（邻接表）</a></span>
   </li>
 
       
@@ -429,7 +434,7 @@ mioe = 書架 = AC总在意料外^^</title>
 <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2023/01/05/BFS%E6%A8%A1%E6%9D%BF/" title="BFS模板">BFS模板</a></span>
+    <span><a href="/2022/12/30/%E7%BA%BF%E6%AE%B5%E6%A0%91___%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84_%E6%A8%A1%E6%9D%BF/" title="线段树 &#x2F; 树状数组 模板">线段树 / 树状数组 模板</a></span>
   </li>
 
       
@@ -437,9 +442,25 @@ mioe = 書架 = AC总在意料外^^</title>
     
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2022/05/25/linux%E6%8C%89%E5%90%8D%E6%9F%A5PID%E5%92%8C%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C/" title="linux按名查PID和后台运行">linux按名查PID和后台运行</a></span>
+    <span><a href="/2021/06/01/%E5%9B%9E%E6%96%87%E8%B4%A8%E6%95%B0_python/" title="回文质数 python">回文质数 python</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%95%99%E7%A8%8B/Linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" title="卸载Linux图形桌面">卸载Linux图形桌面</a></span>
   </li>
 
   </ul>

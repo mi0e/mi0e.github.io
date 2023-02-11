@@ -100,12 +100,12 @@ mioe = 書架 = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?128685"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?893654"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?809414"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?563587"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?980438"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?492229"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?379515"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?94357"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?855598"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?348118"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?872918"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?479216"></li>
         </ul>
       </div>
     </header>
@@ -155,48 +155,48 @@ mioe = 書架 = AC总在意料外^^</title>
 using namespace std;
 const int MAX = 10000;
 struct N&#123;
-	int len;
-	int a[MAX];
-	N(int x = 0)&#123;		// 初始化
-		memset(a, 0, sizeof(a));
-		for(len = 1; x; len++)&#123;
-			a[len] = x % 10;
-			x /= 10;
-		&#125;
-	&#125;
-	void f(int _l)&#123;		// 进位
-		len = _l;
-		for(int i = 1; i &lt;= len; i++)&#123;
-			a[i + 1] += a[i] / 10;
-			a[i] %= 10;
-		&#125;
-		for(;!a[len];) len--;		// 去除无效前置0
-	&#125;
-	void print()&#123;
-		for(int i = max(len, 1); i &gt;= 1; i--)
-			printf(&quot;%d&quot;, a[i]);
-	&#125;
-	int &amp;operator[](int i)&#123;		// 重载[]，方便直接使用Node[num]访问Node数组
-		return a[i];
-	&#125;
-	N operator*(int t)&#123;		// 重载*
-		N c;
-		for(int i = 1; i &lt;= len; i++)
-			c[i] = a[i] * t;
-		c.f(len + 11);
-		return c;
-	&#125;
+    int len;
+    int a[MAX];
+    N(int x = 0)&#123;		// 初始化
+        memset(a, 0, sizeof(a));
+        for(len = 1; x; len++)&#123;
+            a[len] = x % 10;
+            x /= 10;
+        &#125;
+    &#125;
+    void f(int _l)&#123;		// 进位
+        len = _l;
+        for(int i = 1; i &lt;= len; i++)&#123;
+            a[i + 1] += a[i] / 10;
+            a[i] %= 10;
+        &#125;
+        for(;!a[len];) len--;		// 去除无效前置0
+    &#125;
+    void print()&#123;
+        for(int i = max(len, 1); i &gt;= 1; i--)
+            printf(&quot;%d&quot;, a[i]);
+    &#125;
+    int &amp;operator[](int i)&#123;		// 重载[]，方便直接使用Node[num]访问Node数组
+        return a[i];
+    &#125;
+    N operator*(int t)&#123;		// 重载*
+        N c;
+        for(int i = 1; i &lt;= len; i++)
+            c[i] = a[i] * t;
+        c.f(len + 11);
+        return c;
+    &#125;
 &#125;;
 
 int main(void)&#123;
-	N fac(1);
-	int n;
-	cin &gt;&gt; n;
-	for(int i = 1; i &lt;= n; i++)
-		fac = fac * i; 
-	fac.print();
+    N fac(1);
+    int n;
+    cin &gt;&gt; n;
+    for(int i = 1; i &lt;= n; i++)
+        fac = fac * i; 
+    fac.print();
 
-	return 0;
+    return 0;
 &#125;
 </code></pre>
 
@@ -242,7 +242,7 @@ int main(void)&#123;
     <div class="item left">
       
 
-  <a href="/2021/10/26/c_str()%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?950747" title="c_str()使用方法">
+  <a href="/2021/10/26/c_str()%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?436823" title="c_str()使用方法">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> Q/A</span>
   <h3>c_str()使用方法</h3>
@@ -252,7 +252,7 @@ int main(void)&#123;
     <div class="item right">
       
 
-  <a href="/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?960911" title="数组粘贴，初始化C++">
+  <a href="/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?537489" title="数组粘贴，初始化C++">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> Q/A</span>
   <h3>数组粘贴，初始化C++</h3>
@@ -382,10 +382,12 @@ int main(void)&#123;
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/10/27/%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%98%B6%E4%B9%98%E6%A8%A1%E6%9D%BF(C++)/" title="高精度阶乘模板(C++)">高精度阶乘模板(C++)</a></span>
+    <span><a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" title="小根堆">小根堆</a></span>
   </li>
 
       
@@ -394,10 +396,66 @@ int main(void)&#123;
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" title="DFS与BFS使用场景">DFS与BFS使用场景</a></span>
+    <span><a href="/2022/11/28/%E4%BD%8D%E8%BF%90%E7%AE%97/" title="位运算">位运算</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Unity/" title="分类于 Unity">Unity</a>
+</div>
+
+    <span><a href="/2022/10/27/Unity%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%BA%A2%E7%BB%BF%E7%81%AF%E8%87%AA%E5%8A%A8%E5%8F%98%E6%8D%A2/" title="Unity回调函数实现简单红绿灯自动变换">Unity回调函数实现简单红绿灯自动变换</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" title="冒泡排序 C语言">冒泡排序 C语言</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2021/03/28/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E7%9A%84%E9%98%B6%E6%A2%AF%E9%97%AE%E9%A2%98/" title="爱因斯坦的阶梯问题">爱因斯坦的阶梯问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" title="AcWing 95. 费解的开关">AcWing 95. 费解的开关</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+</div>
+
+    <span><a href="/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/" title="git push出现Everything up-to-date">git push出现Everything up-to-date</a></span>
   </li>
 
       
@@ -418,20 +476,10 @@ int main(void)&#123;
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
 </div>
 
-    <span><a href="/2022/11/28/%E4%BD%8D%E8%BF%90%E7%AE%97/" title="位运算">位运算</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
-</div>
-
-    <span><a href="/2021/01/17/Resilio_Sync%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95_+_pro%E8%A7%A3%E9%94%81%E8%A1%A5%E4%B8%81/" title="Resilio Sync添加右键菜单 + pro解锁补丁">Resilio Sync添加右键菜单 + pro解锁补丁</a></span>
+    <span><a href="/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" title="DFS与BFS使用场景">DFS与BFS使用场景</a></span>
   </li>
 
       
@@ -439,53 +487,11 @@ int main(void)&#123;
     
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-</div>
-
-    <span><a href="/2019/10/20/%E7%AE%80%E5%8D%95%E9%80%9A%E4%BF%97%E7%9A%84%E8%AF%B4%E4%B8%80%E4%B8%8B%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="简单通俗的说一下什么是面向过程和面向对象">简单通俗的说一下什么是面向过程和面向对象</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
 </div>
 
-    <span><a href="/2023/01/30/%E5%8D%95%E8%B0%83%E6%A0%88%E3%80%81%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%EF%BC%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%EF%BC%89/" title="单调栈、滑动窗口（单调队列）">单调栈、滑动窗口（单调队列）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Python/" title="分类于 Python">Python</a>
-</div>
-
-    <span><a href="/2021/03/17/Python%E5%A3%B0%E6%98%8E%E7%A9%BA%E6%95%B0%E7%BB%84/" title="Python声明空数组">Python声明空数组</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
-</div>
-
-    <span><a href="/2022/09/25/%E5%9B%BE%E7%89%87%E8%AE%A1%E7%AE%97/" title="图片计算">图片计算</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E6%95%99%E7%A8%8B/Linux/" title="分类于 Linux">Linux</a>
-</div>
-
-    <span><a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" title="卸载Linux图形桌面">卸载Linux图形桌面</a></span>
+    <span><a href="/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/" title="关于矩阵对角线的相关表达">关于矩阵对角线的相关表达</a></span>
   </li>
 
   </ul>

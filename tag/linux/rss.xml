@@ -7,10 +7,10 @@
         <language>zh-CN</language>
         <pubDate>Wed, 13 Apr 2022 12:55:00 +0800</pubDate>
         <lastBuildDate>Wed, 13 Apr 2022 12:55:00 +0800</lastBuildDate>
-        <category>算法</category>
         <category>BFS</category>
-        <category>unity</category>
+        <category>算法</category>
         <category>Resilio Sync</category>
+        <category>unity</category>
         <category>WolfraAlpha</category>
         <category>数论</category>
         <category>github</category>
@@ -43,52 +43,41 @@ yum groupremove &amp;quot;X window System&amp;quot; -y
             <category>碧蓝航线</category>
             <category>Python</category>
             <pubDate>Wed, 13 Apr 2022 09:59:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;在-linux-上部署-azurlaneautoscript&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#在-linux-上部署-azurlaneautoscript&#34;&gt;#&lt;/a&gt; 在 Linux 上部署 AzurLaneAutoScript&lt;/h1&gt;
-&lt;h2 id=&#34;anaconda相关&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#anaconda相关&#34;&gt;#&lt;/a&gt; Anaconda 相关&lt;/h2&gt;
-&lt;h3 id=&#34;下载anaconda3&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载anaconda3&#34;&gt;#&lt;/a&gt; 下载 anaconda3&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;wget https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.shanaconda
+            <description><![CDATA[ &lt;h1 id=&#34;在-Linux-上部署-AzurLaneAutoScript&#34;&gt;&lt;a href=&#34;#在-Linux-上部署-AzurLaneAutoScript&#34; class=&#34;headerlink&#34; title=&#34;在 Linux 上部署 AzurLaneAutoScript&#34;&gt;&lt;/a&gt;在 Linux 上部署 AzurLaneAutoScript&lt;/h1&gt;&lt;h2 id=&#34;Anaconda相关&#34;&gt;&lt;a href=&#34;#Anaconda相关&#34; class=&#34;headerlink&#34; title=&#34;Anaconda相关&#34;&gt;&lt;/a&gt;Anaconda相关&lt;/h2&gt;&lt;h3 id=&#34;下载anaconda3&#34;&gt;&lt;a href=&#34;#下载anaconda3&#34; class=&#34;headerlink&#34; title=&#34;下载anaconda3&#34;&gt;&lt;/a&gt;下载anaconda3&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;wget https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.shanaconda
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;修改权限&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#修改权限&#34;&gt;#&lt;/a&gt; 修改权限&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;chmod +x Anaconda3-5.2.0-Linux-x86_64.sh
+&lt;h3 id=&#34;修改权限&#34;&gt;&lt;a href=&#34;#修改权限&#34; class=&#34;headerlink&#34; title=&#34;修改权限&#34;&gt;&lt;/a&gt;修改权限&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;chmod +x Anaconda3-5.2.0-Linux-x86_64.sh
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;./Anaconda3-5.2.0-Linux-x86_64.sh
+&lt;h3 id=&#34;安装&#34;&gt;&lt;a href=&#34;#安装&#34; class=&#34;headerlink&#34; title=&#34;安装&#34;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;./Anaconda3-5.2.0-Linux-x86_64.sh
 # 一路yes&amp;amp;enter
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;拉取alas&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#拉取alas&#34;&gt;#&lt;/a&gt; 拉取 Alas&lt;/h2&gt;
-&lt;p&gt;移动到欲安装 alas 目录下，git 整个仓库&lt;/p&gt;
+&lt;h2 id=&#34;拉取Alas&#34;&gt;&lt;a href=&#34;#拉取Alas&#34; class=&#34;headerlink&#34; title=&#34;拉取Alas&#34;&gt;&lt;/a&gt;拉取Alas&lt;/h2&gt;&lt;p&gt;移动到欲安装alas目录下，git整个仓库&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cd /home
 git clone https://github.com/LmeSzinc/AzurLaneAutoScript.git
 # 如果下载速度缓慢，可换用gitee
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;安装依赖&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装依赖&#34;&gt;#&lt;/a&gt; 安装依赖&lt;/h2&gt;
-&lt;h3 id=&#34;python环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#python环境&#34;&gt;#&lt;/a&gt; python 环境&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;conda create -n alas python=3.7.6
+&lt;h2 id=&#34;安装依赖&#34;&gt;&lt;a href=&#34;#安装依赖&#34; class=&#34;headerlink&#34; title=&#34;安装依赖&#34;&gt;&lt;/a&gt;安装依赖&lt;/h2&gt;&lt;h3 id=&#34;python环境&#34;&gt;&lt;a href=&#34;#python环境&#34; class=&#34;headerlink&#34; title=&#34;python环境&#34;&gt;&lt;/a&gt;python环境&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;conda create -n alas python=3.7.6
 conda activate alas
 cd AzurLaneAutoScript
 pip install -r requirements-in.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 # 可换用其他源
 &lt;/code&gt;&lt;/pre&gt;
 &lt;blockquote&gt;
-&lt;p&gt;由于某些 python 库在不同 os 下的依赖不同，直接从 requirements-in.txt 安装即可，pip 会自动处理依赖。当然也可以从 requirements.txt 安装，但是需注释掉 pywin32&lt;/p&gt;
+&lt;p&gt;由于某些 python 库在不同 os 下的依赖不同，直接从 requirements-in.txt 安装即可，pip会自动处理依赖。当然也可以从 requirements.txt 安装，但是需注释掉 pywin32&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;adb&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#adb&#34;&gt;#&lt;/a&gt; adb&lt;/h3&gt;
-&lt;p&gt;下载 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXIuYW5kcm9pZC5jb20vc3R1ZGlvL3JlbGVhc2VzL3BsYXRmb3JtLXRvb2xz&#34;&gt;SDK Platform Tools for Linux&lt;/span&gt; 并解压，将 adb 放在 &lt;code&gt;/usr/bin&lt;/code&gt;  目录下&lt;/p&gt;
-&lt;h3 id=&#34;uiautomator2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#uiautomator2&#34;&gt;#&lt;/a&gt; uiautomator2&lt;/h3&gt;
-&lt;p&gt;若运行 alas 后无法正常初始化 uiautomator2，可按此方法手动安装，安装过程参考 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL29wZW5hdHgvdWlhdXRvbWF0b3Iy&#34;&gt;uiautomator2&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;运行  &lt;code&gt;adb connect &amp;lt;address&amp;gt;&lt;/code&gt;  连接你的云手机，确保运行  &lt;code&gt;adb device&lt;/code&gt;  后可以看到设备&lt;/p&gt;
-&lt;p&gt;在 alas python 环境下运行  &lt;code&gt;python&lt;/code&gt;  打开 python 命令行窗口，输入以下命令&lt;/p&gt;
+&lt;h3 id=&#34;adb&#34;&gt;&lt;a href=&#34;#adb&#34; class=&#34;headerlink&#34; title=&#34;adb&#34;&gt;&lt;/a&gt;adb&lt;/h3&gt;&lt;p&gt;下载 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXIuYW5kcm9pZC5jb20vc3R1ZGlvL3JlbGVhc2VzL3BsYXRmb3JtLXRvb2xz&#34;&gt;SDK Platform Tools for Linux&lt;/span&gt; 并解压，将adb放在&lt;code&gt;/usr/bin&lt;/code&gt;目录下&lt;/p&gt;
+&lt;h3 id=&#34;uiautomator2&#34;&gt;&lt;a href=&#34;#uiautomator2&#34; class=&#34;headerlink&#34; title=&#34;uiautomator2&#34;&gt;&lt;/a&gt;uiautomator2&lt;/h3&gt;&lt;p&gt;若运行 alas 后无法正常初始化 uiautomator2，可按此方法手动安装，安装过程参考 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL29wZW5hdHgvdWlhdXRvbWF0b3Iy&#34;&gt;uiautomator2&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;运行 &lt;code&gt;adb connect &amp;lt;address&amp;gt;&lt;/code&gt; 连接你的云手机，确保运行 &lt;code&gt;adb device&lt;/code&gt; 后可以看到设备&lt;/p&gt;
+&lt;p&gt;在 alas python 环境下运行 &lt;code&gt;python&lt;/code&gt; 打开 python 命令行窗口，输入以下命令&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;import uiautomator2 as u2
 
 d = u2.connect() # connect to device
 print(d.info)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;等待一段时间，输出类似如下内容，说明安装成功&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;#123;&#39;currentPackageName&#39;: &#39;net.oneplus.launcher&#39;, &#39;displayHeight&#39;: 1920, &#39;displayRotation&#39;: 0, &#39;displaySizeDpX&#39;: 411, &#39;displaySizeDpY&#39;: 731, &#39;displayWidth&#39;: 1080, &#39;productName&#39;: &#39;OnePlus5&#39;, &#39;
-screenOn&#39;: True, &#39;sdkInt&#39;: 27, &#39;naturalOrientation&#39;: True&amp;#125;
+&lt;pre&gt;&lt;code&gt;&amp;#123;&amp;#39;currentPackageName&amp;#39;: &amp;#39;net.oneplus.launcher&amp;#39;, &amp;#39;displayHeight&amp;#39;: 1920, &amp;#39;displayRotation&amp;#39;: 0, &amp;#39;displaySizeDpX&amp;#39;: 411, &amp;#39;displaySizeDpY&amp;#39;: 731, &amp;#39;displayWidth&amp;#39;: 1080, &amp;#39;productName&amp;#39;: &amp;#39;OnePlus5&amp;#39;, &amp;#39;
+screenOn&amp;#39;: True, &amp;#39;sdkInt&amp;#39;: 27, &amp;#39;naturalOrientation&amp;#39;: True&amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;修改deployyaml&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#修改deployyaml&#34;&gt;#&lt;/a&gt; 修改 deploy.yaml&lt;/h3&gt;
-&lt;p&gt;因为 Alas 默认使用了 Windows 下的配置文件，所以我们要手动修改&lt;/p&gt;
+&lt;h3 id=&#34;修改deploy-yaml&#34;&gt;&lt;a href=&#34;#修改deploy-yaml&#34; class=&#34;headerlink&#34; title=&#34;修改deploy.yaml&#34;&gt;&lt;/a&gt;修改deploy.yaml&lt;/h3&gt;&lt;p&gt;因为Alas默认使用了Windows下的配置文件，所以我们要手动修改&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# 修改gitee仓库
 Deploy.Git.Repository : https://gitee.com/LmeSzinc/AzurLaneAutoScript
 
@@ -101,8 +90,7 @@ Deploy.Python.PythonExecutable : [Anaconda安装路径]/envs/alas/bin/python
 # adb位置
 Deploy.Adb.AdbExecutable : /usr/bin/adb
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;使用-shell-脚本启动停止-alas&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用-shell-脚本启动停止-alas&#34;&gt;#&lt;/a&gt; 使用 shell 脚本启动停止 alas&lt;/h2&gt;
-&lt;p&gt;编写脚本&lt;/p&gt;
+&lt;h2 id=&#34;使用-shell-脚本启动停止-alas&#34;&gt;&lt;a href=&#34;#使用-shell-脚本启动停止-alas&#34; class=&#34;headerlink&#34; title=&#34;使用 shell 脚本启动停止 alas&#34;&gt;&lt;/a&gt;使用 shell 脚本启动停止 alas&lt;/h2&gt;&lt;p&gt;编写脚本&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;#!/bin/bash
 
 start()&amp;#123;
@@ -124,7 +112,7 @@ case $1 in
     * ) stop;start;;
 esac
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;将文件保存为 alas，放在 &lt;code&gt;/usr/bin&lt;/code&gt; ，修改权限&lt;/p&gt;
+&lt;p&gt;将文件保存为 alas，放在&lt;code&gt;/usr/bin&lt;/code&gt;，修改权限&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;chmod 755 alas
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;可用以下命令控制 alas&lt;/p&gt;
@@ -132,13 +120,10 @@ esac
 alas stop # 停止
 alas # 重启
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;遇到一些问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#遇到一些问题&#34;&gt;#&lt;/a&gt; 遇到一些问题&lt;/h2&gt;
-&lt;h3 id=&#34;errorpermission-denied&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#errorpermission-denied&#34;&gt;#&lt;/a&gt; ERROR:Permission denied&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;# 权限相关问题，激活环境时用以下代码
+&lt;h2 id=&#34;遇到一些问题&#34;&gt;&lt;a href=&#34;#遇到一些问题&#34; class=&#34;headerlink&#34; title=&#34;遇到一些问题&#34;&gt;&lt;/a&gt;遇到一些问题&lt;/h2&gt;&lt;h3 id=&#34;ERROR-Permission-denied&#34;&gt;&lt;a href=&#34;#ERROR-Permission-denied&#34; class=&#34;headerlink&#34; title=&#34;ERROR:Permission denied&#34;&gt;&lt;/a&gt;ERROR:Permission denied&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;# 权限相关问题，激活环境时用以下代码
 source activate alas
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;errorconda-command-not-found&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#errorconda-command-not-found&#34;&gt;#&lt;/a&gt; ERROR:Conda command not found&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;# 打开系统变量
+&lt;h3 id=&#34;ERROR-Conda-command-not-found&#34;&gt;&lt;a href=&#34;#ERROR-Conda-command-not-found&#34; class=&#34;headerlink&#34; title=&#34;ERROR:Conda command not found&#34;&gt;&lt;/a&gt;ERROR:Conda command not found&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;# 打开系统变量
 vim ~/.bashrc
 
 # 添加系统变量
@@ -147,14 +132,12 @@ export PATH=/[path]/anaconda3/bin:$PATH # [path]为anaconda3的安装路径
 #重新加载配置
 source ~/.bashrc
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;errorxxx-is-not-a-trusted-or-secure-host&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#errorxxx-is-not-a-trusted-or-secure-host&#34;&gt;#&lt;/a&gt; ERROR:XXX is not a trusted or secure host&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;pip install 库包名 -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+&lt;h3 id=&#34;ERROR-XXX-is-not-a-trusted-or-secure-host&#34;&gt;&lt;a href=&#34;#ERROR-XXX-is-not-a-trusted-or-secure-host&#34; class=&#34;headerlink&#34; title=&#34;ERROR:XXX is not a trusted or secure host&#34;&gt;&lt;/a&gt;ERROR:XXX is not a trusted or secure host&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;pip install 库包名 -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
 # 这里将pip源换成清华源、阿里源等都适用。
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
-&lt;p&gt;感谢 Lme 大佬的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0xtZVN6aW5jL0F6dXJMYW5lQXV0b1NjcmlwdA==&#34;&gt;AzurLaneAutoScript&lt;/span&gt; &lt;s&gt;MAGA 让碧蓝航线再次伟大！&lt;/s&gt;&lt;/p&gt;
-&lt;p&gt;教程参考了群内大佬 &lt;strong&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3huLS1BbGFzLXl3Nms5ODdmLm1k&#34;&gt;Alas 部署.md&lt;/span&gt; - freesrz&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;感谢Lme大佬的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0xtZVN6aW5jL0F6dXJMYW5lQXV0b1NjcmlwdA==&#34;&gt;AzurLaneAutoScript&lt;/span&gt; &lt;del&gt;MAGA 让碧蓝航线再次伟大！&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;教程参考了群内大佬 &lt;strong&gt;Alas部署.md - freesrz&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;再一次感谢各位群大佬&lt;/p&gt;
  ]]></description>
         </item>
