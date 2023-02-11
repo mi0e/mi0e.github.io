@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?793228"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?691731"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?833406"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?746026"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?201201"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?300337"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?351258"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?870211"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?210659"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?723426"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?339708"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?770055"></li>
         </ul>
       </div>
     </header>
@@ -120,7 +120,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/10/01/P2911_%5BUSACO08OCT%5DBovine_Bones_G_(C)/" itemprop="url" title="P2911 [USACO08OCT]Bovine Bones G (C)"><img data-src="https://www.dmoe.cc/random.php?364450"></a>
+    <a href="/2021/10/01/P2911_%5BUSACO08OCT%5DBovine_Bones_G_(C)/" itemprop="url" title="P2911 [USACO08OCT]Bovine Bones G (C)"><img data-src="https://www.dmoe.cc/random.php?508671"></a>
   </div>
   <div class="info">
     
@@ -131,21 +131,34 @@
     </span>
     <time itemprop="dateCreated datePublished" datetime="2021-10-01T20:40:00+08:00">2021-10-01</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>766</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
 </div>
 
     <h3><a href="/2021/10/01/P2911_%5BUSACO08OCT%5DBovine_Bones_G_(C)/" itemprop="url" title="P2911 [USACO08OCT]Bovine Bones G (C)">P2911 [USACO08OCT]Bovine Bones G (C)</a></h3>
     <div class="excerpt">
         /*
-根据题意，总共3个骰子，每个骰子有 S个面，因为数据范围较小，可以直接选择暴力
-每次总和记录到相应的结构体(Sum = 10 -&amp;gt; struct[10])，结构体中保存两个数据：总和(num)、次数(times)
-最后使用快排(qsort)筛出次数(times)最小的目标
+	根据题意，总共3个骰子，每个骰子有 S个面，因为数据范围较小，可以直接选择暴力
+	每次总和记录到相应的结构体(Sum = 10 -&amp;gt; struct[10])，结构体中保存两个数据：总和(num)、次数(times)
+	最后使用快排(qsort)筛出次数(times)最小的目标
 */
 
 #include&amp;lt;stdio.h&amp;gt;
 
 struct A&amp;#123;		// 声明结构体，存放点数总和与次数
-int num;
-int times;
+	int num;
+	int times;
 &amp;#125;;
 
 int compare(const void *a, const void...
@@ -162,7 +175,7 @@ int compare(const void *a, const void...
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" itemprop="url" title="冒泡排序 C语言"><img data-src="https://www.dmoe.cc/random.php?19364"></a>
+    <a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" itemprop="url" title="冒泡排序 C语言"><img data-src="https://www.dmoe.cc/random.php?186325"></a>
   </div>
   <div class="info">
     
@@ -173,6 +186,19 @@ int compare(const void *a, const void...
     </span>
     <time itemprop="dateCreated datePublished" datetime="2021-09-11T17:10:00+08:00">2021-09-11</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>605</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
 </div>
 
     <h3><a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" itemprop="url" title="冒泡排序 C语言">冒泡排序 C语言</a></h3>
@@ -181,20 +207,20 @@ int compare(const void *a, const void...
 
 /* 交换函数
 void swap(int *pa, int *pb)&amp;#123;
-int temp;
-if(*pa &amp;gt; *pb)&amp;#123;
-temp = *pb;
-*pb = *pa;
-*pa = temp;
-&amp;#125;
+	int temp;
+	if(*pa &amp;gt; *pb)&amp;#123;
+		temp = *pb;
+		*pb = *pa;
+		*pa = temp;
+	&amp;#125;
 &amp;#125;
 */
 
 int main(void)&amp;#123;
-int a[] = &amp;#123;1, 3, 5, 2, 14, 8, 4 ,9&amp;#125;;
-int i, j;
-int temp;
-int num =...
+	int a[] = &amp;#123;1, 3, 5, 2, 14, 8, 4 ,9&amp;#125;;
+	int i, j;
+	int temp;
+	int...
     </div>
     <div class="meta footer">
       <span>
@@ -208,7 +234,7 @@ int num =...
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/09/10/%E6%B4%9B%E8%B0%B7%E9%A2%98%E5%BA%93%E7%88%AC%E8%99%AB/" itemprop="url" title="洛谷题库爬虫"><img data-src="https://www.dmoe.cc/random.php?742168"></a>
+    <a href="/2021/09/10/%E6%B4%9B%E8%B0%B7%E9%A2%98%E5%BA%93%E7%88%AC%E8%99%AB/" itemprop="url" title="洛谷题库爬虫"><img data-src="https://www.dmoe.cc/random.php?794434"></a>
   </div>
   <div class="info">
     
@@ -218,6 +244,19 @@ int num =...
       <i class="ic i-calendar"></i>
     </span>
     <time itemprop="dateCreated datePublished" datetime="2021-09-10T20:39:00+08:00">2021-09-10</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.8k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>2 分钟</span>
   </span>
 </div>
 
@@ -246,7 +285,7 @@ def...
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/09/04/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4%E9%97%AE%E9%A2%98%E7%BB%AD%EF%BC%88C%EF%BC%89/" itemprop="url" title="P1223 排队接水问题续（C）"><img data-src="https://www.dmoe.cc/random.php?354454"></a>
+    <a href="/2021/09/04/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4%E9%97%AE%E9%A2%98%E7%BB%AD%EF%BC%88C%EF%BC%89/" itemprop="url" title="P1223 排队接水问题续（C）"><img data-src="https://www.dmoe.cc/random.php?784243"></a>
   </div>
   <div class="info">
     
@@ -256,6 +295,19 @@ def...
       <i class="ic i-calendar"></i>
     </span>
     <time itemprop="dateCreated datePublished" datetime="2021-09-04T18:32:00+08:00">2021-09-04</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>780</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
   </span>
 </div>
 
@@ -267,16 +319,15 @@ const MAX = 1500;
 
 //创建结构体
 struct P&amp;#123;
-int id;
-int time;
+	int id;
+	int time;
 &amp;#125;;
 
 //排序函数
 int comp(const void *p1, const void *p2)
 &amp;#123;
-const struct P *ps1 = (struct P *)p1;
-const struct P *ps2 = (struct P *)p2;	
-if(ps1-&amp;gt;time !=...
+	const struct P *ps1 = (struct P *)p1;
+	const struct P *ps2 = (struct P...
     </div>
     <div class="meta footer">
       <span>
@@ -290,7 +341,7 @@ if(ps1-&amp;gt;time !=...
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/06/02/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4_python/" itemprop="url" title="P1223 排队接水 python"><img data-src="https://www.dmoe.cc/random.php?277358"></a>
+    <a href="/2021/06/02/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4_python/" itemprop="url" title="P1223 排队接水 python"><img data-src="https://www.dmoe.cc/random.php?202465"></a>
   </div>
   <div class="info">
     
@@ -300,6 +351,19 @@ if(ps1-&amp;gt;time !=...
       <i class="ic i-calendar"></i>
     </span>
     <time itemprop="dateCreated datePublished" datetime="2021-06-02T21:10:00+08:00">2021-06-02</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>412</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
   </span>
 </div>
 
@@ -328,7 +392,7 @@ sum1 +=...
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/06/01/%E5%9B%9E%E6%96%87%E8%B4%A8%E6%95%B0_python/" itemprop="url" title="回文质数 python"><img data-src="https://www.dmoe.cc/random.php?642836"></a>
+    <a href="/2021/06/01/%E5%9B%9E%E6%96%87%E8%B4%A8%E6%95%B0_python/" itemprop="url" title="回文质数 python"><img data-src="https://www.dmoe.cc/random.php?413273"></a>
   </div>
   <div class="info">
     
@@ -339,15 +403,28 @@ sum1 +=...
     </span>
     <time itemprop="dateCreated datePublished" datetime="2021-06-01T20:02:49+08:00">2021-06-01</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>311</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
 </div>
 
     <h3><a href="/2021/06/01/%E5%9B%9E%E6%96%87%E8%B4%A8%E6%95%B0_python/" itemprop="url" title="回文质数 python">回文质数 python</a></h3>
     <div class="excerpt">
-        洛谷卡了很长时间，最终还是没有AC，最后两个超时，可能是我回文判断选择用字符串的方式导致的,最后没办法了，选择下策直接打表AC。
+        洛谷卡了很长时间，最终还是没有 AC，最后两个超时，可能是我回文判断选择用字符串的方式导致的，最后没办法了，选择下策直接打表 AC。
 注：
 
-除 11 外没有偶数位的回文质数，那么[10000000,100000000] 这个区间根本不用枚举。
-只需要[2, sqrt(i) + 1]
+除 11 外没有偶数位的回文质数，那么 [10000000,100000000] 这个区间根本不用枚举。
+只需要 [2, sqrt (i) + 1]
 
 代码如下：
 import math
@@ -356,8 +433,7 @@ list1 = []
 if b &amp;gt; 10000000:
 b = 10000000
 for i in range(a, b + 1):
-if str(i) == str(i)[::-1]:
-for j...
+if str(i) ==...
     </div>
     <div class="meta footer">
       <span>
@@ -371,7 +447,7 @@ for j...
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/06/01/%E6%B4%9B%E8%B0%B7_P1106_%E5%88%A0%E6%95%B0%E9%97%AE%E9%A2%98_python%E8%A7%A3%E6%B3%95/" itemprop="url" title="洛谷 P1106 删数问题 python解法"><img data-src="https://www.dmoe.cc/random.php?893830"></a>
+    <a href="/2021/06/01/%E6%B4%9B%E8%B0%B7_P1106_%E5%88%A0%E6%95%B0%E9%97%AE%E9%A2%98_python%E8%A7%A3%E6%B3%95/" itemprop="url" title="洛谷 P1106 删数问题 python解法"><img data-src="https://www.dmoe.cc/random.php?409414"></a>
   </div>
   <div class="info">
     
@@ -382,14 +458,34 @@ for j...
     </span>
     <time itemprop="dateCreated datePublished" datetime="2021-06-01T19:48:00+08:00">2021-06-01</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>425</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
 </div>
 
     <h3><a href="/2021/06/01/%E6%B4%9B%E8%B0%B7_P1106_%E5%88%A0%E6%95%B0%E9%97%AE%E9%A2%98_python%E8%A7%A3%E6%B3%95/" itemprop="url" title="洛谷 P1106 删数问题 python解法">洛谷 P1106 删数问题 python解法</a></h3>
     <div class="excerpt">
-        第一次提交时，因为读题不清，3个WA。一开始理解为依次删除最大数，例50074897 2得500747，结果一直WA，然后被迫下载测试数据，发现正确答案为 4897。
-思索了一番，发现是个贪心问题,还是用 50074897 2 举例: (1) 5 &amp;gt; 0 , 删除5, 0074897 (2) 0 &amp;#x3D; 0 , 不动 0074897 (3) 0 &amp;#x3D; 0 , 同理 0074897 (5) 7 &amp;gt; 4 , 删除7，004897 (6) 去零整理，答案为 4897Python天下第一，代码如下：
+        第一次提交时，因为读题不清，3 个 WA。一开始理解为依次删除最大数，例 50074897 2 得 500747，结果一直 WA，然后被迫下载测试数据，发现正确答案为 4897。
+思索了一番，发现是个贪心问题，还是用 50074897 2 举例:
+(1) 5 &amp;gt; 0 , 删除 5, 0074897
+(2) 0 = 0 , 不动 0074897
+(3) 0 = 0 , 同理 0074897
+(5) 7 &amp;gt; 4 , 删除 7，004897
+(6) 去零整理，答案为 4897
+Python 天下第一，代码如下：
 m = input()
-n =...
+n = int(input())
+i...
     </div>
     <div class="meta footer">
       <span>
@@ -403,7 +499,7 @@ n =...
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" itemprop="url" title="贪婪算法之背包问题"><img data-src="https://www.dmoe.cc/random.php?689818"></a>
+    <a href="/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" itemprop="url" title="贪婪算法之背包问题"><img data-src="https://www.dmoe.cc/random.php?295142"></a>
   </div>
   <div class="info">
     
@@ -414,6 +510,19 @@ n =...
     </span>
     <time itemprop="dateCreated datePublished" datetime="2021-05-31T21:54:41+08:00">2021-05-31</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>472</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
 </div>
 
     <h3><a href="/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" itemprop="url" title="贪婪算法之背包问题">贪婪算法之背包问题</a></h3>
@@ -423,7 +532,8 @@ emt = []
 sum_coin = 0.0
 for i in range(coins):
 temp_weight, temp_coin = map(int, input().split())
-emt.append(&amp;#123;&amp;#39;coin&amp;#39;: temp_coin, &amp;#39;weight&amp;#39;: temp_weight, &amp;#39;avg&amp;#39;:...
+emt.append(&amp;#123;&#39;coin&#39;: temp_coin, &#39;weight&#39;: temp_weight, &#39;avg&#39;: temp_coin/temp_weight&amp;#125;)
+emt.sort(key=lambda emt_d:...
     </div>
     <div class="meta footer">
       <span>
@@ -437,7 +547,7 @@ emt.append(&amp;#123;&amp;#39;coin&amp;#39;: temp_coin, &amp;#39;weight&amp;#39;
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/04/06/python%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC_%E8%A3%85%E9%A5%B0%E5%99%A8/" itemprop="url" title="python基础之函数进阶之函数作为返回值&#x2F;装饰器"><img data-src="https://www.dmoe.cc/random.php?544175"></a>
+    <a href="/2021/04/06/python%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC_%E8%A3%85%E9%A5%B0%E5%99%A8/" itemprop="url" title="python基础之函数进阶之函数作为返回值&#x2F;装饰器"><img data-src="https://www.dmoe.cc/random.php?176846"></a>
   </div>
   <div class="info">
     
@@ -448,12 +558,26 @@ emt.append(&amp;#123;&amp;#39;coin&amp;#39;: temp_coin, &amp;#39;weight&amp;#39;
     </span>
     <time itemprop="dateCreated datePublished" datetime="2021-04-06T18:44:00+08:00">2021-04-06</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.7k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>2 分钟</span>
+  </span>
 </div>
 
     <h3><a href="/2021/04/06/python%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC_%E8%A3%85%E9%A5%B0%E5%99%A8/" itemprop="url" title="python基础之函数进阶之函数作为返回值&#x2F;装饰器">python基础之函数进阶之函数作为返回值/装饰器</a></h3>
     <div class="excerpt">
-        因为装饰器需要用到返回函数的知识，所以在这里将返回函数和装饰器合并讲解。什么是返回函数？
-我们知道，一个函数中return可以返回一个或者多个值，但其实，return不仅可以返回值，还可以返回函数。
+        因为装饰器需要用到返回函数的知识，所以在这里将返回函数和装饰器合并讲解。
+什么是返回函数？
+我们知道，一个函数中 return 可以返回一个或者多个值，但其实，return 不仅可以返回值，还可以返回函数。
 实例：
 def col(*arg):
 def sum():
@@ -478,7 +602,7 @@ print(a)#结果：15
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/03/31/%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B(D&amp;C%EF%BC%89/" itemprop="url" title="分而治之(D&amp;C）"><img data-src="https://www.dmoe.cc/random.php?405866"></a>
+    <a href="/2021/03/31/%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B(D&amp;C%EF%BC%89/" itemprop="url" title="分而治之(D&amp;C）"><img data-src="https://www.dmoe.cc/random.php?547467"></a>
   </div>
   <div class="info">
     
@@ -489,19 +613,32 @@ print(a)#结果：15
     </span>
     <time itemprop="dateCreated datePublished" datetime="2021-03-31T18:15:00+08:00">2021-03-31</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>452</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
 </div>
 
     <h3><a href="/2021/03/31/%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B(D&amp;C%EF%BC%89/" itemprop="url" title="分而治之(D&amp;C）">分而治之(D&amp;C）</a></h3>
     <div class="excerpt">
-        分而治之（Ｄ＆Ｃ）能将问题逐步分解，但并非可用于解决问题的算法，而是一种解决问题的思路。
-分而治之算法是递归的，使用分而治之(D&amp;amp;C)解决问题的过程包括两个步骤：
+        ** 分而治之（Ｄ＆Ｃ）** 能将问题逐步分解，但并非可用于解决问题的算法，而是一种解决问题的思路。
+分而治之算法是递归的，使用分而治之 (D&amp;amp;C) 解决问题的过程包括两个步骤：
 
 找出递归边界条件，这种条件必须尽可能简单
 不断地将问题分解（或者说缩小规模），直到符合递归边界条件。
 
 注意：假设要将一块地均匀地分成方块，确保分出的方块最大的条件，应采取Ｄ＆Ｃ策略：适用于这小块地的最大方块，也是适用于整块地的最大方案。原因可参考欧几里得算法。
 
-给定一个数字数组　arr &amp;#x3D; [2, 4,...
+给定一个数字数组　arr = [2, 4,...
     </div>
     <div class="meta footer">
       <span>
@@ -639,68 +776,10 @@ print(a)#结果：15
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Java/" title="分类于 Java">Java</a>
 </div>
 
-    <span><a href="/2021/10/26/c_str()%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="c_str()使用方法">c_str()使用方法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" title="冒泡排序 C语言">冒泡排序 C语言</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-</div>
-
-    <span><a href="/2022/11/10/DFS%E5%88%A4%E6%96%AD%E8%BF%B7%E5%AE%AB%E6%97%A0%E8%A7%A3/" title="DFS判断迷宫无解">DFS判断迷宫无解</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-</div>
-
-    <span><a href="/2021/06/01/%E6%B4%9B%E8%B0%B7_P1106_%E5%88%A0%E6%95%B0%E9%97%AE%E9%A2%98_python%E8%A7%A3%E6%B3%95/" title="洛谷 P1106 删数问题 python解法">洛谷 P1106 删数问题 python解法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
-</div>
-
-    <span><a href="/2022/09/20/cv%E5%9F%BA%E7%A1%80%E7%9B%B8%E5%85%B3%E4%B8%8Efloat_uint8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="cv基础相关与float&#x2F;uint8类型转换">cv基础相关与float/uint8类型转换</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-</div>
-
-    <span><a href="/2022/12/21/AcWing_116._%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F/" title="AcWing 116. 飞行员兄弟">AcWing 116. 飞行员兄弟</a></span>
+    <span><a href="/2020/12/24/ArrayList%E5%88%97%E8%A1%A8%E9%9B%86%E5%90%88/" title="ArrayList列表集合">ArrayList列表集合</a></span>
   </li>
 
       
@@ -710,31 +789,17 @@ print(a)#结果：15
 <a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
 </div>
 
-    <span><a href="/2020/03/18/%E6%99%BA%E6%85%A7%E6%A0%91%E5%8A%A9%E6%89%8B/" title="智慧树助手">智慧树助手</a></span>
+    <span><a href="/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/" title="随机头图">随机头图</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2023/01/08/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/" title="树的直径">树的直径</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E6%95%99%E7%A8%8B/Linux/" title="分类于 Linux">Linux</a>
-</div>
-
-    <span><a href="/2022/04/13/%E5%9F%BA%E4%BA%8ELinux-Anaconda%E9%83%A8%E7%BD%B2AzurLaneAutoScript/" title="基于Linux-Anaconda部署AzurLaneAutoScript">基于Linux-Anaconda部署AzurLaneAutoScript</a></span>
+    <span><a href="/2022/12/06/C++_%E6%8F%90%E5%8F%96%E5%B0%8F%E6%95%B0/" title="C++ 提取小数">C++ 提取小数</a></span>
   </li>
 
       
@@ -748,14 +813,80 @@ print(a)#结果：15
 <a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/10/28/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%A8%A1%E6%9D%BF/" title="二叉树模板">二叉树模板</a></span>
+    <span><a href="/2021/11/04/Vector_%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="Vector 二分查找">Vector 二分查找</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" title="小根堆">小根堆</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2023/01/30/%E5%8D%95%E8%B0%83%E6%A0%88%E3%80%81%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%EF%BC%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%EF%BC%89/" title="单调栈、滑动窗口（单调队列）">单调栈、滑动窗口（单调队列）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2021/10/23/C++_STL%E5%AE%B9%E5%99%A8%EF%BC%8811%E4%B8%AA%EF%BC%89/" title="C++ STL容器（11个）">C++ STL容器（11个）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2021/03/21/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="二分查找">二分查找</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%95%99%E7%A8%8B/Linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" title="卸载Linux图形桌面">卸载Linux图形桌面</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%85%B6%E4%BB%96/" title="分类于 其他">其他</a>
+</div>
+
+    <span><a href="/2022/06/06/Wolfram_Alpha%E5%BD%92%E6%A1%A3/" title="Wolfram Alpha归档">Wolfram Alpha归档</a></span>
   </li>
 
   </ul>
-</div>
-<div>
-  <h2>最新评论</h2>
-  <ul class="leancloud-recent-comment"></ul>
 </div>
 
         </div>

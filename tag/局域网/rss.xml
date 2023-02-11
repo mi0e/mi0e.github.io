@@ -7,8 +7,8 @@
         <language>zh-CN</language>
         <pubDate>Fri, 31 Dec 2021 12:15:00 +0800</pubDate>
         <lastBuildDate>Fri, 31 Dec 2021 12:15:00 +0800</lastBuildDate>
-        <category>BFS</category>
         <category>算法</category>
+        <category>BFS</category>
         <category>Resilio Sync</category>
         <category>unity</category>
         <category>WolfraAlpha</category>
@@ -16,9 +16,9 @@
         <category>github</category>
         <category>linux</category>
         <category>Open-cv</category>
+        <category>模板</category>
         <category>碧蓝航线</category>
         <category>Python</category>
-        <category>模板</category>
         <category>局域网</category>
         <category>阅读</category>
         <category>相册</category>
@@ -30,8 +30,8 @@
             <category>局域网</category>
             <pubDate>Fri, 31 Dec 2021 12:15:00 +0800</pubDate>
             <description><![CDATA[ &lt;ul&gt;
-&lt;li&gt;不在同一网段 &amp;#x2F; 网关不一致 （无法ping通）&lt;/li&gt;
-&lt;li&gt;防火墙拦截 （&lt;del&gt;不一定能ping通&lt;/del&gt;）&lt;/li&gt;
+&lt;li&gt;不在同一网段 / 网关不一致 （无法 ping 通）&lt;/li&gt;
+&lt;li&gt;防火墙拦截 （&lt;s&gt;不一定能 ping 通&lt;/s&gt;）&lt;/li&gt;
 &lt;/ul&gt;
  ]]></description>
         </item>

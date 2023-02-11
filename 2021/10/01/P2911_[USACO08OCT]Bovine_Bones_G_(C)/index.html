@@ -69,6 +69,21 @@ mioe = 書架 = AC总在意料外^^</title>
     <span class="text">发表于</span>
     <time itemprop="dateCreated datePublished" datetime="2021-10-01T20:40:00+08:00">2021-10-01</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>766</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
 </div>
 
 
@@ -100,12 +115,12 @@ mioe = 書架 = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?243953"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?783868"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?919851"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?9557"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?271140"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?254986"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?177468"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?331520"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?25240"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?786318"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?661549"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?386884"></li>
         </ul>
       </div>
     </header>
@@ -159,44 +174,44 @@ mioe = 書架 = AC总在意料外^^</title>
 
     <p><img data-src="https://i.loli.net/2021/10/01/dcA2xWtmfYQRaqD.png" alt="image.png"></p>
 <pre><code>/*
-    根据题意，总共3个骰子，每个骰子有 S个面，因为数据范围较小，可以直接选择暴力
-    每次总和记录到相应的结构体(Sum = 10 -&gt; struct[10])，结构体中保存两个数据：总和(num)、次数(times) 
-    最后使用快排(qsort)筛出次数(times)最小的目标 
+	根据题意，总共3个骰子，每个骰子有 S个面，因为数据范围较小，可以直接选择暴力
+	每次总和记录到相应的结构体(Sum = 10 -&gt; struct[10])，结构体中保存两个数据：总和(num)、次数(times) 
+	最后使用快排(qsort)筛出次数(times)最小的目标 
 */ 
 
 #include&lt;stdio.h&gt;
 
 struct A&#123;		// 声明结构体，存放点数总和与次数 
-    int num;
-    int times;
+	int num;
+	int times;
 &#125;;
 
 int compare(const void *a, const void *b)&#123;
-    struct A *p1 = (struct A *)a;
-    struct A *p2 = (struct A *)b;
-    if(p1-&gt;times == p2-&gt;times) return p1-&gt;num - p2-&gt;num;		// 题意：如果出现概率一样时输出最小总和 
-    return p2-&gt;times - p1-&gt;times;
+	struct A *p1 = (struct A *)a;
+	struct A *p2 = (struct A *)b;
+	if(p1-&gt;times == p2-&gt;times) return p1-&gt;num - p2-&gt;num;		// 题意：如果出现概率一样时输出最小总和 
+	return p2-&gt;times - p1-&gt;times;
 &#125;
 
 int main(void)&#123;
-    int s1, s2, s3, s, i, j, k;
-    struct A a[80];
-    scanf(&quot;%d %d %d&quot;, &amp;s1, &amp;s2, &amp;s3);
-    for(i = 0; i &lt; 81; i++)&#123;
-         a[i].times = 0;
-         a[i].num = 0;
-    &#125;
-    for(i = 1; i &lt;= s1; i++)
-        for(j = 1; j &lt;= s2; j++)
-            for(k = 1; k &lt;= s3; k++)&#123;
-                a[i + j + k].num = i + j + k;
-                a[i + j + k].times++;
-            &#125;
+	int s1, s2, s3, s, i, j, k;
+	struct A a[80];
+	scanf(&quot;%d %d %d&quot;, &amp;s1, &amp;s2, &amp;s3);
+	for(i = 0; i &lt; 81; i++)&#123;
+		 a[i].times = 0;
+		 a[i].num = 0;
+	&#125;
+	for(i = 1; i &lt;= s1; i++)
+		for(j = 1; j &lt;= s2; j++)
+			for(k = 1; k &lt;= s3; k++)&#123;
+				a[i + j + k].num = i + j + k;
+				a[i + j + k].times++;
+			&#125;
 
-    qsort(a, 80, sizeof(struct A), compare);
-    printf(&quot;%d&quot;, a[0].num);
+	qsort(a, 80, sizeof(struct A), compare);
+	printf(&quot;%d&quot;, a[0].num);
 
-    return 0;
+	return 0;
 &#125;
 </code></pre>
 
@@ -242,7 +257,7 @@ int main(void)&#123;
     <div class="item left">
       
 
-  <a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?417723" title="冒泡排序 C语言">
+  <a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?208601" title="冒泡排序 C语言">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>冒泡排序 C语言</h3>
@@ -252,7 +267,7 @@ int main(void)&#123;
     <div class="item right">
       
 
-  <a href="/2021/10/15/%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?657191" title="类型字符串提取数字">
+  <a href="/2021/10/15/%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?16673" title="类型字符串提取数字">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>类型字符串提取数字</h3>
@@ -382,16 +397,6 @@ int main(void)&#123;
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2023/02/07/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" title="最小生成树">最小生成树</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
 <a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
@@ -399,7 +404,37 @@ int main(void)&#123;
 <a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2021/06/01/%E6%B4%9B%E8%B0%B7_P1106_%E5%88%A0%E6%95%B0%E9%97%AE%E9%A2%98_python%E8%A7%A3%E6%B3%95/" title="洛谷 P1106 删数问题 python解法">洛谷 P1106 删数问题 python解法</a></span>
+    <span><a href="/2021/06/02/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4_python/" title="P1223 排队接水 python">P1223 排队接水 python</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2022/12/06/C++_%E6%8F%90%E5%8F%96%E5%B0%8F%E6%95%B0/" title="C++ 提取小数">C++ 提取小数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Python/" title="分类于 Python">Python</a>
+</div>
+
+    <span><a href="/2021/04/06/python%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC_%E8%A3%85%E9%A5%B0%E5%99%A8/" title="python基础之函数进阶之函数作为返回值&#x2F;装饰器">python基础之函数进阶之函数作为返回值/装饰器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%85%B6%E4%BB%96/" title="分类于 其他">其他</a>
+</div>
+
+    <span><a href="/2022/06/06/Wolfram_Alpha%E5%BD%92%E6%A1%A3/" title="Wolfram Alpha归档">Wolfram Alpha归档</a></span>
   </li>
 
       
@@ -407,9 +442,13 @@ int main(void)&#123;
     
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/" title="bot相关一">bot相关一</a></span>
+    <span><a href="/2021/11/04/Vector_%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="Vector 二分查找">Vector 二分查找</a></span>
   </li>
 
       
@@ -426,10 +465,12 @@ int main(void)&#123;
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2019/10/20/%E7%AE%80%E5%8D%95%E9%80%9A%E4%BF%97%E7%9A%84%E8%AF%B4%E4%B8%80%E4%B8%8B%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="简单通俗的说一下什么是面向过程和面向对象">简单通俗的说一下什么是面向过程和面向对象</a></span>
+    <span><a href="/2023/02/02/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/" title="字符串哈希">字符串哈希</a></span>
   </li>
 
       
@@ -438,42 +479,10 @@ int main(void)&#123;
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
 </div>
 
-    <span><a href="/2021/10/28/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%A8%A1%E6%9D%BF/" title="二叉树模板">二叉树模板</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2021/10/27/%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%98%B6%E4%B9%98%E6%A8%A1%E6%9D%BF(C++)/" title="高精度阶乘模板(C++)">高精度阶乘模板(C++)</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
-</div>
-
-    <span><a href="/2022/09/27/%E4%BC%BD%E9%A9%AC%E6%A0%A1%E6%AD%A3%E8%A1%A5%E5%81%BF/" title="伽马校正补偿">伽马校正补偿</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-</div>
-
-    <span><a href="/2022/06/23/%E8%A1%A8%E6%83%85%E5%8C%85%E6%8F%92%E4%BB%B6%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E/" title="表情包插件相关说明">表情包插件相关说明</a></span>
+    <span><a href="/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" title="DFS与BFS使用场景">DFS与BFS使用场景</a></span>
   </li>
 
       
@@ -485,14 +494,22 @@ int main(void)&#123;
 <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" title="AcWing 95. 费解的开关">AcWing 95. 费解的开关</a></span>
+    <span><a href="/2022/12/27/stringstream_%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC_int_double/" title="stringstream 字符串转 int&#x2F;double">stringstream 字符串转 int/double</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2022/12/25/%E5%9C%A8%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97%E9%87%8C%E5%A4%84%E7%90%86%E6%B5%AE%E7%82%B9%E6%95%B0/" title="在整数运算里处理浮点数">在整数运算里处理浮点数</a></span>
   </li>
 
   </ul>
-</div>
-<div>
-  <h2>最新评论</h2>
-  <ul class="leancloud-recent-comment"></ul>
 </div>
 
         </div>

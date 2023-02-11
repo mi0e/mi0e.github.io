@@ -69,6 +69,21 @@ mioe = 書架 = AC总在意料外^^</title>
     <span class="text">发表于</span>
     <time itemprop="dateCreated datePublished" datetime="2022-12-19T20:01:00+08:00">2022-12-19</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.4k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
 </div>
 
 
@@ -100,12 +115,12 @@ mioe = 書架 = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?278801"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?314478"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?565581"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?765713"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?821842"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?532369"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?509941"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?396374"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?546609"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?470295"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?493426"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?159269"></li>
         </ul>
       </div>
     </header>
@@ -151,8 +166,9 @@ mioe = 書架 = AC总在意料外^^</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p><strong>二维数组初始化<code>fill(arr[0], arr[0] + n * n, 0)</code></strong></p>
-<h3 id="DFS-超时"><a href="#DFS-超时" class="headerlink" title="DFS 超时"></a>DFS 超时</h3><pre><code class="c++">#include&lt;bits/stdc++.h&gt;
+    <p><strong>二维数组初始化 <code>fill(arr[0], arr[0] + n * n, 0)</code> </strong></p>
+<h3 id="dfs-超时"><a class="markdownIt-Anchor" href="#dfs-超时">#</a> DFS 超时</h3>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 int num[101][101] = &#123;0&#125;;
 int add[101][101] = &#123;0&#125;;
@@ -201,40 +217,41 @@ int main()
     return 0;
 &#125;
 </code></pre>
-<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><pre><code class="c++">#include&lt;bits/stdc++.h&gt;
+<h3 id="动态规划"><a class="markdownIt-Anchor" href="#动态规划">#</a> 动态规划</h3>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 
 int main()
 &#123;
-    int n;
-    cin &gt;&gt; n;
-    int num[n][n], dp[n][n];
-    fill(num[0], num[0] + n * n, 0);
-    fill(dp[0], dp[0] + n * n, 0);
-    for(int i = 0; i &lt; n; i++)&#123;
-        for(int j = 0; j &lt;= i; j++)&#123;
-            scanf(&quot;%d&quot;, &amp;num[i][j]);
-        &#125;
-    &#125;
-    dp[0][0] = num[0][0];
-    for(int i = 0; i &lt; n; i++)&#123;
-        for(int j = 0; j &lt;= i; j++)&#123;
-            if(i - 1 &gt;= 0 &amp;&amp; j - 1 &lt; 0)&#123;
-                dp[i][j] = dp[i - 1][j] + num[i][j];
-            &#125;else if(i - 1 &gt;= 0 &amp;&amp; j - 1 &gt;= 0)&#123;
-                dp[i][j] = max(dp[i - 1][j - 1] + num[i][j], dp[i - 1][j] + num[i][j]);
-            &#125;
-        &#125;
-    &#125;
+	int n;
+	cin &gt;&gt; n;
+	int num[n][n], dp[n][n];
+	fill(num[0], num[0] + n * n, 0);
+	fill(dp[0], dp[0] + n * n, 0);
+	for(int i = 0; i &lt; n; i++)&#123;
+		for(int j = 0; j &lt;= i; j++)&#123;
+			scanf(&quot;%d&quot;, &amp;num[i][j]);
+		&#125;
+	&#125;
+	dp[0][0] = num[0][0];
+	for(int i = 0; i &lt; n; i++)&#123;
+		for(int j = 0; j &lt;= i; j++)&#123;
+			if(i - 1 &gt;= 0 &amp;&amp; j - 1 &lt; 0)&#123;
+				dp[i][j] = dp[i - 1][j] + num[i][j];
+			&#125;else if(i - 1 &gt;= 0 &amp;&amp; j - 1 &gt;= 0)&#123;
+				dp[i][j] = max(dp[i - 1][j - 1] + num[i][j], dp[i - 1][j] + num[i][j]);
+			&#125;
+		&#125;
+	&#125;
 // 因为向左下走的次数与向右下走的次数相差不能超过 1
 // 所以答案一定在中间
-    if(n%2 == 0)&#123;
-        cout &lt;&lt; max(dp[n - 1][n / 2 - 1], dp[n - 1][n / 2]);
-    &#125;else&#123;
-        cout &lt;&lt; dp[n - 1][n / 2];
-    &#125;
+	if(n%2 == 0)&#123;
+		cout &lt;&lt; max(dp[n - 1][n / 2 - 1], dp[n - 1][n / 2]);
+	&#125;else&#123;
+		cout &lt;&lt; dp[n - 1][n / 2];
+	&#125;
 
-    return 0;
+	return 0;
 &#125;
 </code></pre>
 
@@ -280,7 +297,7 @@ int main()
     <div class="item left">
       
 
-  <a href="/2022/12/06/C++_%E6%8F%90%E5%8F%96%E5%B0%8F%E6%95%B0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?783240" title="C++ 提取小数">
+  <a href="/2022/12/06/C++_%E6%8F%90%E5%8F%96%E5%B0%8F%E6%95%B0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?870947" title="C++ 提取小数">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>C++ 提取小数</h3>
@@ -290,7 +307,7 @@ int main()
     <div class="item right">
       
 
-  <a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?261081" title="AcWing 95. 费解的开关">
+  <a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?279696" title="AcWing 95. 费解的开关">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>AcWing 95. 费解的开关</h3>
@@ -312,7 +329,7 @@ int main()
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#DFS-%E8%B6%85%E6%97%B6"><span class="toc-number">1.</span> <span class="toc-text">DFS 超时</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="toc-number">2.</span> <span class="toc-text">动态规划</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#dfs-%E8%B6%85%E6%97%B6"><span class="toc-number">1.</span> <span class="toc-text"> DFS 超时</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="toc-number">2.</span> <span class="toc-text"> 动态规划</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -421,12 +438,38 @@ int main()
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Java/" title="分类于 Java">Java</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2020/12/06/Java%E5%8A%A0%E5%BC%BA%E5%9E%8B%E5%BE%AA%E7%8E%AFfor_each/" title="Java加强型循环for each">Java加强型循环for each</a></span>
+    <span><a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" title="冒泡排序 C语言">冒泡排序 C语言</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" title="AcWing 95. 费解的开关">AcWing 95. 费解的开关</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="贪婪算法之背包问题">贪婪算法之背包问题</a></span>
   </li>
 
       
@@ -440,63 +483,51 @@ int main()
 <a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/10/15/%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/" title="类型字符串提取数字">类型字符串提取数字</a></span>
+    <span><a href="/2021/10/28/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%A8%A1%E6%9D%BF/" title="二叉树模板">二叉树模板</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
+<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
+</div>
+
+    <span><a href="/2022/09/20/cv%E5%9F%BA%E7%A1%80%E7%9B%B8%E5%85%B3%E4%B8%8Efloat_uint8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="cv基础相关与float&#x2F;uint8类型转换">cv基础相关与float/uint8类型转换</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E6%95%99%E7%A8%8B/Linux/" title="分类于 Linux">Linux</a>
-</div>
-
-    <span><a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" title="卸载Linux图形桌面">卸载Linux图形桌面</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
-</div>
-
-    <span><a href="/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/" title="随机头图">随机头图</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Python/" title="分类于 Python">Python</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
 </div>
 
-    <span><a href="/2021/03/21/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="二分查找">二分查找</a></span>
+    <span><a href="/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/" title="数组粘贴，初始化C++">数组粘贴，初始化C++</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Python/" title="分类于 Python">Python</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/03/28/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E7%9A%84%E9%98%B6%E6%A2%AF%E9%97%AE%E9%A2%98/" title="爱因斯坦的阶梯问题">爱因斯坦的阶梯问题</a></span>
+    <span><a href="/2021/10/27/%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%98%B6%E4%B9%98%E6%A8%A1%E6%9D%BF(C++)/" title="高精度阶乘模板(C++)">高精度阶乘模板(C++)</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Q-A/" title="分类于 Q/A">Q/A</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2021/11/01/img%E6%A0%87%E7%AD%BE%E5%9C%A8%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF/" title="img标签在谷歌浏览器下不显示错误信息">img标签在谷歌浏览器下不显示错误信息</a></span>
+    <span><a href="/2022/11/10/DFS%E5%88%A4%E6%96%AD%E8%BF%B7%E5%AE%AB%E6%97%A0%E8%A7%A3/" title="DFS判断迷宫无解">DFS判断迷宫无解</a></span>
   </li>
 
       
@@ -517,29 +548,15 @@ int main()
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-</div>
-
-    <span><a href="/2022/09/02/bot%E7%9B%B8%E5%85%B3%E4%B8%80/" title="bot相关一">bot相关一</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Java/" title="分类于 Java">Java</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2020/12/24/ArrayList%E5%88%97%E8%A1%A8%E9%9B%86%E5%90%88/" title="ArrayList列表集合">ArrayList列表集合</a></span>
+    <span><a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" title="小根堆">小根堆</a></span>
   </li>
 
   </ul>
-</div>
-<div>
-  <h2>最新评论</h2>
-  <ul class="leancloud-recent-comment"></ul>
 </div>
 
         </div>
