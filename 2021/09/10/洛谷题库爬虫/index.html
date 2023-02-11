@@ -74,7 +74,7 @@ mioe = 書架 = AC总在意料外^^</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>1.8k</span>
+    <span>1.5k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -82,7 +82,7 @@ mioe = 書架 = AC总在意料外^^</title>
       <i class="ic i-clock"></i>
     </span>
     <span class="text">阅读时长</span>
-    <span>2 分钟</span>
+    <span>1 分钟</span>
   </span>
 </div>
 
@@ -115,12 +115,12 @@ mioe = 書架 = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?617732"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?131137"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?983810"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?251632"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?781591"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?238593"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?136036"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?424945"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?665719"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?312586"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?218415"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?682478"></li>
         </ul>
       </div>
     </header>
@@ -169,92 +169,7 @@ mioe = 書架 = AC总在意料外^^</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <pre><code>import re
-import urllib.request, urllib.error
-import bs4
-import time
-
-
-baseUrl = &quot;https://www.luogu.com.cn/problem/P&quot;
-savePath = &quot;C:\\Users\\666\\Desktop\\p\\&quot;	# 存放位置
-maxn = 7000	# 最大爬取数
-
-
-def main():
-    print(&quot;计划爬取到P&#123;&#125;&quot;.format(maxn))
-    for i in range(1000, maxn + 1):
-        time.sleep(0.2)
-        try:
-            print(&quot;正在爬取P&#123;&#125;&quot;.format(i))
-            html = getHTML(baseUrl + str(i))
-            problemMD = getMD(html)
-            name = getName(html)
-            saveData(problemMD, &quot;P&quot; + str(i) + &quot; &quot; + name + &quot;.md&quot;)
-        except Exception:
-            pass
-        continue
-    print(&quot;爬取完毕&quot;)
-
-
-def getHTML(url):
-    headers = &#123;
-        &quot;user-agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5&quot;
-                      &quot;37.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36&quot;
-    &#125;
-    request = urllib.request.Request(url=url, headers=headers)
-    response = urllib.request.urlopen(request)
-    html = response.read().decode('utf-8')
-    return html
-
-
-def getName(html):
-    bs = bs4.BeautifulSoup(html, &quot;html.parser&quot;)
-    name = str(bs.select(&quot;h1&quot;)[0])
-    name = re.sub(&quot;&lt;h1&gt;&quot;, &quot;&quot;, name)
-    name = re.sub(&quot;&lt;/?[a-zA-Z]+[^&lt;&gt;]*&gt;&quot;, &quot;&quot;, name)
-    return name
-
-
-def getMD(html):
-    bs = bs4.BeautifulSoup(html, &quot;html.parser&quot;)
-    core = bs.select(&quot;article&quot;)[0]
-    md = str(core)
-    md = re.sub(&quot;&lt;h1&gt;&quot;, &quot;# &quot;, md)
-    md = re.sub(&quot;&lt;h2&gt;&quot;, &quot;## &quot;, md)
-    md = re.sub(&quot;&lt;h3&gt;&quot;, &quot;#### &quot;, md)
-    md = re.sub(&quot;&lt;/?[a-zA-Z]+[^&lt;&gt;]*&gt;&quot;, &quot;&quot;, md)
-    md = func(md)
-    return md
-
-
-def func(s: str) -&gt; str:
-    res = &quot;&quot;
-    left = True
-    for i in s:
-        if i != &quot;$&quot;:
-            res = res + i
-        elif left == True:
-            res = res + &quot;`&quot; + i
-            left = not (left)
-        else:
-            res = res + i + &quot;`&quot;
-            left = not (left)
-    return res
-
-
-def saveData(data, filename):
-    cfilename = savePath + filename
-    file = open(cfilename, &quot;w&quot;, encoding=&quot;utf-8&quot;)
-    for d in data:
-        file.writelines(d)
-    file.close()
-
-
-if __name__ == '__main__':
-    main()
-
-</code></pre>
-
+    <figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> re</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request<span class="token punctuation">,</span> urllib<span class="token punctuation">.</span>error</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">import</span> bs4</pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">import</span> time</pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre>baseUrl <span class="token operator">=</span> <span class="token string">"https://www.luogu.com.cn/problem/P"</span></pre></td></tr><tr><td data-num="8"></td><td><pre>savePath <span class="token operator">=</span> <span class="token string">"C:\\Users\\666\\Desktop\\p\\"</span>	<span class="token comment"># 存放位置</span></pre></td></tr><tr><td data-num="9"></td><td><pre>maxn <span class="token operator">=</span> <span class="token number">7000</span>	<span class="token comment"># 最大爬取数</span></pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"计划爬取到P&#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>maxn<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">,</span> maxn <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.2</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="16"></td><td><pre>        <span class="token keyword">try</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="17"></td><td><pre>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"正在爬取P&#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="18"></td><td><pre>            html <span class="token operator">=</span> getHTML<span class="token punctuation">(</span>baseUrl <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="19"></td><td><pre>            problemMD <span class="token operator">=</span> getMD<span class="token punctuation">(</span>html<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="20"></td><td><pre>            name <span class="token operator">=</span> getName<span class="token punctuation">(</span>html<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="21"></td><td><pre>            saveData<span class="token punctuation">(</span>problemMD<span class="token punctuation">,</span> <span class="token string">"P"</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">".md"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre>        <span class="token keyword">except</span> Exception<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="23"></td><td><pre>            <span class="token keyword">pass</span></pre></td></tr><tr><td data-num="24"></td><td><pre>        <span class="token keyword">continue</span></pre></td></tr><tr><td data-num="25"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"爬取完毕"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="26"></td><td><pre></pre></td></tr><tr><td data-num="27"></td><td><pre></pre></td></tr><tr><td data-num="28"></td><td><pre><span class="token keyword">def</span> <span class="token function">getHTML</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="29"></td><td><pre>    headers <span class="token operator">=</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="30"></td><td><pre>        <span class="token string">"user-agent"</span><span class="token punctuation">:</span> <span class="token string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5"</span></pre></td></tr><tr><td data-num="31"></td><td><pre>                      <span class="token string">"37.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"</span></pre></td></tr><tr><td data-num="32"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="33"></td><td><pre>    request <span class="token operator">=</span> urllib<span class="token punctuation">.</span>request<span class="token punctuation">.</span>Request<span class="token punctuation">(</span>url<span class="token operator">=</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="34"></td><td><pre>    response <span class="token operator">=</span> urllib<span class="token punctuation">.</span>request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span>request<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="35"></td><td><pre>    html <span class="token operator">=</span> response<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="36"></td><td><pre>    <span class="token keyword">return</span> html</pre></td></tr><tr><td data-num="37"></td><td><pre></pre></td></tr><tr><td data-num="38"></td><td><pre></pre></td></tr><tr><td data-num="39"></td><td><pre><span class="token keyword">def</span> <span class="token function">getName</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="40"></td><td><pre>    bs <span class="token operator">=</span> bs4<span class="token punctuation">.</span>BeautifulSoup<span class="token punctuation">(</span>html<span class="token punctuation">,</span> <span class="token string">"html.parser"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="41"></td><td><pre>    name <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>bs<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">"h1"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="42"></td><td><pre>    name <span class="token operator">=</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">"&lt;h1>"</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="43"></td><td><pre>    name <span class="token operator">=</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">"&lt;/?[a-zA-Z]+[^&lt;>]*>"</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="44"></td><td><pre>    <span class="token keyword">return</span> name</pre></td></tr><tr><td data-num="45"></td><td><pre></pre></td></tr><tr><td data-num="46"></td><td><pre></pre></td></tr><tr><td data-num="47"></td><td><pre><span class="token keyword">def</span> <span class="token function">getMD</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="48"></td><td><pre>    bs <span class="token operator">=</span> bs4<span class="token punctuation">.</span>BeautifulSoup<span class="token punctuation">(</span>html<span class="token punctuation">,</span> <span class="token string">"html.parser"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="49"></td><td><pre>    core <span class="token operator">=</span> bs<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">"article"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="50"></td><td><pre>    md <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>core<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="51"></td><td><pre>    md <span class="token operator">=</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">"&lt;h1>"</span><span class="token punctuation">,</span> <span class="token string">"# "</span><span class="token punctuation">,</span> md<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="52"></td><td><pre>    md <span class="token operator">=</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">"&lt;h2>"</span><span class="token punctuation">,</span> <span class="token string">"## "</span><span class="token punctuation">,</span> md<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="53"></td><td><pre>    md <span class="token operator">=</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">"&lt;h3>"</span><span class="token punctuation">,</span> <span class="token string">"#### "</span><span class="token punctuation">,</span> md<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="54"></td><td><pre>    md <span class="token operator">=</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">"&lt;/?[a-zA-Z]+[^&lt;>]*>"</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> md<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="55"></td><td><pre>    md <span class="token operator">=</span> func<span class="token punctuation">(</span>md<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="56"></td><td><pre>    <span class="token keyword">return</span> md</pre></td></tr><tr><td data-num="57"></td><td><pre></pre></td></tr><tr><td data-num="58"></td><td><pre></pre></td></tr><tr><td data-num="59"></td><td><pre><span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span>s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">str</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="60"></td><td><pre>    res <span class="token operator">=</span> <span class="token string">""</span></pre></td></tr><tr><td data-num="61"></td><td><pre>    left <span class="token operator">=</span> <span class="token boolean">True</span></pre></td></tr><tr><td data-num="62"></td><td><pre>    <span class="token keyword">for</span> i <span class="token keyword">in</span> s<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="63"></td><td><pre>        <span class="token keyword">if</span> i <span class="token operator">!=</span> <span class="token string">"$"</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="64"></td><td><pre>            res <span class="token operator">=</span> res <span class="token operator">+</span> i</pre></td></tr><tr><td data-num="65"></td><td><pre>        <span class="token keyword">elif</span> left <span class="token operator">==</span> <span class="token boolean">True</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="66"></td><td><pre>            res <span class="token operator">=</span> res <span class="token operator">+</span> <span class="token string">"`"</span> <span class="token operator">+</span> i</pre></td></tr><tr><td data-num="67"></td><td><pre>            left <span class="token operator">=</span> <span class="token keyword">not</span> <span class="token punctuation">(</span>left<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="68"></td><td><pre>        <span class="token keyword">else</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="69"></td><td><pre>            res <span class="token operator">=</span> res <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"`"</span></pre></td></tr><tr><td data-num="70"></td><td><pre>            left <span class="token operator">=</span> <span class="token keyword">not</span> <span class="token punctuation">(</span>left<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="71"></td><td><pre>    <span class="token keyword">return</span> res</pre></td></tr><tr><td data-num="72"></td><td><pre></pre></td></tr><tr><td data-num="73"></td><td><pre></pre></td></tr><tr><td data-num="74"></td><td><pre><span class="token keyword">def</span> <span class="token function">saveData</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="75"></td><td><pre>    cfilename <span class="token operator">=</span> savePath <span class="token operator">+</span> filename</pre></td></tr><tr><td data-num="76"></td><td><pre>    <span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>cfilename<span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="77"></td><td><pre>    <span class="token keyword">for</span> d <span class="token keyword">in</span> data<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="78"></td><td><pre>        <span class="token builtin">file</span><span class="token punctuation">.</span>writelines<span class="token punctuation">(</span>d<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="79"></td><td><pre>    <span class="token builtin">file</span><span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="80"></td><td><pre></pre></td></tr><tr><td data-num="81"></td><td><pre></pre></td></tr><tr><td data-num="82"></td><td><pre><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="83"></td><td><pre>    main<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure>
   </div>
 
    <footer>
@@ -297,7 +212,7 @@ if __name__ == '__main__':
     <div class="item left">
       
 
-  <a href="/2021/09/04/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4%E9%97%AE%E9%A2%98%E7%BB%AD%EF%BC%88C%EF%BC%89/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?171909" title="P1223 排队接水问题续（C）">
+  <a href="/2021/09/04/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4%E9%97%AE%E9%A2%98%E7%BB%AD%EF%BC%88C%EF%BC%89/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?312092" title="P1223 排队接水问题续（C）">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 算法</span>
   <h3>P1223 排队接水问题续（C）</h3>
@@ -307,7 +222,7 @@ if __name__ == '__main__':
     <div class="item right">
       
 
-  <a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?739877" title="冒泡排序 C语言">
+  <a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?365062" title="冒泡排序 C语言">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> C/C++</span>
   <h3>冒泡排序 C语言</h3>
@@ -437,10 +352,44 @@ if __name__ == '__main__':
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%95%99%E7%A8%8B/Linux/" title="分类于 Linux">Linux</a>
 </div>
 
-    <span><a href="/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/" title="git push出现Everything up-to-date">git push出现Everything up-to-date</a></span>
+    <span><a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" title="卸载Linux图形桌面">卸载Linux图形桌面</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" title="冒泡排序 C语言">冒泡排序 C语言</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Python/" title="分类于 Python">Python</a>
+</div>
+
+    <span><a href="/2021/04/06/python%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC_%E8%A3%85%E9%A5%B0%E5%99%A8/" title="python基础之函数进阶之函数作为返回值&#x2F;装饰器">python基础之函数进阶之函数作为返回值/装饰器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Q-A/" title="分类于 Q/A">Q/A</a>
+</div>
+
+    <span><a href="/2021/11/01/img%E6%A0%87%E7%AD%BE%E5%9C%A8%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF/" title="img标签在谷歌浏览器下不显示错误信息">img标签在谷歌浏览器下不显示错误信息</a></span>
   </li>
 
       
@@ -451,6 +400,40 @@ if __name__ == '__main__':
 </div>
 
     <span><a href="/2021/01/17/Resilio_Sync%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95_+_pro%E8%A7%A3%E9%94%81%E8%A1%A5%E4%B8%81/" title="Resilio Sync添加右键菜单 + pro解锁补丁">Resilio Sync添加右键菜单 + pro解锁补丁</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Unity/" title="分类于 Unity">Unity</a>
+</div>
+
+    <span><a href="/2022/10/27/Unity%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%BA%A2%E7%BB%BF%E7%81%AF%E8%87%AA%E5%8A%A8%E5%8F%98%E6%8D%A2/" title="Unity回调函数实现简单红绿灯自动变换">Unity回调函数实现简单红绿灯自动变换</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2021/10/15/%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/" title="类型字符串提取数字">类型字符串提取数字</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+</div>
+
+    <span><a href="/2022/05/25/linux%E6%8C%89%E5%90%8D%E6%9F%A5PID%E5%92%8C%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C/" title="linux按名查PID和后台运行">linux按名查PID和后台运行</a></span>
   </li>
 
       
@@ -469,84 +452,14 @@ if __name__ == '__main__':
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2023/01/30/%E5%8D%95%E8%B0%83%E6%A0%88%E3%80%81%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%EF%BC%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%EF%BC%89/" title="单调栈、滑动窗口（单调队列）">单调栈、滑动窗口（单调队列）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Python/" title="分类于 Python">Python</a>
-</div>
-
-    <span><a href="/2021/04/06/python%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC_%E8%A3%85%E9%A5%B0%E5%99%A8/" title="python基础之函数进阶之函数作为返回值&#x2F;装饰器">python基础之函数进阶之函数作为返回值/装饰器</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E6%95%99%E7%A8%8B/Linux/" title="分类于 Linux">Linux</a>
-</div>
-
-    <span><a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" title="卸载Linux图形桌面">卸载Linux图形桌面</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2022/12/27/stringstream_%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC_int_double/" title="stringstream 字符串转 int&#x2F;double">stringstream 字符串转 int/double</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/" title="数组粘贴，初始化C++">数组粘贴，初始化C++</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
-</div>
-
-    <span><a href="/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/" title="scanf、cin返回值与连续输入">scanf、cin返回值与连续输入</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Python/" title="分类于 Python">Python</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-</div>
-
-    <span><a href="/2021/03/21/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="二分查找">二分查找</a></span>
+    <span><a href="/2021/11/04/Vector_%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="Vector 二分查找">Vector 二分查找</a></span>
   </li>
 
   </ul>

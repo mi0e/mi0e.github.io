@@ -12,15 +12,15 @@
         <category>Resilio Sync</category>
         <category>unity</category>
         <category>WolfraAlpha</category>
-        <category>数论</category>
         <category>github</category>
+        <category>数论</category>
         <category>linux</category>
         <category>Open-cv</category>
-        <category>模板</category>
         <category>碧蓝航线</category>
         <category>Python</category>
         <category>局域网</category>
         <category>阅读</category>
+        <category>模板</category>
         <category>相册</category>
         <category>算法模板</category>
         <item>
@@ -29,20 +29,18 @@
             <link>http://example.com/2022/05/21/git_pull%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81%EF%BC%8C%E9%81%BF%E5%85%8D%E8%A6%86%E7%9B%96%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E7%9A%84%E4%BB%A3%E7%A0%81/</link>
             <category>github</category>
             <pubDate>Sat, 21 May 2022 10:46:00 +0800</pubDate>
-            <description><![CDATA[ &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;先将本地代码放到暂存区&lt;/p&gt;
-&lt;p&gt;git stash​​&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;将远程 github（码云等）上面的代码拉取下来&lt;/p&gt;
-&lt;p&gt;git pull​​&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;将第一步暂存区的代码放回本地&lt;/p&gt;
-&lt;p&gt;git stash pop​​&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
+            <description><![CDATA[ &lt;pre&gt;&lt;code&gt;# 1. 先将本地代码放到暂存区
+
+    git stash​​
+
+# 2. 将远程github（码云等）上面的代码拉取下来
+
+    git pull​​
+
+# 3. 将第一步暂存区的代码放回本地
+
+    git stash pop​​
+&lt;/code&gt;&lt;/pre&gt;
  ]]></description>
         </item>
     </channel>

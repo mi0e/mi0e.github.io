@@ -9,20 +9,20 @@
     <category term="Resilio Sync" />
     <category term="unity" />
     <category term="WolfraAlpha" />
-    <category term="数论" />
     <category term="github" />
+    <category term="数论" />
     <category term="linux" />
     <category term="Open-cv" />
-    <category term="模板" />
     <category term="碧蓝航线" />
     <category term="Python" />
     <category term="局域网" />
     <category term="阅读" />
+    <category term="模板" />
     <category term="相册" />
     <category term="算法模板" />
     <entry>
         <id>http://example.com/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/</id>
-        <title>随机头图</title>
+        <title>typecho-handsome 随机头图</title>
         <link rel="alternate" href="http://example.com/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;转载 https://blog.ruixiaolu.com/archives/29/&lt;/p&gt;
@@ -191,23 +191,5 @@ regsvr32 /i “&lt;em&gt;\ShellExtensionPath86_&lt;/em&gt;.dll”&lt;br&gt;
 </content>
         <category term="Resilio Sync" />
         <updated>2021-01-17T14:48:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>http://example.com/2020/03/18/%E6%99%BA%E6%85%A7%E6%A0%91%E5%8A%A9%E6%89%8B/</id>
-        <title>智慧树助手</title>
-        <link rel="alternate" href="http://example.com/2020/03/18/%E6%99%BA%E6%85%A7%E6%A0%91%E5%8A%A9%E6%89%8B/"/>
-        <content type="html">&lt;ol&gt;
-&lt;li&gt;先安装猴油插件&lt;/li&gt;
-&lt;li&gt;安装刷课插件&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ncmVhc3lmb3JrLm9yZy96aC1DTi9zY3JpcHRzLzM4MDUwNg==&#34;&gt;智慧树网课助手&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;之后打开智慧树网页版，即可自动激活脚本，开启刷课之旅&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;转载 CSDN：22 26 25&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-        <updated>2020-03-18T04:00:00.000Z</updated>
     </entry>
 </feed>

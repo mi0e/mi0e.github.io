@@ -115,12 +115,12 @@ mioe = 書架 = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?567948"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?400816"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?749597"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?255347"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?869220"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?218311"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?455043"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?839225"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?351876"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?997023"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?919170"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?710831"></li>
         </ul>
       </div>
     </header>
@@ -170,97 +170,24 @@ mioe = 書架 = AC总在意料外^^</title>
 <strong>什么是返回函数？</strong></p>
 <p>我们知道，一个函数中 return 可以返回一个或者多个值，但其实，return 不仅可以返回值，还可以返回函数。</p>
 <p>实例：</p>
-<pre><code>def col(*arg):
-    def sum():
-        res_sum=0
-        for i in arg:
-            res_sum=res_sum+i
-        return res_sum
-    return sum()
-a=col(1,2,3,4,5)
-print(a)#结果：15
-#a=col(1,2,3,4,5)  ==〉
-#即a=sum,并且arg=(1,2,3,4,5)也被传入sum中了
-#a()==sum()
-</code></pre>
-<p style="color:red">并且因为sum()定义在col()函数中，所以sum()继承了col()函数的局部变量和参数，这就是闭包。</p>（比如，col()的arg参数就被sum()所继承）
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">def</span> <span class="token function">col</span><span class="token punctuation">(</span><span class="token operator">*</span>arg<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>        <span class="token keyword">def</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="3"></td><td><pre>            res_sum<span class="token operator">=</span><span class="token number">0</span></pre></td></tr><tr><td data-num="4"></td><td><pre>            <span class="token keyword">for</span> i <span class="token keyword">in</span> arg<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="5"></td><td><pre>                res_sum<span class="token operator">=</span>res_sum<span class="token operator">+</span>i</pre></td></tr><tr><td data-num="6"></td><td><pre>            <span class="token keyword">return</span> res_sum</pre></td></tr><tr><td data-num="7"></td><td><pre>        <span class="token keyword">return</span> <span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    a<span class="token operator">=</span>col<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token comment">#结果：15</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token comment">#a=col(1,2,3,4,5)  ==〉</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token comment">#即 a=sum, 并且 arg=(1,2,3,4,5) 也被传入 sum 中了</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token comment">#a()==sum()</span></pre></td></tr></table></figure><p style="color:red">并且因为sum()定义在col()函数中，所以sum()继承了col()函数的局部变量和参数，这就是闭包。</p>（比如，col()的arg参数就被sum()所继承）
 <p>下面来看一个我在检验上面加红的句话时所碰到的一个问题：</p>
-<pre><code>#还是用上面这段代码。稍稍修改一下
-def col(*arg):
-    res_sum=0         #注意：将这句话移动到这里了
-    def sum():
-        for i in arg:
-            res_sum=res_sum+i
-        return res_sum
-    return sum()
-a=col(1,2,3,4,5)
-print(a())       
-
-结果报错：local variable 'res_sum' referenced before assignment
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">#还是用上面这段代码。稍稍修改一下</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">col</span><span class="token punctuation">(</span><span class="token operator">*</span>arg<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="3"></td><td><pre>        res_sum<span class="token operator">=</span><span class="token number">0</span>         <span class="token comment">#注意：将这句话移动到这里了</span></pre></td></tr><tr><td data-num="4"></td><td><pre>        <span class="token keyword">def</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="5"></td><td><pre>            <span class="token keyword">for</span> i <span class="token keyword">in</span> arg<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="6"></td><td><pre>                res_sum<span class="token operator">=</span>res_sum<span class="token operator">+</span>i</pre></td></tr><tr><td data-num="7"></td><td><pre>            <span class="token keyword">return</span> res_sum</pre></td></tr><tr><td data-num="8"></td><td><pre>        <span class="token keyword">return</span> <span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    a<span class="token operator">=</span>col<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr></table></figure><pre><code>结果报错：local variable 'res_sum' referenced before assignment
 #既然内部函数可以引用外部函数的变量，为什么res_sum没有被内#部函数所引用？
 </code></pre>
 <p>为啥会报错？我当时很是疑惑，后来终于弄明白，错在这句：res_sum=res_sum+i</p>
 <p style="color:blue">这句导致内部函数修改了外部函数的局部变量res_sum，这时，Python认为res_sum是内部函数的局部变量，而res_sum=res_sum+i之前并没有事先定义res_sum，所以当然会发生这种错误。</p>
 <p>所以，需要这样进行修改：</p>
-<pre><code>def col(*arg):
-    res_sum=0         
-    def sum():
-        for i in arg:
-            a=res_sum+i     #在内部函数中定义一个新的变量a
-        return a
-    return sum
-a=col(1,2,3,4,5)
-print(a())
-</code></pre>
-<hr>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">def</span> <span class="token function">col</span><span class="token punctuation">(</span><span class="token operator">*</span>arg<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>        res_sum<span class="token operator">=</span><span class="token number">0</span>         </pre></td></tr><tr><td data-num="3"></td><td><pre>        <span class="token keyword">def</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="4"></td><td><pre>            <span class="token keyword">for</span> i <span class="token keyword">in</span> arg<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="5"></td><td><pre>                a<span class="token operator">=</span>res_sum<span class="token operator">+</span>i     <span class="token comment">#在内部函数中定义一个新的变量 a</span></pre></td></tr><tr><td data-num="6"></td><td><pre>            <span class="token keyword">return</span> a</pre></td></tr><tr><td data-num="7"></td><td><pre>        <span class="token keyword">return</span> <span class="token builtin">sum</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    a<span class="token operator">=</span>col<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr></table></figure><hr>
 <p><strong>什么是装饰器？</strong></p>
-<pre><code>def login():
-    pass
-@login       #关键字@
-def open():
-    pass
-</code></pre>
-<p>上例就是一个装饰器的例子。</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">def</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>        <span class="token keyword">pass</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token decorator annotation punctuation">@login</span>       <span class="token comment">#关键字 @</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">open</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="5"></td><td><pre>        <span class="token keyword">pass</span></pre></td></tr></table></figure><p>上例就是一个装饰器的例子。</p>
 <p><strong>装饰器的作用：</strong><br>
 当我们定义了 open 函数后（可以帮助我们打开某个文件），过了一段时间，发现我们需要在进行 open 之前进行验证用户，如何在<p style="color:red">不修改 open 函数的条件下将 login 函数和 open 函数进行结合</p>，即：运行 open 之前先运行 login？ 这里就要用到装饰器。</p>
 <p>下面我们来看一个真正的装饰器的实例：</p>
-<pre><code>def login(fun):
-    def real_login():
-        print('please input your password')
-        return fun()
-    return real_login
-@login
-def open():
-    print('hello world')
-open()
-</code></pre>
-<p>@login 相当于 open=login (open)   也就是将 open 函数偷梁换柱了一番。</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">def</span> <span class="token function">login</span><span class="token punctuation">(</span>fun<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>        <span class="token keyword">def</span> <span class="token function">real_login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="3"></td><td><pre>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'please input your password'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre>            <span class="token keyword">return</span> fun<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>        <span class="token keyword">return</span> real_login</pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token decorator annotation punctuation">@login</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">open</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="8"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'hello world'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>@login 相当于 open=login (open)   也就是将 open 函数偷梁换柱了一番。</p>
 <p>当我们运行 open () 时：</p>
-<pre><code>open=login(open)　　#login(open)中的参数及局部变量：fun=open(原)　　#open=login(open)的返回值！
-　　#即：open=real_login　　
-open()=real_login()
-　　#因为real_login定义在login之中，所以继承其参数和局部变量
-　　#所以整体来看open()==login(open)+real_login()+open()
-</code></pre>
-<p>实现一个可以接受任意参数的装饰器：</p>
-<pre><code>def outer(func):
-    def inner(*args,**kwargs):
-        print('start')
-        r=func(*args,**kwargs)    # 这里func(*args,**kwargs)相当于f(a,b)
-        print('end')
-        return r
-    return inner
-
-@outer
-def f(a,b):
-    print(a+b)
-@outer
-def f2(a,b,c):
-    print(a+b+c)
-
-f(1,2)
-f2(1,2,3)
-#结果：
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token builtin">open</span><span class="token operator">=</span>login<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">)</span>　　</pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token comment">#login (open) 中的参数及局部变量：fun=open (原)　　</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token comment">#open=login (open) 的返回值！</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token comment">#即：open=real_login　　</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span>real_login<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    　　<span class="token comment">#因为 real_login 定义在 login 之中，所以继承其参数和局部变量</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    　　<span class="token comment">#所以整体来看 open ()==login (open)+real_login ()+open ()</span></pre></td></tr></table></figure><p>实现一个可以接受任意参数的装饰器：</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">def</span> <span class="token function">outer</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>        <span class="token keyword">def</span> <span class="token function">inner</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span><span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="3"></td><td><pre>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'start'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre>            r<span class="token operator">=</span>func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span><span class="token operator">**</span>kwargs<span class="token punctuation">)</span>    <span class="token comment"># 这里 func (*args,**kwargs) 相当于 f (a,b)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'end'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>            <span class="token keyword">return</span> r</pre></td></tr><tr><td data-num="7"></td><td><pre>        <span class="token keyword">return</span> inner</pre></td></tr><tr><td data-num="8"></td><td><pre>    </pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token decorator annotation punctuation">@outer</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token operator">+</span>b<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token decorator annotation punctuation">@outer</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">f2</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token operator">+</span>b<span class="token operator">+</span>c<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    </pre></td></tr><tr><td data-num="16"></td><td><pre>    f<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="17"></td><td><pre>    f2<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span></pre></td></tr></table></figure><pre><code>#结果：
 start
 3
 end
@@ -310,7 +237,7 @@ end</code></pre>
     <div class="item left">
       
 
-  <a href="/2021/03/31/%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B(D&amp;C%EF%BC%89/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?220679" title="分而治之(D&amp;C）">
+  <a href="/2021/03/31/%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B(D&amp;C%EF%BC%89/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?222773" title="分而治之(D&amp;C）">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 算法</span>
   <h3>分而治之(D&amp;C）</h3>
@@ -320,7 +247,7 @@ end</code></pre>
     <div class="item right">
       
 
-  <a href="/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?561588" title="贪婪算法之背包问题">
+  <a href="/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?347560" title="贪婪算法之背包问题">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> 算法</span>
   <h3>贪婪算法之背包问题</h3>
@@ -450,88 +377,10 @@ end</code></pre>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-</div>
-
-    <span><a href="/2021/03/31/%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B(D&amp;C%EF%BC%89/" title="分而治之(D&amp;C）">分而治之(D&amp;C）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
-</div>
-
-    <span><a href="/2022/09/27/%E4%BC%BD%E9%A9%AC%E6%A0%A1%E6%AD%A3%E8%A1%A5%E5%81%BF/" title="伽马校正补偿">伽马校正补偿</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E9%9A%8F%E7%AC%94/" title="分类于 随笔">随笔</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E9%9A%8F%E7%AC%94/%E7%9B%B8%E5%86%8C/" title="分类于 相册">相册</a>
-</div>
-
-    <span><a href="/2019/05/20/%E6%9C%89%E8%B6%A3%E7%9A%84%E7%81%B5%E9%AD%82%E7%BB%88%E4%BC%9A%E7%9B%B8%E9%81%87/" title="有趣的灵魂终会相遇">有趣的灵魂终会相遇</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2021/10/28/%E5%8D%A1%E5%B8%B8%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%8C%E8%82%86%E6%97%A0%E5%BF%8C%E6%83%AESTL/" title="卡常小技巧，肆无忌惮STL">卡常小技巧，肆无忌惮STL</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-</div>
-
-    <span><a href="/2023/02/03/%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%EF%BC%88%E9%82%BB%E6%8E%A5%E8%A1%A8%EF%BC%89/" title="树的深度优先遍历（邻接表）">树的深度优先遍历（邻接表）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
-</div>
-
-    <span><a href="/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/" title="随机头图">随机头图</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2021/10/23/C++_STL%E5%AE%B9%E5%99%A8%EF%BC%8811%E4%B8%AA%EF%BC%89/" title="C++ STL容器（11个）">C++ STL容器（11个）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 </div>
 
-    <span><a href="/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/" title="git push出现Everything up-to-date">git push出现Everything up-to-date</a></span>
+    <span><a href="/2020/12/06/%E5%BE%AA%E7%8E%AF%E3%80%81%E8%BF%AD%E4%BB%A3%E3%80%81%E9%81%8D%E5%8E%86%E5%92%8C%E9%80%92%E5%BD%92%E7%9A%84%E5%8C%BA%E5%88%AB/" title="循环、迭代、遍历和递归的区别">循环、迭代、遍历和递归的区别</a></span>
   </li>
 
       
@@ -543,7 +392,7 @@ end</code></pre>
 <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2023/02/02/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/" title="字符串哈希">字符串哈希</a></span>
+    <span><a href="/2022/12/30/%E7%BA%BF%E6%AE%B5%E6%A0%91___%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84_%E6%A8%A1%E6%9D%BF/" title="线段树 &#x2F; 树状数组 模板">线段树 / 树状数组 模板</a></span>
   </li>
 
       
@@ -557,7 +406,87 @@ end</code></pre>
 <a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="贪婪算法之背包问题">贪婪算法之背包问题</a></span>
+    <span><a href="/2021/06/01/%E5%9B%9E%E6%96%87%E8%B4%A8%E6%95%B0_python/" title="回文质数 python">回文质数 python</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
+</div>
+
+    <span><a href="/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/" title="数组粘贴，初始化C++">数组粘贴，初始化C++</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2020/12/24/ArrayList%E5%88%97%E8%A1%A8%E9%9B%86%E5%90%88/" title="ArrayList列表集合">ArrayList列表集合</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
+</div>
+
+    <span><a href="/2022/09/25/%E5%9B%BE%E7%89%87%E8%AE%A1%E7%AE%97/" title="图片计算">图片计算</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2021/03/21/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="二分查找">二分查找</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2023/02/07/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" title="最小生成树">最小生成树</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
+</div>
+
+    <span><a href="/2021/11/05/C++_STL%E4%B8%AD%E7%9A%84next_permutation/" title="C++ STL中的next_permutation">C++ STL中的next_permutation</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
+</div>
+
+    <span><a href="/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/" title="typecho-handsome 随机头图">typecho-handsome 随机头图</a></span>
   </li>
 
   </ul>

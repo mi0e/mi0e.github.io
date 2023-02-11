@@ -12,20 +12,20 @@
         <category>Resilio Sync</category>
         <category>unity</category>
         <category>WolfraAlpha</category>
-        <category>数论</category>
         <category>github</category>
+        <category>数论</category>
         <category>linux</category>
         <category>Open-cv</category>
-        <category>模板</category>
         <category>碧蓝航线</category>
         <category>Python</category>
         <category>局域网</category>
         <category>阅读</category>
+        <category>模板</category>
         <category>相册</category>
         <category>算法模板</category>
         <item>
             <guid isPermalink="true">http://example.com/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/</guid>
-            <title>随机头图</title>
+            <title>typecho-handsome 随机头图</title>
             <link>http://example.com/2022/09/25/%E9%9A%8F%E6%9C%BA%E5%A4%B4%E5%9B%BE/</link>
             <pubDate>Sun, 25 Sep 2022 19:05:00 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
@@ -193,24 +193,6 @@ regsvr32 /i “&lt;em&gt;\ShellExtensionPath86_&lt;/em&gt;.dll”&lt;br&gt;
 &lt;hr&gt;
 &lt;p&gt;[collapse status=“false” title=“补丁”] 补丁链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d2EubGFuem91cy5jb20vaVBIa0hraW1wdGU=&#34;&gt;蓝奏云&lt;/span&gt;&lt;br&gt;
 使用方法：设置 - 许可证 - 应用许可证 [/collapse]&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2020/03/18/%E6%99%BA%E6%85%A7%E6%A0%91%E5%8A%A9%E6%89%8B/</guid>
-            <title>智慧树助手</title>
-            <link>http://example.com/2020/03/18/%E6%99%BA%E6%85%A7%E6%A0%91%E5%8A%A9%E6%89%8B/</link>
-            <pubDate>Wed, 18 Mar 2020 12:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;ol&gt;
-&lt;li&gt;先安装猴油插件&lt;/li&gt;
-&lt;li&gt;安装刷课插件&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ncmVhc3lmb3JrLm9yZy96aC1DTi9zY3JpcHRzLzM4MDUwNg==&#34;&gt;智慧树网课助手&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;之后打开智慧树网页版，即可自动激活脚本，开启刷课之旅&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;转载 CSDN：22 26 25&lt;/p&gt;
-&lt;/blockquote&gt;
  ]]></description>
         </item>
     </channel>

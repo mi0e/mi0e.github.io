@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?203826"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?536601"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?902252"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?336643"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?254014"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?405719"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?354947"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?979025"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?175881"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?606583"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?958299"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?672137"></li>
         </ul>
       </div>
     </header>
@@ -120,7 +120,49 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/10/gcd%E4%B8%8E%E6%AC%A7%E6%8B%89%E8%B4%A8%E6%95%B0%E7%AD%9B%E6%A8%A1%E6%9D%BF/" itemprop="url" title="gcd与欧拉质数筛模板"><img data-src="https://www.dmoe.cc/random.php?587068"></a>
+    <a href="/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/" itemprop="url" title="离散化区间和"><img data-src="https://www.dmoe.cc/random.php?707007"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-01-20 19:29:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-01-20T19:29:00+08:00">2023-01-20</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>846</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/" itemprop="url" title="离散化区间和">离散化区间和</a></h3>
+    <div class="excerpt">
+        #include&amp;lt;bits/stdc++.h&gt;using namespace std;const int N = 100;typedef pair&amp;lt;int, int&gt; PII;int n, m;int arr[N], sum[N];vector&amp;lt;int&gt; alls;vector&amp;lt;PII&gt; add, query;// 查找 x 在 alls 数组中的下标int find(int x)&amp;#123;	int l = 0, r = alls.size() - 1, mid;	while(l &amp;lt;...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" title="算法"><i class="ic i-flag"></i>算法</a>
+      </span>
+    </div>
+    <a href="/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/" itemprop="url" title="离散化区间和" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/01/10/gcd%E4%B8%8E%E6%AC%A7%E6%8B%89%E8%B4%A8%E6%95%B0%E7%AD%9B%E6%A8%A1%E6%9D%BF/" itemprop="url" title="gcd与欧拉质数筛模板"><img data-src="https://www.dmoe.cc/random.php?21891"></a>
   </div>
   <div class="info">
     
@@ -150,16 +192,9 @@
     <div class="excerpt">
         # 欧几里得辗转相除法
 gcd(a,b)=gcd(b,a mod b)=⋅⋅⋅=gcd(n,0)gcd(a, b)=gcd(b,a\ mod\ b)=···=gcd(n,0)gcd(a,b)=gcd(b,a mod b)=⋅⋅⋅=gcd(n,0)
-int gcd(int a, int b)&amp;#123;
-	return b ? gcd(b, a % b) : a;
-&amp;#125;
-
-# 欧拉质数筛
+int gcd(int a, int b)&amp;#123;	return b ? gcd(b, a % b) : a;&amp;#125;# 欧拉质数筛
 # 时间复杂度O(n)O(n)O(n)
-const int N = 1e8 + 10;
-int p[N], cnt;
-bool st[N];
-void get_primes(int...
+const int N = 1e8 + 10;int p[N], cnt;bool st[N];void get_primes(int...
     </div>
     <div class="meta footer">
       <span>
@@ -173,7 +208,7 @@ void get_primes(int...
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/08/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/" itemprop="url" title="树的直径"><img data-src="https://www.dmoe.cc/random.php?483161"></a>
+    <a href="/2023/01/08/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/" itemprop="url" title="树的直径"><img data-src="https://www.dmoe.cc/random.php?353311"></a>
   </div>
   <div class="info">
     
@@ -230,7 +265,7 @@ void dfs(int idx, int root, int dst)&amp;#123;
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/05/BFS%E6%A8%A1%E6%9D%BF/" itemprop="url" title="BFS模板"><img data-src="https://www.dmoe.cc/random.php?452854"></a>
+    <a href="/2023/01/05/BFS%E6%A8%A1%E6%9D%BF/" itemprop="url" title="BFS模板"><img data-src="https://www.dmoe.cc/random.php?313608"></a>
   </div>
   <div class="info">
     
@@ -279,7 +314,7 @@ void dfs(int idx, int root, int dst)&amp;#123;
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/12/30/%E7%BA%BF%E6%AE%B5%E6%A0%91___%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84_%E6%A8%A1%E6%9D%BF/" itemprop="url" title="线段树 &#x2F; 树状数组 模板"><img data-src="https://www.dmoe.cc/random.php?433588"></a>
+    <a href="/2022/12/30/%E7%BA%BF%E6%AE%B5%E6%A0%91___%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84_%E6%A8%A1%E6%9D%BF/" itemprop="url" title="线段树 &#x2F; 树状数组 模板"><img data-src="https://www.dmoe.cc/random.php?682010"></a>
   </div>
   <div class="info">
     
@@ -334,7 +369,7 @@ void dfs(int idx, int root, int dst)&amp;#123;
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/12/27/stringstream_%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC_int_double/" itemprop="url" title="stringstream 字符串转 int&#x2F;double"><img data-src="https://www.dmoe.cc/random.php?230926"></a>
+    <a href="/2022/12/27/stringstream_%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC_int_double/" itemprop="url" title="stringstream 字符串转 int&#x2F;double"><img data-src="https://www.dmoe.cc/random.php?693744"></a>
   </div>
   <div class="info">
     
@@ -386,7 +421,7 @@ void dfs(int idx, int root, int dst)&amp;#123;
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/12/25/%E5%9C%A8%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97%E9%87%8C%E5%A4%84%E7%90%86%E6%B5%AE%E7%82%B9%E6%95%B0/" itemprop="url" title="在整数运算里处理浮点数"><img data-src="https://www.dmoe.cc/random.php?529388"></a>
+    <a href="/2022/12/25/%E5%9C%A8%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97%E9%87%8C%E5%A4%84%E7%90%86%E6%B5%AE%E7%82%B9%E6%95%B0/" itemprop="url" title="在整数运算里处理浮点数"><img data-src="https://www.dmoe.cc/random.php?924241"></a>
   </div>
   <div class="info">
     
@@ -430,7 +465,7 @@ n &amp;lt; m / 2 -&amp;gt; n * 2 &amp;lt; m
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/12/21/AcWing_116._%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F/" itemprop="url" title="AcWing 116. 飞行员兄弟"><img data-src="https://www.dmoe.cc/random.php?259222"></a>
+    <a href="/2022/12/21/AcWing_116._%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F/" itemprop="url" title="AcWing 116. 飞行员兄弟"><img data-src="https://www.dmoe.cc/random.php?864834"></a>
   </div>
   <div class="info">
     
@@ -483,7 +518,7 @@ n &amp;lt; m / 2 -&amp;gt; n * 2 &amp;lt; m
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" itemprop="url" title="AcWing 95. 费解的开关"><img data-src="https://www.dmoe.cc/random.php?263889"></a>
+    <a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" itemprop="url" title="AcWing 95. 费解的开关"><img data-src="https://www.dmoe.cc/random.php?378621"></a>
   </div>
   <div class="info">
     
@@ -530,7 +565,7 @@ n &amp;lt; m / 2 -&amp;gt; n * 2 &amp;lt; m
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/12/19/%E6%95%B0%E5%AD%97%E4%B8%89%E8%A7%92%E5%BD%A2_%EF%BC%88%E5%90%91%E5%B7%A6%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E4%B8%8E%E5%90%91%E5%8F%B3%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E7%9B%B8%E5%B7%AE%E4%B8%8D%E8%83%BD%E8%B6%85%E8%BF%87_1%EF%BC%89/" itemprop="url" title="数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）"><img data-src="https://www.dmoe.cc/random.php?403978"></a>
+    <a href="/2022/12/19/%E6%95%B0%E5%AD%97%E4%B8%89%E8%A7%92%E5%BD%A2_%EF%BC%88%E5%90%91%E5%B7%A6%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E4%B8%8E%E5%90%91%E5%8F%B3%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E7%9B%B8%E5%B7%AE%E4%B8%8D%E8%83%BD%E8%B6%85%E8%BF%87_1%EF%BC%89/" itemprop="url" title="数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）"><img data-src="https://www.dmoe.cc/random.php?720427"></a>
   </div>
   <div class="info">
     
@@ -560,15 +595,7 @@ n &amp;lt; m / 2 -&amp;gt; n * 2 &amp;lt; m
     <div class="excerpt">
         二维数组初始化 fill(arr[0], arr[0] + n * n, 0)
 # DFS 超时
-#include&amp;lt;bits/stdc++.h&amp;gt;
-using namespace std;
-int num[101][101] = &amp;#123;0&amp;#125;;
-int add[101][101] = &amp;#123;0&amp;#125;;
-int n;
-vector&amp;lt;int&amp;gt; ans;
-
-void dfs(int l, int r, int x, int y)&amp;#123;
-if(l &amp;gt; n/2 ||...
+#include&amp;lt;bits/stdc++.h&gt;using namespace std;int num[101][101] = &amp;#123;0&amp;#125;;int add[101][101] = &amp;#123;0&amp;#125;;int n;vector&amp;lt;int&gt; ans;void dfs(int l, int r, int x, int y)&amp;#123; if(l &gt; n/2 || r &gt;...
     </div>
     <div class="meta footer">
       <span>
@@ -576,59 +603,6 @@ if(l &amp;gt; n/2 ||...
       </span>
     </div>
     <a href="/2022/12/19/%E6%95%B0%E5%AD%97%E4%B8%89%E8%A7%92%E5%BD%A2_%EF%BC%88%E5%90%91%E5%B7%A6%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E4%B8%8E%E5%90%91%E5%8F%B3%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E7%9B%B8%E5%B7%AE%E4%B8%8D%E8%83%BD%E8%B6%85%E8%BF%87_1%EF%BC%89/" itemprop="url" title="数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2022/12/06/C++_%E6%8F%90%E5%8F%96%E5%B0%8F%E6%95%B0/" itemprop="url" title="C++ 提取小数"><img data-src="https://www.dmoe.cc/random.php?234656"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-12-06 17:45:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-12-06T17:45:00+08:00">2022-12-06</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>519</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2022/12/06/C++_%E6%8F%90%E5%8F%96%E5%B0%8F%E6%95%B0/" itemprop="url" title="C++ 提取小数">C++ 提取小数</a></h3>
-    <div class="excerpt">
-        OpenAi 写的一段代码，太值得学习了
-自己写 for 循环提取小数实在是太蠢了
-# copy
-std::copy(start, end, std::back_inserter(container));
-
-std::copy(iterator source_first, iterator source_end, iterator target_start);
-
-因为第三个参数要接受一个迭代器，所以需要使用 back_inserter(container)
-# regex
-pass
-string expression = &amp;quot;4.12*3.14&amp;quot;;
-regex...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/C-C/" itemprop="url" title="C&#x2F;C++"><i class="ic i-flag"></i>C/C++</a>
-      </span>
-    </div>
-    <a href="/2022/12/06/C++_%E6%8F%90%E5%8F%96%E5%B0%8F%E6%95%B0/" itemprop="url" title="C++ 提取小数" class="btn">more...</a>
   </div>
 </article>
 
@@ -756,24 +730,60 @@ regex...
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2023/01/05/BFS%E6%A8%A1%E6%9D%BF/" title="BFS模板">BFS模板</a></span>
+    <span><a href="/2021/10/01/P2911_%5BUSACO08OCT%5DBovine_Bones_G_(C)/" title="P2911 [USACO08OCT]Bovine Bones G (C)">P2911 [USACO08OCT]Bovine Bones G (C)</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/11/05/C++_STL%E4%B8%AD%E7%9A%84next_permutation/" title="C++ STL中的next_permutation">C++ STL中的next_permutation</a></span>
+    <span><a href="/2023/02/02/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/" title="字符串哈希">字符串哈希</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
+</div>
+
+    <span><a href="/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" title="DFS与BFS使用场景">DFS与BFS使用场景</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2021/03/28/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E7%9A%84%E9%98%B6%E6%A2%AF%E9%97%AE%E9%A2%98/" title="爱因斯坦的阶梯问题">爱因斯坦的阶梯问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+</div>
+
+    <span><a href="/2022/05/25/linux%E6%8C%89%E5%90%8D%E6%9F%A5PID%E5%92%8C%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C/" title="linux按名查PID和后台运行">linux按名查PID和后台运行</a></span>
   </li>
 
       
@@ -783,51 +793,17 @@ regex...
 <a href="/categories/%E5%85%B6%E4%BB%96/" title="分类于 其他">其他</a>
 </div>
 
-    <span><a href="/2022/10/31/WolfraAlpha_%E7%9F%A9%E9%98%B5%E7%9B%B8%E5%85%B3/" title="WolfraAlpha 矩阵相关">WolfraAlpha 矩阵相关</a></span>
+    <span><a href="/2022/06/06/Wolfram_Alpha%E5%BD%92%E6%A1%A3/" title="Wolfram Alpha归档">Wolfram Alpha归档</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
+<a href="/categories/Linux/" title="分类于 Linux">Linux</a>
 </div>
 
-    <span><a href="/2022/09/25/%E5%9B%BE%E7%89%87%E8%AE%A1%E7%AE%97/" title="图片计算">图片计算</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-</div>
-
-    <span><a href="/2021/06/01/%E6%B4%9B%E8%B0%B7_P1106_%E5%88%A0%E6%95%B0%E9%97%AE%E9%A2%98_python%E8%A7%A3%E6%B3%95/" title="洛谷 P1106 删数问题 python解法">洛谷 P1106 删数问题 python解法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2022/12/19/%E6%95%B0%E5%AD%97%E4%B8%89%E8%A7%92%E5%BD%A2_%EF%BC%88%E5%90%91%E5%B7%A6%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E4%B8%8E%E5%90%91%E5%8F%B3%E4%B8%8B%E8%B5%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E7%9B%B8%E5%B7%AE%E4%B8%8D%E8%83%BD%E8%B6%85%E8%BF%87_1%EF%BC%89/" title="数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）">数字三角形 （向左下走的次数与向右下走的次数相差不能超过 1）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
-</div>
-
-    <span><a href="/2022/09/24/%E5%9B%BE%E5%83%8F%E5%A1%AB%E5%85%85/" title="图像填充">图像填充</a></span>
+    <span><a href="/2022/05/21/git_pull%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81%EF%BC%8C%E9%81%BF%E5%85%8D%E8%A6%86%E7%9B%96%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E7%9A%84%E4%BB%A3%E7%A0%81/" title="git pull拉取仓库代码，避免覆盖本地修改的代码">git pull拉取仓库代码，避免覆盖本地修改的代码</a></span>
   </li>
 
       
@@ -835,13 +811,9 @@ regex...
     
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
 </div>
 
-    <span><a href="/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/" title="数组粘贴，初始化C++">数组粘贴，初始化C++</a></span>
+    <span><a href="/2022/10/04/%E5%9B%BE%E5%83%8F%E7%9A%84%E5%88%86%E6%AE%B5%E7%BA%BF%E6%80%A7%E7%82%B9%E8%BF%90%E7%AE%97/" title="图像的分段线性点运算">图像的分段线性点运算</a></span>
   </li>
 
       
@@ -851,21 +823,19 @@ regex...
 <a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2021/03/31/%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B(D&amp;C%EF%BC%89/" title="分而治之(D&amp;C）">分而治之(D&amp;C）</a></span>
+    <span><a href="/2022/11/10/DFS%E5%88%A4%E6%96%AD%E8%BF%B7%E5%AE%AB%E6%97%A0%E8%A7%A3/" title="DFS判断迷宫无解">DFS判断迷宫无解</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/05/31/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95%E4%B9%8B%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="贪婪算法之背包问题">贪婪算法之背包问题</a></span>
+    <span><a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" title="AcWing 95. 费解的开关">AcWing 95. 费解的开关</a></span>
   </li>
 
   </ul>
