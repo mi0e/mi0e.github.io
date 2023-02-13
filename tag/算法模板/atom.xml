@@ -9,17 +9,18 @@
     <category term="Resilio Sync" />
     <category term="unity" />
     <category term="WolfraAlpha" />
-    <category term="github" />
     <category term="数论" />
+    <category term="github" />
+    <category term="hexo" />
     <category term="linux" />
     <category term="Open-cv" />
     <category term="碧蓝航线" />
     <category term="Python" />
-    <category term="局域网" />
-    <category term="阅读" />
     <category term="模板" />
-    <category term="相册" />
+    <category term="局域网" />
     <category term="算法模板" />
+    <category term="相册" />
+    <category term="阅读" />
     <entry>
         <id>http://example.com/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/</id>
         <title>离散化区间和</title>

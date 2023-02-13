@@ -9,17 +9,18 @@
     <category term="Resilio Sync" />
     <category term="unity" />
     <category term="WolfraAlpha" />
-    <category term="github" />
     <category term="数论" />
+    <category term="github" />
+    <category term="hexo" />
     <category term="linux" />
     <category term="Open-cv" />
     <category term="碧蓝航线" />
     <category term="Python" />
-    <category term="局域网" />
-    <category term="阅读" />
     <category term="模板" />
-    <category term="相册" />
+    <category term="局域网" />
     <category term="算法模板" />
+    <category term="相册" />
+    <category term="阅读" />
     <entry>
         <id>http://example.com/2023/02/11/%E6%9E%84%E9%80%A0%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
         <title>Acwing 4808. 构造字符串</title>

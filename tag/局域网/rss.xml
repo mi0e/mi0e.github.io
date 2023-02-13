@@ -12,17 +12,18 @@
         <category>Resilio Sync</category>
         <category>unity</category>
         <category>WolfraAlpha</category>
-        <category>github</category>
         <category>数论</category>
+        <category>github</category>
+        <category>hexo</category>
         <category>linux</category>
         <category>Open-cv</category>
         <category>碧蓝航线</category>
         <category>Python</category>
-        <category>局域网</category>
-        <category>阅读</category>
         <category>模板</category>
-        <category>相册</category>
+        <category>局域网</category>
         <category>算法模板</category>
+        <category>相册</category>
+        <category>阅读</category>
         <item>
             <guid isPermalink="true">http://example.com/2021/12/31/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/</guid>
             <title>局域网搭建服务器无法访问</title>

@@ -5,24 +5,54 @@
         <link>http://example.com</link>
         <description>花店不开了，花继续开</description>
         <language>zh-CN</language>
-        <pubDate>Sat, 11 Feb 2023 23:37:25 +0800</pubDate>
-        <lastBuildDate>Sat, 11 Feb 2023 23:37:25 +0800</lastBuildDate>
+        <pubDate>Mon, 13 Feb 2023 18:19:31 +0800</pubDate>
+        <lastBuildDate>Mon, 13 Feb 2023 18:19:31 +0800</lastBuildDate>
         <category>算法</category>
         <category>BFS</category>
         <category>Resilio Sync</category>
         <category>unity</category>
         <category>WolfraAlpha</category>
-        <category>github</category>
         <category>数论</category>
+        <category>github</category>
+        <category>hexo</category>
         <category>linux</category>
         <category>Open-cv</category>
         <category>碧蓝航线</category>
         <category>Python</category>
-        <category>局域网</category>
-        <category>阅读</category>
         <category>模板</category>
-        <category>相册</category>
+        <category>局域网</category>
         <category>算法模板</category>
+        <category>相册</category>
+        <category>阅读</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2023/02/13/hexo%E7%9B%B8%E5%85%B3%EF%BC%88%E4%B8%80%EF%BC%89/</guid>
+            <title>hexo相关（一）</title>
+            <link>http://example.com/2023/02/13/hexo%E7%9B%B8%E5%85%B3%EF%BC%88%E4%B8%80%EF%BC%89/</link>
+            <category>hexo</category>
+            <pubDate>Mon, 13 Feb 2023 18:19:31 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;新建markdown文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#新建markdown文件&#34;&gt;#&lt;/a&gt; 新建 markdown 文件&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# cd 根目录
+hexo new [filename]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;清理原始文件配置文档&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#清理原始文件配置文档&#34;&gt;#&lt;/a&gt; 清理原始文件（配置文档）&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;hexo clean
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;渲染md&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#渲染md&#34;&gt;#&lt;/a&gt; 渲染 md&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;hexo g / hexo generate
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;部署到本地服务器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#部署到本地服务器&#34;&gt;#&lt;/a&gt; 部署到本地服务器&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;hexo s / hexo server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;部署到指定仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#部署到指定仓库&#34;&gt;#&lt;/a&gt; 部署到指定仓库&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;hexo d / hexo deploy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;生成algolia目录并推送&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#生成algolia目录并推送&#34;&gt;#&lt;/a&gt; 生成 algolia 目录并推送&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 需提前在git bash配置环境变量
+# export HEXO_ALGOLIA_INDEXING_KEY = API key
+hexo algolia
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2023/02/11/%E6%9E%84%E9%80%A0%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
             <title>Acwing 4808. 构造字符串</title>

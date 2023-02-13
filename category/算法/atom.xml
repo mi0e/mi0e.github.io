@@ -9,17 +9,18 @@
     <category term="Resilio Sync" />
     <category term="unity" />
     <category term="WolfraAlpha" />
-    <category term="github" />
     <category term="数论" />
+    <category term="github" />
+    <category term="hexo" />
     <category term="linux" />
     <category term="Open-cv" />
     <category term="碧蓝航线" />
     <category term="Python" />
-    <category term="局域网" />
-    <category term="阅读" />
     <category term="模板" />
-    <category term="相册" />
+    <category term="局域网" />
     <category term="算法模板" />
+    <category term="相册" />
+    <category term="阅读" />
     <entry>
         <id>http://example.com/2023/02/04/%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/</id>
         <title>最短路问题</title>
