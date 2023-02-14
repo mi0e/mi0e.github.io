@@ -4,13 +4,13 @@
     <title>書架 • Posts by &#34;算法&#34; category</title>
     <link href="http://example.com" />
     <updated>2023-02-04T10:51:00.000Z</updated>
-    <category term="算法" />
     <category term="BFS" />
-    <category term="Resilio Sync" />
+    <category term="算法" />
     <category term="unity" />
     <category term="WolfraAlpha" />
-    <category term="数论" />
+    <category term="Resilio Sync" />
     <category term="github" />
+    <category term="数论" />
     <category term="hexo" />
     <category term="linux" />
     <category term="Open-cv" />
@@ -18,9 +18,9 @@
     <category term="Python" />
     <category term="模板" />
     <category term="局域网" />
-    <category term="算法模板" />
-    <category term="相册" />
     <category term="阅读" />
+    <category term="相册" />
+    <category term="算法模板" />
     <entry>
         <id>http://example.com/2023/02/04/%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/</id>
         <title>最短路问题</title>

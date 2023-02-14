@@ -7,13 +7,13 @@
         <language>zh-CN</language>
         <pubDate>Sat, 04 Feb 2023 18:51:00 +0800</pubDate>
         <lastBuildDate>Sat, 04 Feb 2023 18:51:00 +0800</lastBuildDate>
-        <category>算法</category>
         <category>BFS</category>
-        <category>Resilio Sync</category>
+        <category>算法</category>
         <category>unity</category>
         <category>WolfraAlpha</category>
-        <category>数论</category>
+        <category>Resilio Sync</category>
         <category>github</category>
+        <category>数论</category>
         <category>hexo</category>
         <category>linux</category>
         <category>Open-cv</category>
@@ -21,9 +21,9 @@
         <category>Python</category>
         <category>模板</category>
         <category>局域网</category>
-        <category>算法模板</category>
-        <category>相册</category>
         <category>阅读</category>
+        <category>相册</category>
+        <category>算法模板</category>
         <item>
             <guid isPermalink="true">http://example.com/2023/02/04/%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/</guid>
             <title>最短路问题</title>

@@ -4,13 +4,13 @@
     <title>書架 • Posts by &#34;数论&#34; tag</title>
     <link href="http://example.com" />
     <updated>2023-01-10T08:04:00.000Z</updated>
-    <category term="算法" />
     <category term="BFS" />
-    <category term="Resilio Sync" />
+    <category term="算法" />
     <category term="unity" />
     <category term="WolfraAlpha" />
-    <category term="数论" />
+    <category term="Resilio Sync" />
     <category term="github" />
+    <category term="数论" />
     <category term="hexo" />
     <category term="linux" />
     <category term="Open-cv" />
@@ -18,9 +18,9 @@
     <category term="Python" />
     <category term="模板" />
     <category term="局域网" />
-    <category term="算法模板" />
-    <category term="相册" />
     <category term="阅读" />
+    <category term="相册" />
+    <category term="算法模板" />
     <entry>
         <id>http://example.com/2023/01/10/gcd%E4%B8%8E%E6%AC%A7%E6%8B%89%E8%B4%A8%E6%95%B0%E7%AD%9B%E6%A8%A1%E6%9D%BF/</id>
         <title>gcd与欧拉质数筛模板</title>

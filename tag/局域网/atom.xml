@@ -4,13 +4,13 @@
     <title>書架 • Posts by &#34;局域网&#34; tag</title>
     <link href="http://example.com" />
     <updated>2021-12-31T04:15:00.000Z</updated>
-    <category term="算法" />
     <category term="BFS" />
-    <category term="Resilio Sync" />
+    <category term="算法" />
     <category term="unity" />
     <category term="WolfraAlpha" />
-    <category term="数论" />
+    <category term="Resilio Sync" />
     <category term="github" />
+    <category term="数论" />
     <category term="hexo" />
     <category term="linux" />
     <category term="Open-cv" />
@@ -18,9 +18,9 @@
     <category term="Python" />
     <category term="模板" />
     <category term="局域网" />
-    <category term="算法模板" />
-    <category term="相册" />
     <category term="阅读" />
+    <category term="相册" />
+    <category term="算法模板" />
     <entry>
         <id>http://example.com/2021/12/31/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/</id>
         <title>局域网搭建服务器无法访问</title>
