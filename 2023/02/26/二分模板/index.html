@@ -27,12 +27,12 @@
   <meta name="keywords" content="算法" />
 
 
-<link rel="canonical" href="http://example.com/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/">
+<link rel="canonical" href="http://example.com/2023/02/26/%E4%BA%8C%E5%88%86%E6%A8%A1%E6%9D%BF/">
 
 
 
   <title>
-scanf、cin返回值与连续输入 - Q/A - 编程 |
+二分模板 - 算法 - C/C++ |
 mioe = 書架 = AC总在意料外^^</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -60,23 +60,23 @@ mioe = 書架 = AC总在意料外^^</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">scanf、cin返回值与连续输入
+  <h1 itemprop="name headline">二分模板
   </h1>
   
 <div class="meta">
-  <span class="item" title="创建时间：2021-11-04 19:43:00">
+  <span class="item" title="创建时间：2023-02-26 20:17:41">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">发表于</span>
-    <time itemprop="dateCreated datePublished" datetime="2021-11-04T19:43:00+08:00">2021-11-04</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-26T20:17:41+08:00">2023-02-26</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>222</span>
+    <span>144</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -117,12 +117,12 @@ mioe = 書架 = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?280699"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?306869"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?615387"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?481983"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?697266"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?838401"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?202647"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?130616"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?461596"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?152624"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?432522"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?882391"></li>
         </ul>
       </div>
     </header>
@@ -148,15 +148,15 @@ mioe = 書架 = AC总在意料外^^</title>
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
 <span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
-<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="item" rel="index" title="分类于 编程"><span itemprop="name">编程</span></a>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/C-C/" itemprop="item" rel="index" title="分类于 C/C++"><span itemprop="name">C/C++</span></a>
 <meta itemprop="position" content="1" /></span>
 <i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" itemprop="item" rel="index" title="分类于 Q/A"><span itemprop="name">Q/A</span></a>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/C-C/%E7%AE%97%E6%B3%95/" itemprop="item" rel="index" title="分类于 算法"><span itemprop="name">算法</span></a>
 <meta itemprop="position" content="2" /></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/26/%E4%BA%8C%E5%88%86%E6%A8%A1%E6%9D%BF/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/02.jpg">
@@ -171,16 +171,7 @@ mioe = 書架 = AC总在意料外^^</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p><code>scanf(&quot;%d %d&quot;, &amp;a, &amp;b);</code></p>
-<ul>
-<li><strong>a</strong> , <strong>b</strong> 都成功读入，返回值为 <strong>2</strong></li>
-<li>只有 <strong>a</strong> 成功读入，返回值为 <strong>1</strong></li>
-<li><strong>a</strong> 和 <strong>b</strong> 都未成功读入，返回值为 <strong>0</strong></li>
-<li>遇到 <strong>错误</strong> 或遇到 <strong>end of file</strong>，返回值为 <strong>EOF</strong></li>
-</ul>
-<p><code>std::cin &gt;&gt; a &gt;&gt; b; 	// cin 无返回值</code></p>
-<p><strong>连续输入参考模板：</strong></p>
-<figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>i<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">EOF</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">while</span><span class="token punctuation">(</span>cin <span class="token operator">>></span> i<span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">&#125;</span></pre></td></tr></table></figure>
+    <figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">// 1</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">while</span> <span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    mid <span class="token operator">=</span> l <span class="token operator">+</span> r <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">check</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span><span class="token punctuation">)</span> r <span class="token operator">=</span> mid<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token keyword">else</span> l <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token comment">// 2</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token keyword">while</span> <span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    mid <span class="token operator">=</span> l <span class="token operator">+</span> r <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">check</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span><span class="token punctuation">)</span> l <span class="token operator">=</span> mid<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token keyword">else</span> r <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure>
       <div class="tags">
           <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="ic i-tag"></i> 算法</a>
       </div>
@@ -194,7 +185,7 @@ mioe = 書架 = AC总在意料外^^</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2022-03-27 10:21:09" itemprop="dateModified" datetime="2022-03-27T10:21:09+08:00">2022-03-27</time>
+    <time title="修改时间：2023-02-26 20:19:28" itemprop="dateModified" datetime="2023-02-26T20:19:28+08:00">2023-02-26</time>
   </span>
 </div>
 
@@ -203,11 +194,11 @@ mioe = 書架 = AC总在意料外^^</title>
 <div id="copyright">
 <ul>
   <li class="author">
-    <strong>本文作者： </strong>mi0e <i class="ic i-at"><em>@</em></i>書架
+    <strong>本文作者： </strong> <i class="ic i-at"><em>@</em></i>書架
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="http://example.com/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/" title="scanf、cin返回值与连续输入">http://example.com/2021/11/04/scanf、cin返回值与连续输入/</a>
+    <a href="http://example.com/2023/02/26/%E4%BA%8C%E5%88%86%E6%A8%A1%E6%9D%BF/" title="二分模板">http://example.com/2023/02/26/二分模板/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -226,22 +217,14 @@ mioe = 書架 = AC总在意料外^^</title>
     <div class="item left">
       
 
-  <a href="/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?171815" title="关于矩阵对角线的相关表达">
+  <a href="/2023/02/26/%E6%8C%81%E4%B9%85%E5%8C%96%E9%9B%86%E5%90%88/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?648421" title="持久化集合">
   <span class="type">上一篇</span>
-  <span class="category"><i class="ic i-flag"></i> Q/A</span>
-  <h3>关于矩阵对角线的相关表达</h3>
+  <span class="category"><i class="ic i-flag"></i> 算法</span>
+  <h3>持久化集合</h3>
   </a>
 
     </div>
     <div class="item right">
-      
-
-  <a href="/2021/11/05/C++_STL%E4%B8%AD%E7%9A%84next_permutation/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?782323" title="C++ STL中的next_permutation">
-  <span class="type">下一篇</span>
-  <span class="category"><i class="ic i-flag"></i> Q/A</span>
-  <h3>C++ STL中的next_permutation</h3>
-  </a>
-
     </div>
 </div>
 
@@ -261,7 +244,7 @@ mioe = 書架 = AC总在意料外^^</title>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li><a href="/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" rel="bookmark" title="DFS与BFS使用场景">DFS与BFS使用场景</a></li><li><a href="/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/" rel="bookmark" title="关于矩阵对角线的相关表达">关于矩阵对角线的相关表达</a></li><li class="active"><a href="/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/" rel="bookmark" title="scanf、cin返回值与连续输入">scanf、cin返回值与连续输入</a></li>
+          <li><a href="/2023/02/14/%E5%B7%AE%E5%88%86/" rel="bookmark" title="一维&二维差分">一维&二维差分</a></li><li><a href="/2023/02/14/Acwing-89-%E5%91%A8%E8%B5%9B/" rel="bookmark" title="Acwing 89周赛">Acwing 89周赛</a></li><li><a href="/2023/02/15/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/" rel="bookmark" title="记忆化搜索">记忆化搜索</a></li><li><a href="/2023/02/18/%E6%A0%91%E7%9A%84%E9%87%8D%E6%9E%84/" rel="bookmark" title="树的重构">树的重构</a></li><li><a href="/2023/02/26/%E6%8C%81%E4%B9%85%E5%8C%96%E9%9B%86%E5%90%88/" rel="bookmark" title="持久化集合">持久化集合</a></li><li class="active"><a href="/2023/02/26/%E4%BA%8C%E5%88%86%E6%A8%A1%E6%9D%BF/" rel="bookmark" title="二分模板">二分模板</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -339,12 +322,10 @@ mioe = 書架 = AC总在意料外^^</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2021/11/04/%E5%85%B3%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A8%E8%BE%BE/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2021/11/05/C++_STL%E4%B8%AD%E7%9A%84next_permutation/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -366,6 +347,32 @@ mioe = 書架 = AC总在意料外^^</title>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2021/06/02/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4_python/" title="P1223 排队接水 python">P1223 排队接水 python</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2022/11/28/%E4%BD%8D%E8%BF%90%E7%AE%97/" title="位运算">位运算</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/Q-A/" title="分类于 Q/A">Q/A</a>
 </div>
 
@@ -377,40 +384,9 @@ mioe = 書架 = AC总在意料外^^</title>
     
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
 </div>
 
-    <span><a href="/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" title="DFS与BFS使用场景">DFS与BFS使用场景</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/02/18/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" title="快速排序">快速排序</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-</div>
-
-    <span><a href="/2021/03/31/%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B(D&amp;C%EF%BC%89/" title="分而治之(D&amp;C）">分而治之(D&amp;C）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Linux/" title="分类于 Linux">Linux</a>
-</div>
-
-    <span><a href="/2022/05/21/git_pull%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81%EF%BC%8C%E9%81%BF%E5%85%8D%E8%A6%86%E7%9B%96%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E7%9A%84%E4%BB%A3%E7%A0%81/" title="git pull拉取仓库代码，避免覆盖本地修改的代码">git pull拉取仓库代码，避免覆盖本地修改的代码</a></span>
+    <span><a href="/2019/10/20/%E7%AE%80%E5%8D%95%E9%80%9A%E4%BF%97%E7%9A%84%E8%AF%B4%E4%B8%80%E4%B8%8B%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="简单通俗的说一下什么是面向过程和面向对象">简单通俗的说一下什么是面向过程和面向对象</a></span>
   </li>
 
       
@@ -418,11 +394,9 @@ mioe = 書架 = AC总在意料外^^</title>
     
 <div class="breadcrumb">
 <a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/C-C/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2023/02/26/%E6%8C%81%E4%B9%85%E5%8C%96%E9%9B%86%E5%90%88/" title="持久化集合">持久化集合</a></span>
+    <span><a href="/2022/11/11/C++%E5%A4%A7%E4%BD%9C%E4%B8%9A/" title="C++大作业 高性能计算器">C++大作业 高性能计算器</a></span>
   </li>
 
       
@@ -434,41 +408,51 @@ mioe = 書架 = AC总在意料外^^</title>
 <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2023/01/08/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/" title="树的直径">树的直径</a></span>
+    <span><a href="/2023/01/30/%E5%8D%95%E8%B0%83%E6%A0%88%E3%80%81%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%EF%BC%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%EF%BC%89/" title="单调栈、滑动窗口（单调队列）">单调栈、滑动窗口（单调队列）</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
-</div>
-
-    <span><a href="/2022/09/25/%E5%9B%BE%E7%89%87%E8%AE%A1%E7%AE%97/" title="图片计算">图片计算</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/Python/" title="分类于 Python">Python</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2021/06/01/%E5%9B%9E%E6%96%87%E8%B4%A8%E6%95%B0_python/" title="回文质数 python">回文质数 python</a></span>
+    <span><a href="/2021/03/31/%E9%80%92%E5%BD%92_-_%E6%95%B0%E7%BB%84%E7%B4%AF%E5%8A%A0/" title="递归 - 数组累加">递归 - 数组累加</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2022/05/25/linux%E6%8C%89%E5%90%8D%E6%9F%A5PID%E5%92%8C%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C/" title="linux按名查PID和后台运行">linux按名查PID和后台运行</a></span>
+    <span><a href="/2023/02/02/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/" title="字符串哈希">字符串哈希</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%85%B6%E4%BB%96/" title="分类于 其他">其他</a>
+</div>
+
+    <span><a href="/2022/10/31/WolfraAlpha_%E7%9F%A9%E9%98%B5%E7%9B%B8%E5%85%B3/" title="WolfraAlpha 矩阵相关">WolfraAlpha 矩阵相关</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2023/01/20/%E7%A6%BB%E6%95%A3%E5%8C%96%E5%8C%BA%E9%97%B4%E5%92%8C/" title="离散化区间和">离散化区间和</a></span>
   </li>
 
   </ul>
@@ -495,7 +479,7 @@ mioe = 書架 = AC总在意料外^^</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2021/11/04/scanf、cin返回值与连续输入/',
+    path: '2023/02/26/二分模板/',
     favicon: {
       show: "（●´3｀●）やれやれだぜ",
       hide: "(´Д｀)大変だ！"
