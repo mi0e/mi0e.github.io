@@ -5,8 +5,8 @@
         <link>http://example.com</link>
         <description>花店不开了，花继续开</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 26 Feb 2023 20:17:41 +0800</pubDate>
-        <lastBuildDate>Sun, 26 Feb 2023 20:17:41 +0800</lastBuildDate>
+        <pubDate>Tue, 28 Feb 2023 20:56:51 +0800</pubDate>
+        <lastBuildDate>Tue, 28 Feb 2023 20:56:51 +0800</lastBuildDate>
         <category>BFS</category>
         <category>算法</category>
         <category>Resilio Sync</category>
@@ -24,6 +24,13 @@
         <category>相册</category>
         <category>github</category>
         <category>算法模板</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2023/02/28/%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0-%E4%BC%A0%E7%BA%B8%E6%9D%A1/</guid>
+            <title>方格取数-传纸条</title>
+            <link>http://example.com/2023/02/28/%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0-%E4%BC%A0%E7%BA%B8%E6%9D%A1/</link>
+            <pubDate>Tue, 28 Feb 2023 20:56:51 +0800</pubDate>
+            <description><![CDATA[  ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2023/02/26/%E4%BA%8C%E5%88%86%E6%A8%A1%E6%9D%BF/</guid>
             <title>二分模板</title>
