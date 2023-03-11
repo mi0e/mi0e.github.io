@@ -4,13 +4,14 @@
     <title>書架 • Posts by &#34;其他&#34; category</title>
     <link href="http://example.com" />
     <updated>2022-10-31T08:28:00.000Z</updated>
-    <category term="BFS" />
     <category term="算法" />
+    <category term="BFS" />
     <category term="Resilio Sync" />
     <category term="unity" />
     <category term="WolfraAlpha" />
     <category term="数论" />
     <category term="hexo" />
+    <category term="github" />
     <category term="linux" />
     <category term="Open-cv" />
     <category term="模板" />
@@ -19,7 +20,6 @@
     <category term="局域网" />
     <category term="阅读" />
     <category term="相册" />
-    <category term="github" />
     <category term="算法模板" />
     <entry>
         <id>http://example.com/2022/10/31/WolfraAlpha_%E7%9F%A9%E9%98%B5%E7%9B%B8%E5%85%B3/</id>

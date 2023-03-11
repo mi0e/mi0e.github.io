@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?499560"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?803427"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?454088"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?478566"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?970128"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?212172"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?502359"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?395126"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?430700"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?237247"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?504979"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?515097"></li>
         </ul>
       </div>
     </header>
@@ -121,7 +121,93 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/03/02/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" itemprop="url" title="拓扑排序"><img data-src="https://www.dmoe.cc/random.php?888111"></a>
+    <a href="/2023/03/11/%E4%BA%8C%E5%88%86%E5%9B%BE/" itemprop="url" title="二分图"><img data-src="https://www.dmoe.cc/random.php?839297"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-11 18:11:48">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-11T18:11:48+08:00">2023-03-11</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/03/11/%E4%BA%8C%E5%88%86%E5%9B%BE/" itemprop="url" title="二分图">二分图</a></h3>
+    <div class="excerpt">
+        # 染色法
+#include &amp;lt;bits/stdc++.h&gt;using namespace std;const int N = 1e2 + 10, M = 2 * N;int h[N], e[M], ne[M], idx;int color[N];int n, m;void add(int a, int b)&amp;#123; e[idx] = b, ne[idx] = h[a], h[a] = idx++;&amp;#125;bool dfs(int u, int c)&amp;#123; color[u] = c; for (int i = h[u]; ~i; i =...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" itemprop="url" title="C&#x2F;C++"><i class="ic i-flag"></i>C/C++</a>
+      </span>
+    </div>
+    <a href="/2023/03/11/%E4%BA%8C%E5%88%86%E5%9B%BE/" itemprop="url" title="二分图" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/03/11/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" itemprop="url" title="最近公共祖先"><img data-src="https://www.dmoe.cc/random.php?608910"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-11 18:11:21">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-11T18:11:21+08:00">2023-03-11</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>647</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/03/11/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" itemprop="url" title="最近公共祖先">最近公共祖先</a></h3>
+    <div class="excerpt">
+        # 爬坡法
+#include &amp;lt;bits/stdc++.h&gt;using namespace std;const int N = 1e3 + 10;int l[N], r[N], p[N];int dist[N];int n, m, t;void dfs(int x, int d) &amp;#123; dist[x] = d; if (l[x] != -1) dfs(l[x], d + 1); if (r[x] != -1) dfs(r[x], d + 1);&amp;#125;int get_lca(int a, int b) &amp;#123; if (dist[a]...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" itemprop="url" title="C&#x2F;C++"><i class="ic i-flag"></i>C/C++</a>
+      </span>
+    </div>
+    <a href="/2023/03/11/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" itemprop="url" title="最近公共祖先" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/03/02/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" itemprop="url" title="拓扑排序"><img data-src="https://www.dmoe.cc/random.php?292221"></a>
   </div>
   <div class="info">
     
@@ -163,7 +249,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/28/%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0-%E4%BC%A0%E7%BA%B8%E6%9D%A1/" itemprop="url" title="方格取数-传纸条"><img data-src="https://www.dmoe.cc/random.php?517266"></a>
+    <a href="/2023/02/28/%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0-%E4%BC%A0%E7%BA%B8%E6%9D%A1/" itemprop="url" title="方格取数-传纸条"><img data-src="https://www.dmoe.cc/random.php?970612"></a>
   </div>
   <div class="info">
     
@@ -178,7 +264,7 @@
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>0</span>
+    <span>1.5k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -191,7 +277,14 @@
 
     <h3><a href="/2023/02/28/%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0-%E4%BC%A0%E7%BA%B8%E6%9D%A1/" itemprop="url" title="方格取数-传纸条">方格取数-传纸条</a></h3>
     <div class="excerpt">
-        
+        # [NOIP2008 提高组] 传纸条
+# 题目描述
+小渊和小轩是好朋友也是同班同学，他们在一起总有谈不完的话题。一次素质拓展活动中，班上同学安排坐成一个 mmm 行 nnn 列的矩阵，而小渊和小轩被安排在矩阵对角线的两端，因此，他们就无法直接交谈了。幸运的是，他们可以通过传纸条来进行交流。纸条要经由许多同学传到对方手里，小渊坐在矩阵的左上角，坐标 (1,1)(1,1)(1,1)，小轩坐在矩阵的右下角，坐标...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/C-C/%E7%AE%97%E6%B3%95/" itemprop="url" title="算法"><i class="ic i-flag"></i>算法</a>
+      </span>
     </div>
     <a href="/2023/02/28/%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0-%E4%BC%A0%E7%BA%B8%E6%9D%A1/" itemprop="url" title="方格取数-传纸条" class="btn">more...</a>
   </div>
@@ -200,7 +293,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/26/%E4%BA%8C%E5%88%86%E6%A8%A1%E6%9D%BF/" itemprop="url" title="二分模板"><img data-src="https://www.dmoe.cc/random.php?575723"></a>
+    <a href="/2023/02/26/%E4%BA%8C%E5%88%86%E6%A8%A1%E6%9D%BF/" itemprop="url" title="二分模板"><img data-src="https://www.dmoe.cc/random.php?832337"></a>
   </div>
   <div class="info">
     
@@ -242,7 +335,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/26/%E6%8C%81%E4%B9%85%E5%8C%96%E9%9B%86%E5%90%88/" itemprop="url" title="持久化集合"><img data-src="https://www.dmoe.cc/random.php?974023"></a>
+    <a href="/2023/02/26/%E6%8C%81%E4%B9%85%E5%8C%96%E9%9B%86%E5%90%88/" itemprop="url" title="持久化集合"><img data-src="https://www.dmoe.cc/random.php?253887"></a>
   </div>
   <div class="info">
     
@@ -286,7 +379,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/18/%E6%A0%91%E7%9A%84%E9%87%8D%E6%9E%84/" itemprop="url" title="树的重构"><img data-src="https://www.dmoe.cc/random.php?40672"></a>
+    <a href="/2023/02/18/%E6%A0%91%E7%9A%84%E9%87%8D%E6%9E%84/" itemprop="url" title="树的重构"><img data-src="https://www.dmoe.cc/random.php?352328"></a>
   </div>
   <div class="info">
     
@@ -328,7 +421,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/18/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" itemprop="url" title="快速排序"><img data-src="https://www.dmoe.cc/random.php?352944"></a>
+    <a href="/2023/02/18/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" itemprop="url" title="快速排序"><img data-src="https://www.dmoe.cc/random.php?757219"></a>
   </div>
   <div class="info">
     
@@ -365,7 +458,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/15/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/" itemprop="url" title="记忆化搜索"><img data-src="https://www.dmoe.cc/random.php?521803"></a>
+    <a href="/2023/02/15/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/" itemprop="url" title="记忆化搜索"><img data-src="https://www.dmoe.cc/random.php?33545"></a>
   </div>
   <div class="info">
     
@@ -409,7 +502,7 @@ Michael 喜欢滑雪。这并不奇怪，因为滑雪的确很刺激。可是为
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/14/Acwing-89-%E5%91%A8%E8%B5%9B/" itemprop="url" title="Acwing 89周赛"><img data-src="https://www.dmoe.cc/random.php?79526"></a>
+    <a href="/2023/02/14/Acwing-89-%E5%91%A8%E8%B5%9B/" itemprop="url" title="Acwing 89周赛"><img data-src="https://www.dmoe.cc/random.php?783749"></a>
   </div>
   <div class="info">
     
@@ -450,111 +543,6 @@ Michael 喜欢滑雪。这并不奇怪，因为滑雪的确很刺激。可是为
   </div>
 </article>
 
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/02/14/%E5%B7%AE%E5%88%86/" itemprop="url" title="一维&amp;二维差分"><img data-src="https://www.dmoe.cc/random.php?940355"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-02-14 14:03:20">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-02-14T14:03:20+08:00">2023-02-14</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>1.3k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/02/14/%E5%B7%AE%E5%88%86/" itemprop="url" title="一维&amp;二维差分">一维&二维差分</a></h3>
-    <div class="excerpt">
-        # 定义
-基于容斥原理的 n 维差分与 n 维前缀和相似
-差分数组：定义 b[1, i] 的前缀和等于 a[i]
-二维差分数组同理
-# 构造差分
-// 一维a[l] += ca[r + 1] -= c; // 二维a[x1][y1] += c;a[x1][y2 + 1] -= c;a[x2 + 1][y1] -= c;a[x2 + 1][y2 + 1] += c;// 二维差分矩阵复原 (与前缀和类似)a[i][j] += a[i - 1][j] + a[i][j - 1] - a[i - 1][j - 1];# 模板
-# 一维差分
-#include...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/C-C/%E7%AE%97%E6%B3%95/" itemprop="url" title="算法"><i class="ic i-flag"></i>算法</a>
-      </span>
-    </div>
-    <a href="/2023/02/14/%E5%B7%AE%E5%88%86/" itemprop="url" title="一维&amp;二维差分" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/02/13/hexo%E7%9B%B8%E5%85%B3%EF%BC%88%E4%B8%80%EF%BC%89/" itemprop="url" title="hexo相关（一）"><img data-src="https://www.dmoe.cc/random.php?165210"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-02-13 18:19:31">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-02-13T18:19:31+08:00">2023-02-13</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>213</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/02/13/hexo%E7%9B%B8%E5%85%B3%EF%BC%88%E4%B8%80%EF%BC%89/" itemprop="url" title="hexo相关（一）">hexo相关（一）</a></h3>
-    <div class="excerpt">
-        # 新建 markdown 文件
-# cd 根目录
-hexo new [filename]
-
-# 清理原始文件（配置文档）
-hexo clean
-
-# 渲染 md
-hexo g / hexo generate
-
-# 部署到本地服务器
-hexo s / hexo server
-
-# 部署到指定仓库
-hexo d / hexo deploy
-
-# 生成 algolia 目录并推送
-# 需提前在git bash配置环境变量
-# export HEXO_ALGOLIA_INDEXING_KEY = API key
-hexo algolia
-    </div>
-    <a href="/2023/02/13/hexo%E7%9B%B8%E5%85%B3%EF%BC%88%E4%B8%80%EF%BC%89/" itemprop="url" title="hexo相关（一）" class="btn">more...</a>
-  </div>
-</article>
-
     </div>
 
   </div>
@@ -590,7 +578,7 @@ hexo algolia
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">92</span>
+        <span class="count">94</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -679,12 +667,12 @@ hexo algolia
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
 </div>
 
-    <span><a href="/2022/12/27/stringstream_%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC_int_double/" title="stringstream 字符串转 int&#x2F;double">stringstream 字符串转 int/double</a></span>
+    <span><a href="/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/" title="scanf、cin返回值与连续输入">scanf、cin返回值与连续输入</a></span>
   </li>
 
       
@@ -693,77 +681,12 @@ hexo algolia
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2021/10/23/C++_STL%E5%AE%B9%E5%99%A8%EF%BC%8811%E4%B8%AA%EF%BC%89/" title="C++ STL容器（11个）">C++ STL容器（11个）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/10/28/%E6%95%B0%E7%BB%84%E7%B2%98%E8%B4%B4%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96C++/" title="数组粘贴，初始化C++">数组粘贴，初始化C++</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2021/11/08/DFS%E8%BF%B7%E5%AE%AB%E9%97%AE%E9%A2%98/" title="DFS迷宫问题">DFS迷宫问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
-</div>
-
-    <span><a href="/2021/11/05/C++_STL%E4%B8%AD%E7%9A%84next_permutation/" title="C++ STL中的next_permutation">C++ STL中的next_permutation</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%85%B6%E4%BB%96/" title="分类于 其他">其他</a>
-</div>
-
-    <span><a href="/2022/06/06/Wolfram_Alpha%E5%BD%92%E6%A1%A3/" title="Wolfram Alpha归档">Wolfram Alpha归档</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/02/18/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" title="快速排序">快速排序</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-</div>
-
-    <span><a href="/2021/03/31/%E5%88%86%E8%80%8C%E6%B2%BB%E4%B9%8B(D&amp;C%EF%BC%89/" title="分而治之(D&amp;C）">分而治之(D&amp;C）</a></span>
+    <span><a href="/2021/10/28/%E5%8D%A1%E5%B8%B8%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%8C%E8%82%86%E6%97%A0%E5%BF%8C%E6%83%AESTL/" title="卡常小技巧，肆无忌惮STL">卡常小技巧，肆无忌惮STL</a></span>
   </li>
 
       
@@ -780,10 +703,78 @@ hexo algolia
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Q-A/" title="分类于 Q/A">Q/A</a>
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/C-C/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2021/11/01/img%E6%A0%87%E7%AD%BE%E5%9C%A8%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF/" title="img标签在谷歌浏览器下不显示错误信息">img标签在谷歌浏览器下不显示错误信息</a></span>
+    <span><a href="/2023/02/28/%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0-%E4%BC%A0%E7%BA%B8%E6%9D%A1/" title="方格取数-传纸条">方格取数-传纸条</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2022/11/10/DFS%E5%88%A4%E6%96%AD%E8%BF%B7%E5%AE%AB%E6%97%A0%E8%A7%A3/" title="DFS判断迷宫无解">DFS判断迷宫无解</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" title="小根堆">小根堆</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
+</div>
+
+    <span><a href="/2021/09/10/%E6%B4%9B%E8%B0%B7%E9%A2%98%E5%BA%93%E7%88%AC%E8%99%AB/" title="洛谷题库爬虫">洛谷题库爬虫</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2023/03/11/%E4%BA%8C%E5%88%86%E5%9B%BE/" title="二分图">二分图</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2022/12/06/C++_%E6%8F%90%E5%8F%96%E5%B0%8F%E6%95%B0/" title="C++ 提取小数">C++ 提取小数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
+</div>
+
+    <span><a href="/2022/09/24/%E5%9B%BE%E5%83%8F%E5%A1%AB%E5%85%85/" title="图像填充">图像填充</a></span>
   </li>
 
   </ul>
