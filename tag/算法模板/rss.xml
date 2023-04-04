@@ -9,18 +9,18 @@
         <lastBuildDate>Fri, 20 Jan 2023 19:29:00 +0800</lastBuildDate>
         <category>算法</category>
         <category>BFS</category>
-        <category>unity</category>
         <category>Resilio Sync</category>
+        <category>unity</category>
         <category>WolfraAlpha</category>
-        <category>github</category>
-        <category>Open-cv</category>
-        <category>linux</category>
-        <category>碧蓝航线</category>
-        <category>Python</category>
         <category>数论</category>
+        <category>github</category>
         <category>hexo</category>
+        <category>linux</category>
+        <category>Open-cv</category>
         <category>模板</category>
         <category>局域网</category>
+        <category>碧蓝航线</category>
+        <category>Python</category>
         <category>阅读</category>
         <category>相册</category>
         <category>算法模板</category>
@@ -49,8 +49,8 @@
 &lt;p&gt;输出若干行数字，表示 &lt;strong&gt;k&lt;/strong&gt;=&lt;strong&gt;0&lt;/strong&gt; 时，对应的子数列 &lt;strong&gt;[&lt;strong&gt;a&lt;/strong&gt;,&lt;strong&gt;b&lt;/strong&gt;]&lt;/strong&gt; 的连续和。&lt;/p&gt;
 &lt;h4 id=&#34;数据范围&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据范围&#34;&gt;#&lt;/a&gt; 数据范围&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;≤&lt;strong&gt;n&lt;/strong&gt;≤&lt;strong&gt;100000&lt;/strong&gt;,&lt;br&gt;
-&lt;strong&gt;1&lt;/strong&gt;≤&lt;strong&gt;m&lt;/strong&gt;≤&lt;strong&gt;100000，&lt;br&gt;
-1&lt;/strong&gt;≤&lt;strong&gt;a&lt;/strong&gt;≤&lt;strong&gt;b&lt;/strong&gt;≤&lt;strong&gt;n&lt;/strong&gt;,&lt;br&gt;
+&lt;strong&gt;1&lt;/strong&gt;≤&lt;strong&gt;m&lt;/strong&gt;≤&lt;strong&gt;100000&lt;/strong&gt;，&lt;br&gt;
+&lt;strong&gt;1&lt;/strong&gt;≤&lt;strong&gt;a&lt;/strong&gt;≤&lt;strong&gt;b&lt;/strong&gt;≤&lt;strong&gt;n&lt;/strong&gt;,&lt;br&gt;
  数据保证在任何时候，数列中所有元素之和均在 int 范围内。&lt;/p&gt;
 &lt;h4 id=&#34;输入样例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#输入样例&#34;&gt;#&lt;/a&gt; 输入样例：&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;10 5
