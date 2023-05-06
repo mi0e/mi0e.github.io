@@ -5,6 +5,14 @@
     "home_page_url": "http://example.com",
     "items": [
         {
+            "id": "http://example.com/2023/05/06/SpringBoot3.0%E8%B8%A9%E5%9D%91/",
+            "url": "http://example.com/2023/05/06/SpringBoot3.0%E8%B8%A9%E5%9D%91/",
+            "title": "SpringBoot踩坑(1)",
+            "date_published": "2023-05-06T14:13:28.000Z",
+            "content_html": "<h2 id=\"import-javaxservlet报错\"><a class=\"markdownIt-Anchor\" href=\"#import-javaxservlet报错\">#</a>  <code>import javax.servlet.*;</code>  报错</h2>\n<p>这个报错主要是 Spring Boot3.0 已经为所有依赖项从 Java EE 迁移到 Jakarta EE API，导致 servlet 包名的修改，Spring 团队这样做的原因，主要是避免 Oracle 的版权问题，解决办法很简单，两步走：</p>\n<figure class=\"highlight typescript\"><figcaption data-lang=\"typescript\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre><span class=\"token comment\">// 修改前：</span></pre></td></tr><tr><td data-num=\"2\"></td><td><pre><span class=\"token keyword\">import</span> javax<span class=\"token punctuation\">.</span>servlet<span class=\"token punctuation\">.</span><span class=\"token operator\">*</span></pre></td></tr><tr><td data-num=\"3\"></td><td><pre><span class=\"token comment\">// 修改后：</span></pre></td></tr><tr><td data-num=\"4\"></td><td><pre><span class=\"token keyword\">import</span> jakarta<span class=\"token punctuation\">.</span>servlet<span class=\"token punctuation\">.</span><span class=\"token operator\">*</span></pre></td></tr></table></figure>",
+            "tags": []
+        },
+        {
             "id": "http://example.com/2023/04/04/%E5%85%AB%E6%95%B0%E7%A0%81-A/",
             "url": "http://example.com/2023/04/04/%E5%85%AB%E6%95%B0%E7%A0%81-A/",
             "title": "八数码(A*)",

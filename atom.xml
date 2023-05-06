@@ -3,7 +3,7 @@
     <id>http://example.com</id>
     <title>書架</title>
     <link href="http://example.com" />
-    <updated>2023-04-04T11:19:45.000Z</updated>
+    <updated>2023-05-06T14:13:28.000Z</updated>
     <category term="算法" />
     <category term="BFS" />
     <category term="Resilio Sync" />
@@ -21,6 +21,15 @@
     <category term="阅读" />
     <category term="相册" />
     <category term="算法模板" />
+    <entry>
+        <id>http://example.com/2023/05/06/SpringBoot3.0%E8%B8%A9%E5%9D%91/</id>
+        <title>SpringBoot踩坑(1)</title>
+        <link rel="alternate" href="http://example.com/2023/05/06/SpringBoot3.0%E8%B8%A9%E5%9D%91/"/>
+        <content type="html">&lt;h2 id=&#34;import-javaxservlet报错&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#import-javaxservlet报错&#34;&gt;#&lt;/a&gt;  &lt;code&gt;import javax.servlet.*;&lt;/code&gt;  报错&lt;/h2&gt;
+&lt;p&gt;这个报错主要是 Spring Boot3.0 已经为所有依赖项从 Java EE 迁移到 Jakarta EE API，导致 servlet 包名的修改，Spring 团队这样做的原因，主要是避免 Oracle 的版权问题，解决办法很简单，两步走：&lt;/p&gt;
+&lt;figure class=&#34;highlight typescript&#34;&gt;&lt;figcaption data-lang=&#34;typescript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 修改前：&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; javax&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;servlet&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 修改后：&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; jakarta&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;servlet&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <updated>2023-05-06T14:13:28.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2023/04/04/%E5%85%AB%E6%95%B0%E7%A0%81-A/</id>
         <title>八数码(A*)</title>
