@@ -5,6 +5,14 @@
     "home_page_url": "http://example.com",
     "items": [
         {
+            "id": "http://example.com/2023/05/15/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/",
+            "url": "http://example.com/2023/05/15/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/",
+            "title": "Spring常用注解",
+            "date_published": "2023-05-15T10:36:54.000Z",
+            "content_html": "<p>@Autowired：用于自动装配依赖项。</p>\n<p>@Component：用于标记一个可被 Spring 容器管理的组件。</p>\n<p>@Controller：用于标记一个控制器类，处理请求并返回响应。</p>\n<p>@Service：用于标记一个业务逻辑层（Service）组件。</p>\n<p>@Repository：用于标记一个数据访问层（Repository）组件。</p>\n<p>@Configuration：用于标记一个配置类，定义应用程序的配置信息。</p>\n<p>@Bean：用于定义和导出一个 Spring Bean。</p>\n<p>@RequestMapping：用于将请求映射到处理方法或控制器类。</p>\n<p>@PathVariable：用于将请求路径中的变量映射到方法参数。</p>\n<p>@RequestParam：用于获取请求参数的值。</p>\n<p>@ResponseBody：用于将方法返回的对象直接作为响应体返回给客户端。</p>\n<p>@Valid：用于启用参数的校验。</p>\n<p>@ExceptionHandler：用于处理特定类型的异常。</p>\n<p>@Transactional：用于标记一个事务处理方法或类。</p>\n<p>@Aspect：用于定义切面类，实现面向切面编程。</p>\n",
+            "tags": []
+        },
+        {
             "id": "http://example.com/2023/05/06/SpringBoot3.0%E8%B8%A9%E5%9D%91/",
             "url": "http://example.com/2023/05/06/SpringBoot3.0%E8%B8%A9%E5%9D%91/",
             "title": "SpringBoot踩坑(1)",

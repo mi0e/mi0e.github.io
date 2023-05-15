@@ -5,8 +5,8 @@
         <link>http://example.com</link>
         <description>花店不开了，花继续开</description>
         <language>zh-CN</language>
-        <pubDate>Sat, 06 May 2023 22:13:28 +0800</pubDate>
-        <lastBuildDate>Sat, 06 May 2023 22:13:28 +0800</lastBuildDate>
+        <pubDate>Mon, 15 May 2023 18:36:54 +0800</pubDate>
+        <lastBuildDate>Mon, 15 May 2023 18:36:54 +0800</lastBuildDate>
         <category>算法</category>
         <category>BFS</category>
         <category>Resilio Sync</category>
@@ -24,6 +24,28 @@
         <category>阅读</category>
         <category>相册</category>
         <category>算法模板</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2023/05/15/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/</guid>
+            <title>Spring常用注解</title>
+            <link>http://example.com/2023/05/15/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/</link>
+            <pubDate>Mon, 15 May 2023 18:36:54 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;@Autowired：用于自动装配依赖项。&lt;/p&gt;
+&lt;p&gt;@Component：用于标记一个可被 Spring 容器管理的组件。&lt;/p&gt;
+&lt;p&gt;@Controller：用于标记一个控制器类，处理请求并返回响应。&lt;/p&gt;
+&lt;p&gt;@Service：用于标记一个业务逻辑层（Service）组件。&lt;/p&gt;
+&lt;p&gt;@Repository：用于标记一个数据访问层（Repository）组件。&lt;/p&gt;
+&lt;p&gt;@Configuration：用于标记一个配置类，定义应用程序的配置信息。&lt;/p&gt;
+&lt;p&gt;@Bean：用于定义和导出一个 Spring Bean。&lt;/p&gt;
+&lt;p&gt;@RequestMapping：用于将请求映射到处理方法或控制器类。&lt;/p&gt;
+&lt;p&gt;@PathVariable：用于将请求路径中的变量映射到方法参数。&lt;/p&gt;
+&lt;p&gt;@RequestParam：用于获取请求参数的值。&lt;/p&gt;
+&lt;p&gt;@ResponseBody：用于将方法返回的对象直接作为响应体返回给客户端。&lt;/p&gt;
+&lt;p&gt;@Valid：用于启用参数的校验。&lt;/p&gt;
+&lt;p&gt;@ExceptionHandler：用于处理特定类型的异常。&lt;/p&gt;
+&lt;p&gt;@Transactional：用于标记一个事务处理方法或类。&lt;/p&gt;
+&lt;p&gt;@Aspect：用于定义切面类，实现面向切面编程。&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2023/05/06/SpringBoot3.0%E8%B8%A9%E5%9D%91/</guid>
             <title>SpringBoot踩坑(1)</title>

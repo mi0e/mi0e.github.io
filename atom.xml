@@ -3,7 +3,7 @@
     <id>http://example.com</id>
     <title>書架</title>
     <link href="http://example.com" />
-    <updated>2023-05-06T14:13:28.000Z</updated>
+    <updated>2023-05-15T10:36:54.000Z</updated>
     <category term="算法" />
     <category term="BFS" />
     <category term="Resilio Sync" />
@@ -21,6 +21,28 @@
     <category term="阅读" />
     <category term="相册" />
     <category term="算法模板" />
+    <entry>
+        <id>http://example.com/2023/05/15/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/</id>
+        <title>Spring常用注解</title>
+        <link rel="alternate" href="http://example.com/2023/05/15/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/"/>
+        <content type="html">&lt;p&gt;@Autowired：用于自动装配依赖项。&lt;/p&gt;
+&lt;p&gt;@Component：用于标记一个可被 Spring 容器管理的组件。&lt;/p&gt;
+&lt;p&gt;@Controller：用于标记一个控制器类，处理请求并返回响应。&lt;/p&gt;
+&lt;p&gt;@Service：用于标记一个业务逻辑层（Service）组件。&lt;/p&gt;
+&lt;p&gt;@Repository：用于标记一个数据访问层（Repository）组件。&lt;/p&gt;
+&lt;p&gt;@Configuration：用于标记一个配置类，定义应用程序的配置信息。&lt;/p&gt;
+&lt;p&gt;@Bean：用于定义和导出一个 Spring Bean。&lt;/p&gt;
+&lt;p&gt;@RequestMapping：用于将请求映射到处理方法或控制器类。&lt;/p&gt;
+&lt;p&gt;@PathVariable：用于将请求路径中的变量映射到方法参数。&lt;/p&gt;
+&lt;p&gt;@RequestParam：用于获取请求参数的值。&lt;/p&gt;
+&lt;p&gt;@ResponseBody：用于将方法返回的对象直接作为响应体返回给客户端。&lt;/p&gt;
+&lt;p&gt;@Valid：用于启用参数的校验。&lt;/p&gt;
+&lt;p&gt;@ExceptionHandler：用于处理特定类型的异常。&lt;/p&gt;
+&lt;p&gt;@Transactional：用于标记一个事务处理方法或类。&lt;/p&gt;
+&lt;p&gt;@Aspect：用于定义切面类，实现面向切面编程。&lt;/p&gt;
+</content>
+        <updated>2023-05-15T10:36:54.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2023/05/06/SpringBoot3.0%E8%B8%A9%E5%9D%91/</id>
         <title>SpringBoot踩坑(1)</title>
