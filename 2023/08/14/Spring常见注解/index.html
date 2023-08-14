@@ -25,12 +25,12 @@
 
   
 
-<link rel="canonical" href="http://example.com/2023/05/15/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/">
+<link rel="canonical" href="http://example.com/2023/08/14/Spring%E5%B8%B8%E8%A7%81%E6%B3%A8%E8%A7%A3/">
 
 
 
   <title>
-Spring常用注解 |
+Spring常见注解 |
 mioe = 書架 = AC总在意料外^^</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,23 +58,23 @@ mioe = 書架 = AC总在意料外^^</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">Spring常用注解
+  <h1 itemprop="name headline">Spring常见注解
   </h1>
   
 <div class="meta">
-  <span class="item" title="创建时间：2023-05-15 18:36:54">
+  <span class="item" title="创建时间：2023-08-14 23:17:52">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">发表于</span>
-    <time itemprop="dateCreated datePublished" datetime="2023-05-15T18:36:54+08:00">2023-05-15</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-08-14T23:17:52+08:00">2023-08-14</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>452</span>
+    <span>826</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -115,12 +115,12 @@ mioe = 書架 = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?474996"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?749212"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?135998"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?915207"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?176503"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?528424"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?931298"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?157869"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?141906"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?826427"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?73444"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?751953"></li>
         </ul>
       </div>
     </header>
@@ -149,7 +149,7 @@ mioe = 書架 = AC总在意料外^^</title>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/15/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/14/Spring%E5%B8%B8%E8%A7%81%E6%B3%A8%E8%A7%A3/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/02.jpg">
@@ -164,21 +164,119 @@ mioe = 書架 = AC总在意料外^^</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p>@Autowired：用于自动装配依赖项。</p>
-<p>@Component：用于标记一个可被 Spring 容器管理的组件。</p>
-<p>@Controller：用于标记一个控制器类，处理请求并返回响应。</p>
-<p>@Service：用于标记一个业务逻辑层（Service）组件。</p>
-<p>@Repository：用于标记一个数据访问层（Repository）组件。</p>
-<p>@Configuration：用于标记一个配置类，定义应用程序的配置信息。</p>
-<p>@Bean：用于定义和导出一个 Spring Bean。</p>
-<p>@RequestMapping：用于将请求映射到处理方法或控制器类。</p>
-<p>@PathVariable：用于将请求路径中的变量映射到方法参数。</p>
-<p>@RequestParam：用于获取请求参数的值。</p>
-<p>@ResponseBody：用于将方法返回的对象直接作为响应体返回给客户端。</p>
-<p>@Valid：用于启用参数的校验。</p>
-<p>@ExceptionHandler：用于处理特定类型的异常。</p>
-<p>@Transactional：用于标记一个事务处理方法或类。</p>
-<p>@Aspect：用于定义切面类，实现面向切面编程。</p>
+    <h2 id="spring"><a class="markdownIt-Anchor" href="#spring">#</a> Spring</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">注解</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">@Conmponent、@Controller、@Service、@Repository</td>
+<td style="text-align:center">使用在类上用于实例化 Bean</td>
+</tr>
+<tr>
+<td style="text-align:center">@Autowired</td>
+<td style="text-align:center">使用在字段上用于根据类型依赖注入</td>
+</tr>
+<tr>
+<td style="text-align:center">@Qualifier</td>
+<td style="text-align:center">结合 @Autowired 一起使用用于根据名称进行依赖注入</td>
+</tr>
+<tr>
+<td style="text-align:center">@Scope</td>
+<td style="text-align:center">标注 Bean 的作用范围</td>
+</tr>
+<tr>
+<td style="text-align:center">@Configuration</td>
+<td style="text-align:center">指定当前类是一个 Spring 配置类，当创建容器时会从该类上加载注解</td>
+</tr>
+<tr>
+<td style="text-align:center">@ComponentScan</td>
+<td style="text-align:center">用于指定 Spring 在初始化容器时要扫描的包</td>
+</tr>
+<tr>
+<td style="text-align:center">@Bean</td>
+<td style="text-align:center">使用在方法上，标注将该方法的返回值存储到 Spring 容器中</td>
+</tr>
+<tr>
+<td style="text-align:center">@Import</td>
+<td style="text-align:center">使用 @Import 导入的类会被 Spring 加载到 IOC 容器中</td>
+</tr>
+<tr>
+<td style="text-align:center">@Aspect、@Before、@After、@Around、@Pointcut</td>
+<td style="text-align:center">AOP</td>
+</tr>
+</tbody>
+</table>
+<h2 id="springmvc"><a class="markdownIt-Anchor" href="#springmvc">#</a> SpringMVC</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">注解</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">@RequestMapping</td>
+<td style="text-align:center">用于映射请求路径，可以定义在类上和方法上。用于类上，则表示类中的所有的方法都是以该地址作为父路径</td>
+</tr>
+<tr>
+<td style="text-align:center">@RequestBody</td>
+<td style="text-align:center">注解实现接收 http 请求的 json 数据，将 json 转换为 java 对象</td>
+</tr>
+<tr>
+<td style="text-align:center">@RequestParam</td>
+<td style="text-align:center">指定请求参数的名称</td>
+</tr>
+<tr>
+<td style="text-align:center">@PathViriable</td>
+<td style="text-align:center">从请求路径下中获取请求参数 (/user/(id])，传递给方法的形式参数</td>
+</tr>
+<tr>
+<td style="text-align:center">@ResponseBody</td>
+<td style="text-align:center">注解实现将 controller 方法返回对象转化为 json 对象响应给客户端</td>
+</tr>
+<tr>
+<td style="text-align:center">@RequestHeader</td>
+<td style="text-align:center">获取指定的请求头数据</td>
+</tr>
+<tr>
+<td style="text-align:center">@RestController</td>
+<td style="text-align:center">@Controller + @ResponseBody</td>
+</tr>
+</tbody>
+</table>
+<h2 id="springboot"><a class="markdownIt-Anchor" href="#springboot">#</a> SpringBoot</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">注解</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">@SpringBootApplication</td>
+<td style="text-align:center">启动 SpringBoot，包含以下三个注解</td>
+</tr>
+<tr>
+<td style="text-align:center">@SpringBootConfiguration</td>
+<td style="text-align:center">结合了 @Configuration ，实现配置文件功能</td>
+</tr>
+<tr>
+<td style="text-align:center">@EnableAutoConfiguration</td>
+<td style="text-align:center">打开自动配置功能，也可以关闭某个自动配置的类</td>
+</tr>
+<tr>
+<td style="text-align:center">@ComponentScan</td>
+<td style="text-align:center">组件扫描</td>
+</tr>
+</tbody>
+</table>
 
   </div>
 
@@ -190,7 +288,7 @@ mioe = 書架 = AC总在意料外^^</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2023-05-15 18:38:35" itemprop="dateModified" datetime="2023-05-15T18:38:35+08:00">2023-05-15</time>
+    <time title="修改时间：2023-08-14 23:32:07" itemprop="dateModified" datetime="2023-08-14T23:32:07+08:00">2023-08-14</time>
   </span>
 </div>
 
@@ -203,7 +301,7 @@ mioe = 書架 = AC总在意料外^^</title>
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="http://example.com/2023/05/15/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/" title="Spring常用注解">http://example.com/2023/05/15/Spring常用注解/</a>
+    <a href="http://example.com/2023/08/14/Spring%E5%B8%B8%E8%A7%81%E6%B3%A8%E8%A7%A3/" title="Spring常见注解">http://example.com/2023/08/14/Spring常见注解/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -222,22 +320,14 @@ mioe = 書架 = AC总在意料外^^</title>
     <div class="item left">
       
 
-  <a href="/2023/05/06/SpringBoot3.0%E8%B8%A9%E5%9D%91/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?61020" title="SpringBoot踩坑(1)">
+  <a href="/2023/08/02/%E8%AE%A1%E6%95%B0DP/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?384826" title="计数DP">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>SpringBoot踩坑(1)</h3>
+  <h3>计数DP</h3>
   </a>
 
     </div>
     <div class="item right">
-      
-
-  <a href="/2023/05/21/Axios%E4%BC%A0%E5%8F%82SpringBoot%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96%E5%80%BC/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?975577" title="Axios传参SpringBoot无法获取值">
-  <span class="type">下一篇</span>
-  <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>Axios传参SpringBoot无法获取值</h3>
-  </a>
-
     </div>
 </div>
 
@@ -254,6 +344,7 @@ mioe = 書架 = AC总在意料外^^</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#spring"><span class="toc-number">1.</span> <span class="toc-text"> Spring</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#springmvc"><span class="toc-number">2.</span> <span class="toc-text"> SpringMVC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#springboot"><span class="toc-number">3.</span> <span class="toc-text"> SpringBoot</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -332,12 +423,10 @@ mioe = 書架 = AC总在意料外^^</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2023/05/06/SpringBoot3.0%E8%B8%A9%E5%9D%91/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2023/05/21/Axios%E4%BC%A0%E5%8F%82SpringBoot%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96%E5%80%BC/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -361,12 +450,80 @@ mioe = 書架 = AC总在意料外^^</title>
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
 <i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2021/06/02/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4_python/" title="P1223 排队接水 python">P1223 排队接水 python</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2023/02/11/%E6%9E%84%E9%80%A0%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="Acwing 4808. 构造字符串">Acwing 4808. 构造字符串</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
+</div>
+
+    <span><a href="/2021/11/04/scanf%E3%80%81cin%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9E%E7%BB%AD%E8%BE%93%E5%85%A5/" title="scanf、cin返回值与连续输入">scanf、cin返回值与连续输入</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2022/12/21/AcWing_95._%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3/" title="AcWing 95. 费解的开关">AcWing 95. 费解的开关</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
+</div>
+
+    <span><a href="/2023/03/11/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" title="最近公共祖先">最近公共祖先</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
+</div>
+
+    <span><a href="/2022/09/20/cv%E5%9F%BA%E7%A1%80%E7%9B%B8%E5%85%B3%E4%B8%8Efloat_uint8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="cv基础相关与float&#x2F;uint8类型转换">cv基础相关与float/uint8类型转换</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
 <a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/10/15/%E7%B1%BB%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97/" title="类型字符串提取数字">类型字符串提取数字</a></span>
+    <span><a href="/2021/09/04/P1223_%E6%8E%92%E9%98%9F%E6%8E%A5%E6%B0%B4%E9%97%AE%E9%A2%98%E7%BB%AD%EF%BC%88C%EF%BC%89/" title="P1223 排队接水问题续（C）">P1223 排队接水问题续（C）</a></span>
   </li>
 
       
@@ -378,41 +535,17 @@ mioe = 書架 = AC总在意料外^^</title>
 <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2023/04/04/%E5%85%AB%E6%95%B0%E7%A0%81-A/" title="八数码(A*)">八数码(A*)</a></span>
+    <span><a href="/2023/02/01/%E5%B0%8F%E6%A0%B9%E5%A0%86/" title="小根堆">小根堆</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Q-A/" title="分类于 Q/A">Q/A</a>
+<a href="/categories/Linux/" title="分类于 Linux">Linux</a>
 </div>
 
-    <span><a href="/2021/12/31/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/" title="局域网搭建服务器无法访问">局域网搭建服务器无法访问</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2023/02/02/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/" title="字符串哈希">字符串哈希</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/C-C/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-</div>
-
-    <span><a href="/2023/02/18/%E6%A0%91%E7%9A%84%E9%87%8D%E6%9E%84/" title="树的重构">树的重构</a></span>
+    <span><a href="/2022/05/21/git_pull%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81%EF%BC%8C%E9%81%BF%E5%85%8D%E8%A6%86%E7%9B%96%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E7%9A%84%E4%BB%A3%E7%A0%81/" title="git pull拉取仓库代码，避免覆盖本地修改的代码">git pull拉取仓库代码，避免覆盖本地修改的代码</a></span>
   </li>
 
       
@@ -424,48 +557,7 @@ mioe = 書架 = AC总在意料外^^</title>
 <a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/09/11/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F_C%E8%AF%AD%E8%A8%80/" title="冒泡排序 C语言">冒泡排序 C语言</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-</div>
-
-    <span><a href="/2022/11/10/DFS%E5%88%A4%E6%96%AD%E8%BF%B7%E5%AE%AB%E6%97%A0%E8%A7%A3/" title="DFS判断迷宫无解">DFS判断迷宫无解</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Python/" title="分类于 Python">Python</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/Python/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-</div>
-
-    <span><a href="/2021/03/31/%E9%80%92%E5%BD%92_-_%E6%95%B0%E7%BB%84%E7%B4%AF%E5%8A%A0/" title="递归 - 数组累加">递归 - 数组累加</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2023/02/07/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" title="最小生成树">最小生成树</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/02/18/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" title="快速排序">快速排序</a></span>
+    <span><a href="/2023/03/19/%E5%A4%9A%E6%BA%90BFS/" title="多源BFS">多源BFS</a></span>
   </li>
 
   </ul>
@@ -492,7 +584,7 @@ mioe = 書架 = AC总在意料外^^</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2023/05/15/Spring常用注解/',
+    path: '2023/08/14/Spring常见注解/',
     favicon: {
       show: "（●´3｀●）やれやれだぜ",
       hide: "(´Д｀)大変だ！"
