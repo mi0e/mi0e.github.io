@@ -5,6 +5,14 @@
     "home_page_url": "http://example.com",
     "items": [
         {
+            "id": "http://example.com/2023/11/15/n%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86%20leetcode_429/",
+            "url": "http://example.com/2023/11/15/n%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86%20leetcode_429/",
+            "title": "n叉树的层次遍历 leetcode_429",
+            "date_published": "2023-11-15T12:09:08.000Z",
+            "content_html": "<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9uLWFyeS10cmVlLWxldmVsLW9yZGVyLXRyYXZlcnNhbC9kZXNjcmlwdGlvbi8=\">429. N 叉树的层序遍历</span></p>\n<pre><code>class Solution &#123;\npublic:\n    vector&lt;vector&lt;int&gt;&gt; levelOrder(Node* root) &#123;\n        vector&lt;vector&lt;int&gt;&gt; res;\n        if (!root) return res;\n\n        queue&lt;Node*&gt; q;\n        q.push(root);\n        \n        while (!q.empty()) &#123;\n            int s = q.size();\n            vector&lt;int&gt; t;\n            for (int i = 0; i &lt; s; i++) &#123;\n                auto e = q.front();\n                q.pop();\n                t.push_back(e-&gt;val);\n                for (auto ee: e-&gt;children) q.push(ee);\n            &#125;\n            res.push_back(t);\n        &#125;\n\n        return res;\n    &#125;\n&#125;;\n</code></pre>\n",
+            "tags": []
+        },
+        {
             "id": "http://example.com/2023/08/14/Spring%E5%B8%B8%E8%A7%81%E6%B3%A8%E8%A7%A3/",
             "url": "http://example.com/2023/08/14/Spring%E5%B8%B8%E8%A7%81%E6%B3%A8%E8%A7%A3/",
             "title": "Spring常见注解",

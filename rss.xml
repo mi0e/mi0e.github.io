@@ -5,8 +5,8 @@
         <link>http://example.com</link>
         <description>花店不开了，花继续开</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 14 Aug 2023 23:17:52 +0800</pubDate>
-        <lastBuildDate>Mon, 14 Aug 2023 23:17:52 +0800</lastBuildDate>
+        <pubDate>Wed, 15 Nov 2023 20:09:08 +0800</pubDate>
+        <lastBuildDate>Wed, 15 Nov 2023 20:09:08 +0800</lastBuildDate>
         <category>算法</category>
         <category>BFS</category>
         <category>Resilio Sync</category>
@@ -24,6 +24,39 @@
         <category>阅读</category>
         <category>相册</category>
         <category>算法模板</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2023/11/15/n%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86%20leetcode_429/</guid>
+            <title>n叉树的层次遍历 leetcode_429</title>
+            <link>http://example.com/2023/11/15/n%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86%20leetcode_429/</link>
+            <pubDate>Wed, 15 Nov 2023 20:09:08 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9uLWFyeS10cmVlLWxldmVsLW9yZGVyLXRyYXZlcnNhbC9kZXNjcmlwdGlvbi8=&#34;&gt;429. N 叉树的层序遍历&lt;/span&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution &amp;#123;
+public:
+    vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; levelOrder(Node* root) &amp;#123;
+        vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; res;
+        if (!root) return res;
+
+        queue&amp;lt;Node*&amp;gt; q;
+        q.push(root);
+        
+        while (!q.empty()) &amp;#123;
+            int s = q.size();
+            vector&amp;lt;int&amp;gt; t;
+            for (int i = 0; i &amp;lt; s; i++) &amp;#123;
+                auto e = q.front();
+                q.pop();
+                t.push_back(e-&amp;gt;val);
+                for (auto ee: e-&amp;gt;children) q.push(ee);
+            &amp;#125;
+            res.push_back(t);
+        &amp;#125;
+
+        return res;
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2023/08/14/Spring%E5%B8%B8%E8%A7%81%E6%B3%A8%E8%A7%A3/</guid>
             <title>Spring常见注解</title>
