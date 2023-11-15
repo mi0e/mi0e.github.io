@@ -74,7 +74,7 @@ mioe = 書架 = AC总在意料外^^</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>753</span>
+    <span>735</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -115,12 +115,12 @@ mioe = 書架 = AC总在意料外^^</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?249492"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?173256"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?356737"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?737842"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?80074"></li>
-          <li class="item" data-background-image="https://www.dmoe.cc/random.php?612562"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?558862"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?108658"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?431085"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?882811"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?594696"></li>
+          <li class="item" data-background-image="https://www.dmoe.cc/random.php?149685"></li>
         </ul>
       </div>
     </header>
@@ -164,31 +164,7 @@ mioe = 書架 = AC总在意料外^^</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <pre><code>class Solution &#123;
-public:
-    double findMedianSortedArrays(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) &#123;
-        int s = nums1.size() + nums2.size();
-        if (s % 2 == 0) &#123;
-            int left = find(nums1, 0, nums2, 0, s / 2);
-            int right = find(nums1, 0, nums2, 0, s / 2 + 1);
-            return (left + right) / 2.0;
-        &#125; else return find(nums1, 0, nums2, 0, s / 2 + 1);
-    &#125;
-
-    int find(vector&lt;int&gt;&amp; nums1, int i, vector&lt;int&gt;&amp; nums2, int j, int k) &#123;
-        if (nums1.size() - i &gt; nums2.size() - j) return find(nums2, j, nums1, i, k);
-        if (k == 1) &#123;
-            if (nums1.size() == i) return nums2[j];
-            else return min(nums1[i], nums2[j]);
-        &#125;
-        if (nums1.size() == i) return nums2[j + k - 1];
-        int si = min((int)nums1.size(), i + k / 2), sj = j + k - k / 2;
-        if (nums1[si - 1] &gt; nums2[sj - 1]) return find(nums1, i, nums2, sj, k - (sj - j));
-        else return find(nums1, si, nums2, j, k - (si - i));
-    &#125;
-&#125;;
-</code></pre>
-
+    <figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">public</span><span class="token operator">:</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">double</span> <span class="token function">findMedianSortedArrays</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> nums1<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> nums2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>        <span class="token keyword">int</span> s <span class="token operator">=</span> nums1<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> nums2<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>s <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>            <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> s <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>            <span class="token keyword">int</span> right <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> s <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>            <span class="token keyword">return</span> <span class="token punctuation">(</span>left <span class="token operator">+</span> right<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2.0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token function">find</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> s <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token keyword">int</span> <span class="token function">find</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> nums1<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> nums2<span class="token punctuation">,</span> <span class="token keyword">int</span> j<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums1<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> i <span class="token operator">></span> nums2<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> j<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">find</span><span class="token punctuation">(</span>nums2<span class="token punctuation">,</span> j<span class="token punctuation">,</span> nums1<span class="token punctuation">,</span> i<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums1<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> i<span class="token punctuation">)</span> <span class="token keyword">return</span> nums2<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>            <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token function">min</span><span class="token punctuation">(</span>nums1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> nums2<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums1<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> i<span class="token punctuation">)</span> <span class="token keyword">return</span> nums2<span class="token punctuation">[</span>j <span class="token operator">+</span> k <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>        <span class="token keyword">int</span> si <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>nums1<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> i <span class="token operator">+</span> k <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> sj <span class="token operator">=</span> j <span class="token operator">+</span> k <span class="token operator">-</span> k <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums1<span class="token punctuation">[</span>si <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">></span> nums2<span class="token punctuation">[</span>sj <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">find</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> i<span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> sj<span class="token punctuation">,</span> k <span class="token operator">-</span> <span class="token punctuation">(</span>sj <span class="token operator">-</span> j<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>        <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token function">find</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> si<span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> j<span class="token punctuation">,</span> k <span class="token operator">-</span> <span class="token punctuation">(</span>si <span class="token operator">-</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="22"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="23"></td><td><pre><span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr></table></figure>
   </div>
 
    <footer>
@@ -199,7 +175,7 @@ public:
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2023-11-15 20:12:23" itemprop="dateModified" datetime="2023-11-15T20:12:23+08:00">2023-11-15</time>
+    <time title="修改时间：2023-11-15 20:15:36" itemprop="dateModified" datetime="2023-11-15T20:15:36+08:00">2023-11-15</time>
   </span>
 </div>
 
@@ -231,7 +207,7 @@ public:
     <div class="item left">
       
 
-  <a href="/2023/05/21/Axios%E4%BC%A0%E5%8F%82SpringBoot%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96%E5%80%BC/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?890107" title="Axios传参SpringBoot无法获取值">
+  <a href="/2023/05/21/Axios%E4%BC%A0%E5%8F%82SpringBoot%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96%E5%80%BC/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?94934" title="Axios传参SpringBoot无法获取值">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>Axios传参SpringBoot无法获取值</h3>
@@ -241,7 +217,7 @@ public:
     <div class="item right">
       
 
-  <a href="/2023/08/02/%E8%AE%A1%E6%95%B0DP/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?819435" title="计数DP">
+  <a href="/2023/08/02/%E8%AE%A1%E6%95%B0DP/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?74669" title="计数DP">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>计数DP</h3>
@@ -368,10 +344,60 @@ public:
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E5%85%B6%E4%BB%96/" title="分类于 其他">其他</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2022/06/06/Wolfram_Alpha%E5%BD%92%E6%A1%A3/" title="Wolfram Alpha归档">Wolfram Alpha归档</a></span>
+    <span><a href="/2023/03/11/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" title="最近公共祖先">最近公共祖先</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C-C/" title="分类于 C/C++">C/C++</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/C-C/Q-A/" title="分类于 Q/A">Q/A</a>
+</div>
+
+    <span><a href="/2021/11/05/C++_STL%E4%B8%AD%E7%9A%84next_permutation/" title="C++ STL中的next_permutation">C++ STL中的next_permutation</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Q-A/" title="分类于 Q/A">Q/A</a>
+</div>
+
+    <span><a href="/2021/10/29/DFS%E4%B8%8EBFS%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" title="DFS与BFS使用场景">DFS与BFS使用场景</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B/Python/" title="分类于 Python">Python</a>
+</div>
+
+    <span><a href="/2021/09/10/%E6%B4%9B%E8%B0%B7%E9%A2%98%E5%BA%93%E7%88%AC%E8%99%AB/" title="洛谷题库爬虫">洛谷题库爬虫</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%95%99%E7%A8%8B/Linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/2022/04/13/%E5%8D%B8%E8%BD%BDLinux%E5%9B%BE%E5%BD%A2%E6%A1%8C%E9%9D%A2/" title="卸载Linux图形桌面">卸载Linux图形桌面</a></span>
   </li>
 
       
@@ -379,19 +405,32 @@ public:
     
 <div class="breadcrumb">
 <a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2023/02/04/%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/" title="最短路问题">最短路问题</a></span>
+    <span><a href="/2021/11/08/DFS%E8%BF%B7%E5%AE%AB%E9%97%AE%E9%A2%98/" title="DFS迷宫问题">DFS迷宫问题</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E9%9A%8F%E7%AC%94/" title="分类于 随笔">随笔</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2022/03/27/%E6%99%95%E8%BD%AE%E6%95%88%E5%BA%94/" title="晕轮效应">晕轮效应</a></span>
+    <span><a href="/2023/03/15/DFS%E5%89%AA%E6%9E%9D/" title="DFS剪枝">DFS剪枝</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/11/15/n%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86%20leetcode_429/" title="n叉树的层次遍历 leetcode_429">n叉树的层次遍历 leetcode_429</a></span>
   </li>
 
       
@@ -411,67 +450,9 @@ public:
     
 <div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
 </div>
 
-    <span><a href="/2021/11/04/Vector_%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="Vector 二分查找">Vector 二分查找</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Python/" title="分类于 Python">Python</a>
-</div>
-
-    <span><a href="/2021/03/17/Python%E5%A3%B0%E6%98%8E%E7%A9%BA%E6%95%B0%E7%BB%84/" title="Python声明空数组">Python声明空数组</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%BC%96%E7%A8%8B/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2021/10/23/C++_STL%E5%AE%B9%E5%99%A8%EF%BC%8811%E4%B8%AA%EF%BC%89/" title="C++ STL容器（11个）">C++ STL容器（11个）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Opencv/" title="分类于 Opencv">Opencv</a>
-</div>
-
-    <span><a href="/2022/09/27/%E4%BC%BD%E9%A9%AC%E6%A0%A1%E6%AD%A3%E8%A1%A5%E5%81%BF/" title="伽马校正补偿">伽马校正补偿</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E7%AE%97%E6%B3%95/C-C/" title="分类于 C/C++">C/C++</a>
-</div>
-
-    <span><a href="/2021/11/08/DFS%E8%BF%B7%E5%AE%AB%E9%97%AE%E9%A2%98/" title="DFS迷宫问题">DFS迷宫问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B/" title="分类于 编程">编程</a>
-</div>
-
-    <span><a href="/2020/12/06/%E5%BE%AA%E7%8E%AF%E3%80%81%E8%BF%AD%E4%BB%A3%E3%80%81%E9%81%8D%E5%8E%86%E5%92%8C%E9%80%92%E5%BD%92%E7%9A%84%E5%8C%BA%E5%88%AB/" title="循环、迭代、遍历和递归的区别">循环、迭代、遍历和递归的区别</a></span>
+    <span><a href="/2022/05/22/git_push%E5%87%BA%E7%8E%B0Everything_up-to-date/" title="git push出现Everything up-to-date">git push出现Everything up-to-date</a></span>
   </li>
 
   </ul>
